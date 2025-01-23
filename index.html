@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>...</title>
-    <script>var version = "0.3.8";</script>
+    <script>var version = "0.3.9";</script>
     <style>
       :root {/* Default */
         --black: #000000ff;
@@ -1151,6 +1151,31 @@
       #contactUsMessenger:hover {
         filter: drop-shadow(0px 0px 5px var(--filter-shadow)) grayscale(0);
       }
+      #downloadNoAutoUpdate {
+        width: 160px;
+        height: 37px;
+        margin: auto;
+        background-size: auto 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        filter: grayscale(1);
+        transform: scale(1.0);
+        border: none;
+        background-color: transparent;
+        outline: none;
+        cursor: pointer;
+        transition: 0.6s;
+        -webkit-transition: 0.6s;
+        -moz-transition: 0.6s;
+        -o-transition: 0.6s;
+      }
+      .windows-dl {
+        background-image: url('index_data/29172/download_computer.png');
+      }
+      #downloadNoAutoUpdate:hover {
+        filter: grayscale(0);
+        transform: scale(1.02);
+      }
       @media screen and (max-width: 800px) {
         .wrapper {
           width: 100vmin;
@@ -1389,7 +1414,7 @@
         </div>
       </div>
 
-      <div id="navBtn" onclick="clearInterval(setIntervalId);document.getElementById('menu').style.display='block';openSettingsSound();"></div>
+      <div id="navBtn" onclick="clearInterval(setIntervalId);document.getElementById('menu').style.display='block';openSettingsSound();menuPauseWalkSound();"></div>
       <input type="checkbox" id="chechboxPausing" class="pauseBtn" onchange="pauseGame();">
       <div class="menu" id="menu">
         <div class="menu-content">
@@ -1415,6 +1440,7 @@
             </div>
             <div class="categores moresettingscontent">...</div>
             <input type="button" id="deleteprogbutton" onclick="alertDeleteProgress();" value="...">
+            <input type="button" id="downloadNoAutoUpdate" class="windows-dl" onclick="downloadAlertSystem();" value=" ">
             <hr>
             <div class="categores" id="langsLangs">...</div>
             <div id="selectOptions" class="select-content">
@@ -1703,7 +1729,7 @@
     <!-- Movement Sounds -->
     <!-- Player Walk -->
     <audio muted preload="none" id="playerWalk" loop class="walk-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/3b7ozce6gimei0ojbxmcp/player_walk.mp3?rlkey=dr565ft68qdvhta2hlsdfj44l&st=5m1zirtw&dl=0">
+      <source type="audio/mp3" src="index_data/29208/player_walk.mp3">
       <script>
         function aaSetActiveMoveSound() {
           document.getElementById("pwAlang").classList.add("activet");
@@ -1738,7 +1764,7 @@
     </audio>
     <!-- Alborada Walk -->
     <audio muted preload="none" id="alboradaWalk" loop class="walk-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/46kgb8cu4v6bdkxmh03ee/alborada_walk.mp3?rlkey=nqvpyqfd29856vo2lmkeg8727&dl=0">
+      <source type="audio/mp3" src="index_data/29208/alborada_walk.mp3">
       <script>
         function aaSetActiveMechaMoveSound() {
           document.getElementById("pwAlang").classList.remove("activet");
@@ -1773,7 +1799,7 @@
     </audio>
     <!-- Andromeda Walk -->
     <audio muted preload="none" id="andromedaWalk" loop class="walk-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/ay9gqkyeqokucpegocqz9/andromeda_walk.mp3?rlkey=z4lfiy9weo4lli8q895u3cisg&dl=0">
+      <source type="audio/mp3" src="index_data/29208/andromeda_walk.mp3">
       <script>
         function baSetActiveMoveSound() {
           document.getElementById("pwAlang").classList.remove("activet");
@@ -1808,7 +1834,7 @@
     </audio>
     <!-- Arthur Walk -->
     <audio muted preload="none" id="arthurWalk" loop class="walk-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/r9mcfuj5sizkylgchxxz7/arthur_walk.mp3?rlkey=jnjdc60g52zj55e0s1jw2u3bo&dl=0">
+      <source type="audio/mp3" src="index_data/29208/arthur_walk.mp3">
       <script>
         function caSetActiveMechaMoveSound() {
           document.getElementById("pwAlang").classList.remove("activet");
@@ -1843,7 +1869,7 @@
     </audio>
     <!-- Aurora Walk -->
     <audio muted preload="none" id="auroraWalk" loop class="walk-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/r0u3bcsz9icrc4psppb7r/aurora_walk.mp3?rlkey=nizdmyh6g5p6kmr4dorhkdu7u&dl=0">
+      <source type="audio/mp3" src="index_data/29208/aurora_walk.mp3">
       <script>
         function daSetActiveMechaMoveSound() {
           document.getElementById("pwAlang").classList.remove("activet");
@@ -1878,7 +1904,7 @@
     </audio>
     <!-- Boltus Walk -->
     <audio muted preload="none" id="boltusWalk" loop class="walk-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/h8rkeqo84ejmtr60pkxae/boltus_walk.mp3?rlkey=7ilvo9cujzvh13l8rlvft8yu6&dl=0">
+      <source type="audio/mp3" src="index_data/29208/boltus_walk.mp3">
       <script>
         function eaSetActiveMechaMoveSound() {
           document.getElementById("pwAlang").classList.remove("activet");
@@ -1913,7 +1939,7 @@
     </audio>
     <!-- Caramel Walk -->
     <audio muted preload="none" id="caramelWalk" loop class="walk-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/rg75nyrq7rpng33adyq2t/caramel_walk.mp3?rlkey=5po0zgbel8f219nao2f5oucuy&dl=0">
+      <source type="audio/mp3" src="index_data/29208/caramel_walk.mp3">
       <script>
         function faSetActiveMechaMoveSound() {
           document.getElementById("pwAlang").classList.remove("activet");
@@ -1948,7 +1974,7 @@
     </audio>
     <!-- Doomlight Walk -->
     <audio muted preload="none" id="doomlightlWalk" loop class="walk-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/fv8u2eky3y131zkpwd1z8/doomlight_walk.mp3?rlkey=vaqpms2cyh3sy6w0ax64sywxq&dl=0">
+      <source type="audio/mp3" src="index_data/29208/doomlight_walk.mp3">
       <script>
         function gaSetActiveMechaMoveSound() {
           document.getElementById("pwAlang").classList.remove("activet");
@@ -1983,7 +2009,7 @@
     </audio>
     <!-- Frefox Walk -->
     <audio muted preload="none" id="firefoxWalk" loop class="walk-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/j1t14o54ihdfqxllhxshg/firefox_walk.mp3?rlkey=153gjxwwjbkiijgr0i9ohf4va&dl=0">
+      <source type="audio/mp3" src="index_data/29208/firefox_walk.mp3">
       <script>
         function haSetActiveMechaMoveSound() {
           document.getElementById("pwAlang").classList.remove("activet");
@@ -2018,7 +2044,7 @@
     </audio>
     <!-- Frestar Walk -->
     <audio muted preload="none" id="firestarWalk" loop class="walk-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/xy8n3b6kwhonlf75va0xq/firestar_walk.mp3?rlkey=83baown4kc69yyzrwykyn6utv&dl=0">
+      <source type="audio/mp3" src="index_data/29208/firestar_walk.mp3">
       <script>
         function iaSetActiveMechaMoveSound() {
           document.getElementById("pwAlang").classList.remove("activet");
@@ -2053,7 +2079,7 @@
     </audio>
     <!-- Flamenco Walk -->
     <audio muted preload="none" id="flamencoWalk" loop class="walk-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/igj5360nuj3f8dx0u5ifg/flamenco_walk.mp3?rlkey=f8qy9qvcawbuwj21tp9d9es5k&dl=0">
+      <source type="audio/mp3" src="index_data/29208/flamenco_walk.mp3">
       <script>
         function jaSetActiveMechaMoveSound() {
           document.getElementById("pwAlang").classList.remove("activet");
@@ -2088,7 +2114,7 @@
     </audio>
     <!-- Gabriel Walk -->
     <audio muted preload="none" id="gabrielWalk" loop class="walk-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/ml5731p72e2ca1uxu228m/gabriel_walk.mp3?rlkey=xjh95q8wiux9ygevmai7szjnj&dl=0">
+      <source type="audio/mp3" src="index_data/29208/gabriel_walk.mp3">
       <script>
         function kaSetActiveMechaMoveSound() {
           document.getElementById("pwAlang").classList.remove("activet");
@@ -2123,7 +2149,7 @@
     </audio>
     <!-- Hotsteel Walk -->
     <audio muted preload="none" id="hotsteelWalk" loop class="walk-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/bac4xnemxfxyqo1r2y4pf/hotsteel_walk.mp3?rlkey=2r56j3m0ptfzxt3atu36lgfu1&dl=0">
+      <source type="audio/mp3" src="index_data/29208/hotsteel_walk.mp3">
       <script>
         function laSetActiveMechaMoveSound() {
           document.getElementById("pwAlang").classList.remove("activet");
@@ -2158,7 +2184,7 @@
     </audio>
     <!-- Hurricane Walk -->
     <audio muted preload="none" id="hurricaneWalk" loop class="walk-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/limxl62t9ph8ffxpzgv17/hurricane_walk.mp3?rlkey=ts2mpeh196u342l94by812dxb&dl=0">
+      <source type="audio/mp3" src="index_data/29208/hurricane_walk.mp3">
       <script>
         function maSetActiveMechaMoveSound() {
           document.getElementById("pwAlang").classList.remove("activet");
@@ -2193,7 +2219,7 @@
     </audio>
     <!-- Jojo Walk -->
     <audio muted preload="none" id="jojoWalk" loop class="walk-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/hasp3p0doap6kd1oorjdg/jojo_walk.mp3?rlkey=d3w3g15mw5f5vsj6ffmh14dmv&dl=0">
+      <source type="audio/mp3" src="index_data/29208/jojo_walk.mp3">
       <script>
         function naSetActiveMechaMoveSound() {
           document.getElementById("pwAlang").classList.remove("activet");
@@ -2228,7 +2254,7 @@
     </audio>
     <!-- Michael Walk -->
     <audio muted preload="none" id="michaelWalk" loop class="walk-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/cvlga4l831c9yyzcu0yyj/michael_walk.mp3?rlkey=ey96dldkcfrw73ic7jzunuc3n&dl=0">
+      <source type="audio/mp3" src="index_data/29208/michael_walk.mp3">
       <script>
         function oaSetActiveMechaMoveSound() {
           document.getElementById("pwAlang").classList.remove("activet");
@@ -2263,7 +2289,7 @@
     </audio>
     <!-- Neutron Walk -->
     <audio muted preload="none" id="neutronWalk" loop class="walk-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/faqy75jag29k0ajzpbfmx/neutron_star_walk.mp3?rlkey=90a0vx9ki44d8qst6ynfr070x&dl=0">
+      <source type="audio/mp3" src="index_data/29208/neutron_star_walk.mp3">
       <script>
         function paSetActiveMechaMoveSound() {
           document.getElementById("pwAlang").classList.remove("activet");
@@ -2298,7 +2324,7 @@
     </audio>
     <!-- Northern Walk -->
     <audio muted preload="none" id="northernWalk" loop class="walk-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/miy5vg3b3nn5naoespux3/northern_knight_walk.mp3?rlkey=310qq85l79smhlil63tsrer1l&dl=0">
+      <source type="audio/mp3" src="index_data/29208/northern_knight_walk.mp3">
       <script>
         function qaSetActiveMechaMoveSound() {
           document.getElementById("pwAlang").classList.remove("activet");
@@ -2333,7 +2359,7 @@
     </audio>
     <!-- Pulsar Walk -->
     <audio muted preload="none" id="pulsarWalk" loop class="walk-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/9uji20tq9s5skqowxdm8v/pulsar_walk.mp3?rlkey=3hosun2cc4tv7angge1o5tl30&dl=0">
+      <source type="audio/mp3" src="index_data/29208/pulsar_walk.mp3">
       <script>
         function raSetActiveMechaMoveSound() {
           document.getElementById("pwAlang").classList.remove("activet");
@@ -2368,7 +2394,7 @@
     </audio>
     <!-- Ranger Walk -->
     <audio muted preload="none" id="rangerWalk" loop class="walk-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/dmsog1u3pq4n7iqryipnz/ranger_walk.mp3?rlkey=uaum1dc3u4z6mhrt7u67c0b8l&dl=0">
+      <source type="audio/mp3" src="index_data/29208/ranger_walk.mp3">
       <script>
         function saSetActiveMechaMoveSound() {
           document.getElementById("pwAlang").classList.remove("activet");
@@ -2403,7 +2429,7 @@
     </audio>
     <!-- Raven Walk -->
     <audio muted preload="none" id="ravenWalk" loop class="walk-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/lf3zd8tfmlv2t0bhykgdn/raven_walk.mp3?rlkey=etpapn3tb57djxqptkeobxvau&dl=0">
+      <source type="audio/mp3" src="index_data/29208/raven_walk.mp3">
       <script>
         function taSetActiveMechaMoveSound() {
           document.getElementById("pwAlang").classList.remove("activet");
@@ -2438,7 +2464,7 @@
     </audio>
     <!-- Skylark Walk -->
     <audio muted preload="none" id="skylarkWalk" loop class="walk-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/bp2lgfuecztibdkfvo26k/skylark_walk.mp3?rlkey=z5z9b2rcqmov36rrdk3tq5pyb&dl=0">
+      <source type="audio/mp3" src="index_data/29208/skylark_walk.mp3">
       <script>
         function uaSetActiveMechaMoveSound() {
           document.getElementById("pwAlang").classList.remove("activet");
@@ -2473,7 +2499,7 @@
     </audio>
     <!-- Snow Walk -->
     <audio muted preload="none" id="snowWalk" loop class="walk-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/s4997mv26jyrkj5wghw6q/snow_mirage_walk.mp3?rlkey=xvgoo8duw2wb0vc9ly3giwxjx&dl=0">
+      <source type="audio/mp3" src="index_data/29208/snow_mirage_walk.mp3">
       <script>
         function vaSetActiveMechaMoveSound() {
           document.getElementById("pwAlang").classList.remove("activet");
@@ -2508,7 +2534,7 @@
     </audio>
     <!-- Trio Walk -->
     <audio muted preload="none" id="trioWalk" loop class="walk-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/hiqd8th2fakptrpyz8x0x/trio_of_enders_walk.mp3?rlkey=nbo9br94257i2c9c1l6hf94q2&dl=0">
+      <source type="audio/mp3" src="index_data/29208/trio_of_enders_walk.mp3">
       <script>
         function waSetActiveMechaMoveSound() {
           document.getElementById("pwAlang").classList.remove("activet");
@@ -2543,7 +2569,7 @@
     </audio>
     <!-- Ventorus Walk -->
     <audio muted preload="none" id="ventorusWalk" loop class="walk-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/60668e3gclb5fznzcefow/ventorus.mp3?rlkey=5gdqw4imrer9es1wij00i2kw7&dl=0">
+      <source type="audio/mp3" src="index_data/29208/ventorus_walk.mp3">
       <script>
         function xaSetActiveMechaMoveSound() {
           document.getElementById("pwAlang").classList.remove("activet");
@@ -2863,7 +2889,7 @@
     </script>
     <!-- Default Click -->
     <audio muted preload="none" id="defaultClickSound">
-      <source src="https://dl.dropbox.com/s/svopyeytte8gv9zp6sm9c/default_press.mp3?rlkey=yvlsoedjg01htnged8bv5y62d&st=jclad46q&dl=0" type="audio/mp3">
+      <source src="index_data/29208/default_press.mp3" type="audio/mp3">
       <script>
         function defaultClickSound() {
           if(document.getElementById("checkBaseVolum").checked === true) {
@@ -2878,7 +2904,7 @@
     </audio>
     <!-- Close Settings -->
     <audio muted preload="none" id="closeSettingsSound">
-      <source src="https://dl.dropbox.com/s/1vus00ozwpa91d2bg4frs/close_settings.mp3?rlkey=dwovvh4yvxldqh656g25cwavz&st=3cmpq9zl&dl=0" type="audio/mp3">
+      <source src="index_data/29208/close_settings.mp3" type="audio/mp3">
       <script>
         function closeSettingsSound() {
           if(document.getElementById("checkBaseVolum").checked === true) {
@@ -2893,7 +2919,7 @@
     </audio>
     <!-- Cancel -->
     <audio muted preload="none" id="cancelSound">
-      <source src="https://dl.dropbox.com/s/hve1v3gyvcw6ymcip00bk/cancel.mp3?rlkey=b55i84ezoi3nggm6rujcloj1m&st=iix5e1pa&dl=0" type="audio/mp3">
+      <source src="index_data/29208/cancel.mp3" type="audio/mp3">
       <script>
         function cancelSound() {
           if(document.getElementById("checkBaseVolum").checked === true) {
@@ -2908,7 +2934,7 @@
     </audio>
     <!-- Open Settings -->
     <audio muted preload="none" id="openSettingsSound">
-      <source src="https://dl.dropbox.com/s/8yzytaj7b3yykfwxu5ooo/open_settings.mp3?rlkey=69h53lobltko57hr9nerhugmp&st=q0q7ee33&dl=0" type="audio/mp3">
+      <source src="index_data/29208/open_settings.mp3" type="audio/mp3">
       <script>
         function openSettingsSound() {
           if(document.getElementById("checkBaseVolum").checked === true) {
@@ -2923,7 +2949,7 @@
     </audio>
     <!-- Tab Select & Select Buttons -->
     <audio muted preload="none" id="selectionSound">
-      <source src="https://dl.dropbox.com/s/ga4l5jo0qxvjzqq5yqxfw/tab_select.mp3?rlkey=blijfmyi6xqk2rw2thgdopaeh&st=yqr75fha&dl=0" type="audio/mp3">
+      <source src="index_data/29208/tab_select.mp3" type="audio/mp3">
       <script>
         function selectionSound() {
           if(document.getElementById("checkBaseVolum").checked === true) {
@@ -2938,7 +2964,7 @@
     </audio>
     <!-- Background Music 1 -->
     <audio muted preload="none" id="musicAbgSound" loop class="music-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/g7pasyqilqqpc0lpumuj6/Stable-and-Upbeat.mp3?rlkey=juxgaqcr0gxz9wy36br4f87qd&st=qc69pcxq&dl=0">
+      <source type="audio/mp3" src="index_data/29208/stable_and_upbeat.mp3">
       <script>
         function aaSetActiveMusic() {
           localStorage.setItem("musicbg", "sauMusic");
@@ -2993,7 +3019,7 @@
     </audio>
     <!-- Background Music 2 -->
     <audio muted preload="none" id="musicBbgSound" loop class="music-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/cose5wq3qpyzw889q9nfs/Acceleration-Folding.mp3?rlkey=syl0us698lfh0h459l215fx08&st=yka4hflh&dl=0">
+      <source type="audio/mp3" src="index_data/29208/acceleration_folding.mp3">
       <script>
         function baSetActiveMusic() {
           localStorage.setItem("musicbg", "afMusic");
@@ -3048,7 +3074,7 @@
     </audio>
     <!-- Background Music 3 -->
     <audio muted preload="none" id="musicCbgSound" loop class="music-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/qvwruopm8h3f7m5gfqd9b/Alice-the-Dreamer-Accompaniment.mp3?rlkey=078jr89mkfuv1h97jovqxm06g&st=d69b4463&dl=0">
+      <source type="audio/mp3" src="index_data/29208/alice_the_dreamer_accompaniment.mp3">
       <script>
         function caSetActiveMusic() {
           localStorage.setItem("musicbg", "atdaMusic");
@@ -3103,7 +3129,7 @@
     </audio>
     <!-- Background Music 4 -->
     <audio muted preload="none" id="musicDbgSound" loop class="music-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/gunw730cy1nvx2crj48x1/Alice-the-Dreamer.mp3?rlkey=ig7vielg4suw3j6rz58htcvt1&st=iomk2u90&dl=0">
+      <source type="audio/mp3" src="index_data/29208/alice_the_dreamer.mp3">
       <script>
         function daSetActiveMusic() {
           localStorage.setItem("musicbg", "atdMusic");
@@ -3158,7 +3184,7 @@
     </audio>
     <!-- Background Music 5 -->
     <audio muted preload="none" id="musicEbgSound" loop class="music-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/2ej0rn0262mltw3792bfe/All-or-Nothing-Ending-Version.mp3?rlkey=s3yqborgxpvuan2kfbdb3mime&st=gv4ipcx5&dl=0">
+      <source type="audio/mp3" src="index_data/29208/all_or_nothing_ending_version.mp3">
       <script>
         function eaSetActiveMusic() {
           localStorage.setItem("musicbg", "aonevMusic");
@@ -3213,7 +3239,7 @@
     </audio>
     <!-- Background Music 6 -->
     <audio muted preload="none" id="musicFbgSound" loop class="music-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/pz1w26jpu02itwi0oie0l/All-or-Nothing.mp3?rlkey=lg2zj7tt0o78cwfajqwe5tp5f&st=jitwalvr&dl=0">
+      <source type="audio/mp3" src="index_data/29208/all_or_nothing.mp3">
       <script>
         function faSetActiveMusic() {
           localStorage.setItem("musicbg", "aonMusic");
@@ -3268,7 +3294,7 @@
     </audio>
     <!-- Background Music 7 -->
     <audio muted preload="none" id="musicGbgSound" loop class="music-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/99dor97il47qxpupbgput/Backtracking-Journey.mp3?rlkey=i5an2l9hl3qp5as94ii5p3fsz&st=b3hmmq0b&dl=0">
+      <source type="audio/mp3" src="index_data/29208/backtracking_journey.mp3">
       <script>
         function gaSetActiveMusic() {
           localStorage.setItem("musicbg", "bjMusic");
@@ -3323,7 +3349,7 @@
     </audio>
     <!-- Background Music 8 -->
     <audio muted preload="none" id="musicHbgSound" loop class="music-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/hc738dy86th7e2f15t3ol/Before-the-Storm.mp3?rlkey=53mpaza5f28y51rme8nzev3hi&st=bmpfrfou&dl=0">
+      <source type="audio/mp3" src="index_data/29208/before_the_storm.mp3">
       <script>
         function haSetActiveMusic() {
           localStorage.setItem("musicbg", "btsMusic");
@@ -3378,7 +3404,7 @@
     </audio>
     <!-- Background Music 9 -->
     <audio muted preload="none" id="musicIbgSound" loop class="music-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/hwfys5d5nhqm778tlv2e7/Disillusionment-Melody.mp3?rlkey=m3ys9f33fwz1fe9ha1l47zpjd&st=qxtnywzd&dl=0">
+      <source type="audio/mp3" src="index_data/29208/disillusionment_melody.mp3">
       <script>
         function iaSetActiveMusic() {
           localStorage.setItem("musicbg", "dmMusic");
@@ -3433,7 +3459,7 @@
     </audio>
     <!-- Background Music 10 -->
     <audio muted preload="none" id="musicJbgSound" loop class="music-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/zk4w0d38bk87jgkmjc1uv/Explosive-Halo.mp3?rlkey=tuxd5dokuc7a5r5cnwjpoaey9&st=spl84tp2&dl=0">
+      <source type="audio/mp3" src="index_data/29208/explosive_halo.mp3">
       <script>
         function jaSetActiveMusic() {
           localStorage.setItem("musicbg", "ehMusic");
@@ -3488,7 +3514,7 @@
     </audio>
     <!-- Background Music 11 -->
     <audio muted preload="none" id="musicKbgSound" loop class="music-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/vdvorrpmui0s3m05mjoyr/Firestar.mp3?rlkey=x64yb55j98unave37q0ivf641&st=c493qbz2&dl=0">
+      <source type="audio/mp3" src="index_data/29208/firestar.mp3">
       <script>
         function kaSetActiveMusic() {
           localStorage.setItem("musicbg", "fMusic");
@@ -3543,7 +3569,7 @@
     </audio>
     <!-- Background Music 12 -->
     <audio muted preload="none" id="musicLbgSound" loop class="music-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/q3wnwpqmb9ee5d0oqwr2t/Future-Bounce.mp3?rlkey=3lu9a0grz234814mmtewkqdy6&st=jfy58brx&dl=0">
+      <source type="audio/mp3" src="index_data/29208/future_bounce.mp3">
       <script>
         function laSetActiveMusic() {
           localStorage.setItem("musicbg", "fbMusic");
@@ -3598,7 +3624,7 @@
     </audio>
     <!-- Background Music 13 -->
     <audio muted preload="none" id="musicMbgSound" loop class="music-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/nmpsaa5s0j7herbwfkaz1/Interlude-Mojito.mp3?rlkey=4q0q5ki2x449y01i1hk21wfey&st=u1wp2fus&dl=0">
+      <source type="audio/mp3" src="index_data/29208/interlude_mojito.mp3">
       <script>
         function maSetActiveMusic() {
           localStorage.setItem("musicbg", "imMusic");
@@ -3653,7 +3679,7 @@
     </audio>
     <!-- Background Music 14 -->
     <audio muted preload="none" id="musicNbgSound" loop class="music-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/hsyotgdvh8f7nkul233v9/Joyful-Passion.mp3?rlkey=bdi7suk3x637r0lpmfcgpoquh&st=wjw1q4p1&dl=0">
+      <source type="audio/mp3" src="index_data/29208/joyful_passion.mp3">
       <script>
         function naSetActiveMusic() {
           localStorage.setItem("musicbg", "jpMusic");
@@ -3708,7 +3734,7 @@
     </audio>
     <!-- Background Music 15 -->
     <audio muted preload="none" id="musicObgSound" loop class="music-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/9q0hq2jhkk7899d3fyjpd/Lunar.mp3?rlkey=3h1hctzuoaqdmb0zvzyh8a605&st=k26bnjc5&dl=0">
+      <source type="audio/mp3" src="index_data/29208/lunar.mp3">
       <script>
         function oaSetActiveMusic() {
           localStorage.setItem("musicbg", "lMusic");
@@ -3763,7 +3789,7 @@
     </audio>
     <!-- Background Music 16 -->
     <audio muted preload="none" id="musicPbgSound" loop class="music-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/whuhogpicjq5fss2col9m/Nyan-Nyan.mp3?rlkey=ire7erc854e0012pewnnz48cj&st=yoh3co4w&dl=0">
+      <source type="audio/mp3" src="index_data/29208/nyan_nyan.mp3">
       <script>
         function paSetActiveMusic() {
           localStorage.setItem("musicbg", "nnMusic");
@@ -3818,7 +3844,7 @@
     </audio>
     <!-- Background Music 17 -->
     <audio muted preload="none" id="musicQbgSound" loop class="music-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/h83idz40arsocctdud4ts/Prelude-of-War.mp3?rlkey=4dcfu4kbjrzi2w1azj5lv1j58&st=hhhs79au&dl=0">
+      <source type="audio/mp3" src="index_data/29208/prelude_of_war.mp3">
       <script>
         function qaSetActiveMusic() {
           localStorage.setItem("musicbg", "powMusic");
@@ -3873,7 +3899,7 @@
     </audio>
     <!-- Background Music 18 -->
     <audio muted preload="none" id="musicRbgSound" loop class="music-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/pdqjnih6tkradu2v2qm2a/Preparation-Break.mp3?rlkey=l7tgwrji56h3k33jr05jbaqkg&st=y765xyl5&dl=0">
+      <source type="audio/mp3" src="index_data/29208/preparation_break.mp3">
       <script>
         function raSetActiveMusic() {
           localStorage.setItem("musicbg", "pbMusic");
@@ -3928,7 +3954,7 @@
     </audio>
     <!-- Background Music 19 -->
     <audio muted preload="none" id="musicSbgSound" loop class="music-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/0ty0imp8hqyza1weop1i5/SMC-Memory-2022.mp3?rlkey=i9zttfl2lgv45xon5vzjltqte&st=68xfv2qb&dl=0">
+      <source type="audio/mp3" src="index_data/29208/smc_memory_2022.mp3">
       <script>
         function saSetActiveMusic() {
           localStorage.setItem("musicbg", "smcm22Music");
@@ -3983,7 +4009,7 @@
     </audio>
     <!-- Background Music 20 -->
     <audio muted preload="none" id="musicTbgSound" loop class="music-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/o88e36n51fixy484zlrlp/SMC-Memory-2023.mp3?rlkey=dwc2ns5ktkjz476ne3q9cwjmq&st=9jn6puiu&dl=0">
+      <source type="audio/mp3" src="index_data/29208/smc_memory_2023.mp3">
       <script>
         function taSetActiveMusic() {
           localStorage.setItem("musicbg", "smcm23Music");
@@ -4038,7 +4064,7 @@
     </audio>
     <!-- Background Music 21 -->
     <audio muted preload="none" id="musicUbgSound" loop class="music-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/2fkht444bfxmp3t3lolc6/Throbbing-Beat.mp3?rlkey=a9xw1oco4aqba1hjhwuelmdsg&st=g64hqo91&dl=0">
+      <source type="audio/mp3" src="index_data/29208/throbbing_beat.mp3">
       <script>
         function uaSetActiveMusic() {
           localStorage.setItem("musicbg", "tbMusic");
@@ -4093,7 +4119,7 @@
     </audio>
     <!-- Background Music 22 -->
     <audio muted preload="none" id="musicVbgSound" loop class="music-background">
-      <source type="audio/mp3" src="https://dl.dropbox.com/s/qf1i4afair5g7at95thgh/Ultra-Beast-Force.mp3?rlkey=764s4he8lkv2b6aygmbs0aiku&st=fegbilfl&dl=0">
+      <source type="audio/mp3" src="index_data/29208/ultra_beast_force.mp3">
       <script>
         function vaSetActiveMusic() {
           localStorage.setItem("musicbg", "ubfMusic");
@@ -5482,7 +5508,6 @@
           clearInterval(setIntervalId);
           checkbox.classList.add("pauser");
           document.getElementById("btn000").classList.add("pauser");
-          document.getElementById("playerWalk").pause();
           document.getElementById("alert").style.display = "block";
           alertcancel.value = "...";
           alertcancel.style.display = "none";
@@ -5542,11 +5567,12 @@
               document.getElementById("playerWalk").playbackRate = 1.0;
             }
             document.getElementById("alert").style.display = "none";
-            document.getElementById("playerWalk").play();
             checkbox.classList.remove("pauser");
             document.getElementById("btn000").classList.remove("pauser");
+            playActiveMoveSound();
           },4000);
         }
+        menuPauseWalkSound();
         defaultClickSound();
       }
     </script>
@@ -6487,6 +6513,21 @@
         window.open('https://m.me/100037328776594?hash=AbbiIv3lRHEaooAd&source=qr_link_share', '_blank');
       }
     </script>
+    <script>
+      function downloadAlertSystem() {
+        var host = "https://";
+        var domine = "github.com/";
+        var publisher = "ArturVesta/";
+        var space = "mnts.snakegame.smc/";
+        var fileType = "archive/";
+        var refs = "refs/";
+        var heads = "heads/";
+        var fileName = "main";
+        var fileFormat = ".zip";
+        window.open(host + domine + publisher + space + fileType + refs + heads + fileName + fileFormat, '_blank');
+      }
+    </script>
+    
     
     <!-- Adminestrative -->
   </body>
