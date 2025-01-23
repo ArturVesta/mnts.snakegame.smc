@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>...</title>
-    <script>var version = "0.3.7";</script>
+    <script>var version = "0.3.8";</script>
     <style>
       :root {/* Default */
         --black: #000000ff;
@@ -1142,6 +1142,7 @@
         height: 50px;
         filter: drop-shadow(0px 0px 5px var(--black)) grayscale(1);
         display: block;
+        cursor: pointer;
         transition: 0.6s;
         -webkit-transition: 0.6s;
         -moz-transition: 0.6s;
@@ -5839,6 +5840,7 @@
         const a002_all = document.getElementsByClassName('coming-soon');
         const a003_all = document.getElementsByClassName('moresettingscontent');
         const a004_all = document.getElementsByClassName('totopelement');
+        const a005_all = document.getElementsByClassName('serviceLang');
         if(localStorage.getItem("lang") === "en") {
           a000.innerHTML = "Settings";
           a001.innerHTML = "About";
@@ -5909,6 +5911,9 @@
           };
           for (let i = 0; i < a004_all.length; i++) {
             a004_all[i].textContent = 'To start';
+          };
+          for (let i = 0; i < a005_all.length; i++) {
+            a005_all[i].textContent = 'Services:';
           }
           document.title = "Snake Mecha Collector";
         }else
@@ -5982,8 +5987,11 @@
           };
           for (let i = 0; i < a004_all.length; i++) {
             a004_all[i].textContent = 'К началу';
+          };
+          for (let i = 0; i < a005_all.length; i++) {
+            a005_all[i].textContent = 'Услуги:';
           }
-          document.title = "Сборщик Змея Меха";
+          document.title = "Змея Меха Сборщик";
         }
         a054.innerHTML = "Visual Studio Code";
       };
