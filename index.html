@@ -3,7 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="background_color" content="#ffffff">
     <title>...</title>
+    <link rel="canonical" href="https://arturvesta.github.io/mnts.snakegame.smc/">
+    <link rel="manifest" href="/mnts.snakegame.smc/manifest.webmanifest">
     <link rel="stylesheet" href="index_data/styles.css">
   </head>
   <body>
@@ -285,7 +289,7 @@
         <img src="index_data/29172/origo_map.jpg" class="loading-assets">
         <img src="index_data/29172/game_over.png" class="loading-assets">
         <img src="index_data/29172/menu.png" class="loading-assets">
-        <img src="index_data/29172/alert.jpg" class="loading-assets">
+        <img src="index_data/29172/alert.png" class="loading-assets">
         <img src="index_data/29172/new_modal_content.png" class="loading-assets">
         <img src="index_data/29172/button_true.png" class="loading-assets">
         <img src="index_data/29172/first_modal_bg.jpg" class="loading-assets">
@@ -641,6 +645,11 @@
     <script src="index_data/scripts.js"></script>
     <script src="index_data/system.js" defer></script>
     <script src="index_data/scripts_2.js"></script>
+    <script>
+      if(navigator.serviceWorker) {
+        navigator.serviceWorker.register('/mnts.snakegame.smc/sw.js',{scope: '/mnts.snakegame.smc/'})
+      }
+    </script>
     <!-- Adminestrative -->
   </body>
 </html>
