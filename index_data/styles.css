@@ -11,7 +11,7 @@
   --gray: #7c8089ff;
   /* Imageres */
   /* Foods */
-  --meow-token: url('29172/Meaw_token.png');
+  --meaw-token: url('29172/meaw_token.png');
   --gold: url('29172/gold.png');
   --alpha-coin: url('29172/alpha_coin.png');
   --crystal: url('29172/crystal.png');
@@ -25,7 +25,7 @@
   --origo: url('29172/origo_map.jpg');
   --modal: url('29172/game_over.png');
   --menu: url('29172/menu.png');
-  --alert: url('29172/alert.jpg');
+  --alert: url('29172/alert.png');
   --first: url('29172/new_modal_content.png');
   --button-true: url('29172/button_true.png');
   --first-back: url('29172/first_modal_bg.jpg');
@@ -38,7 +38,7 @@
   --menu-ru: url('29172/nav_menu_ru.png');
   --left: url('29172/btn_control_lt.png');
   --left-hover: url('29172/btn_control_lt_hover.png');
-  --down: url('29172/btn_control_lt_hover.png');
+  --down: url('29172/btn_control_dn.png');
   --down-hover: url('29172/btn_control_dn_hover.png');
   --right: url('29172/btn_control_rt.png');
   --right-hover: url('29172/btn_control_rt_hover.png');
@@ -163,7 +163,7 @@ hr {
   background-size: 100% 100%;
 }
 .play-board .food.meow {
-  background-image: var(--meow-token);
+  background-image: var(--meaw-token);
 }
 .play-board .food.gold {
   background-image: var(--gold);
@@ -273,8 +273,8 @@ hr {
 }
 .alert .alert-content {
   width: 100%;
-  height: 334px;
-  padding-top: 30px;
+  height: 390px;
+  padding-top: 70px;
   right: 0;
   left: 0;
   background-image: var(--alert);
@@ -362,7 +362,7 @@ hr {
 }
 .alert-btn-container {
   position: absolute;
-  bottom: 40px;
+  bottom: 95px;
   right: 10%;
   display: flex;
 }
@@ -629,8 +629,8 @@ hr {
   text-align: center;
   cursor: pointer;
   background-image: var(--tabs-menu);
-  background-size: 100% auto;
-  background-position: 111px 0;
+  background-size: 117% 170%;
+  background-position: 111px -1px;
   background-repeat: no-repeat;
   transition: 0.6s;
   -webkit-transition: 0.6s;
@@ -638,7 +638,7 @@ hr {
   -o-transition: 0.6s;
 }
 .tab .tablinks.active {
-  background-position: 0 0%;
+  background-position: -5px -1px;
 }
 .tablinks:first-child {
   margin-top: 0;
@@ -804,7 +804,7 @@ hr {
 }
 .select-content #meowItemImage,
 #meowIcon {
-  background-image: var(--meow-token);
+  background-image: var(--meaw-token);
 }
 .select-content #goldItemImage,
 #goldIcon {
@@ -1300,6 +1300,9 @@ hr.acc {
     margin: 5px 0px;
     width: 70px;
     font-size: 12px;
+  }
+  .tab .tablinks.active {
+    background-position: -5px -1px;
   }
   .select-content .select {
     margin: 5px 0px;
