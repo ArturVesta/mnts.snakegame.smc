@@ -71,13 +71,14 @@
   --button-long: url('29172/long_button.png');
   --button-long-hover: url('29172/long_button_hover.png');
   --play: url('29172/btn_function_py.png');
-  --google-translate: url('./Google_en.png');
-  --google-perevodchick: url('./Google_ru.png');
+  --google-translate: url('../Google_en.png');
+  --google-perevodchick: url('../Google_ru.png');
   --icons: url('29172/icon_bg.png');
   --exit: url('29172/exit.png');
   --exit-hover: url('29172/exit_hover.png');
-  --messenger: url('./messenger.webp');
+  --messenger: url('../messenger.webp');
   --dl-windows: url('29172/download_computer.png');
+  --dl-android: url('29172/download_android.png');
 }
 * {
   margin: 0;
@@ -1212,7 +1213,8 @@ hr.acc {
 #contactUsMessenger:hover {
   filter: drop-shadow(0px 0px 5px var(--filter-shadow)) grayscale(0);
 }
-#downloadNoAutoUpdate {
+#downloadNoAutoUpdate,
+#downloadNoAutoUpdate2 {
   width: 160px;
   height: 37px;
   margin: auto;
@@ -1233,7 +1235,11 @@ hr.acc {
 .windows-dl {
   background-image: var(--dl-windows);
 }
-#downloadNoAutoUpdate:hover {
+.android-dl {
+  background-image: var(--dl-android);
+}
+#downloadNoAutoUpdate:hover,
+#downloadNoAutoUpdate2:hover {
   filter: grayscale(0);
   transform: scale(1.02);
 }
