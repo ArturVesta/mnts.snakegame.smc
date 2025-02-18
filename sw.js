@@ -1,6 +1,6 @@
 var GHPATH = '/mnts.snakegame.smc';
 var APP_PREFIX = 'gppwa_';
-var VERSION = 'version_02';
+var VERSION = 'version_03';
 var URLS = [
   `${GHPATH}/`,
   `${GHPATH}/index_data`,
@@ -83,6 +83,7 @@ var URLS = [
   `${GHPATH}/index_data/29172/crystal.png`,
   `${GHPATH}/index_data/29172/cube_bg.png`,
   `${GHPATH}/index_data/29172/download.png`,
+  `${GHPATH}/index_data/29172/download_android.png`,
   `${GHPATH}/index_data/29172/download_computer.png`,
   `${GHPATH}/index_data/29172/exit.png`,
   `${GHPATH}/index_data/29172/exit_hover.png`,
