@@ -1,9 +1,3 @@
-<style>
-  :root {
-    --mnts-color-a: #ffffffff;
-  }
-
-</style>
 <h3><a href="https://arturvesta.github.io/mnts.snakegame.smc/">Open the game</a></h3>
 There is a classic Snake Game but with SMC styles.<br>
 I MNTS make this minigame with love SMC by coding in 30minutes up to 1-2 hourse through <a href="https://code.visualstudio.com">Visual Studio Code</a>.
@@ -16,7 +10,7 @@ Supports keyboard buttons {<br>
 }
 <hr>
 Foods<br>
-<div style="border:solid 2px var(--mnts-color-a);">
+<div style="border:solid 2px var(border-color: var(--controlKnob-borderColor-rest);">
   <img src="https://github.com/user-attachments/assets/4d76df2e-292d-453a-bc5f-59282faddfec" style="width: 55px; height: 55px">Alpha Coin<br>
 </div>
   <img src="https://github.com/user-attachments/assets/1a36c0f5-6a01-4b7b-bf10-773755f73540" style="width: 55px; height: 55px">Crystal<br>
