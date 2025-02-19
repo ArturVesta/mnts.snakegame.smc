@@ -10,7 +10,7 @@ Supports keyboard buttons {<br>
 }
 <hr>
 Foods<br>
-<div style="border: solid 2px var(--controlKnob-borderColor-rest);">
+<div style="border: solid 2px #272727ff;">
   <img src="https://github.com/user-attachments/assets/4d76df2e-292d-453a-bc5f-59282faddfec" style="width: 55px; height: 55px">Alpha Coin<br>
 </div>
   <img src="https://github.com/user-attachments/assets/1a36c0f5-6a01-4b7b-bf10-773755f73540" style="width: 55px; height: 55px">Crystal<br>
