@@ -41,6 +41,7 @@ Languages<br>
 <h4>Tell us what language you want that we add to game</h4>
 <hr>
   Thanks: MNTS, NetEase, Online Converter, Xiaomi Screen Recorder, Microsoft Visual Studio Code, Google Translate;
+
 <hr>
 Game is downlodable {<br>
   For Android it via browser;<br>
@@ -51,3 +52,8 @@ Game is downlodable {<br>
 This site is with copyrights!<br>
 Do not distribute any of content out share the game link to friends or peoples!<br>
 and this site is free usage;
+<hr>
+<h4>Contact to us</h4>
+<a href="https://m.me/100037328776594?hash=AbbiIv3lRHEaooAd&source=qr_link_share">
+  <img src="https://github.com/user-attachments/assets/112545f0-3c95-4ca3-8124-983d1f9fc38a">
+</a>
