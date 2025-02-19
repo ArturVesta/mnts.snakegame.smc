@@ -8,7 +8,7 @@ Supports keyboard buttons {
 }
 <hr>
 Foods
-![alpha_coin](https://github.com/user-attachments/assets/4d76df2e-292d-453a-bc5f-59282faddfec)
+<img src="https://github.com/user-attachments/assets/4d76df2e-292d-453a-bc5f-59282faddfec" style="width: 55px; height: 55px">
 ![crystal](https://github.com/user-attachments/assets/1a36c0f5-6a01-4b7b-bf10-773755f73540)
 ![gold](https://github.com/user-attachments/assets/34e776ca-fc0e-4df9-ad50-2828dea10a57)
 ![meaw_token](https://github.com/user-attachments/assets/082d5238-6750-49c5-baaf-7aac4fd8e667)
