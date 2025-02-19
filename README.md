@@ -57,3 +57,7 @@ and this site is free usage;
 <a href="https://m.me/100037328776594?hash=AbbiIv3lRHEaooAd&source=qr_link_share">
   <img src="https://github.com/user-attachments/assets/112545f0-3c95-4ca3-8124-983d1f9fc38a" style="width: 55px; height: 55px">
 </a>
+<a href="https://discord.gg/efKSzt64">
+  <img src="https://github.com/user-attachments/assets/3d2bf073-30e8-4ab2-bfd0-3425b8a6ed36">
+</a>
+
