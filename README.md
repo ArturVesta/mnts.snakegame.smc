@@ -17,10 +17,10 @@ Foods<br>
 <img src="https://github.com/user-attachments/assets/aa2cdad2-dbe2-4fb5-a24a-0caf91753a6f" style="width: 55px; height: 55px">Ticket Chromatic<br>
 <img src="https://github.com/user-attachments/assets/465d8e53-34a1-4ecd-bfe2-2ec5f9d1483d" style="width: 55px; height: 55px">Ticket Premium<br>
 <hr>
-Snake
+Snake<br>
 Player marks 1-3
 <hr>
-Boards
+Boards<br>
 <img src="https://github.com/user-attachments/assets/de12d80e-e01b-4075-8ce5-93f9d20e8eba" style="width: 55px; height: 55px">Alpha City<br>
 <img src="https://github.com/user-attachments/assets/90530eac-e8d0-4606-b74e-996c110a8016" style="width: 55px; height: 55px">Origo Island<br>
 <h4>More in progress</h4>
