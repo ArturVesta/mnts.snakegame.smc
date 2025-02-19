@@ -16,10 +16,12 @@ Foods<br>
   <img src="https://github.com/user-attachments/assets/082d5238-6750-49c5-baaf-7aac4fd8e667" style="width: 55px; height: 55px">Meaw Token<br>
   <img src="https://github.com/user-attachments/assets/fe73a353-2146-4f9f-b29f-44793a88ece0" style="width: 55px; height: 55px">Ticket<br>
   <img src="https://github.com/user-attachments/assets/aa2cdad2-dbe2-4fb5-a24a-0caf91753a6f" style="width: 55px; height: 55px">Ticket Chromatic<br>
-  <img src="https://github.com/user-attachments/assets/465d8e53-34a1-4ecd-bfe2-2ec5f9d1483d" style="width: 55px; height: 55px">Ticket Premium<br>
+  <img src="https://github.com/user-attachments/assets/465d8e53-34a1-4ecd-bfe2-2ec5f9d1483d" style="width: 55px; height: 55px">Ticket Premium
+<h4>More in progress</h4>
 <hr>
 Snake<br>
 Player marks 1-3
+<h4>More in progress</h4>
 <hr>
 Boards<br>
 <img src="https://github.com/user-attachments/assets/de12d80e-e01b-4075-8ce5-93f9d20e8eba" style="width: 55px; height: 55px">Alpha City<br>
@@ -31,7 +33,7 @@ Walks sounds<br>
 Interface sounds<br>
 Background music<br>
 ! Recorded by Screen Recorder and converted to MP3
-<h4>Also more in progress</h4>
+<h4>More in progress</h4>
 <hr>
 Languages<br>
   English: Google Translate;<br>
