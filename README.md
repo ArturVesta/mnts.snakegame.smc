@@ -1,11 +1,11 @@
-There is a classic Snake Game but with SMC styles.
+There is a classic Snake Game but with SMC styles.<br>
 I MNTS make this minigame with love SMC by coding in 30minutes up to 1-2 hourse through <a href="https://code.visualstudio.com">Visual Studio Code</a>.
 <hr>
-Supports keyboard buttons {
-  "ESC": "Open the Menu";
-  "SPACE": "Pause the game";
-  "WASD": "Way to walk";
-  "UP,LEFT,BOTTOM,RIGHT": "Way to walk"; 
+Supports keyboard buttons {<br>
+  "ESC": "Open the Menu";<br>
+  "SPACE": "Pause the game";<br>
+  "WASD": "Way to walk";<br>
+  "UP,LEFT,BOTTOM,RIGHT": "Way to walk";<br>
 }
 <hr>
 Foods<br>
@@ -25,9 +25,10 @@ Boards<br>
 <img src="https://github.com/user-attachments/assets/90530eac-e8d0-4606-b74e-996c110a8016" style="width: 55px; height: 55px">Origo Island<br>
 <h4>More in progress</h4>
 <hr>
-Game is downlodable {
-  For Android it via browser;
-  For Windows is ZIP file [With batch files for generate lnk WebShortcut (Default: if desktop folder inside "User folder") and (OneDrive: if desktop fo folder inside OneDrive where also inside "User folder)].
+Game is downlodable {<br>
+  For Android it via browser;<br>
+  For Windows is ZIP file [With batch files for generate lnk WebShortcut (Default: if desktop folder inside "User folder") and (OneDrive: if desktop fo folder inside OneDrive where also inside "User folder)].<br>
 }
 <hr>
-[!]This site is with copyrights!
+[!]This site is with copyrights!<br>
+and free usage
