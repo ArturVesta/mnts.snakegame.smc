@@ -45,7 +45,7 @@ Game is downlodable {<br>
   For Windows is ZIP file [With batch files for generate lnk WebShortcut (Default: if desktop folder inside "User folder") and (OneDrive: if desktop fo folder inside OneDrive where also inside "User folder)].<br>
 }
 <hr>
-<img src="[https://github.com/user-attachments/assets/90530eac-e8d0-4606-b74e-996c110a8016](https://github.com/user-attachments/assets/9fc9ef63-7696-4ee0-9cb1-be625d87cf9b)" style="width: 55px; height: 55px">
+<img src="https://github.com/user-attachments/assets/9fc9ef63-7696-4ee0-9cb1-be625d87cf9b" style="width: 55px; height: 55px">
 This site is with copyrights!<br>
-Do not distribute any of content!<br>
+Do not distribute any of content out share to friends or peoples!<br>
 and this site is free usage;
