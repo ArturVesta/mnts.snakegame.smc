@@ -55,5 +55,5 @@ and this site is free usage;
 <hr>
 <h4>Contact to us</h4>
 <a href="https://m.me/100037328776594?hash=AbbiIv3lRHEaooAd&source=qr_link_share">
-  <img src="https://github.com/user-attachments/assets/112545f0-3c95-4ca3-8124-983d1f9fc38a">
+  <img src="https://github.com/user-attachments/assets/112545f0-3c95-4ca3-8124-983d1f9fc38a" style="width: 55px; height: 55px">
 </a>
