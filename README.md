@@ -10,7 +10,7 @@ Supports keyboard buttons {<br>
 }
 <hr>
 Foods<br>
-  <img src="https://github.com/user-attachments/assets/4d76df2e-292d-453a-bc5f-59282faddfec" style="width: 55px; height: 55px" ondragstart="return false;">Alpha Coin<br>
+  <img src="https://github.com/user-attachments/assets/4d76df2e-292d-453a-bc5f-59282faddfec" style="width: 55px; height: 55px">Alpha Coin<br>
   <img src="https://github.com/user-attachments/assets/1a36c0f5-6a01-4b7b-bf10-773755f73540" style="width: 55px; height: 55px">Crystal<br>
   <img src="https://github.com/user-attachments/assets/34e776ca-fc0e-4df9-ad50-2828dea10a57" style="width: 55px; height: 55px">Gold<br>
   <img src="https://github.com/user-attachments/assets/082d5238-6750-49c5-baaf-7aac4fd8e667" style="width: 55px; height: 55px">Meaw Token<br>
@@ -38,12 +38,14 @@ Languages<br>
   Russian: By my memory;<br>
 <h4>Tell us what language you want that we add to game</h4>
 <hr>
-  Thanks: MNTS, NetEase, Online Converter, Xiaomi Screen Recorder, Microsoft Visual Studio Code;
+  Thanks: MNTS, NetEase, Online Converter, Xiaomi Screen Recorder, Microsoft Visual Studio Code, Google Translate;
 <hr>
 Game is downlodable {<br>
   For Android it via browser;<br>
   For Windows is ZIP file [With batch files for generate lnk WebShortcut (Default: if desktop folder inside "User folder") and (OneDrive: if desktop fo folder inside OneDrive where also inside "User folder)].<br>
 }
 <hr>
-[!]This site is with copyrights!<br>
-and free usage
+<img src="[https://github.com/user-attachments/assets/90530eac-e8d0-4606-b74e-996c110a8016](https://github.com/user-attachments/assets/9fc9ef63-7696-4ee0-9cb1-be625d87cf9b)" style="width: 55px; height: 55px">
+This site is with copyrights!<br>
+Do not distribute any of content!<br>
+and this site is free usage;
