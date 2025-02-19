@@ -10,7 +10,12 @@ Supports keyboard buttons {<br>
 }
 <hr>
 Foods<br>
-<div style="position:relative">
+<div dir="auto" style="
+    position: relative;
+    background: black;
+    border: solid 2px var(--borderColor-neutral-emphasis);
+    margin: 5px 0;
+">
   <img src="https://github.com/user-attachments/assets/4d76df2e-292d-453a-bc5f-59282faddfec" style="width: 55px; height: 55px">Alpha Coin
   <div style="position:absolute;top:0;left:0;background:#ff0000;"></div>
 </div>
