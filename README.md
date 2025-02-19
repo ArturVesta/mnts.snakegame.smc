@@ -12,7 +12,7 @@ Supports keyboard buttons {<br>
 Foods<br>
 <div style="position:relative">
   <img src="https://github.com/user-attachments/assets/4d76df2e-292d-453a-bc5f-59282faddfec" style="width: 55px; height: 55px">Alpha Coin
-  <div style="position:absolute;top:0;left:0;background:#ff000055;"></div>
+  <div style="position:absolute;top:0;left:0;background:#ff0000;"></div>
 </div>
   <img src="https://github.com/user-attachments/assets/1a36c0f5-6a01-4b7b-bf10-773755f73540" style="width: 55px; height: 55px">Crystal<br>
   <img src="https://github.com/user-attachments/assets/34e776ca-fc0e-4df9-ad50-2828dea10a57" style="width: 55px; height: 55px">Gold<br>
