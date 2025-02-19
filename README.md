@@ -47,5 +47,5 @@ Game is downlodable {<br>
 <hr>
 <img src="https://github.com/user-attachments/assets/9fc9ef63-7696-4ee0-9cb1-be625d87cf9b" style="width: 55px; height: 55px">
 This site is with copyrights!<br>
-Do not distribute any of content out share to friends or peoples!<br>
+Do not distribute any of content out share the game link to friends or peoples!<br>
 and this site is free usage;
