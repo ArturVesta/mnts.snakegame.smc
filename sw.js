@@ -1,6 +1,6 @@
 var GHPATH = '/mnts.snakegame.smc';
 var APP_PREFIX = 'gppwa_';
-var VERSION = 'version_08';
+var VERSION = 'version_09';
 var URLS = [
   `${GHPATH}/`,
   `${GHPATH}/index_data`,
