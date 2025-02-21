@@ -74,7 +74,10 @@ function pauseGame() {
   menuPauseWalkSound();
   defaultClickSound();
 };
-window.addEventListener('load', stopLoading);
+window.addEventListener('load', function() {
+  stopLoading();
+  localStorage.setItem("steelScore", localStorage.getItem("high-score"));
+});
 function stopLoading() {
   document.getElementById("loading").style.display = "none";
   alertAccept();
@@ -666,124 +669,174 @@ function loadLocalStorages() {
 loadLocalStorages();
 function levelsSystem() {
   var star = document.getElementById("star");
+  var substar = document.getElementById("substar");
   if(localStorage.getItem("high-score") == "0" || localStorage.getItem("high-score") == null) {
     document.getElementById("leaguelevel").innerHTML = "0";
     star.style.color = "#ffffffff";
+    substar.style.color = "#ffffffff";
   }else
   if(localStorage.getItem("high-score") == "1" || localStorage.getItem("high-score") == "2" || localStorage.getItem("high-score") == "11" || localStorage.getItem("high-score") == "12" || localStorage.getItem("high-score") == "21" || localStorage.getItem("high-score") == "22" ||  localStorage.getItem("high-score") == "31" || localStorage.getItem("high-score") == "32" || localStorage.getItem("high-score") == "41" || localStorage.getItem("high-score") == "42" || localStorage.getItem("high-score") == "51" || localStorage.getItem("high-score") == "52" || localStorage.getItem("high-score") == "61" || localStorage.getItem("high-score") == "62" || localStorage.getItem("high-score") == "71" || localStorage.getItem("high-score") == "72") {
     document.getElementById("leaguelevel").innerHTML = "1";
+    document.getElementById("subleaguelevel").innerHTML = "1";
   }else
   if(localStorage.getItem("high-score") == "3" || localStorage.getItem("high-score") == "4" || localStorage.getItem("high-score") == "13" || localStorage.getItem("high-score") == "14" || localStorage.getItem("high-score") == "23" || localStorage.getItem("high-score") == "24" || localStorage.getItem("high-score") == "33" || localStorage.getItem("high-score") == "34" || localStorage.getItem("high-score") == "43" || localStorage.getItem("high-score") == "44" || localStorage.getItem("high-score") == "53" || localStorage.getItem("high-score") == "54" || localStorage.getItem("high-score") == "63" || localStorage.getItem("high-score") == "64" || localStorage.getItem("high-score") == "73" || localStorage.getItem("high-score") == "74") {
     document.getElementById("leaguelevel").innerHTML = "2";
+    document.getElementById("subleaguelevel").innerHTML = "2";
   }else
   if(localStorage.getItem("high-score") == "5" || localStorage.getItem("high-score") == "6" || localStorage.getItem("high-score") == "15" || localStorage.getItem("high-score") == "16" || localStorage.getItem("high-score") == "25" || localStorage.getItem("high-score") == "26" || localStorage.getItem("high-score") == "35" || localStorage.getItem("high-score") == "36" || localStorage.getItem("high-score") == "45" || localStorage.getItem("high-score") == "46" || localStorage.getItem("high-score") == "55" || localStorage.getItem("high-score") == "56" || localStorage.getItem("high-score") == "65" || localStorage.getItem("high-score") == "66" || localStorage.getItem("high-score") == "75" || localStorage.getItem("high-score") == "76") {
     document.getElementById("leaguelevel").innerHTML = "3";
+    document.getElementById("subleaguelevel").innerHTML = "3";
   }else
   if(localStorage.getItem("high-score") == "7" || localStorage.getItem("high-score") == "8" || localStorage.getItem("high-score") == "17" || localStorage.getItem("high-score") == "18" || localStorage.getItem("high-score") == "27" || localStorage.getItem("high-score") == "28" || localStorage.getItem("high-score") == "37" || localStorage.getItem("high-score") == "38" || localStorage.getItem("high-score") == "47" || localStorage.getItem("high-score") == "48" || localStorage.getItem("high-score") == "57" || localStorage.getItem("high-score") == "58" || localStorage.getItem("high-score") == "67" || localStorage.getItem("high-score") == "68" || localStorage.getItem("high-score") == "77" || localStorage.getItem("high-score") == "78") {
     document.getElementById("leaguelevel").innerHTML = "4";
+    document.getElementById("subleaguelevel").innerHTML = "4";
   }else
   if(localStorage.getItem("high-score") == "9" || localStorage.getItem("high-score") == "19" || localStorage.getItem("high-score") == "29" || localStorage.getItem("high-score") == "39" || localStorage.getItem("high-score") == "49" || localStorage.getItem("high-score") == "59" || localStorage.getItem("high-score") == "69" || localStorage.getItem("high-score") == "79" || localStorage.getItem("high-score") == "80" || localStorage.getItem("high-score") == "10" || localStorage.getItem("high-score") == "20" || localStorage.getItem("high-score") == "30" || localStorage.getItem("high-score") == "40" || localStorage.getItem("high-score") == "50" || localStorage.getItem("high-score") == "60" || localStorage.getItem("high-score") == "70") {
     document.getElementById("leaguelevel").innerHTML = "5";
+    document.getElementById("subleaguelevel").innerHTML = "5";
   }
 };
 levelsSystem();
 function leagueSystem() {
   if(localStorage.getItem("high-score") == "0" || localStorage.getItem("high-score") == null) {
     document.getElementById("leagueImage").classList.add("null-league");
+    document.getElementById("subleagueImage").classList.add("null-league");
     if(localStorage.getItem("lang") === "en") {
       document.getElementById("leagueType").innerHTML = "Non league";
+      document.getElementById("subleagueType").innerHTML = "Non league";
     }else
     if(localStorage.getItem("lang") === "ru") {
       document.getElementById("leagueType").innerHTML = "Нет лиге";
+      document.getElementById("subleagueType").innerHTML = "Нет лиге";
     }
   }else
   if(localStorage.getItem("high-score") == "1" || localStorage.getItem("high-score") == "2" || localStorage.getItem("high-score") == "3" || localStorage.getItem("high-score") == "4" || localStorage.getItem("high-score") == "5" || localStorage.getItem("high-score") == "6" || localStorage.getItem("high-score") == "7" || localStorage.getItem("high-score") == "8" || localStorage.getItem("high-score") == "9" || localStorage.getItem("high-score") == "10") {
     document.getElementById("leagueImage").classList.add("bronze");
     document.getElementById("leagueImage").classList.remove("null-league");
+    document.getElementById("subleagueImage").classList.add("bronze");
+    document.getElementById("subleagueImage").classList.remove("null-league");
     if(localStorage.getItem("lang") === "en") {
       document.getElementById("leagueType").innerHTML = "Bronze League";
+      document.getElementById("subleagueType").innerHTML = "Bronze League";
     }else
     if(localStorage.getItem("lang") === "ru") {
       document.getElementById("leagueType").innerHTML = "Бронзовая лига";
+      document.getElementById("subleagueTypeleagueType").innerHTML = "Бронзовая лига";
     }
     star.style.color = "#ce8946ff";
+    substar.style.color = "#ce8946ff";
   }else
   if(localStorage.getItem("high-score") == "11" || localStorage.getItem("high-score") == "12" || localStorage.getItem("high-score") == "13" || localStorage.getItem("high-score") == "14" || localStorage.getItem("high-score") == "15" || localStorage.getItem("high-score") == "16" || localStorage.getItem("high-score") == "17" || localStorage.getItem("high-score") == "18" || localStorage.getItem("high-score") == "19" || localStorage.getItem("high-score") == "20") {
     document.getElementById("leagueImage").classList.add("silver");
     document.getElementById("leagueImage").classList.remove("bronze");
+    document.getElementById("subleagueImage").classList.add("silver");
+    document.getElementById("subleagueImage").classList.remove("bronze");
     if(localStorage.getItem("lang") === "en") {
       document.getElementById("leagueType").innerHTML = "Silver League";
+      document.getElementById("subleagueType").innerHTML = "Silver League";
     }else
     if(localStorage.getItem("lang") === "ru") {
       document.getElementById("leagueType").innerHTML = "Серебряная лига";
+      document.getElementById("subleagueType").innerHTML = "Серебряная лига";
     }
     star.style.color = "#c4c4c4ff";
+    substar.style.color = "#c4c4c4ff";
   }else
   if(localStorage.getItem("high-score") == "21" || localStorage.getItem("high-score") == "22" || localStorage.getItem("high-score") == "23" || localStorage.getItem("high-score") == "24" || localStorage.getItem("high-score") == "25" || localStorage.getItem("high-score") == "26" || localStorage.getItem("high-score") == "27" || localStorage.getItem("high-score") == "28" || localStorage.getItem("high-score") == "29" || localStorage.getItem("high-score") == "30") {
     document.getElementById("leagueImage").classList.add("goldleague");
     document.getElementById("leagueImage").classList.remove("silver");
+    document.getElementById("subleagueImage").classList.add("goldleague");
+    document.getElementById("subleagueImage").classList.remove("silver");
     if(localStorage.getItem("lang") === "en") {
       document.getElementById("leagueType").innerHTML = "Gold League";
+      document.getElementById("subleagueType").innerHTML = "Gold League";
     }else
     if(localStorage.getItem("lang") === "ru") {
       document.getElementById("leagueType").innerHTML = "Золотая лига";
+      document.getElementById("subleagueType").innerHTML = "Золотая лига";
     }
     star.style.color = "#efbf04ff";
+    substar.style.color = "#efbf04ff";
   }else
   if(localStorage.getItem("high-score") == "31" || localStorage.getItem("high-score") == "32" || localStorage.getItem("high-score") == "33" || localStorage.getItem("high-score") == "34" || localStorage.getItem("high-score") == "35" || localStorage.getItem("high-score") == "36" || localStorage.getItem("high-score") == "37" || localStorage.getItem("high-score") == "38" || localStorage.getItem("high-score") == "39" || localStorage.getItem("high-score") == "40") {
     document.getElementById("leagueImage").classList.add("platinium");
     document.getElementById("leagueImage").classList.remove("goldleague");
+    document.getElementById("subleagueImage").classList.add("platinium");
+    document.getElementById("subleagueImage").classList.remove("goldleague");
     if(localStorage.getItem("lang") === "en") {
       document.getElementById("leagueType").innerHTML = "Platinum League";
+      document.getElementById("subleagueType").innerHTML = "Platinum League";
     }else
     if(localStorage.getItem("lang") === "ru") {
       document.getElementById("leagueType").innerHTML = "Платиновая лига";
+      document.getElementById("subleagueType").innerHTML = "Платиновая лига";
     }
     star.style.color = "#d9d9d9ff";
+    substar.style.color = "#d9d9d9ff";
   }else
   if(localStorage.getItem("high-score") == "41" || localStorage.getItem("high-score") == "42" || localStorage.getItem("high-score") == "43" || localStorage.getItem("high-score") == "44" || localStorage.getItem("high-score") == "45" || localStorage.getItem("high-score") == "46" || localStorage.getItem("high-score") == "47" || localStorage.getItem("high-score") == "48" || localStorage.getItem("high-score") == "49" || localStorage.getItem("high-score") == "50") {
     document.getElementById("leagueImage").classList.add("diamond");
     document.getElementById("leagueImage").classList.remove("platinium");
+    document.getElementById("subleagueImage").classList.add("diamond");
+    document.getElementById("subleagueImage").classList.remove("platinium");
     if(localStorage.getItem("lang") === "en") {
       document.getElementById("leagueType").innerHTML = "Diamond League";
+      document.getElementById("subleagueType").innerHTML = "Diamond League";
     }else
     if(localStorage.getItem("lang") === "ru") {
       document.getElementById("leagueType").innerHTML = "Алмазная лига";
+      document.getElementById("subleagueType").innerHTML = "Алмазная лига";
     }
     star.style.color = "#D397F8ff";
+    substar.style.color = "#D397F8ff";
   }else
   if(localStorage.getItem("high-score") == "51" || localStorage.getItem("high-score") == "52" || localStorage.getItem("high-score") == "53" || localStorage.getItem("high-score") == "54" || localStorage.getItem("high-score") == "55" || localStorage.getItem("high-score") == "56" || localStorage.getItem("high-score") == "57" || localStorage.getItem("high-score") == "58" || localStorage.getItem("high-score") == "59" || localStorage.getItem("high-score") == "60") {
     document.getElementById("leagueImage").classList.add("super");
     document.getElementById("leagueImage").classList.remove("diamond");
+    document.getElementById("subleagueImage").classList.add("super");
+    document.getElementById("subleagueImage").classList.remove("diamond");
     if(localStorage.getItem("lang") === "en") {
       document.getElementById("leagueType").innerHTML = "Super League";
+      document.getElementById("subleagueType").innerHTML = "Super League";
     }else
     if(localStorage.getItem("lang") === "ru") {
       document.getElementById("leagueType").innerHTML = "Супер лига";
+      document.getElementById("subleagueType").innerHTML = "Супер лига";
     }
     star.style.color = "#FF7518ff";
+    substar.style.color = "#FF7518ff";
   }else
   if(localStorage.getItem("high-score") == "61" || localStorage.getItem("high-score") == "62" || localStorage.getItem("high-score") == "63" || localStorage.getItem("high-score") == "64" || localStorage.getItem("high-score") == "65" || localStorage.getItem("high-score") == "66" || localStorage.getItem("high-score") == "67" || localStorage.getItem("high-score") == "68" || localStorage.getItem("high-score") == "69" || localStorage.getItem("high-score") == "70") {
     document.getElementById("leagueImage").classList.add("legendary");
     document.getElementById("leagueImage").classList.remove("super");
+    document.getElementById("subleagueImage").classList.add("legendary");
+    document.getElementById("subleagueImage").classList.remove("super");
     if(localStorage.getItem("lang") === "en") {
       document.getElementById("leagueType").innerHTML = "Legendary League";
+      document.getElementById("subleagueType").innerHTML = "Legendary League";
     }else
     if(localStorage.getItem("lang") === "ru") {
       document.getElementById("leagueType").innerHTML = "Легендарная лига";
+      document.getElementById("subleagueType").innerHTML = "Легендарная лига";
     }
     star.style.color = "#FF7518ff";
+    substar.style.color = "#FF7518ff";
   }else
   if(localStorage.getItem("high-score") == "71" || localStorage.getItem("high-score") == "72" || localStorage.getItem("high-score") == "73" || localStorage.getItem("high-score") == "74" || localStorage.getItem("high-score") == "75" || localStorage.getItem("high-score") == "76" || localStorage.getItem("high-score") == "77" || localStorage.getItem("high-score") == "78" || localStorage.getItem("high-score") == "79" || localStorage.getItem("high-score") == "80") {
     document.getElementById("leagueImage").classList.add("alphaknight");
     document.getElementById("leagueImage").classList.remove("legendary");
+    document.getElementById("subleagueImage").classList.add("alphaknight");
+    document.getElementById("subleagueImage").classList.remove("legendary");
     if(localStorage.getItem("lang") === "en") {
       document.getElementById("leagueType").innerHTML = "Alpha Knight";
+      document.getElementById("subleagueType").innerHTML = "Alpha Knight";
     }else
     if(localStorage.getItem("lang") === "ru") {
       document.getElementById("leagueType").innerHTML = "Альфа Рыцарь";
+      document.getElementById("subleagueType").innerHTML = "Альфа Рыцарь";
     }
     star.style.color = "#ffff00ff";
+    substar.style.color = "#ffff00ff";
   }
 };
 leagueSystem();
@@ -990,4 +1043,4 @@ function downloadAlertSystem() {
   var fileName = "main";
   var fileFormat = ".zip";
   window.open(host + domine + publisher + space + fileType + refs + heads + fileName + fileFormat, '_blank');
-};
+}

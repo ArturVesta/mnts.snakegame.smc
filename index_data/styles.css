@@ -343,7 +343,8 @@ hr {
   justify-content: center;
   flex-direction: column;
 }
-#accontent {
+#accontent,
+#progressingALost {
   padding: 0px;
   display: block;
 }
@@ -979,7 +980,8 @@ input[type="range"]::-webkit-slider-thumb {
   height: 100%;
   padding-left: 10px;
 }
-#leagueImage {
+#leagueImage,
+#subleagueImage {
   float: left;
   position: relative;
   width: 100px;
@@ -988,32 +990,41 @@ input[type="range"]::-webkit-slider-thumb {
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
-#leagueImage.null-league {
+#leagueImage.null-league,
+#subleagueImage.null-league {
   background-image: var(--league-0);
   filter: grayscale(1);
 }
-#leagueImage.bronze {
+#leagueImage.bronze,
+#subleagueImage.bronze {
   background-image: var(--league-1);
 }
-#leagueImage.silver {
+#leagueImage.silver,
+#subleagueImage.silver {
   background-image: var(--league-2);
 }
-#leagueImage.goldleague {
+#leagueImage.goldleague,
+#subleagueImage.goldleague {
   background-image: var(--league-3);
 }
-#leagueImage.platinium {
+#leagueImage.platinium,
+#subleagueImage.platinium {
   background-image: var(--league-4);
 }
-#leagueImage.diamond {
+#leagueImage.diamond,
+#subleagueImage.diamond {
   background-image: var(--league-5);
 }
-#leagueImage.super {
+#leagueImage.super,
+#subleagueImage.super {
   background-image: var(--league-6);
 }
-#leagueImage.legendary {
+#leagueImage.legendary,
+#subleagueImage.legendary {
   background-image: var(--league-7);
 }
-#leagueImage.alphaknight {
+#leagueImage.alphaknight,
+#subleagueImage.alphaknight {
   background-image: var(--league-8);
 }
 #deleteprogbutton {
@@ -1403,7 +1414,8 @@ hr.acc {
   .right-modal-acc {
     width: 177px;
   }
-  #leagueImage {
+  #leagueImage,
+  #subleagueImage {
     width: 77px;
   }
   hr.acc {

@@ -23,6 +23,16 @@ const updateFoodPosition = () => {
 const handleGameOver = () => {
   document.getElementById("loseModal").style.display = "block";
   document.getElementById("loseScore").innerHTML = scoreElement.innerText;
+  updateFoodPosition();
+  if(score <= localStorage.getItem("steelScore")) {
+    document.getElementById("loseNewRecordScore").innerHTML = "";
+  }else
+  if(score === localStorage.getItem("steelScore")) {
+    document.getElementById("loseNewRecordScore").innerHTML = "So close to add +1 to new record!";
+  }else
+  if(score >= localStorage.getItem("steelScore")) {
+    document.getElementById("loseNewRecordScore").innerHTML = "Congrats, you achieved a new record!";
+  }
   if(localStorage.getItem("movementbg") === "playerWalk") {
     document.getElementById("playerWalk").pause();
   }else
@@ -98,11 +108,24 @@ const handleGameOver = () => {
   if(localStorage.getItem("movementbg") === "ventorusWalk") {
     document.getElementById("ventorusWalk").pause();
   }
-  clearInterval(setIntervalId);
-}
+};
 document.getElementById("reset").onclick = function() {
-  location.reload();
-}
+  document.getElementById("loseModal").style.display = "none";
+  gameOver = false;
+  foodX, foodY;
+  snakeX = 5, snakeY = 5;
+  velocityX = 0, velocityY = 0;
+  snakeBody = [];
+  setIntervalId;
+  score = 0;
+  if(localStorage.getItem("lang") === "en") {
+    scoreElement.innerText = `Score: ${score}`;
+  }else
+  if(localStorage.getItem("lang") === "ru") {
+    scoreElement.innerText = `Счет: ${score}`;
+  };
+  localStorage.setItem("steelScore", localStorage.getItem("high-score"));
+};
 const changeDirection = e => {
   if(e.key === "ArrowUp" && velocityY != 1) {
     velocityX = 0;

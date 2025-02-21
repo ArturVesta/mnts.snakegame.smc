@@ -769,3 +769,142 @@ function openTabSound(evt, tabName) {
   document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " active";
 };
+// Install App: Gen by: Gemini
+function installApp() {
+  let deferredPrompt; // Store the deferred prompt
+  if (navigator.standalone) {
+    // Already installed (iOS) or running as a standalone app
+    var alertcancel = document.getElementById("alertLeft");
+    var alertconfirm = document.getElementById("alertRight");
+    document.getElementById("alert").style.display = "block";
+    document.getElementById("alert").style.zIndex = "5";
+    alertconfirm.style.display = "block";
+    alertcancel.style.display = "none";
+    if(localStorage.getItem("lang") === "en") {
+      document.getElementById("alertText").innerHTML = "App is already installed or running in standalone mode.";
+      alertconfirm.value = "Confirm";
+    }else
+    if(localStorage.getItem("lang") === "ru") {
+      document.getElementById("alertText").innerHTML = "Приложение уже установлено или работает в автономном режиме.";
+      alertconfirm.value = "Подтвердить";
+    }
+    alertconfirm.onclick = function() {
+      document.getElementById("alert").style.display = "none";
+      document.getElementById("alert").style.zIndex = "3";
+      defaultClickSound();
+    }
+    return;
+  }
+  if (window.matchMedia('(display-mode: standalone)').matches) {
+    // Already installed (Android)
+    var alertcancel = document.getElementById("alertLeft");
+    var alertconfirm = document.getElementById("alertRight");
+    document.getElementById("alert").style.display = "block";
+    document.getElementById("alert").style.zIndex = "5";
+    alertconfirm.style.display = "block";
+    if(localStorage.getItem("lang") === "en") {
+      document.getElementById("alertText").innerHTML = "App is already installed or running in standalone mode.";
+      alertconfirm.value = "Ok";
+    }else
+    if(localStorage.getItem("lang") === "ru") {
+      document.getElementById("alertText").innerHTML = "Приложение уже установлено или работает в автономном режиме.";
+      alertconfirm.value = "Ок";
+    }
+    alertconfirm.onclick = function() {
+      document.getElementById("alert").style.display = "none";
+      document.getElementById("alert").style.zIndex = "3";
+      defaultClickSound();
+    }
+    return;
+  }
+  if (typeof deferredPrompt !== 'undefined') {
+    // The user has been prompted before, so let's prompt them again
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === 'accepted') {
+        console.log('User accepted the A2HS prompt');
+      } else {
+        console.log('User dismissed the A2HS prompt');
+      }
+      deferredPrompt = null; // Reset the deferred prompt
+    });
+    return;
+  }
+  // Check if the browser supports add to home screen
+  if (window.matchMedia('(display-mode: browser)').matches) {
+    // Check if the browser supports beforeinstallprompt event
+    window.addEventListener('beforeinstallprompt', (e) => {
+      // Prevent the mini-infobar from appearing on mobile
+      e.preventDefault();
+      // Stash the event so it can be used later.
+      deferredPrompt = e;
+      // Optionally, send analytics event that A2HS prompt was shown.
+      console.log('beforeinstallprompt' + 'event was fired.');
+      // Show the install button
+       const installButton = document.getElementById('downloadNoAutoUpdate2'); // Replace with your button ID
+       if (installButton) {
+           installButton.style.display = 'block'; // Or however you want to show it
+       }
+    });
+    // Handle the button click
+    const installButton = document.getElementById('downloadNoAutoUpdate2'); // Replace with your button ID
+    if (installButton) {
+      installButton.addEventListener('click', () => {
+        if (deferredPrompt) {
+          deferredPrompt.prompt();
+          deferredPrompt.userChoice.then((choiceResult) => {
+            if (choiceResult.outcome === 'accepted') {
+              console.log('User accepted the A2HS prompt');
+            } else {
+              console.log('User dismissed the A2HS prompt');
+            }
+            deferredPrompt = null;
+            installButton.style.display = 'none'; // Hide the button after the prompt
+          });
+        } else {
+          // The deferred prompt is not available, possibly due to user interaction or browser limitations.
+          var alertcancel = document.getElementById("alertLeft");
+          var alertconfirm = document.getElementById("alertRight");
+          document.getElementById("alert").style.display = "block";
+          document.getElementById("alert").style.zIndex = "5";
+          alertconfirm.style.display = "block";
+          if(localStorage.getItem("lang") === "en") {
+            document.getElementById("alertText").innerHTML = "Add to Home Screen functionality is not currently available.  Make sure you've visited the site a few times.";
+            alertconfirm.value = "Ok";
+          }else
+          if(localStorage.getItem("lang") === "ru") {
+            document.getElementById("alertText").innerHTML = "Функция «Добавить на главный экран» в настоящее время недоступна. Убедитесь, что вы посетили сайт несколько раз.";
+            alertconfirm.value = "Ок";
+          }
+          alertconfirm.onclick = function() {
+            document.getElementById("alert").style.display = "none";
+            document.getElementById("alert").style.zIndex = "3";
+          }
+        }
+      });
+    }
+  } else {
+    var alertcancel = document.getElementById("alertLeft");
+    var alertconfirm = document.getElementById("alertRight");
+    document.getElementById("alert").style.display = "block";
+    document.getElementById("alert").style.zIndex = "5";
+    alertconfirm.style.display = "block";
+    if(localStorage.getItem("lang") === "en") {
+      document.getElementById("alertText").innerHTML = "This browser does not support Add to Home Screen.";
+      alertconfirm.value = "Ok";
+    }else
+    if(localStorage.getItem("lang") === "ru") {
+      document.getElementById("alertText").innerHTML = "Этот браузер не поддерживает функцию «Добавить на главный экран».";
+      alertconfirm.value = "Ок";
+    }
+    alertconfirm.onclick = function() {
+      document.getElementById("alert").style.display = "none";
+      document.getElementById("alert").style.zIndex = "3";
+    }
+  }
+}
+// Call installApp() when your button is clicked.  For example:
+const installButton = document.getElementById('downloadNoAutoUpdate2'); // Replace with your actual button ID
+if (installButton) {
+  installButton.addEventListener('click', installApp);
+};
