@@ -1,6 +1,6 @@
 var GHPATH = '/mnts.snakegame.smc';
 var APP_PREFIX = 'gppwa_';
-var VERSION = 'version_09';
+var VERSION = 'version_11';
 var URLS = [
   `${GHPATH}/`,
   `${GHPATH}/index_data`,
@@ -117,9 +117,9 @@ var URLS = [
   `${GHPATH}/index_data/29172/league_3_gold.png`,
   `${GHPATH}/index_data/29172/league_4_platinum.png`,
   `${GHPATH}/index_data/29172/league_5_diamond.png`,
-  `${GHPATH}/index_data/29172/league_6_legendary.png`,
   `${GHPATH}/index_data/29172/league_6_super.png`,
-  `${GHPATH}/index_data/29172/league_7_alpha_knight.png`,
+  `${GHPATH}/index_data/29172/league_7_legendary.png`,
+  `${GHPATH}/index_data/29172/league_8_alpha_knight.png`,
   `${GHPATH}/index_data/29172/line.png`,
   `${GHPATH}/index_data/29172/loading_2x.png`,
   `${GHPATH}/index_data/29172/loading_yi_logo_2x.png`,
@@ -326,9 +326,9 @@ var CacheURLS = [
   `${GHPATH}/index_data/29172/league_3_gold.png`,
   `${GHPATH}/index_data/29172/league_4_platinum.png`,
   `${GHPATH}/index_data/29172/league_5_diamond.png`,
-  `${GHPATH}/index_data/29172/league_6_legendary.png`,
   `${GHPATH}/index_data/29172/league_6_super.png`,
-  `${GHPATH}/index_data/29172/league_7_alpha_knight.png`,
+  `${GHPATH}/index_data/29172/league_7_legendary.png`,
+  `${GHPATH}/index_data/29172/league_8_alpha_knight.png`,
   `${GHPATH}/index_data/29172/line.png`,
   `${GHPATH}/index_data/29172/loading_2x.png`,
   `${GHPATH}/index_data/29172/loading_yi_logo_2x.png`,
