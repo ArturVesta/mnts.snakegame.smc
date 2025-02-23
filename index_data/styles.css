@@ -982,9 +982,10 @@ input[type="range"]::-webkit-slider-thumb {
 }
 #leagueImage,
 #subleagueImage {
-  float: left;
-  position: relative;
-  width: 100px;
+  left: 15px;
+  bottom: -22px;
+  position: absolute;
+  width: 220px;
   height: 100%;
   background-position: center center;
   background-size: 100% auto;
@@ -1416,7 +1417,9 @@ hr.acc {
   }
   #leagueImage,
   #subleagueImage {
-    width: 77px;
+    left: 23px;
+    bottom: -20px;
+    width: 130px;
   }
   hr.acc {
     left: 175px;

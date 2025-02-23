@@ -75,8 +75,16 @@ function pauseGame() {
   defaultClickSound();
 };
 window.addEventListener('load', function() {
+  loadLocalStorages();
   stopLoading();
   localStorage.setItem("steelScore", localStorage.getItem("high-score"));
+  document.getElementById("collectedMeow").innerHTML = localStorage.getItem("meawTockenStorage");
+  document.getElementById("collectedGold").innerHTML = localStorage.getItem("goldStorage");
+  document.getElementById("collectedAlphacoin").innerHTML = localStorage.getItem("alphaCoinStorage");
+  document.getElementById("collectedCrystal").innerHTML = localStorage.getItem("crystalStorage");
+  document.getElementById("collectedTicket").innerHTML = localStorage.getItem("ticketStorage");
+  document.getElementById("collectedCticket").innerHTML = localStorage.getItem("ticketChromaticStorage");
+  document.getElementById("collectedPticket").innerHTML = localStorage.getItem("ticketPremiumStorage");
 });
 function stopLoading() {
   document.getElementById("loading").style.display = "none";
@@ -665,8 +673,28 @@ function loadLocalStorages() {
   }else{
     return false;
   };
+  if(localStorage.getItem("meawTockenStorage") === null) {
+    localStorage.setItem("meawTockenStorage", "0");
+  };
+  if(localStorage.getItem("goldStorage") === null) {
+    localStorage.setItem("goldStorage", "0");
+  };
+  if(localStorage.getItem("alphaCoinStorage") === null) {
+    localStorage.setItem("alphaCoinStorage", "0");
+  };
+  if(localStorage.getItem("crystalStorage") === null) {
+    localStorage.setItem("crystalStorage", "0");
+  };
+  if(localStorage.getItem("ticketStorage") === null) {
+    localStorage.setItem("ticketStorage", "0");
+  };
+  if(localStorage.getItem("ticketChromaticStorage") === null) {
+    localStorage.setItem("ticketChromaticStorage", "0");
+  };
+  if(localStorage.getItem("ticketPremiumStorage") === null) {
+    localStorage.setItem("ticketPremiumStorage", "0");
+  };
 };
-loadLocalStorages();
 function levelsSystem() {
   var star = document.getElementById("star");
   var substar = document.getElementById("substar");

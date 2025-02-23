@@ -8,7 +8,16 @@ let snakeX = 5, snakeY = 5;
 let velocityX = 0, velocityY = 0;
 let snakeBody = [];
 let setIntervalId;
+// Scores
 let score = 0;
+let meaw_token_item = localStorage.getItem("meawTockenStorage");
+let gold_item = localStorage.getItem("goldStorage");
+let alpha_coin_item = localStorage.getItem("alphaCoinStorage");
+let crystal_item = localStorage.getItem("crystalStorage");
+let ticket_item = localStorage.getItem("ticketStorage");
+let ticket_chromatic_item = localStorage.getItem("ticketChromaticStorage");
+let ticket_premium_item = localStorage.getItem("ticketPremiumStorage");
+// End scores
 let highScore = localStorage.getItem("high-score") || 0;
 if(localStorage.getItem("lang") === "en") {
   highScoreElement.innerText = `High Score: ${highScore}`;
@@ -210,6 +219,41 @@ const initGame = () => {
     if(localStorage.getItem("lang") === "ru") {
       scoreElement.innerText = `Счет: ${score}`;
       highScoreElement.innerText = `Высокий счет: ${highScore}`;
+    }
+    if(localStorage.getItem("foodStyle") === "imgMeow") {
+      meaw_token_item++;
+      document.getElementById("collectedMeow").innerHTML = meaw_token_item;
+      localStorage.setItem("meawTockenStorage", meaw_token_item);
+    }else
+    if(localStorage.getItem("foodStyle") === "imgGold") {
+      gold_item++;
+      document.getElementById("collectedGold").innerHTML = gold_item;
+      localStorage.setItem("goldStorage", gold_item);
+    }else
+    if(localStorage.getItem("foodStyle") === "imgAlphacoin") {
+      alpha_coin_item++;
+      document.getElementById("collectedAlphacoin").innerHTML = alpha_coin_item;
+      localStorage.setItem("alphaCoinStorage", alpha_coin_item);
+    }else
+    if(localStorage.getItem("foodStyle") === "imgCrystal") {
+      crystal_item++;
+      document.getElementById("collectedCrystal").innerHTML = crystal_item;
+      localStorage.setItem("crystalStorage", crystal_item);
+    }else
+    if(localStorage.getItem("foodStyle") === "imgTicket") {
+      ticket_item++;
+      document.getElementById("collectedTicket").innerHTML = ticket_item;
+      localStorage.setItem("ticketStorage", ticket_item);
+    }else
+    if(localStorage.getItem("foodStyle") === "imgCticket") {
+      ticket_chromatic_item++;
+      document.getElementById("collectedCticket").innerHTML = ticket_chromatic_item;
+      localStorage.setItem("ticketChromaticStorage", ticket_chromatic_item);
+    }else
+    if(localStorage.getItem("foodStyle") === "imgPticket") {
+      ticket_premium_item++;
+      document.getElementById("collectedPticket").innerHTML = ticket_premium_item;
+      localStorage.setItem("ticketPremiumStorage", ticket_premium_item);
     }
   }
   snakeX += velocityX;

@@ -739,6 +739,13 @@ function alertDeleteProgress() {
   };
   alertconfirm.onclick = function() {
     localStorage.setItem("high-score", "0");
+    localStorage.setItem("meawTockenStorage", "0");
+    localStorage.setItem("goldStorage", "0");
+    localStorage.setItem("alphaCoinStorage", "0");
+    localStorage.setItem("crystalStorage", "0");
+    localStorage.setItem("ticketStorage", "0");
+    localStorage.setItem("ticketChromaticStorage", "0");
+    localStorage.setItem("ticketPremiumStorage", "0");
     window.location.reload();
   }
   defaultClickSound();
