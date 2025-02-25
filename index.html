@@ -25,7 +25,7 @@
       <div id="accenter" class="modal">
         <div class="modal-content">
           <div id="profileTitleLang">...</div>
-          <button class="reset-button" id="closeacc" onclick="document.getElementById('accenter').style.display='none';document.getElementById('chechboxPausing').click();"></button>
+          <button class="reset-button" id="closeacc" onclick="document.getElementById('accenter').style.display='none';handleInterval();"></button>
           <div class="in-modal-content" id="accontent">
             <div class="left-modal-acc">
               <div id="leagueImage"></div>
@@ -72,7 +72,7 @@
       <div class="menu" id="menu">
         <div class="menu-content">
           <div id="SettingsTitleLang">...</div>
-          <div class="close" id="menuCloseBtn" onclick="document.getElementById('chechboxPausing').click();document.getElementById('menu').style.display='none';closeSettingsSound();menuPauseWalkSound();"></div>
+          <div class="close" id="menuCloseBtn" onclick="handleInterval();document.getElementById('menu').style.display='none';closeSettingsSound();menuPauseWalkSound();"></div>
           <div class="tab">
             <button class="tablinks active" onclick="openTab(event, 'about');selectionSound();" id="aboutTab">...</button>
             <button class="tablinks" onclick="openTab(event, 'system');selectionSound();" id="systemTab">...</button>
