@@ -749,7 +749,7 @@ function leagueSystem() {
     }else
     if(localStorage.getItem("lang") === "ru") {
       document.getElementById("leagueType").innerHTML = "Бронзовая лига";
-      document.getElementById("subleagueTypeleagueType").innerHTML = "Бронзовая лига";
+      document.getElementById("subleagueType").innerHTML = "Бронзовая лига";
     }
     star.style.color = "#ce8946ff";
     substar.style.color = "#ce8946ff";
