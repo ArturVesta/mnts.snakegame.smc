@@ -91,7 +91,7 @@ function stopLoading() {
   alertAccept();
 };
 window.oncontextmenu=function(){return false}
-window.onerror=function(){alert("Somthin error.., Tell us if this alert is jump." + err)};
+window.onerror=function(){alert("Somthin error.., Tell us if this alert is jump.")};
 const dimensions = [
   "16",
   "32",
@@ -975,6 +975,15 @@ document.onkeydown = function (event) {
   }else
   if (event.keyCode == 68) {
     document.getElementById('btn005').click();
+  }else
+  if((event.key === 'F12') ||
+    (event.ctrlKey && event.shiftKey && event.key === 'I') ||
+    (event.ctrlKey && event.shiftKey && event.key === 'C') ||
+    (event.metaKey && event.altKey && event.key === 'I') ||
+    (event.metaKey && event.shiftKey && event.key === 'C')
+  ) {
+    event.preventDefault();
+    alert("Developer tools access blocked.");
   }
 };
 function menuPauseWalkSound() {
@@ -1071,4 +1080,22 @@ function downloadAlertSystem() {
   var fileName = "main";
   var fileFormat = ".zip";
   window.open(host + domine + publisher + space + fileType + refs + heads + fileName + fileFormat, '_blank');
-}
+};
+function handleInterval() {
+  if(velocityX === 0 && velocityY === 0) {
+    if(localStorage.getItem("difficulty") === "normal") {
+      setIntervalId = setInterval(initGame, 140);
+    }else
+    if(localStorage.getItem("difficulty") === "hard") {
+      setIntervalId = setInterval(initGame, 100);
+    }else
+    if(localStorage.getItem("difficulty") === "hell") {
+      setIntervalId = setInterval(initGame, 50);
+    }else
+    if(localStorage.getItem("difficulty") === "") {
+      setIntervalId = setInterval(initGame, 140);
+    }
+  }else{
+    document.getElementById("chechboxPausing").click();
+  }
+};
