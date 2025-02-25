@@ -1,6 +1,6 @@
 var GHPATH = '/mnts.snakegame.smc';
 var APP_PREFIX = 'gppwa_';
-var VERSION = 'version_13';
+var VERSION = 'version_14';
 var URLS = [
   `${GHPATH}/`,
   `${GHPATH}/index_data`,
@@ -168,7 +168,7 @@ var URLS = [
   `${GHPATH}/index_data/29208/doomlight_walk.mp3`,
   `${GHPATH}/index_data/29208/explosive_halo.mp3`,
   `${GHPATH}/index_data/29208/firefox_walk.mp3`,
-  `${GHPATH}/index_data/29208/Firestar.mp3`,
+  `${GHPATH}/index_data/29208/firestar.mp3`,
   `${GHPATH}/index_data/29208/firestar_walk.mp3`,
   `${GHPATH}/index_data/29208/flamenco_walk.mp3`,
   `${GHPATH}/index_data/29208/future_bounce.mp3`,
@@ -377,7 +377,7 @@ var CacheURLS = [
   `${GHPATH}/index_data/29208/doomlight_walk.mp3`,
   `${GHPATH}/index_data/29208/explosive_halo.mp3`,
   `${GHPATH}/index_data/29208/firefox_walk.mp3`,
-  `${GHPATH}/index_data/29208/Firestar.mp3`,
+  `${GHPATH}/index_data/29208/firestar.mp3`,
   `${GHPATH}/index_data/29208/firestar_walk.mp3`,
   `${GHPATH}/index_data/29208/flamenco_walk.mp3`,
   `${GHPATH}/index_data/29208/future_bounce.mp3`,
