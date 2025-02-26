@@ -1,6 +1,6 @@
 var GHPATH = '/mnts.snakegame.smc';
 var APP_PREFIX = 'gppwa_';
-var VERSION = 'version_18';
+var VERSION = 'version_19';
 var URLS = [
   `${GHPATH}/`,
   `${GHPATH}/index_data`,
@@ -210,7 +210,7 @@ var URLS = [
   `${GHPATH}/messenger.png`,
   `${GHPATH}/discord.png`
 ];
-var CACHE_NAME = 'snakemechacollector-v18';
+var CACHE_NAME = 'snakemechacollector-v19';
 var CacheURLS = [
   `${GHPATH}/`,
   `${GHPATH}/index_data`,
