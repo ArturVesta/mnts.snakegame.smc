@@ -7,8 +7,8 @@
   "display": "standalone",
   "icons": [
     {
-      "src": "/mnts.snakegame.smc/index_data/29172/icon_0.jpg",
-      "type": "image/jpg",
+      "src": "/mnts.snakegame.smc/index_data/29172/icon_0.png",
+      "type": "image/png",
       "sizes": "225x225"
     }
   ]
