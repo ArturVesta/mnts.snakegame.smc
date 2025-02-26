@@ -76,7 +76,7 @@ function pauseGame() {
 };
 window.addEventListener('load', function() {
   loadLocalStorages();
-  stopLoading();
+  testLoadAsset0();
   localStorage.setItem("steelScore", localStorage.getItem("high-score"));
   document.getElementById("collectedMeow").innerHTML = localStorage.getItem("meawTockenStorage");
   document.getElementById("collectedGold").innerHTML = localStorage.getItem("goldStorage");
@@ -86,10 +86,6 @@ window.addEventListener('load', function() {
   document.getElementById("collectedCticket").innerHTML = localStorage.getItem("ticketChromaticStorage");
   document.getElementById("collectedPticket").innerHTML = localStorage.getItem("ticketPremiumStorage");
 });
-function stopLoading() {
-  document.getElementById("loading").style.display = "none";
-  alertAccept();
-};
 window.oncontextmenu=function(){return false}
 window.onerror=function(){alert("Somthin error.., Tell us if this alert is jump.")};
 const dimensions = [
@@ -132,25 +128,25 @@ function iconAllLoad() {
   var favicon300 = document.createElement('link');
   var favicon384 = document.createElement('link');
   var favicon512 = document.createElement('link');
-  subiconCode = "index_data/29172/icon_0.jpg";
-  subiconCode16 = "index_data/29172/icon_" + dimensions[0] + ".jpg";
-  subiconCode32 = "index_data/29172/icon_" + dimensions[1] + ".jpg";
-  subiconCode48 = "index_data/29172/icon_" + dimensions[2] + ".jpg";
-  subiconCode76 = "index_data/29172/icon_" + dimensions[3] + ".jpg";
-  subiconCode96 = "index_data/29172/icon_" + dimensions[4] + ".jpg";
-  subiconCode120 = "index_data/29172/icon_" + dimensions[5] + ".jpg";
-  subiconCode128 = "index_data/29172/icon_" + dimensions[6] + ".jpg";
-  subiconCode144 = "index_data/29172/icon_" + dimensions[7] + ".jpg";
-  subiconCode152 = "index_data/29172/icon_" + dimensions[8] + ".jpg";
-  subiconCode167 = "index_data/29172/icon_" + dimensions[9] + ".jpg";
-  subiconCode180 = "index_data/29172/icon_" + dimensions[10] + ".jpg";
-  subiconCode192 = "index_data/29172/icon_" + dimensions[11] + ".jpg";
-  subiconCode196 = "index_data/29172/icon_" + dimensions[12] + ".jpg";
-  subiconCode228 = "index_data/29172/icon_" + dimensions[13] + ".jpg";
-  subiconCode256 = "index_data/29172/icon_" + dimensions[14] + ".jpg";
-  subiconCode300 = "index_data/29172/icon_" + dimensions[15] + ".jpg";
-  subiconCode384 = "index_data/29172/icon_" + dimensions[16] + ".jpg";
-  subiconCode512 = "index_data/29172/icon_" + dimensions[17] + ".jpg";
+  subiconCode = "index_data/29172/icon_0.png";
+  subiconCode16 = "index_data/29172/icon_" + dimensions[0] + ".png";
+  subiconCode32 = "index_data/29172/icon_" + dimensions[1] + ".png";
+  subiconCode48 = "index_data/29172/icon_" + dimensions[2] + ".png";
+  subiconCode76 = "index_data/29172/icon_" + dimensions[3] + ".png";
+  subiconCode96 = "index_data/29172/icon_" + dimensions[4] + ".png";
+  subiconCode120 = "index_data/29172/icon_" + dimensions[5] + ".png";
+  subiconCode128 = "index_data/29172/icon_" + dimensions[6] + ".png";
+  subiconCode144 = "index_data/29172/icon_" + dimensions[7] + ".png";
+  subiconCode152 = "index_data/29172/icon_" + dimensions[8] + ".png";
+  subiconCode167 = "index_data/29172/icon_" + dimensions[9] + ".png";
+  subiconCode180 = "index_data/29172/icon_" + dimensions[10] + ".png";
+  subiconCode192 = "index_data/29172/icon_" + dimensions[11] + ".png";
+  subiconCode196 = "index_data/29172/icon_" + dimensions[12] + ".png";
+  subiconCode228 = "index_data/29172/icon_" + dimensions[13] + ".png";
+  subiconCode256 = "index_data/29172/icon_" + dimensions[14] + ".png";
+  subiconCode300 = "index_data/29172/icon_" + dimensions[15] + ".png";
+  subiconCode384 = "index_data/29172/icon_" + dimensions[16] + ".png";
+  subiconCode512 = "index_data/29172/icon_" + dimensions[17] + ".png";
   favicon.href = subiconCode;
   favicon.rel = 'icon';
   favicon16.href = subiconCode16;
@@ -1068,6 +1064,9 @@ function openProfileCenter() {
 };
 function goToMessenger() {
   window.open('https://m.me/100037328776594?hash=AbbiIv3lRHEaooAd&source=qr_link_share', '_blank');
+};
+function goToDiscord() {
+  window.open('https://discord.gg/XakF3yZ4', '_blank');
 };
 function downloadAlertSystem() {
   var host = "https://";

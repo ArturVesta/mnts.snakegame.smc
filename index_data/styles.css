@@ -21,14 +21,14 @@
   --player-one: url('29172/player_1.png');
   --player-two: url('29172/player_2.png');
   --player-three: url('29172/player_3.png');
-  --alpha: url('29172/alpha_map.jpg');
-  --origo: url('29172/origo_map.jpg');
+  --alpha: url('29172/alpha_map.png');
+  --origo: url('29172/origo_map.png');
   --modal: url('29172/game_over.png');
   --menu: url('29172/menu.png');
   --alert: url('29172/alert.png');
   --first: url('29172/new_modal_content.png');
   --button-true: url('29172/button_true.png');
-  --first-back: url('29172/first_modal_bg.jpg');
+  --first-back: url('29172/first_modal_bg.png');
   --controller: url('29172/cube_bg.png');
   --border: url('29172/border.png');
   --pause: url('29172/btn_function_pe.png');
@@ -43,11 +43,11 @@
   --right: url('29172/btn_control_rt.png');
   --right-hover: url('29172/btn_control_rt_hover.png');
   --loading-logo: url('29172/loading_yi_logo_2x.png');
-  --loading-spin: url('29172/loading_2x.png');
+  --loading-spin: url('29278/16f75a9bdd0bf6.gif');
   --tabs-menu: url('29172/tab_vertical.png');
   --tabs-audio: url('29172/tab_off.png');
   --tabs-audio-hover: url('29172/tab_horizontal.png');
-  --changed: url('29172/changed_bg.jpg');
+  --changed: url('29172/changed_bg.png');
   --toggled-off: url('29172/unselected.png');
   --toggled-on: url('29172/selected.png');
   --def-norm: url('29172/normal_on.png');
@@ -76,7 +76,8 @@
   --icons: url('29172/icon_bg.png');
   --exit: url('29172/exit.png');
   --exit-hover: url('29172/exit_hover.png');
-  --messenger: url('../messenger.webp');
+  --messenger: url('../messenger.png');
+  --discord: url('../discord.png');
   --dl-windows: url('29172/download_computer.png');
   --dl-android: url('29172/download_android.png');
 }
@@ -493,10 +494,10 @@ hr {
 #btn000, #btn002 {
   background-size: 100% 100%, auto 80%;
 }
-.loading{
+.loading {
     text-align: center;
     width: 300px;
-    margin:24px auto;
+    margin: -300px auto 0 auto;
 }
 .container {
     height:100%;
@@ -522,7 +523,7 @@ hr {
     font-weight: normal;
     font-size: 20px;
     padding: 0;
-    margin: 12px 0;
+    margin: -34px -20px 0 0;
 }
 .loading-img {
     width: 132px;
@@ -536,63 +537,29 @@ hr {
     background: var(--loading-logo) no-repeat;
     -webkit-background-size: 100% 100%;
     background-size: 100% 100%;
-    position: absolute;
-  left: 36px;
-    top: 36px;
+    position: fixed;
+    left: calc(50% - 30px);
+    bottom: 10px;
 }
 .animate-img {
-    width: 132px;
-    height: 132px;
+    width: 157px;
+    height: 100px;
     background: var(--loading-spin) no-repeat;
     -webkit-background-size: 100% 100%;
     background-size: 100% 100%;
     position: absolute;
     left: 0;
     top: 0;
-    animation:loading 10s ease-in-out infinite;
     transform-origin:center center;
-    -webkit-animation:loading 10s ease-in-out infinite;
     -webkit-transform-origin:center center;	
 }
-@keyframes loading {
-  0%{
-    transform: rotate(0deg);
-  }
-  25%{
-    transform: rotate(450deg);
-  }
-  50%{
-    transform: rotate(900deg);
-  }
-  75%{
-    transform: rotate(1350deg);
-  }
-  100%{
-    transform: rotate(1800deg);
-  }
-}
-@-webkit-keyframes loading {
-    0%{
-    transform: rotate(0deg);
-  }
-  25%{
-    transform: rotate(450deg);
-  }
-  50%{
-    transform: rotate(900deg);
-  }
-  75%{
-    transform: rotate(1350deg);
-  }
-  100%{
-    transform: rotate(1800deg);
-  }
-}
 .loading-assets {
-  width: 0px;
-  height: 0px;
+  width: 100%;
+  height: auto;
   padding: 0px;
   margin: 0px;
+  position: fixed;
+  bottom: 152px;
 }
 #navBtn {
   background-size: 100% 100%;
@@ -1207,22 +1174,30 @@ hr.acc {
     var(--exit-hover),
     var(--toggled-on);
 }
-#contactUsMessenger {
-  background-image: var(--messenger);
+#contactUsMessenger,
+#contactUsDiscord {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center center;
   width: 50px;
   height: 50px;
+  margin: 10px;
   filter: drop-shadow(0px 0px 5px var(--black)) grayscale(1);
-  display: block;
+  display: inline-block;
   cursor: pointer;
   transition: 0.6s;
   -webkit-transition: 0.6s;
   -moz-transition: 0.6s;
   -o-transition: 0.6s;
 }
-#contactUsMessenger:hover {
+#contactUsMessenger {
+  background-image: var(--messenger);
+}
+#contactUsDiscord {
+  background-image: var(--discord);
+}
+#contactUsMessenger:hover,
+#contactUsDiscord:hover {
   filter: drop-shadow(0px 0px 5px var(--filter-shadow)) grayscale(0);
 }
 #downloadNoAutoUpdate,
@@ -1254,6 +1229,15 @@ hr.acc {
 #downloadNoAutoUpdate2:hover {
   filter: grayscale(0);
   transform: scale(1.02);
+}
+.blocker {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 @media screen and (max-width: 800px) {
   .wrapper {
@@ -1435,7 +1419,8 @@ hr.acc {
     height: 18px;
     background-size: auto 80%, 100% auto;
   }
-  #contactUsMessenger {
+  #contactUsMessenger,
+  #contactUsDiscord {
     width: 30px;
     height: 30px;
   }
