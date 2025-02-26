@@ -1,4 +1,4 @@
-function baSetActiveMoveSound() {
+function baSetActiveMechaMoveSound() {
   document.getElementById("pwAlang").classList.remove("activet");
   document.getElementById("mwAlang").classList.remove("activet");
   document.getElementById("mwBlang").classList.add("activet");
