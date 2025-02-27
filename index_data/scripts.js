@@ -680,11 +680,11 @@ function alertAccept() {
   var alertconfirm = document.getElementById("alertRight");
     document.getElementById("alert").style.display = "block";
   if(localStorage.getItem("lang") === "en") {
-    document.getElementById("alertText").innerHTML = "We need your accepting to load ressources for disable resources delay.";
+    document.getElementById("alertText").innerHTML = "We need your accepting to load audio ressources for disable audio delay.";
     alertconfirm.value = "Confirm";
   }else
   if(localStorage.getItem("lang") === "ru") {
-    document.getElementById("alertText").innerHTML = "Нам необходимо ваше согласие на загрузку ресурсов для отключения задержки ресурсов.";
+    document.getElementById("alertText").innerHTML = "Нам необходимо ваше согласие на загрузку аудио ресурсов для отключения задержки аудио.";
     alertconfirm.value = "Подтвердить";
   }
   alertcancel.value = "...";
