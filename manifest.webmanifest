@@ -4,8 +4,14 @@
   "description": "A classic Snake Game with SMC style.",
   "scope": "/mnts.snakegame.smc/",
   "start_url": "/mnts.snakegame.smc/",
-  "display": "standalone",
+  "display": "fullscreen",
+  "orientation": "portrait",
   "icons": [
+    {
+      "src": "/mnts.snakegame.smc/index_data/29172/icon_0.png",
+      "type": "image/png",
+      "sizes": "225x225"
+    },
     {
       "src": "/mnts.snakegame.smc/index_data/29172/icon_0.png",
       "type": "image/png",

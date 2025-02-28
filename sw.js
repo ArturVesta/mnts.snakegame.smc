@@ -1,6 +1,8 @@
 var GHPATH = '/mnts.snakegame.smc';
 var APP_PREFIX = 'gppwa_';
-var VERSION = 'version_20';
+let VERSIONNAME = "0.2.1";
+var VERSION = VERSIONNAME;
+var CACHE_NAME = VERSIONNAME;
 var URLS = [
   `${GHPATH}/`,
   `${GHPATH}/index_data`,
@@ -208,9 +210,9 @@ var URLS = [
   `${GHPATH}/Google_ru.png`,
   `${GHPATH}/index.html`,
   `${GHPATH}/messenger.png`,
-  `${GHPATH}/discord.png`
+  `${GHPATH}/discord.png`,
+  `${GHPATH}/manifest.webmanifest`
 ];
-var CACHE_NAME = 'snakemechacollector-v20';
 var CacheURLS = [
   `${GHPATH}/`,
   `${GHPATH}/index_data`,
@@ -418,22 +420,18 @@ var CacheURLS = [
   `${GHPATH}/Google_ru.png`,
   `${GHPATH}/index.html`,
   `${GHPATH}/messenger.png`,
-  `${GHPATH}/discord.png`
+  `${GHPATH}/discord.png`,
+  `${GHPATH}/manifest.webmanifest`
 ];
 self.addEventListener('install', event => {
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(cache => cache.addAll(CacheURLS))
-  );
+  event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(CacheURLS)));
 });
 self.addEventListener('fetch', event => {
-  event.respondWith(
-    caches.match(event.request)
-      .then(response => {
+  event.respondWith(caches.match(event.request).then(response => {
         if (response) {
-          return response; // Return cached response
+          return response;
         }
-        return fetch(event.request); // Fetch from network
+        return fetch(event.request);
       })
   );
 });
