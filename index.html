@@ -13,7 +13,7 @@
   <body>
     <div id="main">
 
-      <div class="profile-content" onclick="clearInterval(setIntervalId);openProfileCenter();menuPauseWalkSound();defaultClickSound();">
+      <div class="profile-content" id="profileOpener" onclick="clearInterval(setIntervalId);openProfileCenter();menuPauseWalkSound();defaultClickSound();">
         <div class="league-info" id="">
           <div class="game-details">
             <div class="score" id="getscore">...</div>
@@ -100,6 +100,7 @@
             <div id="selectOptions" class="select-content">
               <div onclick="englishLanguage();" id="languageEn" class="language select">English</div>
               <div onclick="russianLanguage();" id="languageRu" class="language select">Русский</div>
+              <div onclick="japaneseLanguage();" id="languageJp" class="language select">日本語</div>
               <div class="important-text" id="langImportantLang">...</div>
             </div>
             <hr>
@@ -229,7 +230,7 @@
             <hr>
             <div id="translateUsage">
               <div id="translate"></div>
-              <button id="customLanguage" onclick="alert('Coming Soon...');//window.open('./languageprovider.html', '_blank');">...</button>
+              <button id="customLanguage" onclick="document.getElementById('contactUsDiscord').click();">...</button>
             </div>
             <hr>
             <p id="coderLang">...</p>
@@ -314,6 +315,7 @@
           <div id="selectOptions" class="select-content">
             <div onclick="document.getElementById('languageEn').click();document.getElementById('selectedLanguageIs').innerHTML='English is selected.';document.getElementById('firstModalApplyBtm').style.display='block';document.getElementById('firstModalApplyBtm').value='Apply';document.getElementById('selectedLanguageIs').style.direction='ltr';" class="language select firstinfirstmodal">English</div>
             <div onclick="document.getElementById('languageRu').click();document.getElementById('selectedLanguageIs').innerHTML='Русский вибирань.';document.getElementById('firstModalApplyBtm').style.display='block';document.getElementById('firstModalApplyBtm').value='Подтвердить';document.getElementById('selectedLanguageIs').style.direction='ltr'" class="language select">Русский</div>
+            <div onclick="document.getElementById('languageJp').click();document.getElementById('selectedLanguageIs').innerHTML='日本語が選択されています。';document.getElementById('firstModalApplyBtm').style.display='block';document.getElementById('firstModalApplyBtm').value='適用する';document.getElementById('selectedLanguageIs').style.direction='ltr'" class="language select">日本語</div>
             <div id="selectedLanguageIs"></div>
           </div>
           <input type="submit" id="firstModalApplyBtm" onclick="document.getElementById('applySettings').click();localStorage.setItem('firsttime','exist')" style="display:none;" value="..." />
@@ -600,6 +602,8 @@
     <script src="index_data/system.js" defer></script>
     <script src="index_data/scripts_2.js"></script>
     <script src="index_data/loading_system.js">// Specific for load</script>
+    <script src="index_data/29102/languages.js"></script>
+    <script src="index_data/29102/languages_texts.js"></script>
     <script>
       if(navigator.serviceWorker) {
         navigator.serviceWorker.register('/mnts.snakegame.smc/sw.js',{scope: '/mnts.snakegame.smc/'})
