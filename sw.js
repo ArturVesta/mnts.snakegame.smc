@@ -1,6 +1,6 @@
 var GHPATH = '/mnts.snakegame.smc';
 var APP_PREFIX = 'gppwa_';
-let VERSIONNAME = "0.2.1";
+let VERSIONNAME = "0.2.2";
 var VERSION = VERSIONNAME;
 var CACHE_NAME = VERSIONNAME;
 var URLS = [
@@ -61,6 +61,8 @@ var URLS = [
   `${GHPATH}/index_data/29102/trio_of_enders_walk.js`,
   `${GHPATH}/index_data/29102/ultra_beast_force.js`,
   `${GHPATH}/index_data/29102/ventorus_walk.js`,
+  `${GHPATH}/index_data/29102/item_took.js`,
+  `${GHPATH}/index_data/29102/notice_close.js`,
   `${GHPATH}/index_data/29172`,
   `${GHPATH}/index_data/29172/alert.png`,
   `${GHPATH}/index_data/29172/alpha_coin.png`,
@@ -201,6 +203,8 @@ var URLS = [
   `${GHPATH}/index_data/29208/trio_of_enders_walk.mp3`,
   `${GHPATH}/index_data/29208/ultra_beast_force.mp3`,
   `${GHPATH}/index_data/29208/ventorus_walk.mp3`,
+  `${GHPATH}/index_data/29208/item_took.mp3`,
+  `${GHPATH}/index_data/29208/notice_close.mp3`,
   `${GHPATH}/index_data/scripts.js`,
   `${GHPATH}/index_data/scripts_2.js`,
   `${GHPATH}/index_data/styles.css`,
@@ -271,6 +275,8 @@ var CacheURLS = [
   `${GHPATH}/index_data/29102/trio_of_enders_walk.js`,
   `${GHPATH}/index_data/29102/ultra_beast_force.js`,
   `${GHPATH}/index_data/29102/ventorus_walk.js`,
+  `${GHPATH}/index_data/29102/item_took.js`,
+  `${GHPATH}/index_data/29102/notice_close.js`,
   `${GHPATH}/index_data/29172`,
   `${GHPATH}/index_data/29172/alert.png`,
   `${GHPATH}/index_data/29172/alpha_coin.png`,
@@ -411,6 +417,8 @@ var CacheURLS = [
   `${GHPATH}/index_data/29208/trio_of_enders_walk.mp3`,
   `${GHPATH}/index_data/29208/ultra_beast_force.mp3`,
   `${GHPATH}/index_data/29208/ventorus_walk.mp3`,
+  `${GHPATH}/index_data/29208/item_took.mp3`,
+  `${GHPATH}/index_data/29208/notice_close.mp3`,
   `${GHPATH}/index_data/scripts.js`,
   `${GHPATH}/index_data/scripts_2.js`,
   `${GHPATH}/index_data/styles.css`,

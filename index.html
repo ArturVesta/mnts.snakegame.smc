@@ -13,7 +13,7 @@
   <body>
     <div id="main">
 
-      <div class="profile-content" onclick="clearInterval(setIntervalId);openProfileCenter();menuPauseWalkSound()">
+      <div class="profile-content" onclick="clearInterval(setIntervalId);openProfileCenter();menuPauseWalkSound();defaultClickSound();">
         <div class="league-info" id="">
           <div class="game-details">
             <div class="score" id="getscore">...</div>
@@ -25,7 +25,7 @@
       <div id="accenter" class="modal">
         <div class="modal-content">
           <div id="profileTitleLang">...</div>
-          <button class="reset-button" id="closeacc" onclick="document.getElementById('accenter').style.display='none';handleInterval();"></button>
+          <button class="reset-button" id="closeacc" onclick="document.getElementById('accenter').style.display='none';handleInterval();closeModalSound();"></button>
           <div class="in-modal-content" id="accontent">
             <div class="left-modal-acc">
               <div id="leagueImage"></div>
@@ -163,7 +163,6 @@
             <div class="tab-sounds">
               <button class="tablinks-sounds" onclick="openTabSound(event, 'musicsound');selectionSound();" id="musicstyleLang">...</button>
               <button class="tablinks-sounds" onclick="openTabSound(event, 'snakesound');selectionSound();" id="snakeTabsound">...</button>
-              <button class="tablinks-sounds" onclick="openTabSound(event, 'foodsound');selectionSound();" id="foodTabsound">503</button>
             </div>
             <div id="musicsound" class="sound-content">
               <div id="selectOptions" class="select-content">
@@ -222,9 +221,6 @@
                 <div onclick="xaSetActiveMechaMoveSound();" id="mwXlang" class="select">Ventorus (Walk)</div>
                 <div onclick="goToScrollToIdElementMusicLang();selectionSound();" class="select activet totopelement">...</div>
               </div>
-            </div>
-            <div id="foodsound" class="sound-content">
-              <h1 class="coming-soon">...</h1>
             </div>
           </div>
           <div id="about" class="content" style="display: block;">
@@ -325,6 +321,12 @@
       </div>
     </div>
     <!-- Audio sources -->
+    <!-- Colections Sounds -->
+    <!-- Item collected -->
+    <audio muted preload="none" id="itemCollected" class="collect-background">
+      <source type="audio/mp3" src="index_data/29208/item_took.mp3">
+      <script src="index_data/29102/item_took.js"></script>
+    </audio>
     <!-- Movement Sounds -->
     <!-- Player Walk -->
     <audio muted preload="none" id="playerWalk" loop class="walk-background">
@@ -477,6 +479,11 @@
     <audio muted preload="none" id="selectionSound">
       <source src="index_data/29208/tab_select.mp3" type="audio/mp3">
       <script src="index_data/29102/tab_select.js"></script>
+    </audio>
+    <!-- Close Modals -->
+    <audio muted preload="none" id="closeModalSound">
+      <source src="index_data/29208/notice_close.mp3" type="audio/mp3">
+      <script src="index_data/29102/notice_close.js"></script>
     </audio>
     <!-- Background Music 1 -->
     <audio muted preload="none" id="musicAbgSound" loop class="music-background">
