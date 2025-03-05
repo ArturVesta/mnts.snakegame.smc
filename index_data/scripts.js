@@ -680,11 +680,11 @@ function alertAccept() {
   var alertconfirm = document.getElementById("alertRight");
     document.getElementById("alert").style.display = "block";
   if(localStorage.getItem("lang") === "en") {
-    document.getElementById("alertText").innerHTML = "We need your accepting to load audio ressources for disable audio delay.";
+    document.getElementById("alertText").innerHTML = "Needed your accepting to load audio ressources for disable audio delay.";
     alertconfirm.value = "Confirm";
   }else
   if(localStorage.getItem("lang") === "ru") {
-    document.getElementById("alertText").innerHTML = "Нам необходимо ваше согласие на загрузку аудио ресурсов для отключения задержки аудио.";
+    document.getElementById("alertText").innerHTML = "Необходимо ваше согласие на загрузку аудио ресурсов для отключения задержки аудио.";
     alertconfirm.value = "Подтвердить";
   }
   alertcancel.value = "...";
@@ -706,6 +706,8 @@ function alertAccept() {
     document.getElementById("cancelSound").play();
     document.getElementById("openSettingsSound").play();
     document.getElementById("selectionSound").play();
+    document.getElementById("itemCollected").play();
+    document.getElementById("closeModalSound").play();
     if(localStorage.getItem("lang") === "en") {
       document.getElementById("alertText").innerHTML = "Loading…";
     }else

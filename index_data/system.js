@@ -119,6 +119,7 @@ const handleGameOver = () => {
   }
 };
 document.getElementById("reset").onclick = function() {
+  closeModalSound();
   document.getElementById("loseModal").style.display = "none";
   gameOver = false;
   foodX, foodY;
@@ -208,8 +209,9 @@ const initGame = () => {
   let html = `<div class="food ` + localStorage.getItem("reapitfood") + `" style="grid-area: ${foodY} / ${foodX}"></div>`;
   if(snakeX === foodX && snakeY === foodY) {
     updateFoodPosition();
+    playCollectItem();
     snakeBody.push([foodY, foodX]);
-    score++;// increment score by 1
+    score++;
     highScore = score >= highScore ? score : highScore;
     localStorage.setItem("high-score", highScore);
     if(localStorage.getItem("lang") === "en") {
