@@ -36,6 +36,7 @@
   --up-hover: url('29172/btn_control_up_hover.png');
   --menu-en: url('29172/nav_menu_en.png');
   --menu-ru: url('29172/nav_menu_ru.png');
+  --menu-jp: url('29172/nav_menu_jp.png');
   --left: url('29172/btn_control_lt.png');
   --left-hover: url('29172/btn_control_lt_hover.png');
   --down: url('29172/btn_control_dn.png');
@@ -73,6 +74,7 @@
   --play: url('29172/btn_function_py.png');
   --google-translate: url('../Google_en.png');
   --google-perevodchick: url('../Google_ru.png');
+  --google-honyaku: url('../Google_jp.png');
   --icons: url('29172/icon_bg.png');
   --exit: url('29172/exit.png');
   --exit-hover: url('29172/exit_hover.png');
@@ -85,7 +87,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Microsoft YaHei","Helvetica Neue",Arial,HelveticaNeue,Helvetica,"BBAlpha Sans",sans-serif;
+  font-family: "miSans";
   user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
@@ -455,6 +457,12 @@ hr {
   position: relative;
   display: block;
 }
+#btn002.jp-lang {background-image:
+  var(--border),
+  var(--menu-jp);
+  position: relative;
+  display: block;
+}
 #btn003 {background-image:
   var(--border),
   var(--left);
@@ -497,7 +505,7 @@ hr {
 .loading {
     text-align: center;
     width: 300px;
-    margin: -300px auto 0 auto;
+    margin: -100px auto 0 auto;
 }
 .container {
     height:100%;
@@ -576,6 +584,9 @@ hr {
 }
 #navBtn.ru-lang {
   background-image: var(--menu-ru);
+}
+#navBtn.jp-lang {
+  background-image: var(--menu-jp);
 }
 .tab {
   float: left;
@@ -1057,6 +1068,9 @@ input[type="range"]::-webkit-slider-thumb {
 #translate.g-t-ru {
   background-image: var(--google-perevodchick);
 }
+#translate.g-t-jp {
+  background-image: var(--google-honyaku);
+}
 #customLanguage {
   width: 64%;
   margin: 0px auto;
@@ -1239,6 +1253,10 @@ hr.acc {
   position: absolute;
   top: 0;
   left: 0;
+}
+@font-face {
+  font-family: miSans;
+  src: url(69326/MiSans.ttf);
 }
 @media screen and (max-width: 800px) {
   .wrapper {

@@ -516,6 +516,9 @@ function applySettings() {
   }else
   if(document.getElementById("languageRu").className === "language select activet") {
     localStorage.setItem("lang", "ru");
+  }else
+  if(document.getElementById("languageJp").className === "language select activet") {
+    localStorage.setItem("lang", "jp");
   };
   if(document.getElementById("ccLang").className === "controllerpostype select activet") {
     localStorage.setItem("controllerPosition", "center");
@@ -623,6 +626,11 @@ function alertReloadLater() {
     document.getElementById("alertText").innerHTML = "Установить по умолчанию?";
     alertcancel.value = "Отмена";
     alertconfirm.value = "Подтвердить";
+  }else
+  if(localStorage.getItem("lang") === "jp") {
+    document.getElementById("alertText").innerHTML = "デフォルトに設定しますか?";
+    alertcancel.value = "キャンセル";
+    alertconfirm.value = "確認する";
   }
   alertcancel.onclick = function() {
     document.getElementById("alert").style.display = "none";
@@ -661,6 +669,11 @@ function alertExitSite() {
     document.getElementById("alertText").innerHTML = "Ты уходишь?";
     alertcancel.value = "Нет";
     alertconfirm.value = "Да";
+  }else
+  if(localStorage.getItem("lang") === "jp") {
+    document.getElementById("alertText").innerHTML = "出発しますか？";
+    alertcancel.value = "いいえ";
+    alertconfirm.value = "はい";
   }
   alertcancel.onclick = function() {
     document.getElementById("alert").style.display = "none";
@@ -686,6 +699,10 @@ function alertAccept() {
   if(localStorage.getItem("lang") === "ru") {
     document.getElementById("alertText").innerHTML = "Необходимо ваше согласие на загрузку аудио ресурсов для отключения задержки аудио.";
     alertconfirm.value = "Подтвердить";
+  }else
+  if(localStorage.getItem("lang") === "jp") {
+    document.getElementById("alertText").innerHTML = "オーディオ遅延を無効にするには、オーディオ リソースを読み込む同意が必要です。";
+    alertconfirm.value = "確認する";
   }
   alertcancel.value = "...";
   alertcancel.style.display = "none";
@@ -695,6 +712,9 @@ function alertAccept() {
   }else
   if(localStorage.getItem("lang") === "ru") {
     alert("Как вы нажали на это!?");
+  }else
+  if(localStorage.getItem("lang") === "jp") {
+    alert("どうやってクリックしたんですか！？");
   }
   };
   alertconfirm.onclick = function() {
@@ -713,6 +733,9 @@ function alertAccept() {
     }else
     if(localStorage.getItem("lang") === "ru") {
       document.getElementById("alertText").innerHTML = "Загрузка…";
+    }else
+    if(localStorage.getItem("lang") === "jp") {
+      document.getElementById("alertText").innerHTML = "読み込み中…";
     }
     setTimeout(function() {
       document.getElementById("alert").style.display = "none";
@@ -731,9 +754,14 @@ function alertDeleteProgress() {
     alertconfirm.value = "Yes";
   }else
   if(localStorage.getItem("lang") === "ru") {
-    document.getElementById("alertText").innerHTML = "Вы уверены, что хотите удалить свой прогресс??";
+    document.getElementById("alertText").innerHTML = "Вы уверены, что хотите удалить свой прогресс?";
     alertcancel.value = "Нет";
     alertconfirm.value = "Да";
+  }else
+  if(localStorage.getItem("lang") === "jp") {
+    document.getElementById("alertText").innerHTML = "進捗状況を削除してもよろしいですか?";
+    alertcancel.value = "いいえ";
+    alertconfirm.value = "はい";
   }
   alertcancel.onclick = function() {
     document.getElementById("alert").style.display = "none";
@@ -796,6 +824,10 @@ function installApp() {
     if(localStorage.getItem("lang") === "ru") {
       document.getElementById("alertText").innerHTML = "Приложение уже установлено или работает в автономном режиме.";
       alertconfirm.value = "Подтвердить";
+    }else
+    if(localStorage.getItem("lang") === "jp") {
+      document.getElementById("alertText").innerHTML = "アプリケーションはすでにインストールされているか、オフラインで実行されています。";
+      alertconfirm.value = "確認する";
     }
     alertconfirm.onclick = function() {
       document.getElementById("alert").style.display = "none";
@@ -818,6 +850,10 @@ function installApp() {
     if(localStorage.getItem("lang") === "ru") {
       document.getElementById("alertText").innerHTML = "Приложение уже установлено или работает в автономном режиме.";
       alertconfirm.value = "Ок";
+    }else
+    if(localStorage.getItem("lang") === "jp") {
+      document.getElementById("alertText").innerHTML = "アプリケーションはすでにインストールされているか、オフラインで実行されています。";
+      alertconfirm.value = "わかりました";
     }
     alertconfirm.onclick = function() {
       document.getElementById("alert").style.display = "none";
@@ -884,6 +920,10 @@ function installApp() {
           if(localStorage.getItem("lang") === "ru") {
             document.getElementById("alertText").innerHTML = "Функция «Добавить на главный экран» в настоящее время недоступна. Убедитесь, что вы посетили сайт несколько раз.";
             alertconfirm.value = "Ок";
+          }else
+          if(localStorage.getItem("lang") === "jp") {
+            document.getElementById("alertText").innerHTML = "ホーム画面に追加機能は現在利用できません。サイトに数回アクセスしたことを確認してください。";
+            alertconfirm.value = "Ок";
           }
           alertconfirm.onclick = function() {
             document.getElementById("alert").style.display = "none";
@@ -904,6 +944,10 @@ function installApp() {
     }else
     if(localStorage.getItem("lang") === "ru") {
       document.getElementById("alertText").innerHTML = "Этот браузер не поддерживает функцию «Добавить на главный экран».";
+      alertconfirm.value = "Ок";
+    }else
+    if(localStorage.getItem("lang") === "jp") {
+      document.getElementById("alertText").innerHTML = "このブラウザはホーム画面への追加をサポートしていません。";
       alertconfirm.value = "Ок";
     }
     alertconfirm.onclick = function() {

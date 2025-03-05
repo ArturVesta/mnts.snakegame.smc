@@ -25,6 +25,14 @@ function pauseGame() {
         document.getElementById("alertText").innerHTML = "Игра приостановлена, нажмите ''Продолжить'', чтобы продолжить.";
       }
       alertconfirm.value = "Продолжать";
+    }else
+    if(localStorage.getItem("lang") === "jp") {
+      if(navigator.userAgent.match(/mobile/i)) {
+        document.getElementById("alertText").innerHTML = "ゲームは一時停止されています。続行するには「再開」をタップしてください。";
+      }else{
+        document.getElementById("alertText").innerHTML = "ゲームは一時停止されています。続行するには「続行」をクリックしてください。";
+      }
+      alertconfirm.value = "続く";
     }
     alertconfirm.onclick = function() {
       document.getElementById('chechboxPausing').click();
@@ -37,6 +45,9 @@ function pauseGame() {
     }else
     if(localStorage.getItem("lang") === "ru") {
       document.getElementById("alertText").innerHTML = "Готово продолжить через...";
+    }else
+    if(localStorage.getItem("lang") === "jp") {
+      document.getElementById("alertText").innerHTML = "続行する準備ができました...";
     }
     setTimeout(() => {
       document.getElementById("alertText").innerHTML = "3"
@@ -87,7 +98,17 @@ window.addEventListener('load', function() {
   document.getElementById("collectedPticket").innerHTML = localStorage.getItem("ticketPremiumStorage");
 });
 window.oncontextmenu=function(){return false}
-window.onerror=function(){alert("Somthin error.., Tell us if this alert is jump.")};
+window.onerror=function(){
+  if(localStorage.getItem("lang") === "en") {
+    alert("Somthin error.., Tell us if this alert is jump.");
+  }else
+  if(localStorage.getItem("lang") === "ru") {
+    alert("Произошла ошибка.. Сообщите нам, если отображается это оповещение.");
+  }else
+  if(localStorage.getItem("lang") === "jp") {
+    alert("エラーが発生しました。このアラートが表示されるかどうかを教えてください。");
+  }
+};
 const dimensions = [
   "16",
   "32",
@@ -285,244 +306,6 @@ function positioningController() {
   }
 };
 positioningController();
-function englishLanguage() {
-  document.getElementById("languageEn").classList.add("activet");
-  document.getElementById("languageRu").classList.remove("activet");
-  document.getElementById("applySettings").style.display = "block";
-  selectionSound();
-};
-function russianLanguage() {
-  document.getElementById("languageEn").classList.remove("activet");
-  document.getElementById("languageRu").classList.add("activet");
-  document.getElementById("applySettings").style.display = "block";
-  selectionSound();
-};
-function languagesContents() {
-  var a000 = document.getElementById("SettingsTitleLang");
-  var a001 = document.getElementById("aboutTab");
-  var a002 = document.getElementById("systemTab");
-  var a003 = document.getElementById("snakeTab");
-  var a004 = document.getElementById("foodTab");
-  var a005 = document.getElementById("boardTab");
-  var a006 = document.getElementById("audioTab");
-  var a007 = document.getElementById("difficultyLang");
-  var a008 = document.getElementById("normalDif");
-  var a009 = document.getElementById("hardDif");
-  var a010 = document.getElementById("hellDif");
-  var a011 = document.getElementById("langsLangs");
-  var a012 = document.getElementById("boardMapAlphaLang");
-  var a013 = document.getElementById("boardMapOrigoLang");
-  var a014 = document.getElementById("snakeOne");
-  var a015 = document.getElementById("snakeTwo");
-  var a016 = document.getElementById("snakeThree");
-  var a017 = document.getElementById("meowLang");
-  var a018 = document.getElementById("goldLang");
-  var a019 = document.getElementById("alphaLang");
-  var a020 = document.getElementById("crystalLang");
-  var a021 = document.getElementById("ticketLang");
-  var a022 = document.getElementById("cTicketLang");
-  var a023 = document.getElementById("pTicketLang");
-  var a024 = document.getElementById("muteLang");
-  var a025 = document.getElementById("sfxLang");
-  var a026 = document.getElementById("netEaseLang1");
-  var a027 = document.getElementById("netEaseLang2");
-  var a028 = document.getElementById("coderLang");
-  var a029 = document.getElementById("baseCodeLang");
-  var a030 = document.getElementById("getscore");
-  var a031 = document.getElementById("loseText");
-  var a032 = document.getElementById("defaultSettings");
-  var a033 = document.getElementById("applySettings");
-  var a034 = document.getElementById("controllerSettingsLangs");
-  var a035 = document.getElementById("cspLang");
-  var a036 = document.getElementById("ccLang");
-  var a037 = document.getElementById("clLang");
-  var a038 = document.getElementById("crLang");
-  var a039 = document.getElementById("noticeTitleLang");
-  var a041 = document.getElementById("musicLang");
-  var a042 = document.getElementById("musicstyleLang");
-  var a043 = document.getElementById("navBtn");
-  var a044 = document.getElementById("btn002");
-  var a045 = document.getElementById("deleteprogbutton");
-  var a046 = document.getElementById("langImportantLang");
-  var a047 = document.getElementById("cTypeLang");
-  var a048 = document.getElementById("translate");
-  var a049 = document.getElementById("snakeTabsound");
-  var a050 = document.getElementById("customLanguage");
-  var a051 = document.getElementById("profileTitleLang");
-  var a052 = document.getElementById("clickable0Lang");
-  var a053 = document.getElementById("cratedOn0Lang");
-  var a054 = document.getElementById("cratedOnLang");
-  var a055 = document.getElementById("loadingText");
-  const a000_all = document.getElementsByClassName('settingscontent');
-  const a001_all = document.getElementsByClassName('stylescontent');
-  const a002_all = document.getElementsByClassName('coming-soon');
-  const a003_all = document.getElementsByClassName('moresettingscontent');
-  const a004_all = document.getElementsByClassName('totopelement');
-  const a005_all = document.getElementsByClassName('serviceLang');
-  if(localStorage.getItem("lang") === "en") {
-    a000.innerHTML = "Settings";
-    a001.innerHTML = "About";
-    a002.innerHTML = "System";
-    a003.innerHTML = "Snake";
-    a004.innerHTML = "Food";
-    a005.innerHTML = "Board";
-    a006.innerHTML = "Audio";
-    a007.innerHTML = "Difficulty:";
-    a008.innerHTML = "Normal";
-    a009.innerHTML = "Hard";
-    a010.innerHTML = "Hell";
-    a011.innerHTML = "Languages:";
-    a012.innerHTML = "Alpha City Map";
-    a013.innerHTML = "Origo Island Map";
-    a014.innerHTML = "Player 1";
-    a015.innerHTML = "Player 2";
-    a016.innerHTML = "Player 3";
-    a017.innerHTML = "Meow Token";
-    a018.innerHTML = "Gold";
-    a019.innerHTML = "Alpha Coin";
-    a020.innerHTML = "Crystal";
-    a021.innerHTML = "Ticket";
-    a022.innerHTML = "Chromatic Ticket";
-    a023.innerHTML = "Premium Ticket";
-    a024.innerHTML = "Mute Audio";
-    a025.innerHTML = "SFX Volume";
-    a026.innerHTML = "Privacy Policy, Terms and Conditions";
-    a027.innerHTML = "©1997-2025 NetEase, Inc.All Rights Reserved";
-    a028.innerHTML = "Coding: " + "MNTS;";
-    a029.innerHTML = "Base Code: From";
-    a030.innerHTML = "Score: 0";
-    a031.innerHTML = "Game Over!";
-    a032.value = "Default";
-    a033.value = "Apply";
-    a034.innerHTML = "Controller:";
-    a035.innerHTML = "Position:";
-    a036.innerHTML = "Center";
-    a037.innerHTML = "Left";
-    a038.innerHTML = "Right";
-    a039.innerHTML = "Notice";
-    a041.innerHTML = "Background Music";
-    a042.innerHTML = "Music";
-      a043.classList.add("en-lang");
-      a044.classList.add("en-lang");
-    a045.value = "Delete Progress";
-    a046.innerHTML = "(Language translations may not be 100% accurate)";
-    a047.innerHTML = "Dynamic controls";
-    a048.classList.add("g-t-en");
-    a049.innerHTML = "Snake";
-    a050.innerHTML = "Share your language or repair existing languages";
-    a051.innerHTML = "Profile Center (Beta)";
-    a052.innerHTML = "> Clickable <";
-    a053.innerHTML = "Coded on: ";
-    a055.innerHTML = "Loading…";
-    for (let i = 0; i < a000_all.length; i++) {
-      a000_all[i].textContent = 'Settings:';
-    };
-    for (let i = 0; i < a001_all.length; i++) {
-      a001_all[i].textContent = 'Style:';
-    };
-    for (let i = 0; i < a002_all.length; i++) {
-      a002_all[i].textContent = 'Coming Soon!, Wait for updates.';
-    };
-    for (let i = 0; i < a003_all.length; i++) {
-      a003_all[i].textContent = 'More:';
-    };
-    for (let i = 0; i < a004_all.length; i++) {
-      a004_all[i].textContent = 'To start';
-    };
-    for (let i = 0; i < a005_all.length; i++) {
-      a005_all[i].textContent = 'Services:';
-    }
-    document.title = "Snake Mecha Collector";
-  }else
-  if(localStorage.getItem("lang") === "ru") {
-    a000.innerHTML = "Настр'";
-    a001.innerHTML = "О";
-    a002.innerHTML = "Система";
-    a003.innerHTML = "Змея";
-    a004.innerHTML = "Еда";
-    a005.innerHTML = "Доска";
-    a006.innerHTML = "Аудио";
-    a007.innerHTML = "Сложность:";
-    a008.innerHTML = "Нормальный";
-    a009.innerHTML = "Тяжелый";
-    a010.innerHTML = "Ад";
-    a011.innerHTML = "Языки:";
-    a012.innerHTML = "Карта города Альфа";
-    a013.innerHTML = "Карта острова Ориго";
-    a014.innerHTML = "Игрок 1";
-    a015.innerHTML = "Игрок 2";
-    a016.innerHTML = "Игрок 3";
-    a017.innerHTML = "Мяу-жетон";
-    a018.innerHTML = "Золото";
-    a019.innerHTML = "Альфа-монета";
-    a020.innerHTML = "Кристалл";
-    a021.innerHTML = "Билет";
-    a022.innerHTML = "Хроматический билет";
-    a023.innerHTML = "Премиум-билет";
-    a024.innerHTML = "Отключить звук";
-    a025.innerHTML = "Громкость SFX";
-    a026.innerHTML = "Политика конфиденциальности, положения и условия";
-    a027.innerHTML = "©1997-2025 NetEase, Inc.Все права защищены";
-    a028.innerHTML = "Кодирование: " + "MNTS;";
-    a029.innerHTML = "Базовый код: Из ";
-    a030.innerHTML = "Счет: 0";
-    a031.innerHTML = "Игра закончена!";
-    a032.value = "По умолч";
-    a033.value = "Применять";
-    a034.innerHTML = "Контроллер:";
-    a035.innerHTML = "Позиция:";
-    a036.innerHTML = "Центрый";
-    a037.innerHTML = "Левый";
-    a038.innerHTML = "Правый";
-    a039.innerHTML = "Уведомление";
-    a041.innerHTML = "Фоновая музыка";
-    a042.innerHTML = "Музыка";
-      a043.classList.add("ru-lang");
-      a044.classList.add("ru-lang");
-    a045.value = "Удалить Прогресс";
-    a046.innerHTML = "(Переводы могут содержать ошибки)";
-    a047.innerHTML = "Динамический контроллер";
-    a048.classList.add("g-t-ru");
-    a049.innerHTML = "Змея";
-    a050.innerHTML = "Поделитесь своим языком или исправьте существующие языки";
-    a051.innerHTML = "Центр профиля (Бета)";
-    a052.innerHTML = "> Нажемной <";
-    a053.innerHTML = "Кодировано на: ";
-    a055.innerHTML = "Загрузка…";
-    for (let i = 0; i < a000_all.length; i++) {
-      a000_all[i].textContent = 'Настройки:';
-    };
-    for (let i = 0; i < a001_all.length; i++) {
-      a001_all[i].textContent = 'Стиль:';
-    };
-    for (let i = 0; i < a002_all.length; i++) {
-      a002_all[i].textContent = 'Скоро!, Ждите обновлений.';
-    };
-    for (let i = 0; i < a003_all.length; i++) {
-      a003_all[i].textContent = 'Более:';
-    };
-    for (let i = 0; i < a004_all.length; i++) {
-      a004_all[i].textContent = 'К началу';
-    };
-    for (let i = 0; i < a005_all.length; i++) {
-      a005_all[i].textContent = 'Услуги:';
-    }
-    document.title = "Змея Меха Сборщик";
-  }
-  a054.innerHTML = "Visual Studio Code";
-};
-languagesContents();
-function langCheck() {
-  if(localStorage.getItem("lang") === "en") {
-    document.getElementById("languageEn").classList.add("activet");
-    document.getElementById("languageRu").classList.remove("activet");
-  }else
-  if(localStorage.getItem("lang") === "ru") {
-    document.getElementById("languageEn").classList.remove("activet");
-    document.getElementById("languageRu").classList.add("activet");
-  }
-};
-langCheck();
 function checkDeviceType() {
   if(navigator.userAgent.match(/mobile/i)) {
     document.getElementById("controller").style.display = "grid";
@@ -732,6 +515,10 @@ function leagueSystem() {
     if(localStorage.getItem("lang") === "ru") {
       document.getElementById("leagueType").innerHTML = "Нет лиге";
       document.getElementById("subleagueType").innerHTML = "Нет лиге";
+    }else
+    if(localStorage.getItem("lang") === "jp") {
+      document.getElementById("leagueType").innerHTML = "非リーグ";
+      document.getElementById("subleagueType").innerHTML = "非リーグ";
     }
   }else
   if(localStorage.getItem("high-score") == "1" || localStorage.getItem("high-score") == "2" || localStorage.getItem("high-score") == "3" || localStorage.getItem("high-score") == "4" || localStorage.getItem("high-score") == "5" || localStorage.getItem("high-score") == "6" || localStorage.getItem("high-score") == "7" || localStorage.getItem("high-score") == "8" || localStorage.getItem("high-score") == "9" || localStorage.getItem("high-score") == "10") {
@@ -746,6 +533,10 @@ function leagueSystem() {
     if(localStorage.getItem("lang") === "ru") {
       document.getElementById("leagueType").innerHTML = "Бронзовая лига";
       document.getElementById("subleagueType").innerHTML = "Бронзовая лига";
+    }else
+    if(localStorage.getItem("lang") === "jp") {
+      document.getElementById("leagueType").innerHTML = "ブロンズリーグ";
+      document.getElementById("subleagueType").innerHTML = "ブロンズリーグ";
     }
     star.style.color = "#ce8946ff";
     substar.style.color = "#ce8946ff";
@@ -762,6 +553,10 @@ function leagueSystem() {
     if(localStorage.getItem("lang") === "ru") {
       document.getElementById("leagueType").innerHTML = "Серебряная лига";
       document.getElementById("subleagueType").innerHTML = "Серебряная лига";
+    }else
+    if(localStorage.getItem("lang") === "jp") {
+      document.getElementById("leagueType").innerHTML = "シルバーリーグ";
+      document.getElementById("subleagueType").innerHTML = "シルバーリーグ";
     }
     star.style.color = "#c4c4c4ff";
     substar.style.color = "#c4c4c4ff";
@@ -778,6 +573,10 @@ function leagueSystem() {
     if(localStorage.getItem("lang") === "ru") {
       document.getElementById("leagueType").innerHTML = "Золотая лига";
       document.getElementById("subleagueType").innerHTML = "Золотая лига";
+    }else
+    if(localStorage.getItem("lang") === "jp") {
+      document.getElementById("leagueType").innerHTML = "ゴールドリーグ";
+      document.getElementById("subleagueType").innerHTML = "ゴールドリーグ";
     }
     star.style.color = "#efbf04ff";
     substar.style.color = "#efbf04ff";
@@ -794,6 +593,10 @@ function leagueSystem() {
     if(localStorage.getItem("lang") === "ru") {
       document.getElementById("leagueType").innerHTML = "Платиновая лига";
       document.getElementById("subleagueType").innerHTML = "Платиновая лига";
+    }else
+    if(localStorage.getItem("lang") === "jp") {
+      document.getElementById("leagueType").innerHTML = "プラチナリーグ";
+      document.getElementById("subleagueType").innerHTML = "プラチナリーグ";
     }
     star.style.color = "#d9d9d9ff";
     substar.style.color = "#d9d9d9ff";
@@ -810,6 +613,10 @@ function leagueSystem() {
     if(localStorage.getItem("lang") === "ru") {
       document.getElementById("leagueType").innerHTML = "Алмазная лига";
       document.getElementById("subleagueType").innerHTML = "Алмазная лига";
+    }else
+    if(localStorage.getItem("lang") === "jp") {
+      document.getElementById("leagueType").innerHTML = "ダイヤモンドリーグ";
+      document.getElementById("subleagueType").innerHTML = "ダイヤモンドリーグ";
     }
     star.style.color = "#D397F8ff";
     substar.style.color = "#D397F8ff";
@@ -826,6 +633,10 @@ function leagueSystem() {
     if(localStorage.getItem("lang") === "ru") {
       document.getElementById("leagueType").innerHTML = "Супер лига";
       document.getElementById("subleagueType").innerHTML = "Супер лига";
+    }else
+    if(localStorage.getItem("lang") === "jp") {
+      document.getElementById("leagueType").innerHTML = "スーパーリーグ";
+      document.getElementById("subleagueType").innerHTML = "スーパーリーグ";
     }
     star.style.color = "#FF7518ff";
     substar.style.color = "#FF7518ff";
@@ -842,6 +653,10 @@ function leagueSystem() {
     if(localStorage.getItem("lang") === "ru") {
       document.getElementById("leagueType").innerHTML = "Легендарная лига";
       document.getElementById("subleagueType").innerHTML = "Легендарная лига";
+    }else
+    if(localStorage.getItem("lang") === "jp") {
+      document.getElementById("leagueType").innerHTML = "レジェンダリーリーグ";
+      document.getElementById("subleagueType").innerHTML = "レジェンダリーリーグ";
     }
     star.style.color = "#FF7518ff";
     substar.style.color = "#FF7518ff";
@@ -858,6 +673,10 @@ function leagueSystem() {
     if(localStorage.getItem("lang") === "ru") {
       document.getElementById("leagueType").innerHTML = "Альфа Рыцарь";
       document.getElementById("subleagueType").innerHTML = "Альфа Рыцарь";
+    }else
+    if(localStorage.getItem("lang") === "jp") {
+      document.getElementById("leagueType").innerHTML = "アルファナイト";
+      document.getElementById("subleagueType").innerHTML = "アルファナイト";
     }
     star.style.color = "#ffff00ff";
     substar.style.color = "#ffff00ff";
@@ -946,6 +765,17 @@ document.onmousedown = function (event) {
   }else
   if (event.keyCode == 68) {
     document.getElementById('btn005').click();
+  }else
+  if(event.keyCode == 69) {
+    document.getElementById("profileOpener").click();
+  }else
+  if((event.key === 'F12') ||
+    (event.ctrlKey && event.shiftKey && event.key === 'I') ||
+    (event.ctrlKey && event.shiftKey && event.key === 'C') ||
+    (event.metaKey && event.altKey && event.key === 'I') ||
+    (event.metaKey && event.shiftKey && event.key === 'C')
+  ) {
+    event.preventDefault();
   }
 }
 document.onkeydown = function (event) {
@@ -972,6 +802,9 @@ document.onkeydown = function (event) {
   if (event.keyCode == 68) {
     document.getElementById('btn005').click();
   }else
+  if(event.keyCode == 69) {
+    document.getElementById("profileOpener").click();
+  }else
   if((event.key === 'F12') ||
     (event.ctrlKey && event.shiftKey && event.key === 'I') ||
     (event.ctrlKey && event.shiftKey && event.key === 'C') ||
@@ -979,7 +812,6 @@ document.onkeydown = function (event) {
     (event.metaKey && event.shiftKey && event.key === 'C')
   ) {
     event.preventDefault();
-    alert("Developer tools access blocked.");
   }
 };
 function menuPauseWalkSound() {
@@ -1066,7 +898,7 @@ function goToMessenger() {
   window.open('https://m.me/100037328776594?hash=AbbiIv3lRHEaooAd&source=qr_link_share', '_blank');
 };
 function goToDiscord() {
-  window.open('https://discord.gg/XakF3yZ4', '_blank');
+  window.open('https://discord.gg/FRcBQGgy', '_blank');
 };
 function downloadAlertSystem() {
   var host = "https://";

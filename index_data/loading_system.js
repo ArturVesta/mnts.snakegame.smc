@@ -72,6 +72,7 @@ const tasset0 = [
   "menu",
   "nav_menu_en",
   "nav_menu_ru",
+  "nav_menu_jp",
   "new_modal_content",
   "normal_on",
   "null",
@@ -97,6 +98,7 @@ const tasset1 = [
 const tasset2 = [
   "Google_en",
   "Google_ru",
+  "Google_jp",
   "messenger",
   "discord"
 ];
@@ -107,6 +109,7 @@ function testLoadAsset0() {
       asset.src = locator + tasset0[a] + format;
       asset.style.width = "20px";
       asset.style.height = "20px";
+      asset.style.opacity = "0";
       asset.addEventListener("load", function() {
         document.getElementById('widther').style.width = widthcont++ + "px";
         toDisplayNone();
@@ -118,6 +121,7 @@ function testLoadAsset0() {
       asset.src = locator2 + tasset1[b] + format2;
       asset.style.width = "20px";
       asset.style.height = "20px";
+      asset.style.opacity = "0";
       asset.addEventListener("load", function() {
         document.getElementById('widther').style.width = widthcont++ + "px";
         toDisplayNone();
@@ -129,6 +133,7 @@ function testLoadAsset0() {
       asset.src = tasset2[c] + format;
       asset.style.width = "20px";
       asset.style.height = "20px";
+      asset.style.opacity = "0";
       asset.addEventListener("load", function() {
         document.getElementById('widther').style.width = widthcont++ + "px";
         toDisplayNone();
@@ -139,7 +144,7 @@ function testLoadAsset0() {
 }
 function toDisplayNone() {
   setTimeout(function() {
-  if(document.getElementById('widther').style.width === "90px") {
+  if(document.getElementById('widther').style.width === "92px") {
     alertAccept();
     document.getElementById("loading").style.display = "none";
   }

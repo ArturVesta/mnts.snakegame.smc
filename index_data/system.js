@@ -24,6 +24,9 @@ if(localStorage.getItem("lang") === "en") {
 }else
 if(localStorage.getItem("lang") === "ru") {
   highScoreElement.innerText = `Высокий счет: ${highScore}`;
+}else
+if(localStorage.getItem("lang") === "jp") {
+  highScoreElement.innerText = `ハイスコ​​ア: ${highScore}`;
 }
 const updateFoodPosition = () => {
   foodX = Math.floor(Math.random() * 30) + 1;
@@ -37,10 +40,26 @@ const handleGameOver = () => {
     document.getElementById("loseNewRecordScore").innerHTML = "";
   }else
   if(score === localStorage.getItem("steelScore")) {
-    document.getElementById("loseNewRecordScore").innerHTML = "So close to add +1 to new record!";
+    if(localStorage.getItem("lang") === "en") {
+      document.getElementById("loseNewRecordScore").innerHTML = "So close to a new record!";
+    }else
+    if(localStorage.getItem("lang") === "ru") {
+      document.getElementById("loseNewRecordScore").innerHTML = "Так близко к новому рекорду!";
+    }else
+    if(localStorage.getItem("lang") === "jp") {
+      document.getElementById("loseNewRecordScore").innerHTML = "新しい記録に +1 を追加するのにとても近づきました!";
+    }
   }else
   if(score >= localStorage.getItem("steelScore")) {
-    document.getElementById("loseNewRecordScore").innerHTML = "Congrats, you achieved a new record!";
+    if(localStorage.getItem("lang") === "en") {
+      document.getElementById("loseNewRecordScore").innerHTML = "Congrats, you achieved a new record!";
+    }else
+    if(localStorage.getItem("lang") === "ru") {
+      document.getElementById("loseNewRecordScore").innerHTML = "Поздравляем, вы установили новый рекорд!";
+    }else
+    if(localStorage.getItem("lang") === "jp") {
+      document.getElementById("loseNewRecordScore").innerHTML = "おめでとうございます、新記録を達成しました！";
+    }
   }
   if(localStorage.getItem("movementbg") === "playerWalk") {
     document.getElementById("playerWalk").pause();
@@ -133,6 +152,9 @@ document.getElementById("reset").onclick = function() {
   }else
   if(localStorage.getItem("lang") === "ru") {
     scoreElement.innerText = `Счет: ${score}`;
+  }else
+  if(localStorage.getItem("lang") === "jp") {
+    scoreElement.innerText = `チェック： ${score}`;
   };
   localStorage.setItem("steelScore", localStorage.getItem("high-score"));
 };
@@ -221,6 +243,10 @@ const initGame = () => {
     if(localStorage.getItem("lang") === "ru") {
       scoreElement.innerText = `Счет: ${score}`;
       highScoreElement.innerText = `Высокий счет: ${highScore}`;
+    }else
+    if(localStorage.getItem("lang") === "jp") {
+      scoreElement.innerText = `チェック： ${score}`;
+      highScoreElement.innerText = `ハイスコ​​ア: ${highScore}`;
     }
     if(localStorage.getItem("foodStyle") === "imgMeow") {
       meaw_token_item++;
