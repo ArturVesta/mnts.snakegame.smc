@@ -6,6 +6,7 @@
   "start_url": "/mnts.snakegame.smc/",
   "display": "fullscreen",
   "orientation": "portrait",
+  "lang": "en",
   "icons": [
     {
       "src": "/mnts.snakegame.smc/index_data/29172/icon_0.png",
@@ -17,5 +18,18 @@
       "type": "image/png",
       "sizes": "225x225"
     }
-  ]
+  ],
+  "locales": ["en","ru","ja","zh"],
+  "ru": {
+    "name": "Змея Меха Сборщик",
+    "short_name": "Змея Меха Сборщик"
+  },
+  "ja": {
+    "name": "スネークメカコレクター",
+    "short_name": "スネークメカコレクター"
+  },
+  "zh": {
+    "name": "蛇形机甲收藏家",
+    "short_name": "蛇形机甲收藏家"
+  }
 }

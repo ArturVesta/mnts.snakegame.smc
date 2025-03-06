@@ -9,10 +9,24 @@
     <link rel="canonical" href="https://arturvesta.github.io/mnts.snakegame.smc/">
     <link rel="manifest" href="/mnts.snakegame.smc/manifest.webmanifest">
     <link rel="stylesheet" href="index_data/styles.css">
+    <script>
+      var rUsers = "0";
+      if(localStorage.getItem("lang") === "en") {
+        document.documentElement.setAttribute("lang", "en");
+      }else
+      if(localStorage.getItem("lang") === "ru") {
+        document.documentElement.setAttribute("lang", "ru");
+      }else
+      if(localStorage.getItem("lang") === "jp") {
+        document.documentElement.setAttribute("lang", "ja");
+      }else
+      if(localStorage.getItem("lang") === "chs") {
+        document.documentElement.setAttribute("lang", "zh");
+      }
+    </script>
   </head>
   <body>
     <div id="main">
-
       <div class="profile-content" id="profileOpener" onclick="clearInterval(setIntervalId);openProfileCenter();menuPauseWalkSound();defaultClickSound();">
         <div class="league-info" id="">
           <div class="game-details">
@@ -66,7 +80,6 @@
           </div>
         </div>
       </div>
-
       <div id="navBtn" onclick="clearInterval(setIntervalId);document.getElementById('menu').style.display='block';openSettingsSound();menuPauseWalkSound();"></div>
       <input type="checkbox" id="chechboxPausing" class="pauseBtn" onchange="pauseGame();">
       <div class="menu" id="menu">
@@ -94,13 +107,14 @@
             <div class="categores moresettingscontent">...</div>
             <input type="button" id="deleteprogbutton" onclick="alertDeleteProgress();" value="...">
             <input type="button" id="downloadNoAutoUpdate" class="windows-dl" onclick="downloadAlertSystem();" value=" ">
-            <input type="button" id="downloadNoAutoUpdate2" class="android-dl" onclick="downloadAlertSystemAi();" value=" ">
+            <input type="button" id="downloadNoAutoUpdate2" class="android-dl" value=" ">
             <hr>
             <div class="categores" id="langsLangs">...</div>
             <div id="selectOptions" class="select-content">
               <div onclick="englishLanguage();" id="languageEn" class="language select">English</div>
               <div onclick="russianLanguage();" id="languageRu" class="language select">Русский</div>
               <div onclick="japaneseLanguage();" id="languageJp" class="language select">日本語</div>
+              <div onclick="ChineseSimplifiedLanguage();" id="languageChs" class="language select">简体中文</div>
               <div class="important-text" id="langImportantLang">...</div>
             </div>
             <hr>
@@ -233,6 +247,66 @@
               <button id="customLanguage" onclick="document.getElementById('contactUsDiscord').click();">...</button>
             </div>
             <hr>
+            <span class="heading" id="heading">...</span>
+            <hr style="border:3px solid #f1f1f1;padding:0;margin:0;">
+            <div class="row">
+              <div class="middle">
+                <div class="bar-container">
+                  <div class="bar-5" style="width: 0px;"></div>
+                </div>
+              </div>
+              <div class="side left">
+                <div class="r-stars">5</div>
+              </div>
+              <div class="side right">
+                <div>0</div>
+              </div>
+              <div class="middle">
+                <div class="bar-container">
+                  <div class="bar-4" style="width: 0px;"></div>
+                </div>
+              </div>
+              <div class="side left">
+                <div class="r-stars">4</div>
+              </div>
+              <div class="side right">
+                <div>0</div>
+              </div>
+              <div class="middle">
+                <div class="bar-container">
+                  <div class="bar-3" style="width: 0px;"></div>
+                </div>
+              </div>
+              <div class="side left">
+                <div class="r-stars">3</div>
+              </div>
+              <div class="side right">
+                <div>0</div>
+              </div>
+              <div class="middle">
+                <div class="bar-container">
+                  <div class="bar-2" style="width: 0px;"></div>
+                </div>
+              </div>
+              <div class="side left">
+                <div class="r-stars">2</div>
+              </div>
+              <div class="side right">
+                <div>0</div>
+              </div>
+              <div class="middle">
+                <div class="bar-container">
+                  <div class="bar-1" style="width: 0px;"></div>
+                </div>
+              </div>
+              <div class="side left">
+                <div class="r-star">1</div>
+              </div>
+              <div class="side right">
+                <div>0</div>
+              </div>
+            </div>
+            <hr>
             <p id="coderLang">...</p>
             <p id="direction1"><span id="baseCodeLang">...</span><a href="https://www.codingnepalweb.com/create-snake-game-htm-css-javascript/" target="_blank">CodingNepal</a>;</p>
             <p><span id="cratedOn0Lang">...</span><a id="cratedOnLang" href="https://code.visualstudio.com" target="_blank">...</a></p>
@@ -310,12 +384,13 @@
         <div id="firstContentA" class="in-first-modal">
           <div class="stepsFirsts">1/1</div>
           <div>
-            <p>Select language<br>Вибирайте язык</p>
+            <p>Select language<br>Вибирайте язык<br>言語を選択<br>选择语言</p>
           </div>
           <div id="selectOptions" class="select-content">
             <div onclick="document.getElementById('languageEn').click();document.getElementById('selectedLanguageIs').innerHTML='English is selected.';document.getElementById('firstModalApplyBtm').style.display='block';document.getElementById('firstModalApplyBtm').value='Apply';document.getElementById('selectedLanguageIs').style.direction='ltr';" class="language select firstinfirstmodal">English</div>
             <div onclick="document.getElementById('languageRu').click();document.getElementById('selectedLanguageIs').innerHTML='Русский вибирань.';document.getElementById('firstModalApplyBtm').style.display='block';document.getElementById('firstModalApplyBtm').value='Подтвердить';document.getElementById('selectedLanguageIs').style.direction='ltr'" class="language select">Русский</div>
             <div onclick="document.getElementById('languageJp').click();document.getElementById('selectedLanguageIs').innerHTML='日本語が選択されています。';document.getElementById('firstModalApplyBtm').style.display='block';document.getElementById('firstModalApplyBtm').value='適用する';document.getElementById('selectedLanguageIs').style.direction='ltr'" class="language select">日本語</div>
+            <div onclick="document.getElementById('languageChs').click();document.getElementById('selectedLanguageIs').innerHTML='选择简体中文。';document.getElementById('firstModalApplyBtm').style.display='block';document.getElementById('firstModalApplyBtm').value='申请';document.getElementById('selectedLanguageIs').style.direction='ltr'" class="language select">简体中文</div>
             <div id="selectedLanguageIs"></div>
           </div>
           <input type="submit" id="firstModalApplyBtm" onclick="document.getElementById('applySettings').click();localStorage.setItem('firsttime','exist')" style="display:none;" value="..." />
