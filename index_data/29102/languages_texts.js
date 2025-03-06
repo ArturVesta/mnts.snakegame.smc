@@ -40,6 +40,7 @@ function languagesContents() {
   var a037 = document.getElementById("clLang");
   var a038 = document.getElementById("crLang");
   var a039 = document.getElementById("noticeTitleLang");
+  var a040 = document.getElementById("heading");
   var a041 = document.getElementById("musicLang");
   var a042 = document.getElementById("musicstyleLang");
   var a043 = document.getElementById("navBtn");
@@ -61,6 +62,8 @@ function languagesContents() {
   const a003_all = document.getElementsByClassName('moresettingscontent');
   const a004_all = document.getElementsByClassName('totopelement');
   const a005_all = document.getElementsByClassName('serviceLang');
+  const a006_all = document.getElementsByClassName('r-stars');
+  const a007_all = document.getElementsByClassName('r-star');
   if(localStorage.getItem("lang") === "en") {
     a000.innerHTML = "Settings";
     a001.innerHTML = "About";
@@ -102,6 +105,7 @@ function languagesContents() {
     a037.innerHTML = "Left";
     a038.innerHTML = "Right";
     a039.innerHTML = "Notice";
+    a040.innerHTML = "Rating by " + rUsers + " Users";
     a041.innerHTML = "Background Music";
     a042.innerHTML = "Music";
       a043.classList.add("en-lang");
@@ -111,7 +115,7 @@ function languagesContents() {
     a047.innerHTML = "Dynamic controls";
     a048.classList.add("g-t-en");
     a049.innerHTML = "Snake";
-    a050.innerHTML = "Share your language or repair existing languages";
+    a050.innerHTML = "Share your language or repair existing languages on Discord";
     a051.innerHTML = "Profile Center (Beta)";
     a052.innerHTML = "> Clickable <";
     a053.innerHTML = "Coded on: ";
@@ -133,6 +137,12 @@ function languagesContents() {
     };
     for (let i = 0; i < a005_all.length; i++) {
       a005_all[i].textContent = 'Services:';
+    };
+    for (let i = 0; i < a006_all.length; i++) {
+      a006_all[i].classList.add("en");
+    };
+    for (let i = 0; i < a007_all.length; i++) {
+      a007_all[i].classList.add("en");
     }
     document.title = "Snake Mecha Collector";
   }else
@@ -177,6 +187,7 @@ function languagesContents() {
     a037.innerHTML = "Левый";
     a038.innerHTML = "Правый";
     a039.innerHTML = "Уведомление";
+    a040.innerHTML = "Оценка " + rUsers + " пользователей";
     a041.innerHTML = "Фоновая музыка";
     a042.innerHTML = "Музыка";
       a043.classList.add("ru-lang");
@@ -186,7 +197,7 @@ function languagesContents() {
     a047.innerHTML = "Динамический контроллер";
     a048.classList.add("g-t-ru");
     a049.innerHTML = "Змея";
-    a050.innerHTML = "Поделитесь своим языком или исправьте существующие языки";
+    a050.innerHTML = "Поделитесь своим языком или исправьте существующие языки на Discord";
     a051.innerHTML = "Центр профиля (Бета)";
     a052.innerHTML = "> Нажемной <";
     a053.innerHTML = "Кодировано на: ";
@@ -208,6 +219,12 @@ function languagesContents() {
     };
     for (let i = 0; i < a005_all.length; i++) {
       a005_all[i].textContent = 'Услуги:';
+    };
+    for (let i = 0; i < a006_all.length; i++) {
+      a006_all[i].classList.add("ru");
+    };
+    for (let i = 0; i < a007_all.length; i++) {
+      a007_all[i].classList.add("ru");
     }
     document.title = "Змея Меха Сборщик";
   }else
@@ -252,6 +269,7 @@ function languagesContents() {
     a037.innerHTML = "左";
     a038.innerHTML = "右";
     a039.innerHTML = "知らせ";
+    a040.innerHTML = rUsers + "人のユーザーによる評価";
     a041.innerHTML = "バックグラウンドミュージック";
     a042.innerHTML = "音楽";
       a043.classList.add("jp-lang");
@@ -284,8 +302,96 @@ function languagesContents() {
     };
     for (let i = 0; i < a005_all.length; i++) {
       a005_all[i].textContent = 'サービス：';
+    };
+    for (let i = 0; i < a006_all.length; i++) {
+      a006_all[i].classList.add("jp");
+    };
+    for (let i = 0; i < a007_all.length; i++) {
+      a007_all[i].classList.add("jp");
     }
     document.title = "スネークメカコレクター";
+  }else
+  if(localStorage.getItem("lang") === "chs") {
+    a000.innerHTML = "设置";
+    a001.innerHTML = "关于";
+    a002.innerHTML = "系统";
+    a003.innerHTML = "蛇";
+    a004.innerHTML = "食物";
+    a005.innerHTML = "木板";
+    a006.innerHTML = "声音的";
+    a007.innerHTML = "困难：";
+    a008.innerHTML = "普通的";
+    a009.innerHTML = "难的";
+    a010.innerHTML = "地狱";
+    a011.innerHTML = "语言：";
+    a012.innerHTML = "阿尔法城地图";
+    a013.innerHTML = "奥里戈岛地图";
+    a014.innerHTML = "玩家 1";
+    a015.innerHTML = "玩家 2";
+    a016.innerHTML = "玩家 3";
+    a017.innerHTML = "喵币";
+    a018.innerHTML = "金子";
+    a019.innerHTML = "阿尔法币";
+    a020.innerHTML = "水晶";
+    a021.innerHTML = "票";
+    a022.innerHTML = "彩色票";
+    a023.innerHTML = "高级票";
+    a024.innerHTML = "静音";
+    a025.innerHTML = "音效音量";
+    a026.innerHTML = "隐私政策、条款和条件";
+    a027.innerHTML = "©1997-2025 网易公司版权所有";
+    a028.innerHTML = "编码： " + "MNTS;";
+    a029.innerHTML = "基本代码：来自";
+    a030.innerHTML = "分数： 0";
+    a031.innerHTML = "游戏结束！";
+    a032.value = "默认";
+    a033.value = "申请";
+    a034.innerHTML = "控制器：";
+    a035.innerHTML = "位置：";
+    a036.innerHTML = "中心";
+    a037.innerHTML = "左边";
+    a038.innerHTML = "正确的";
+    a039.innerHTML = "注意";
+    a040.innerHTML = rUsers + "位用户评分";
+    a041.innerHTML = "背景音乐";
+    a042.innerHTML = "音乐";
+      a043.classList.add("chs-lang");
+      a044.classList.add("chs-lang");
+    a045.value = "删除进度";
+    a046.innerHTML = "(语言翻译可能不是 100% 准确)";
+    a047.innerHTML = "动态控制";
+    a048.classList.add("g-t-chs");
+    a049.innerHTML = "蛇";
+    a050.innerHTML = "在 Discord 上分享您的语言或修复现有语言";
+    a051.innerHTML = "个人资料中心（测试版）";
+    a052.innerHTML = "> 可点击 <";
+    a053.innerHTML = "编码于： ";
+    a055.innerHTML = "加载中…";
+    for (let i = 0; i < a000_all.length; i++) {
+      a000_all[i].textContent = '设置：';
+    };
+    for (let i = 0; i < a001_all.length; i++) {
+      a001_all[i].textContent = '风格：';
+    };
+    for (let i = 0; i < a002_all.length; i++) {
+      a002_all[i].textContent = '即将推出！等待更新。';
+    };
+    for (let i = 0; i < a003_all.length; i++) {
+      a003_all[i].textContent = '更多的：';
+    };
+    for (let i = 0; i < a004_all.length; i++) {
+      a004_all[i].textContent = '首先';
+    };
+    for (let i = 0; i < a005_all.length; i++) {
+      a005_all[i].textContent = '服务：';
+    };
+    for (let i = 0; i < a006_all.length; i++) {
+      a006_all[i].classList.add("chs");
+    };
+    for (let i = 0; i < a007_all.length; i++) {
+      a007_all[i].classList.add("chs");
+    }
+    document.title = "蛇形机甲收藏家";
   }
   a054.innerHTML = "Visual Studio Code";
 };
