@@ -88,13 +88,12 @@
   --discord: url('../discord.png');
   --dl-windows: url('29172/download_computer.png');
   --dl-android: url('29172/download_android.png');
-  --font-misans: url(69326/MiSans.ttf);
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "miSans";
+  font-family: miSans;
   user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
@@ -1368,7 +1367,7 @@ hr.acc {
 }
 @font-face {
   font-family: miSans;
-  src: var(--font-misans);
+  src: url('69326/MiSans.ttf');
 }
 @media screen and (max-width: 800px) {
   .wrapper {
@@ -1574,5 +1573,23 @@ hr.acc {
     margin-right: 20px;
     text-align: right;
     width: calc(100% - 20px);
+  }
+}
+@media screen and (min-width: 1545px) {
+  .alert-btn-container input {
+    height: 30px;
+    width: 90px !important;
+    margin: 0px 0px;
+    font-size: 13px;
+  }
+  .alert .alert-content {
+    height: 485px;
+    padding-top: 100px;
+  }
+  .alert-btn-container {
+    bottom: 125px;
+  }
+  .alert .alert-content #alertText {
+    font-size: 25px;
   }
 }
