@@ -73,6 +73,11 @@ const tasset0 = [
   "nav_menu_en",
   "nav_menu_ru",
   "nav_menu_jp",
+  "nav_menu_chs",
+  "nav_menu_en_hover",
+  "nav_menu_ru_hover",
+  "nav_menu_jp_hover",
+  "nav_menu_chs_hover",
   "new_modal_content",
   "normal_on",
   "null",
@@ -90,15 +95,16 @@ const tasset0 = [
   "ticket_chromatic",
   "ticket_premium",
   "unselected",
+  "Google_en",
+  "Google_ru",
+  "Google_jp",
+  "Google_chs",
   "wrapper_bg"
 ];
 const tasset1 = [
   "16f75a9bdd0bf6"
 ];
 const tasset2 = [
-  "Google_en",
-  "Google_ru",
-  "Google_jp",
   "messenger",
   "discord"
 ];
@@ -144,7 +150,7 @@ function testLoadAsset0() {
 }
 function toDisplayNone() {
   setTimeout(function() {
-  if(document.getElementById('widther').style.width === "92px") {
+  if(document.getElementById('widther').style.width === "98px") {
     alertAccept();
     document.getElementById("loading").style.display = "none";
   }

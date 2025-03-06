@@ -27,6 +27,9 @@ if(localStorage.getItem("lang") === "ru") {
 }else
 if(localStorage.getItem("lang") === "jp") {
   highScoreElement.innerText = `ハイスコ​​ア: ${highScore}`;
+}else
+if(localStorage.getItem("lang") === "chs") {
+  highScoreElement.innerText = `高分： ${highScore}`;
 }
 const updateFoodPosition = () => {
   foodX = Math.floor(Math.random() * 30) + 1;
@@ -47,7 +50,10 @@ const handleGameOver = () => {
       document.getElementById("loseNewRecordScore").innerHTML = "Так близко к новому рекорду!";
     }else
     if(localStorage.getItem("lang") === "jp") {
-      document.getElementById("loseNewRecordScore").innerHTML = "新しい記録に +1 を追加するのにとても近づきました!";
+      document.getElementById("loseNewRecordScore").innerHTML = "新記録にかなり近づいています!";
+    }else
+    if(localStorage.getItem("lang") === "chs") {
+      document.getElementById("loseNewRecordScore").innerHTML = "距离新纪录仅一步之遥！";
     }
   }else
   if(score >= localStorage.getItem("steelScore")) {
@@ -59,6 +65,9 @@ const handleGameOver = () => {
     }else
     if(localStorage.getItem("lang") === "jp") {
       document.getElementById("loseNewRecordScore").innerHTML = "おめでとうございます、新記録を達成しました！";
+    }else
+    if(localStorage.getItem("lang") === "chs") {
+      document.getElementById("loseNewRecordScore").innerHTML = "恭喜您，创造了新纪录！";
     }
   }
   if(localStorage.getItem("movementbg") === "playerWalk") {
@@ -155,6 +164,9 @@ document.getElementById("reset").onclick = function() {
   }else
   if(localStorage.getItem("lang") === "jp") {
     scoreElement.innerText = `チェック： ${score}`;
+  }else
+  if(localStorage.getItem("lang") === "chs") {
+    scoreElement.innerText = `分数： ${score}`;
   };
   localStorage.setItem("steelScore", localStorage.getItem("high-score"));
 };
@@ -247,6 +259,10 @@ const initGame = () => {
     if(localStorage.getItem("lang") === "jp") {
       scoreElement.innerText = `チェック： ${score}`;
       highScoreElement.innerText = `ハイスコ​​ア: ${highScore}`;
+    }else
+    if(localStorage.getItem("lang") === "chs") {
+      scoreElement.innerText = `分数： ${score}`;
+      highScoreElement.innerText = `高分： ${highScore}`;
     }
     if(localStorage.getItem("foodStyle") === "imgMeow") {
       meaw_token_item++;

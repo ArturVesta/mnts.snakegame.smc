@@ -37,6 +37,11 @@
   --menu-en: url('29172/nav_menu_en.png');
   --menu-ru: url('29172/nav_menu_ru.png');
   --menu-jp: url('29172/nav_menu_jp.png');
+  --menu-chs: url('29172/nav_menu_chs.png');
+  --menu-en-hover: url('29172/nav_menu_en_hover.png');
+  --menu-ru-hover: url('29172/nav_menu_ru_hover.png');
+  --menu-jp-hover: url('29172/nav_menu_jp_hover.png');
+  --menu-chs-hover: url('29172/nav_menu_chs_hover.png');
   --left: url('29172/btn_control_lt.png');
   --left-hover: url('29172/btn_control_lt_hover.png');
   --down: url('29172/btn_control_dn.png');
@@ -72,9 +77,10 @@
   --button-long: url('29172/long_button.png');
   --button-long-hover: url('29172/long_button_hover.png');
   --play: url('29172/btn_function_py.png');
-  --google-translate: url('../Google_en.png');
-  --google-perevodchick: url('../Google_ru.png');
-  --google-honyaku: url('../Google_jp.png');
+  --google-translate: url('29172/Google_en.png');
+  --google-perevodchick: url('29172/Google_ru.png');
+  --google-honyaku: url('29172/Google_jp.png');
+  --google-fanyi: url('29172/Google_chs.png');
   --icons: url('29172/icon_bg.png');
   --exit: url('29172/exit.png');
   --exit-hover: url('29172/exit_hover.png');
@@ -82,6 +88,7 @@
   --discord: url('../discord.png');
   --dl-windows: url('29172/download_computer.png');
   --dl-android: url('29172/download_android.png');
+  --font-misans: url(69326/MiSans.ttf);
 }
 * {
   margin: 0;
@@ -334,7 +341,7 @@ hr {
   margin: 0;
   width: 530px;
   height: 255px;
-  overflow: auto;
+  overflow: hidden;
   padding: 10px;
   word-wrap: normal;
   position: relative;
@@ -451,17 +458,39 @@ hr {
   position: relative;
   display: block;
 }
+#btn002.en-lang:hover {background-image:
+  var(--border),
+  var(--menu-en-hover);
+}
 #btn002.ru-lang {background-image:
   var(--border),
   var(--menu-ru);
   position: relative;
   display: block;
 }
+#btn002.ru-lang:hover {background-image:
+  var(--border),
+  var(--menu-ru-hover);
+}
 #btn002.jp-lang {background-image:
   var(--border),
   var(--menu-jp);
   position: relative;
   display: block;
+}
+#btn002.jp-lang:hover {background-image:
+  var(--border),
+  var(--menu-jp-hover);
+}
+#btn002.chs-lang {background-image:
+  var(--border),
+  var(--menu-chs);
+  position: relative;
+  display: block;
+}
+#btn002.chs-lang:hover {background-image:
+  var(--border),
+  var(--menu-chs-hover);
 }
 #btn003 {background-image:
   var(--border),
@@ -587,6 +616,21 @@ hr {
 }
 #navBtn.jp-lang {
   background-image: var(--menu-jp);
+}
+#navBtn.chs-lang {
+  background-image: var(--menu-chs);
+}
+#navBtn.en-lang:hover {
+  background-image: var(--menu-en-hover);
+}
+#navBtn.ru-lang:hover {
+  background-image: var(--menu-ru-hover);
+}
+#navBtn.jp-lang:hover {
+  background-image: var(--menu-jp-hover);
+}
+#navBtn.chs-lang:hover {
+  background-image: var(--menu-chs-hover);
 }
 .tab {
   float: left;
@@ -750,6 +794,9 @@ hr {
 }
 .select-content .select.language:first-child,
 .select-content .select.controllerpostype:first-child {
+  margin-left: 32px;
+}
+#languageChs {
   margin-left: 32px;
 }
 .select-content .language.activet,
@@ -1071,6 +1118,9 @@ input[type="range"]::-webkit-slider-thumb {
 #translate.g-t-jp {
   background-image: var(--google-honyaku);
 }
+#translate.g-t-chs {
+  background-image: var(--google-fanyi);
+}
 #customLanguage {
   width: 64%;
   margin: 0px auto;
@@ -1254,9 +1304,71 @@ hr.acc {
   top: 0;
   left: 0;
 }
+.heading {
+  margin-right: 25px;
+}
+.side {
+  float: left;
+  width: 15%;
+  margin-top: 1px;
+}
+.middle {
+  margin-top: 1px;
+  float: right;
+  width: 70%;
+}
+.right {
+  text-align: right;
+  float: right;
+}
+.left {
+  text-align: left;
+  float: left;
+  text-wrap: nowrap;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.bar-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: white;
+}
+.bar-1,.bar-2,.bar-3,.bar-4,.bar-5 {
+  height: 18px;
+  background-image: var(--range);
+  background-size: auto 100%;
+}
+.r-stars.en::after {
+  content: ' Stars';
+}
+.r-star.en::after {
+  content: ' Star';
+}
+.r-stars.ru::after {
+  content: ' Звезды';
+}
+.r-star.ru::after {
+  content: ' Звезда';
+}
+.r-stars.jp::after {
+  content: ' 星';
+}
+.r-star.jp::after {
+  content: ' 星';
+}
+.r-stars.chs::after {
+  content: ' 明星';
+}
+.r-star.chs::after {
+  content: ' 星星';
+}
 @font-face {
   font-family: miSans;
-  src: url(69326/MiSans.ttf);
+  src: var(--font-misans);
 }
 @media screen and (max-width: 800px) {
   .wrapper {
@@ -1355,6 +1467,9 @@ hr.acc {
   .select-content .select.controllerpostype:first-child {
     margin-left: 17px;
   }
+  #languageChs {
+    margin-left: 17px;
+  }
   .select-content .select.controllerpostype[locked="true"] {
     filter: grayscale(1) brightness(0.4);
   }
@@ -1442,5 +1557,22 @@ hr.acc {
   #contactUsDiscord {
     width: 30px;
     height: 30px;
+  }
+  .left {
+    width: auto;
+    text-align: left;
+    margin-top: -17px;
+    margin-left: 20px;
+    width: calc(100% -20px);
+  }
+  .middle {
+    width: 100%;
+  }
+  .right {
+  	display: block;
+    margin-top: -17px;
+    margin-right: 20px;
+    text-align: right;
+    width: calc(100% - 20px);
   }
 }
