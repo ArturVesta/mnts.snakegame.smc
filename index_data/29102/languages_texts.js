@@ -392,6 +392,88 @@ function languagesContents() {
       a007_all[i].classList.add("chs");
     }
     document.title = "蛇形机甲收藏家";
+  }else
+  if(localStorage.getItem("lang") === "cht") {
+    a000.innerHTML = "設定";
+    a001.innerHTML = "關於";
+    a002.innerHTML = "系統";
+    a003.innerHTML = "蛇";
+    a004.innerHTML = "食物";
+    a005.innerHTML = "木板";
+    a006.innerHTML = "聲音的";
+    a007.innerHTML = "困難：";
+    a008.innerHTML = "普通的";
+    a009.innerHTML = "難的";
+    a010.innerHTML = "地獄";
+    a011.innerHTML = "語言：";
+    a012.innerHTML = "阿爾法城地圖";
+    a013.innerHTML = "奧里戈島地圖";
+    a014.innerHTML = "玩家 1";
+    a015.innerHTML = "玩家 2";
+    a016.innerHTML = "玩家 3";
+    a017.innerHTML = "喵幣";
+    a018.innerHTML = "金子";
+    a019.innerHTML = "阿爾法幣";
+    a020.innerHTML = "水晶";
+    a021.innerHTML = "票";
+    a022.innerHTML = "彩色票";
+    a023.innerHTML = "高級票";
+    a024.innerHTML = "靜音";
+    a025.innerHTML = "SFX 音量";
+    a026.innerHTML = "隱私權政策、條款與條件";
+    a027.innerHTML = "©1997-2025 網易公司版權所有";
+    a028.innerHTML = "編碼： " + "MNTS;";
+    a029.innerHTML = "基本程式碼：來自";
+    a030.innerHTML = "分數： 0";
+    a031.innerHTML = "遊戲結束！";
+    a032.value = "預設";
+    a033.value = "申請";
+    a034.innerHTML = "控制器：";
+    a035.innerHTML = "位置：";
+    a036.innerHTML = "中心";
+    a037.innerHTML = "左邊";
+    a038.innerHTML = "正確的";
+    a039.innerHTML = "注意";
+    a040.innerHTML = rUsers + " 位用戶評分";
+    a041.innerHTML = "背景音樂";
+    a042.innerHTML = "音樂";
+      a043.classList.add("cht-lang");
+      a044.classList.add("sht-lang");
+    a045.value = "刪除進度";
+    a046.innerHTML = "(語言翻譯可能不是 100% 準確)";
+    a047.innerHTML = "動態控制";
+    a048.classList.add("g-t-cht");
+    a049.innerHTML = "蛇";
+    a050.innerHTML = "在 Discord 上分享您的語言或修復現有語言";
+    a051.innerHTML = "個人資料中心（測試版）";
+    a052.innerHTML = "> 可點擊 <";
+    a053.innerHTML = "編碼於： ";
+    a055.innerHTML = "載入中…";
+    for (let i = 0; i < a000_all.length; i++) {
+      a000_all[i].textContent = '設定:';
+    };
+    for (let i = 0; i < a001_all.length; i++) {
+      a001_all[i].textContent = '風格：';
+    };
+    for (let i = 0; i < a002_all.length; i++) {
+      a002_all[i].textContent = '即將推出！';
+    };
+    for (let i = 0; i < a003_all.length; i++) {
+      a003_all[i].textContent = '更多的：';
+    };
+    for (let i = 0; i < a004_all.length; i++) {
+      a004_all[i].textContent = '首先';
+    };
+    for (let i = 0; i < a005_all.length; i++) {
+      a005_all[i].textContent = '服務：';
+    };
+    for (let i = 0; i < a006_all.length; i++) {
+      a006_all[i].classList.add("cht");
+    };
+    for (let i = 0; i < a007_all.length; i++) {
+      a007_all[i].classList.add("cht");
+    }
+    document.title = "蛇形機甲收藏家";
   }
   a054.innerHTML = "Visual Studio Code";
 };
