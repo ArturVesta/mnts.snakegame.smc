@@ -14,12 +14,97 @@
       "sizes": "225x225"
     },
     {
-      "src": "/mnts.snakegame.smc/index_data/29172/icon_0.png",
+      "src": "/mnts.snakegame.smc/index_data/29172/icon_16.png",
       "type": "image/png",
-      "sizes": "225x225"
+      "sizes": "16x16"
+    },
+    {
+      "src": "/mnts.snakegame.smc/index_data/29172/icon_32.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "/mnts.snakegame.smc/index_data/29172/icon_48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "/mnts.snakegame.smc/index_data/29172/icon_76.png",
+      "type": "image/png",
+      "sizes": "76x76"
+    },
+    {
+      "src": "/mnts.snakegame.smc/index_data/29172/icon_96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "/mnts.snakegame.smc/index_data/29172/icon_120.png",
+      "type": "image/png",
+      "sizes": "120x120"
+    },
+    {
+      "src": "/mnts.snakegame.smc/index_data/29172/icon_128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "/mnts.snakegame.smc/index_data/29172/icon_144.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "/mnts.snakegame.smc/index_data/29172/icon_152.png",
+      "type": "image/png",
+      "sizes": "152x152"
+    },
+    {
+      "src": "/mnts.snakegame.smc/index_data/29172/icon_167.png",
+      "type": "image/png",
+      "sizes": "167x167"
+    },
+    {
+      "src": "/mnts.snakegame.smc/index_data/29172/icon_180.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    },
+    {
+      "src": "/mnts.snakegame.smc/index_data/29172/icon_192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/mnts.snakegame.smc/index_data/29172/icon_196.png",
+      "type": "image/png",
+      "sizes": "196x196"
+    },
+    {
+      "src": "/mnts.snakegame.smc/index_data/29172/icon_228.png",
+      "type": "image/png",
+      "sizes": "228x228"
+    },
+    {
+      "src": "/mnts.snakegame.smc/index_data/29172/icon_256.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "/mnts.snakegame.smc/index_data/29172/icon_300.png",
+      "type": "image/png",
+      "sizes": "300x300"
+    },
+    {
+      "src": "/mnts.snakegame.smc/index_data/29172/icon_384.png",
+      "type": "image/png",
+      "sizes": "384x384"
+    },
+    {
+      "src": "/mnts.snakegame.smc/index_data/29172/icon_512.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ],
-  "locales": ["en","ru","ja","zh"],
+  "locales": ["en","ru","ja","zhs","zht"],
   "ru": {
     "name": "Змея Меха Сборщик",
     "short_name": "Змея Меха Сборщик"
@@ -28,8 +113,12 @@
     "name": "スネークメカコレクター",
     "short_name": "スネークメカコレクター"
   },
-  "zh": {
+  "zhs": {
     "name": "蛇形机甲收藏家",
     "short_name": "蛇形机甲收藏家"
+  },
+  "zht": {
+    "name": "蛇形機甲收藏家",
+    "short_name": "蛇形機甲收藏家"
   }
 }

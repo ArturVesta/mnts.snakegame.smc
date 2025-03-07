@@ -21,7 +21,10 @@
         document.documentElement.setAttribute("lang", "ja");
       }else
       if(localStorage.getItem("lang") === "chs") {
-        document.documentElement.setAttribute("lang", "zh");
+        document.documentElement.setAttribute("lang", "zhs");
+      }else
+      if(localStorage.getItem("lang") === "cht") {
+        document.documentElement.setAttribute("lang", "zht");
       }
     </script>
   </head>
@@ -115,6 +118,7 @@
               <div onclick="russianLanguage();" id="languageRu" class="language select">Русский</div>
               <div onclick="japaneseLanguage();" id="languageJp" class="language select">日本語</div>
               <div onclick="ChineseSimplifiedLanguage();" id="languageChs" class="language select">简体中文</div>
+              <div onclick="ChineseTraditionalLanguage();" id="languageCht" class="language select">繁體中文</div>
               <div class="important-text" id="langImportantLang">...</div>
             </div>
             <hr>
@@ -384,13 +388,14 @@
         <div id="firstContentA" class="in-first-modal">
           <div class="stepsFirsts">1/1</div>
           <div>
-            <p>Select language<br>Вибирайте язык<br>言語を選択<br>选择语言</p>
+            <p id="langTitleOfFirstModal"></p>
           </div>
           <div id="selectOptions" class="select-content">
-            <div onclick="document.getElementById('languageEn').click();document.getElementById('selectedLanguageIs').innerHTML='English is selected.';document.getElementById('firstModalApplyBtm').style.display='block';document.getElementById('firstModalApplyBtm').value='Apply';document.getElementById('selectedLanguageIs').style.direction='ltr';" class="language select firstinfirstmodal">English</div>
-            <div onclick="document.getElementById('languageRu').click();document.getElementById('selectedLanguageIs').innerHTML='Русский вибирань.';document.getElementById('firstModalApplyBtm').style.display='block';document.getElementById('firstModalApplyBtm').value='Подтвердить';document.getElementById('selectedLanguageIs').style.direction='ltr'" class="language select">Русский</div>
-            <div onclick="document.getElementById('languageJp').click();document.getElementById('selectedLanguageIs').innerHTML='日本語が選択されています。';document.getElementById('firstModalApplyBtm').style.display='block';document.getElementById('firstModalApplyBtm').value='適用する';document.getElementById('selectedLanguageIs').style.direction='ltr'" class="language select">日本語</div>
-            <div onclick="document.getElementById('languageChs').click();document.getElementById('selectedLanguageIs').innerHTML='选择简体中文。';document.getElementById('firstModalApplyBtm').style.display='block';document.getElementById('firstModalApplyBtm').value='申请';document.getElementById('selectedLanguageIs').style.direction='ltr'" class="language select">简体中文</div>
+            <div onclick="document.getElementById('langTitleOfFirstModal').innerHTML='Select language';document.getElementById('languageEn').click();document.getElementById('selectedLanguageIs').innerHTML='English is selected.';document.getElementById('firstModalApplyBtm').style.display='block';document.getElementById('firstModalApplyBtm').value='Apply';document.getElementById('selectedLanguageIs').style.direction='ltr';" class="language select firstinfirstmodal">English</div>
+            <div onclick="document.getElementById('langTitleOfFirstModal').innerHTML='Вибирайте язык';document.getElementById('languageRu').click();document.getElementById('selectedLanguageIs').innerHTML='Русский вибирань.';document.getElementById('firstModalApplyBtm').style.display='block';document.getElementById('firstModalApplyBtm').value='Подтвердить';document.getElementById('selectedLanguageIs').style.direction='ltr'" class="language select">Русский</div>
+            <div onclick="document.getElementById('langTitleOfFirstModal').innerHTML='言語を選択';document.getElementById('languageJp').click();document.getElementById('selectedLanguageIs').innerHTML='日本語が選択されています。';document.getElementById('firstModalApplyBtm').style.display='block';document.getElementById('firstModalApplyBtm').value='適用する';document.getElementById('selectedLanguageIs').style.direction='ltr'" class="language select">日本語</div>
+            <div onclick="document.getElementById('langTitleOfFirstModal').innerHTML='选择语言';document.getElementById('languageChs').click();document.getElementById('selectedLanguageIs').innerHTML='选择简体中文。';document.getElementById('firstModalApplyBtm').style.display='block';document.getElementById('firstModalApplyBtm').value='申请';document.getElementById('selectedLanguageIs').style.direction='ltr'" class="language select" id="newFirstLineBtns">简体中文</div>
+            <div onclick="document.getElementById('langTitleOfFirstModal').innerHTML='繁體中文';document.getElementById('languageCht').click();document.getElementById('selectedLanguageIs').innerHTML='已選擇繁體中文。';document.getElementById('firstModalApplyBtm').style.display='block';document.getElementById('firstModalApplyBtm').value='申請';document.getElementById('selectedLanguageIs').style.direction='ltr'" class="language select">繁體中文</div>
             <div id="selectedLanguageIs"></div>
           </div>
           <input type="submit" id="firstModalApplyBtm" onclick="document.getElementById('applySettings').click();localStorage.setItem('firsttime','exist')" style="display:none;" value="..." />

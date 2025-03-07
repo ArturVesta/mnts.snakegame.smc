@@ -1,6 +1,6 @@
 var GHPATH = '/mnts.snakegame.smc';
 var APP_PREFIX = 'gppwa_';
-let VERSIONNAME = "0.2.6";
+let VERSIONNAME = "0.2.7";
 var VERSION = VERSIONNAME;
 var CACHE_NAME = VERSIONNAME;
 var URLS = [
@@ -136,14 +136,17 @@ var URLS = [
   `${GHPATH}/index_data/29172/nav_menu_ru.png`,
   `${GHPATH}/index_data/29172/nav_menu_jp.png`,
   `${GHPATH}/index_data/29172/nav_menu_chs.png`,
+  `${GHPATH}/index_data/29172/nav_menu_cht.png`,
   `${GHPATH}/index_data/29172/Google_en.png`,
   `${GHPATH}/index_data/29172/Google_ru.png`,
   `${GHPATH}/index_data/29172/Google_jp.png`,
   `${GHPATH}/index_data/29172/Google_chs.png`,
+  `${GHPATH}/index_data/29172/Google_cht.png`,
   `${GHPATH}/index_data/29172/nav_menu_en_hover.png`,
   `${GHPATH}/index_data/29172/nav_menu_ru_hover.png`,
   `${GHPATH}/index_data/29172/nav_menu_jp_hover.png`,
   `${GHPATH}/index_data/29172/nav_menu_chs_hover.png`,
+  `${GHPATH}/index_data/29172/nav_menu_cht_hover.png`,
   `${GHPATH}/index_data/29172/new_modal_content.png`,
   `${GHPATH}/index_data/29172/normal_on.png`,
   `${GHPATH}/index_data/29172/null.png`,
@@ -362,10 +365,12 @@ var CacheURLS = [
   `${GHPATH}/index_data/29172/nav_menu_ru.png`,
   `${GHPATH}/index_data/29172/nav_menu_jp.png`,
   `${GHPATH}/index_data/29172/nav_menu_chs.png`,
+  `${GHPATH}/index_data/29172/nav_menu_cht.png`,
   `${GHPATH}/index_data/29172/nav_menu_en_hover.png`,
   `${GHPATH}/index_data/29172/nav_menu_ru_hover.png`,
   `${GHPATH}/index_data/29172/nav_menu_jp_hover.png`,
   `${GHPATH}/index_data/29172/nav_menu_chs_hover.png`,
+  `${GHPATH}/index_data/29172/nav_menu_cht_hover.png`,
   `${GHPATH}/index_data/29172/new_modal_content.png`,
   `${GHPATH}/index_data/29172/normal_on.png`,
   `${GHPATH}/index_data/29172/null.png`,
@@ -388,6 +393,7 @@ var CacheURLS = [
   `${GHPATH}/index_data/29172/Google_ru.png`,
   `${GHPATH}/index_data/29172/Google_jp.png`,
   `${GHPATH}/index_data/29172/Google_chs.png`,
+  `${GHPATH}/index_data/29172/Google_cht.png`,
   `${GHPATH}/index_data/29208`,
   `${GHPATH}/index_data/29208/acceleration_folding.mp3`,
   `${GHPATH}/index_data/29208/alborada_walk.mp3`,
