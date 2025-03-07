@@ -38,10 +38,12 @@
   --menu-ru: url('29172/nav_menu_ru.png');
   --menu-jp: url('29172/nav_menu_jp.png');
   --menu-chs: url('29172/nav_menu_chs.png');
+  --menu-cht: url('29172/nav_menu_cht.png');
   --menu-en-hover: url('29172/nav_menu_en_hover.png');
   --menu-ru-hover: url('29172/nav_menu_ru_hover.png');
   --menu-jp-hover: url('29172/nav_menu_jp_hover.png');
   --menu-chs-hover: url('29172/nav_menu_chs_hover.png');
+  --menu-cht-hover: url('29172/nav_menu_cht_hover.png');
   --left: url('29172/btn_control_lt.png');
   --left-hover: url('29172/btn_control_lt_hover.png');
   --down: url('29172/btn_control_dn.png');
@@ -80,7 +82,8 @@
   --google-translate: url('29172/Google_en.png');
   --google-perevodchick: url('29172/Google_ru.png');
   --google-honyaku: url('29172/Google_jp.png');
-  --google-fanyi: url('29172/Google_chs.png');
+  --google-fanyi-s: url('29172/Google_chs.png');
+  --google-fanyi-t: url('29172/Google_cht.png');
   --icons: url('29172/icon_bg.png');
   --exit: url('29172/exit.png');
   --exit-hover: url('29172/exit_hover.png');
@@ -491,6 +494,16 @@ hr {
   var(--border),
   var(--menu-chs-hover);
 }
+#btn002.cht-lang {background-image:
+  var(--border),
+  var(--menu-cht);
+  position: relative;
+  display: block;
+}
+#btn002.cht-lang:hover {background-image:
+  var(--border),
+  var(--menu-cht-hover);
+}
 #btn003 {background-image:
   var(--border),
   var(--left);
@@ -619,6 +632,9 @@ hr {
 #navBtn.chs-lang {
   background-image: var(--menu-chs);
 }
+#navBtn.cht-lang {
+  background-image: var(--menu-cht);
+}
 #navBtn.en-lang:hover {
   background-image: var(--menu-en-hover);
 }
@@ -628,8 +644,8 @@ hr {
 #navBtn.jp-lang:hover {
   background-image: var(--menu-jp-hover);
 }
-#navBtn.chs-lang:hover {
-  background-image: var(--menu-chs-hover);
+#navBtn.cht-lang:hover {
+  background-image: var(--menu-cht-hover);
 }
 .tab {
   float: left;
@@ -1118,7 +1134,10 @@ input[type="range"]::-webkit-slider-thumb {
   background-image: var(--google-honyaku);
 }
 #translate.g-t-chs {
-  background-image: var(--google-fanyi);
+  background-image: var(--google-fanyi-s);
+}
+#translate.g-t-cht {
+  background-image: var(--google-fanyi-t);
 }
 #customLanguage {
   width: 64%;
@@ -1146,7 +1165,8 @@ input[type="range"]::-webkit-slider-thumb {
 .totopelement:hover {
   filter: grayscale(0);
 }
-.firstinfirstmodal {
+.firstinfirstmodal,
+#newFirstLineBtns {
   margin-left: 68px !important;
 }
 #firstModalApplyBtm {
@@ -1365,6 +1385,12 @@ hr.acc {
 .r-star.chs::after {
   content: ' 星星';
 }
+.r-stars.cht::after {
+  content: ' 明星';
+}
+.r-star.cht::after {
+  content: ' 星星';
+}
 @font-face {
   font-family: miSans;
   src: url('69326/MiSans.ttf');
@@ -1418,7 +1444,8 @@ hr.acc {
     width: 400px;
     height: 209px;
   }
-  .firstinfirstmodal {
+  .firstinfirstmodal,
+  #newFirstLineBtns {
     margin-left: 53px !important;
   }
   .tab {

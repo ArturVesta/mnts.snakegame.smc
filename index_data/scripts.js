@@ -464,8 +464,6 @@ function boardBGloader() {
 };
 boardBGloader();
 function applySettings() {
-  var alertcancel = document.getElementById("alertLeft");
-  var alertconfirm = document.getElementById("alertRight");
   if(document.getElementById("origoMap").className === "select activet") {
     localStorage.setItem("boardStyle", "imgOrigo");
   }else
@@ -522,6 +520,9 @@ function applySettings() {
   }else
   if(document.getElementById("languageChs").className === "language select activet") {
     localStorage.setItem("lang", "chs");
+  }else
+  if(document.getElementById("languageCht").className === "language select activet") {
+    localStorage.setItem("lang", "cht");
   };
   if(document.getElementById("ccLang").className === "controllerpostype select activet") {
     localStorage.setItem("controllerPosition", "center");
@@ -619,6 +620,7 @@ function alertReloadLater() {
   var alertcancel = document.getElementById("alertLeft");
   var alertconfirm = document.getElementById("alertRight");
   document.getElementById("alert").style.display = "block";
+  alertcancel.style.display = "block";
   alertconfirm.style.display = "block";
   if(localStorage.getItem("lang") === "en") {
     document.getElementById("alertText").innerHTML = "Set to default?";
@@ -639,6 +641,11 @@ function alertReloadLater() {
     document.getElementById("alertText").innerHTML = "设置为默认值？";
     alertcancel.value = "取消";
     alertconfirm.value = "确认";
+  }else
+  if(localStorage.getItem("lang") === "cht") {
+    document.getElementById("alertText").innerHTML = "設定為預設值？";
+    alertcancel.value = "取消";
+    alertconfirm.value = "確認";
   }
   alertcancel.onclick = function() {
     document.getElementById("alert").style.display = "none";
@@ -667,6 +674,7 @@ function alertExitSite() {
   var alertcancel = document.getElementById("alertLeft");
   var alertconfirm = document.getElementById("alertRight");
   document.getElementById("alert").style.display = "block";
+  alertcancel.style.display = "block";
   alertconfirm.style.display = "block";
   if(localStorage.getItem("lang") === "en") {
     document.getElementById("alertText").innerHTML = "You go?";
@@ -684,6 +692,11 @@ function alertExitSite() {
     alertconfirm.value = "はい";
   }else
   if(localStorage.getItem("lang") === "chs") {
+    document.getElementById("alertText").innerHTML = "你去？";
+    alertcancel.value = "不";
+    alertconfirm.value = "是的";
+  }else
+  if(localStorage.getItem("lang") === "cht") {
     document.getElementById("alertText").innerHTML = "你去？";
     alertcancel.value = "不";
     alertconfirm.value = "是的";
@@ -720,6 +733,10 @@ function alertAccept() {
   if(localStorage.getItem("lang") === "chs") {
     document.getElementById("alertText").innerHTML = "需要您接受加载音频资源以禁用音频延迟。";
     alertconfirm.value = "确认";
+  }else
+  if(localStorage.getItem("lang") === "cht") {
+    document.getElementById("alertText").innerHTML = "需要您接受載入音訊資源以停用音訊延遲。";
+    alertconfirm.value = "確認";
   }
   alertcancel.value = "...";
   alertcancel.style.display = "none";
@@ -735,6 +752,9 @@ function alertAccept() {
   }else
   if(localStorage.getItem("lang") === "chs") {
     alert("您是如何点击它的！？");
+  }else
+  if(localStorage.getItem("lang") === "cht") {
+    alert("您是如何點擊它的！?");
   }
   };
   alertconfirm.onclick = function() {
@@ -759,6 +779,9 @@ function alertAccept() {
     }else
     if(localStorage.getItem("lang") === "chs") {
       document.getElementById("alertText").innerHTML = "加载中…";
+    }else
+    if(localStorage.getItem("lang") === "cht") {
+      document.getElementById("alertText").innerHTML = "載入中…";
     }
     setTimeout(function() {
       document.getElementById("alert").style.display = "none";
@@ -770,6 +793,7 @@ function alertDeleteProgress() {
   var alertcancel = document.getElementById("alertLeft");
   var alertconfirm = document.getElementById("alertRight");
   document.getElementById("alert").style.display = "block";
+  alertcancel.style.display = "block";
   alertconfirm.style.display = "block";
   if(localStorage.getItem("lang") === "en") {
     document.getElementById("alertText").innerHTML = "You are sure you want delete your progress?";
@@ -788,6 +812,11 @@ function alertDeleteProgress() {
   }else
   if(localStorage.getItem("lang") === "chs") {
     document.getElementById("alertText").innerHTML = "您确定要删除您的进度吗？";
+    alertcancel.value = "不";
+    alertconfirm.value = "是的";
+  }else
+  if(localStorage.getItem("lang") === "cht") {
+    document.getElementById("alertText").innerHTML = "您確定要刪除您的進度嗎？";
     alertcancel.value = "不";
     alertconfirm.value = "是的";
   }
@@ -843,6 +872,7 @@ function installApp() {
     var alertconfirm = document.getElementById("alertRight");
     document.getElementById("alert").style.display = "block";
     document.getElementById("alert").style.zIndex = "5";
+    alertcancel.style.display = "none";
     alertconfirm.style.display = "block";
     alertcancel.style.display = "none";
     if(localStorage.getItem("lang") === "en") {
@@ -860,6 +890,10 @@ function installApp() {
     if(localStorage.getItem("lang") === "chs") {
       document.getElementById("alertText").innerHTML = "应用程序已安装或以独立模式运行。";
       alertconfirm.value = "确认";
+    }else
+    if(localStorage.getItem("lang") === "cht") {
+      document.getElementById("alertText").innerHTML = "應用程式已安裝或以獨立模式運作。";
+      alertconfirm.value = "確認";
     }
     alertconfirm.onclick = function() {
       document.getElementById("alert").style.display = "none";
@@ -868,12 +902,13 @@ function installApp() {
     }
     return;
   }
-  if (window.matchMedia('(display-mode: standalone)').matches) {
+  if (window.matchMedia('(display-mode: fullscreen)').matches) {
     // Already installed (Android)
     var alertcancel = document.getElementById("alertLeft");
     var alertconfirm = document.getElementById("alertRight");
     document.getElementById("alert").style.display = "block";
     document.getElementById("alert").style.zIndex = "5";
+    alertcancel.style.display = "none";
     alertconfirm.style.display = "block";
     if(localStorage.getItem("lang") === "en") {
       document.getElementById("alertText").innerHTML = "App is already installed or running in standalone mode.";
@@ -881,15 +916,19 @@ function installApp() {
     }else
     if(localStorage.getItem("lang") === "ru") {
       document.getElementById("alertText").innerHTML = "Приложение уже установлено или работает в автономном режиме.";
-      alertconfirm.value = "Ок";
+      alertconfirm.value = "Ok";
     }else
     if(localStorage.getItem("lang") === "jp") {
       document.getElementById("alertText").innerHTML = "アプリケーションはすでにインストールされているか、オフラインで実行されています。";
-      alertconfirm.value = "わかりました";
+      alertconfirm.value = "Ok";
     }else
     if(localStorage.getItem("lang") === "chs") {
       document.getElementById("alertText").innerHTML = "应用程序已安装或以独立模式运行。";
-      alertconfirm.value = "确认";
+      alertconfirm.value = "Ok";
+    }else
+    if(localStorage.getItem("lang") === "cht") {
+      document.getElementById("alertText").innerHTML = "應用程式已安裝或以獨立模式運作。";
+      alertconfirm.value = "Ok";
     }
     alertconfirm.onclick = function() {
       document.getElementById("alert").style.display = "none";
@@ -948,6 +987,7 @@ function installApp() {
           var alertconfirm = document.getElementById("alertRight");
           document.getElementById("alert").style.display = "block";
           document.getElementById("alert").style.zIndex = "5";
+          alertcancel.style.display = "none";
           alertconfirm.style.display = "block";
           if(localStorage.getItem("lang") === "en") {
             document.getElementById("alertText").innerHTML = "Add to Home Screen functionality is not currently available.  Make sure you've visited the site a few times.";
@@ -964,6 +1004,10 @@ function installApp() {
           if(localStorage.getItem("lang") === "chs") {
             document.getElementById("alertText").innerHTML = "添加到主屏幕功能目前不可用。请确保您已访问过该网站几次。";
             alertconfirm.value = "Ok";
+          }else
+          if(localStorage.getItem("lang") === "cht") {
+            document.getElementById("alertText").innerHTML = "「新增至主畫面」功能目前無法使用。 確保您已經訪問過該網站幾次。";
+            alertconfirm.value = "Ok";
           }
           alertconfirm.onclick = function() {
             document.getElementById("alert").style.display = "none";
@@ -977,6 +1021,7 @@ function installApp() {
     var alertconfirm = document.getElementById("alertRight");
     document.getElementById("alert").style.display = "block";
     document.getElementById("alert").style.zIndex = "5";
+    alertcancel.style.display = "none";
     alertconfirm.style.display = "block";
     if(localStorage.getItem("lang") === "en") {
       document.getElementById("alertText").innerHTML = "This browser does not support Add to Home Screen.";
@@ -992,6 +1037,10 @@ function installApp() {
     }else
     if(localStorage.getItem("lang") === "chs") {
       document.getElementById("alertText").innerHTML = "该浏览器不支持添加到主屏幕。";
+      alertconfirm.value = "Ok";
+    }else
+    if(localStorage.getItem("lang") === "cht") {
+      document.getElementById("alertText").innerHTML = "該瀏覽器不支援添加到主螢幕。";
       alertconfirm.value = "Ok";
     }
     alertconfirm.onclick = function() {

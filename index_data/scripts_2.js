@@ -41,6 +41,14 @@ function pauseGame() {
         document.getElementById("alertText").innerHTML = "游戏暂停，点击“继续”继续。";
       }
       alertconfirm.value = "继续";
+    }else
+    if(localStorage.getItem("lang") === "cht") {
+      if(navigator.userAgent.match(/mobile/i)) {
+        document.getElementById("alertText").innerHTML = "遊戲暫停，按「繼續」繼續。";
+      }else{
+        document.getElementById("alertText").innerHTML = "遊戲暫停，點選「繼續」繼續。";
+      }
+      alertconfirm.value = "繼續";
     }
     alertconfirm.onclick = function() {
       document.getElementById('chechboxPausing').click();
@@ -59,6 +67,9 @@ function pauseGame() {
     }else
     if(localStorage.getItem("lang") === "chs") {
       document.getElementById("alertText").innerHTML = "准备继续...";
+    }else
+    if(localStorage.getItem("lang") === "chs") {
+      document.getElementById("alertText").innerHTML = "準備繼續...";
     }
     setTimeout(() => {
       document.getElementById("alertText").innerHTML = "3"
@@ -119,8 +130,11 @@ window.onerror=function(){
   if(localStorage.getItem("lang") === "jp") {
     alert("エラーが発生しました。このアラートが表示されるかどうかを教えてください。");
   }else
-  if(localStorage.getItem("lang") === "jp") {
+  if(localStorage.getItem("lang") === "chs") {
     alert("出现错误..，请告诉我们此警报是否跳转。");
+  }else
+  if(localStorage.getItem("lang") === "cht") {
+    alert("出現錯誤..，請告訴我們此警報是否跳轉。");
   }
 };
 const dimensions = [
@@ -537,6 +551,10 @@ function leagueSystem() {
     if(localStorage.getItem("lang") === "chs") {
       document.getElementById("leagueType").innerHTML = "非联赛";
       document.getElementById("subleagueType").innerHTML = "非联赛";
+    }else
+    if(localStorage.getItem("lang") === "cht") {
+      document.getElementById("leagueType").innerHTML = "非聯賽";
+      document.getElementById("subleagueType").innerHTML = "非聯賽";
     }
   }else
   if(localStorage.getItem("high-score") == "1" || localStorage.getItem("high-score") == "2" || localStorage.getItem("high-score") == "3" || localStorage.getItem("high-score") == "4" || localStorage.getItem("high-score") == "5" || localStorage.getItem("high-score") == "6" || localStorage.getItem("high-score") == "7" || localStorage.getItem("high-score") == "8" || localStorage.getItem("high-score") == "9" || localStorage.getItem("high-score") == "10") {
@@ -559,6 +577,10 @@ function leagueSystem() {
     if(localStorage.getItem("lang") === "chs") {
       document.getElementById("leagueType").innerHTML = "青铜联赛";
       document.getElementById("subleagueType").innerHTML = "青铜联赛";
+    }else
+    if(localStorage.getItem("lang") === "cht") {
+      document.getElementById("leagueType").innerHTML = "青銅聯賽";
+      document.getElementById("subleagueType").innerHTML = "青銅聯賽";
     }
     star.style.color = "#ce8946ff";
     substar.style.color = "#ce8946ff";
@@ -583,6 +605,10 @@ function leagueSystem() {
     if(localStorage.getItem("lang") === "chs") {
       document.getElementById("leagueType").innerHTML = "银级联赛";
       document.getElementById("subleagueType").innerHTML = "银级联赛";
+    }else
+    if(localStorage.getItem("lang") === "cht") {
+      document.getElementById("leagueType").innerHTML = "銀牌聯賽";
+      document.getElementById("subleagueType").innerHTML = "銀牌聯賽";
     }
     star.style.color = "#c4c4c4ff";
     substar.style.color = "#c4c4c4ff";
@@ -607,6 +633,10 @@ function leagueSystem() {
     if(localStorage.getItem("lang") === "chs") {
       document.getElementById("leagueType").innerHTML = "金牌联赛";
       document.getElementById("subleagueType").innerHTML = "金牌联赛";
+    }else
+    if(localStorage.getItem("lang") === "cht") {
+      document.getElementById("leagueType").innerHTML = "金牌聯賽";
+      document.getElementById("subleagueType").innerHTML = "金牌聯賽";
     }
     star.style.color = "#efbf04ff";
     substar.style.color = "#efbf04ff";
@@ -631,6 +661,10 @@ function leagueSystem() {
     if(localStorage.getItem("lang") === "chs") {
       document.getElementById("leagueType").innerHTML = "白金联赛";
       document.getElementById("subleagueType").innerHTML = "白金联赛";
+    }else
+    if(localStorage.getItem("lang") === "cht") {
+      document.getElementById("leagueType").innerHTML = "白金聯賽";
+      document.getElementById("subleagueType").innerHTML = "白金聯賽";
     }
     star.style.color = "#d9d9d9ff";
     substar.style.color = "#d9d9d9ff";
@@ -655,6 +689,10 @@ function leagueSystem() {
     if(localStorage.getItem("lang") === "chs") {
       document.getElementById("leagueType").innerHTML = "钻石联赛";
       document.getElementById("subleagueType").innerHTML = "钻石联赛";
+    }else
+    if(localStorage.getItem("lang") === "cht") {
+      document.getElementById("leagueType").innerHTML = "鑽石聯賽";
+      document.getElementById("subleagueType").innerHTML = "鑽石聯賽";
     }
     star.style.color = "#D397F8ff";
     substar.style.color = "#D397F8ff";
@@ -679,6 +717,10 @@ function leagueSystem() {
     if(localStorage.getItem("lang") === "chs") {
       document.getElementById("leagueType").innerHTML = "超级联赛";
       document.getElementById("subleagueType").innerHTML = "超级联赛";
+    }else
+    if(localStorage.getItem("lang") === "cht") {
+      document.getElementById("leagueType").innerHTML = "超級聯賽";
+      document.getElementById("subleagueType").innerHTML = "超級聯賽";
     }
     star.style.color = "#FF7518ff";
     substar.style.color = "#FF7518ff";
@@ -703,6 +745,10 @@ function leagueSystem() {
     if(localStorage.getItem("lang") === "chs") {
       document.getElementById("leagueType").innerHTML = "传奇联盟";
       document.getElementById("subleagueType").innerHTML = "传奇联盟";
+    }else
+    if(localStorage.getItem("lang") === "cht") {
+      document.getElementById("leagueType").innerHTML = "傳奇聯盟";
+      document.getElementById("subleagueType").innerHTML = "傳奇聯盟";
     }
     star.style.color = "#FF7518ff";
     substar.style.color = "#FF7518ff";
@@ -727,6 +773,10 @@ function leagueSystem() {
     if(localStorage.getItem("lang") === "chs") {
       document.getElementById("leagueType").innerHTML = "阿尔法骑士";
       document.getElementById("subleagueType").innerHTML = "阿尔法骑士";
+    }else
+    if(localStorage.getItem("lang") === "cht") {
+      document.getElementById("leagueType").innerHTML = "阿爾法騎士";
+      document.getElementById("subleagueType").innerHTML = "阿爾法騎士";
     }
     star.style.color = "#ffff00ff";
     substar.style.color = "#ffff00ff";

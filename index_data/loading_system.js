@@ -70,14 +70,6 @@ const tasset0 = [
   "long_button_hover",
   "meaw_token",
   "menu",
-  "nav_menu_en",
-  "nav_menu_ru",
-  "nav_menu_jp",
-  "nav_menu_chs",
-  "nav_menu_en_hover",
-  "nav_menu_ru_hover",
-  "nav_menu_jp_hover",
-  "nav_menu_chs_hover",
   "new_modal_content",
   "normal_on",
   "null",
@@ -95,11 +87,23 @@ const tasset0 = [
   "ticket_chromatic",
   "ticket_premium",
   "unselected",
+  "wrapper_bg",
+  ///////Langs///////
+  "nav_menu_en",
+  "nav_menu_ru",
+  "nav_menu_jp",
+  "nav_menu_chs",
+  "nav_menu_cht",
+  "nav_menu_en_hover",
+  "nav_menu_ru_hover",
+  "nav_menu_jp_hover",
+  "nav_menu_chs_hover",
+  "nav_menu_cht_hover",
   "Google_en",
   "Google_ru",
   "Google_jp",
   "Google_chs",
-  "wrapper_bg"
+  "Google_cht"
 ];
 const tasset1 = [
   "16f75a9bdd0bf6"
@@ -150,7 +154,7 @@ function testLoadAsset0() {
 }
 function toDisplayNone() {
   setTimeout(function() {
-  if(document.getElementById('widther').style.width === "98px") {
+  if(document.getElementById('widther').style.width === "101px") {
     alertAccept();
     document.getElementById("loading").style.display = "none";
   }

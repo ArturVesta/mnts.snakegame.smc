@@ -30,6 +30,9 @@ if(localStorage.getItem("lang") === "jp") {
 }else
 if(localStorage.getItem("lang") === "chs") {
   highScoreElement.innerText = `高分： ${highScore}`;
+}else
+if(localStorage.getItem("lang") === "cht") {
+  highScoreElement.innerText = `高分： ${highScore}`;
 }
 const updateFoodPosition = () => {
   foodX = Math.floor(Math.random() * 30) + 1;
@@ -54,6 +57,9 @@ const handleGameOver = () => {
     }else
     if(localStorage.getItem("lang") === "chs") {
       document.getElementById("loseNewRecordScore").innerHTML = "距离新纪录仅一步之遥！";
+    }else
+    if(localStorage.getItem("lang") === "cht") {
+      document.getElementById("loseNewRecordScore").innerHTML = "距離新紀錄只有一步之遙！";
     }
   }else
   if(score >= localStorage.getItem("steelScore")) {
@@ -68,6 +74,9 @@ const handleGameOver = () => {
     }else
     if(localStorage.getItem("lang") === "chs") {
       document.getElementById("loseNewRecordScore").innerHTML = "恭喜您，创造了新纪录！";
+    }else
+    if(localStorage.getItem("lang") === "cht") {
+      document.getElementById("loseNewRecordScore").innerHTML = "恭喜您，創造了新紀錄！";
     }
   }
   if(localStorage.getItem("movementbg") === "playerWalk") {
@@ -167,6 +176,9 @@ document.getElementById("reset").onclick = function() {
   }else
   if(localStorage.getItem("lang") === "chs") {
     scoreElement.innerText = `分数： ${score}`;
+  }else
+  if(localStorage.getItem("lang") === "cht") {
+    scoreElement.innerText = `分數： ${score}`;
   };
   localStorage.setItem("steelScore", localStorage.getItem("high-score"));
 };
@@ -262,6 +274,10 @@ const initGame = () => {
     }else
     if(localStorage.getItem("lang") === "chs") {
       scoreElement.innerText = `分数： ${score}`;
+      highScoreElement.innerText = `高分： ${highScore}`;
+    }else
+    if(localStorage.getItem("lang") === "cht") {
+      scoreElement.innerText = `分數： ${score}`;
       highScoreElement.innerText = `高分： ${highScore}`;
     }
     if(localStorage.getItem("foodStyle") === "imgMeow") {
