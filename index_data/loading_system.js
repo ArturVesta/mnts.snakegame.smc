@@ -1,4 +1,5 @@
 let widthcont = 0;
+let errorscont = 0;
 const format = ".png";
 const format2 = ".gif";
 const locator = "index_data/29172/";
@@ -88,6 +89,8 @@ const tasset0 = [
   "ticket_premium",
   "unselected",
   "wrapper_bg",
+  "messenger",
+  "discord",
   ///////Langs///////
   "nav_menu_en",
   "nav_menu_ru",
@@ -109,8 +112,6 @@ const tasset1 = [
   "16f75a9bdd0bf6"
 ];
 const tasset2 = [
-  "messenger",
-  "discord"
 ];
 function testLoadAsset0() {
   setTimeout(function() {
@@ -124,6 +125,10 @@ function testLoadAsset0() {
         document.getElementById('widther').style.width = widthcont++ + "px";
         toDisplayNone();
       });
+      asset.addEventListener("error", function() {
+        errorscont++;
+        document.getElementById("loadingText").innerHTML = "Cant load " + errorscont + " assets, not found or removed...";
+      });
       document.getElementById("loadedbar").appendChild(asset);
     }
     for(var b = 0; b < tasset1.length; b++) {
@@ -136,6 +141,10 @@ function testLoadAsset0() {
         document.getElementById('widther').style.width = widthcont++ + "px";
         toDisplayNone();
       });
+      asset.addEventListener("error", function() {
+        errorscont++;
+        document.getElementById("loadingText").innerHTML = "Cant load " + errorscont + " assets, not found or removed...";
+      });
       document.getElementById("loadedbar").appendChild(asset);
     }
     for(var c = 0; c < tasset2.length; c++) {
@@ -147,6 +156,10 @@ function testLoadAsset0() {
       asset.addEventListener("load", function() {
         document.getElementById('widther').style.width = widthcont++ + "px";
         toDisplayNone();
+      });
+      asset.addEventListener("error", function() {
+        errorscont++;
+        document.getElementById("loadingText").innerHTML = "Cant load " + errorscont + " assets, not found or removed...";
       });
       document.getElementById("loadedbar").appendChild(asset);
     }
