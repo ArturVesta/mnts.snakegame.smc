@@ -1,6 +1,6 @@
 var GHPATH = '/mnts.snakegame.smc';
 var APP_PREFIX = 'gppwa_';
-let VERSIONNAME = "0.2.7";
+let VERSIONNAME = "0.2.8";
 var VERSION = VERSIONNAME;
 var CACHE_NAME = VERSIONNAME;
 var URLS = [
@@ -165,6 +165,8 @@ var URLS = [
   `${GHPATH}/index_data/29172/ticket_premium.png`,
   `${GHPATH}/index_data/29172/unselected.png`,
   `${GHPATH}/index_data/29172/wrapper_bg.png`,
+  `${GHPATH}/index_data/29172/messenger.png`,
+  `${GHPATH}/index_data/29172/discord.png`,
   `${GHPATH}/index_data/29208`,
   `${GHPATH}/index_data/29208/acceleration_folding.mp3`,
   `${GHPATH}/index_data/29208/alborada_walk.mp3`,
@@ -228,8 +230,6 @@ var URLS = [
   `${GHPATH}/index_data/system.js`,
   `${GHPATH}/index_data/loading_system.js`,
   `${GHPATH}/index.html`,
-  `${GHPATH}/messenger.png`,
-  `${GHPATH}/discord.png`,
   `${GHPATH}/manifest.webmanifest`
 ];
 var CacheURLS = [
@@ -394,6 +394,8 @@ var CacheURLS = [
   `${GHPATH}/index_data/29172/Google_jp.png`,
   `${GHPATH}/index_data/29172/Google_chs.png`,
   `${GHPATH}/index_data/29172/Google_cht.png`,
+  `${GHPATH}/index_data/29172/messenger.png`,
+  `${GHPATH}/index_data/29172/discord.png`,
   `${GHPATH}/index_data/29208`,
   `${GHPATH}/index_data/29208/acceleration_folding.mp3`,
   `${GHPATH}/index_data/29208/alborada_walk.mp3`,
@@ -457,8 +459,6 @@ var CacheURLS = [
   `${GHPATH}/index_data/system.js`,
   `${GHPATH}/index_data/loading_system.js`,
   `${GHPATH}/index.html`,
-  `${GHPATH}/messenger.png`,
-  `${GHPATH}/discord.png`,
   `${GHPATH}/manifest.webmanifest`
 ];
 self.addEventListener('install', event => {
