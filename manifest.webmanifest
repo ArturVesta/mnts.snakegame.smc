@@ -104,7 +104,7 @@
       "sizes": "512x512"
     }
   ],
-  "locales": ["en","ru","ja","zhs","zht"],
+  "locales": ["en","ru","ja","zhs","zht","ko"],
   "ru": {
     "name": "Змея Меха Сборщик",
     "short_name": "Змея Меха Сборщик"
@@ -120,5 +120,9 @@
   "zht": {
     "name": "蛇形機甲收藏家",
     "short_name": "蛇形機甲收藏家"
+  },
+  "ko": {
+    "name": "뱀 메카 수집가",
+    "short_name": "뱀 메카 수집가"
   }
 }
