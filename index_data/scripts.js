@@ -523,6 +523,9 @@ function applySettings() {
   }else
   if(document.getElementById("languageCht").className === "language select activet") {
     localStorage.setItem("lang", "cht");
+  }else
+  if(document.getElementById("languageKo").className === "language select activet") {
+    localStorage.setItem("lang", "ko");
   };
   if(document.getElementById("ccLang").className === "controllerpostype select activet") {
     localStorage.setItem("controllerPosition", "center");
@@ -646,6 +649,11 @@ function alertReloadLater() {
     document.getElementById("alertText").innerHTML = "設定為預設值？";
     alertcancel.value = "取消";
     alertconfirm.value = "確認";
+  }else
+  if(localStorage.getItem("lang") === "ko") {
+    document.getElementById("alertText").innerHTML = "기본값으로 설정하시겠습니까?";
+    alertcancel.value = "취소";
+    alertconfirm.value = "확인하다";
   }
   alertcancel.onclick = function() {
     document.getElementById("alert").style.display = "none";
@@ -700,6 +708,11 @@ function alertExitSite() {
     document.getElementById("alertText").innerHTML = "你去？";
     alertcancel.value = "不";
     alertconfirm.value = "是的";
+  }else
+  if(localStorage.getItem("lang") === "ko") {
+    document.getElementById("alertText").innerHTML = "가시나요?";
+    alertcancel.value = "아니요";
+    alertconfirm.value = "예";
   }
   alertcancel.onclick = function() {
     document.getElementById("alert").style.display = "none";
@@ -719,7 +732,7 @@ function alertAccept() {
   var alertconfirm = document.getElementById("alertRight");
     document.getElementById("alert").style.display = "block";
   if(localStorage.getItem("lang") === "en") {
-    document.getElementById("alertText").innerHTML = "Needed your accepting to load audio ressources for disable audio delay.";
+    document.getElementById("alertText").innerHTML = "Needed your accepting to load audio resources for disable audio delay.";
     alertconfirm.value = "Confirm";
   }else
   if(localStorage.getItem("lang") === "ru") {
@@ -737,6 +750,10 @@ function alertAccept() {
   if(localStorage.getItem("lang") === "cht") {
     document.getElementById("alertText").innerHTML = "需要您接受載入音訊資源以停用音訊延遲。";
     alertconfirm.value = "確認";
+  }else
+  if(localStorage.getItem("lang") === "ko") {
+    document.getElementById("alertText").innerHTML = "비활성화된 오디오 지연에 대한 오디오 리소스를 로드하는 데 동의해야 합니다.";
+    alertconfirm.value = "확인하다";
   }
   alertcancel.value = "...";
   alertcancel.style.display = "none";
@@ -753,8 +770,11 @@ function alertAccept() {
   if(localStorage.getItem("lang") === "chs") {
     alert("您是如何点击它的！？");
   }else
-  if(localStorage.getItem("lang") === "cht") {
+  if(localStorage.getItem("lang") === "ko") {
     alert("您是如何點擊它的！?");
+  }else
+  if(localStorage.getItem("lang") === "ko") {
+    alert("어떻게 클릭했나요!?");
   }
   };
   alertconfirm.onclick = function() {
@@ -782,6 +802,9 @@ function alertAccept() {
     }else
     if(localStorage.getItem("lang") === "cht") {
       document.getElementById("alertText").innerHTML = "載入中…";
+    }else
+    if(localStorage.getItem("lang") === "ko") {
+      document.getElementById("alertText").innerHTML = "로딩중…";
     }
     setTimeout(function() {
       document.getElementById("alert").style.display = "none";
@@ -819,6 +842,11 @@ function alertDeleteProgress() {
     document.getElementById("alertText").innerHTML = "您確定要刪除您的進度嗎？";
     alertcancel.value = "不";
     alertconfirm.value = "是的";
+  }else
+  if(localStorage.getItem("lang") === "ko") {
+    document.getElementById("alertText").innerHTML = "진행 상황을 삭제하시겠습니까?";
+    alertcancel.value = "아니요";
+    alertconfirm.value = "예";
   }
   alertcancel.onclick = function() {
     document.getElementById("alert").style.display = "none";
@@ -894,6 +922,10 @@ function installApp() {
     if(localStorage.getItem("lang") === "cht") {
       document.getElementById("alertText").innerHTML = "應用程式已安裝或以獨立模式運作。";
       alertconfirm.value = "確認";
+    }else
+    if(localStorage.getItem("lang") === "ko") {
+      document.getElementById("alertText").innerHTML = "앱이 이미 설치되었거나 독립 실행형 모드로 실행 중입니다.";
+      alertconfirm.value = "확인하다";
     }
     alertconfirm.onclick = function() {
       document.getElementById("alert").style.display = "none";
@@ -928,6 +960,10 @@ function installApp() {
     }else
     if(localStorage.getItem("lang") === "cht") {
       document.getElementById("alertText").innerHTML = "應用程式已安裝或以獨立模式運作。";
+      alertconfirm.value = "Ok";
+    }else
+    if(localStorage.getItem("lang") === "ko") {
+      document.getElementById("alertText").innerHTML = "앱이 이미 설치되었거나 독립 실행형 모드로 실행 중입니다.";
       alertconfirm.value = "Ok";
     }
     alertconfirm.onclick = function() {
@@ -1008,6 +1044,10 @@ function installApp() {
           if(localStorage.getItem("lang") === "cht") {
             document.getElementById("alertText").innerHTML = "「新增至主畫面」功能目前無法使用。 確保您已經訪問過該網站幾次。";
             alertconfirm.value = "Ok";
+          }else
+          if(localStorage.getItem("lang") === "ko") {
+            document.getElementById("alertText").innerHTML = "홈 화면에 추가 기능은 현재 사용할 수 없습니다. 사이트를 몇 번 방문했는지 확인하세요.";
+            alertconfirm.value = "Ok";
           }
           alertconfirm.onclick = function() {
             document.getElementById("alert").style.display = "none";
@@ -1042,6 +1082,10 @@ function installApp() {
     if(localStorage.getItem("lang") === "cht") {
       document.getElementById("alertText").innerHTML = "該瀏覽器不支援添加到主螢幕。";
       alertconfirm.value = "Ok";
+    }else
+    if(localStorage.getItem("lang") === "ko") {
+      document.getElementById("alertText").innerHTML = "이 브라우저는 홈 화면에 추가를 지원하지 않습니다.";
+      alertconfirm.value = "Ok";
     }
     alertconfirm.onclick = function() {
       document.getElementById("alert").style.display = "none";
@@ -1053,4 +1097,214 @@ function installApp() {
 const installButton = document.getElementById('downloadNoAutoUpdate2'); // Replace with your actual button ID
 if (installButton) {
   installButton.addEventListener('click', installApp);
+};
+// Get battery level in % with charging detection
+navigator.getBattery().then(function (battery) {
+  function showAllBatteryInfo() {
+    editChargeInfo();
+    editLevelInfo();
+  }
+  showAllBatteryInfo();
+  battery.addEventListener('chargingchange', function () {
+    editChargeInfo();
+  });
+  function editChargeInfo() {
+    var subBttry = document.getElementById('subBatteryCharge');
+    var subInBatteryProg = document.getElementById("subInBatteryProgress");
+    var subBatteryCharge = (battery.charging ? "⨭" : "⨴️");
+    subBttry.innerText = subBatteryCharge;
+    if (subBttry.innerHTML === "⨴️") {
+      subBttry.style.color = "black";
+      subInBatteryProg.style.backgroundImage = "var(--battery-prog-normal)";
+    } else {
+      subBttry.style.color = "lime";
+      subInBatteryProg.style.backgroundImage = "var(--battery-prog-charging)";
+    }
+  };
+  battery.addEventListener('levelchange', function () {
+    editLevelInfo();
+  });
+  battery.addEventListener('chargingchange', function () {
+    editChargeInfo();
+  });
+  function editLevelInfo() {
+    var subBatteryLevel = document.getElementById('subBatteryLevel');
+    var subBttry = document.getElementById('subBatteryCharge');
+    var subInBatteryProg = document.getElementById("subInBatteryProgress");
+    var batteryLevel = battery.level * 100;
+    //var roundedBatteryLevel = Math.round(batteryLevel);
+    var roundedBatteryLevel = batteryLevel.toFixed(0);
+    subBatteryLevel.innerText = roundedBatteryLevel + "%";
+    subInBatteryProg.style.width = subBatteryLevel.innerHTML;
+    if (roundedBatteryLevel < 20 && subBttry.innerHTML === "⨴️") {
+      subBttry.style.color = "red";
+      subInBatteryProg.style.backgroundImage = "var(--battery-prog-low)";
+    }else
+    if(roundedBatteryLevel < 20 && subBttry.innerHTML === "⨭") {
+      subBttry.style.color = "lime";
+      subInBatteryProg.style.backgroundImage = "var(--battery-prog-charging)";
+    }else
+    if(roundedBatteryLevel > 20 && subBttry.innerHTML === "⨴️") {
+      subBttry.style.color = "black";
+      subInBatteryProg.style.backgroundImage = "var(--battery-prog-normal)";
+    }else
+    if(roundedBatteryLevel > 20 && subBttry.innerHTML === "⨭") {
+      subBttry.style.color = "lime";
+      subInBatteryProg.style.backgroundImage = "var(--battery-prog-charging)";
+    }
+  };
+});
+// time & date
+setInterval(displayTime, 1);
+function displayTime() {
+  if(localStorage.getItem("lang") == "en") {
+    const timeNow = new Date();
+    let hoursOfDay = timeNow.getHours();
+    let minutes = timeNow.getMinutes();
+    let weekDay = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat","Sun"]
+    let today = weekDay[timeNow.getDay()];
+    let todaynum = timeNow.getDate();
+    let months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    let monthswin = timeNow.getMonth() + 1;
+    monthswin < 10 ? "0" + monthswin : monthswin.toFixed();
+    let tomonths = months[timeNow.getMonth()];
+    let year = timeNow.getFullYear();
+    hoursOfDay = hoursOfDay < 10 ? "0" + hoursOfDay : hoursOfDay;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    document.getElementById("subClock").innerHTML = hoursOfDay + ":" + minutes;
+    if (navigator.userAgent.match(/Android/i)) {
+      document.getElementById("subCalendar").innerHTML = today + ", " + tomonths + " " + todaynum;
+    } else if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+      document.getElementById("subCalendar").innerHTML = today + " " + todaynum + " " + tomonths;
+    } else if (navigator.userAgent.match(/Windows/i)) {
+      document.getElementById("subCalendar").innerHTML = todaynum + "/" + monthswin + "/" + year;
+    } else {
+      document.getElementById("subCalendar").innerHTML = todaynum + "/" + monthswin + "/" + year;
+    }
+  }else
+  if(localStorage.getItem("lang") == "ru") {
+    const timeNow = new Date();
+    let hoursOfDay = timeNow.getHours();
+    let minutes = timeNow.getMinutes();
+    let weekDay = ["Вс","Пн","Вт","Ср","Чт","Пт","Сб","Вс"]
+    let today = weekDay[timeNow.getDay()];
+    let todaynum = timeNow.getDate();
+    let months = ["Янв","Февр","Март","Апр","Май","Июнь","Июль","Авг","Сент","Окт","Нояб","Дек"];
+    let monthswin = timeNow.getMonth() + 1;
+    monthswin < 10 ? "0" + monthswin : monthswin.toFixed();
+    let tomonths = months[timeNow.getMonth()];
+    let year = timeNow.getFullYear();
+    hoursOfDay = hoursOfDay < 10 ? "0" + hoursOfDay : hoursOfDay;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    document.getElementById("subClock").innerHTML = hoursOfDay + ":" + minutes;
+    if (navigator.userAgent.match(/Android/i)) {
+      document.getElementById("subCalendar").innerHTML = today + ", " + tomonths + " " + todaynum;
+    } else if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+      document.getElementById("subCalendar").innerHTML = today + " " + todaynum + " " + tomonths;
+    } else if (navigator.userAgent.match(/Windows/i)) {
+      document.getElementById("subCalendar").innerHTML = todaynum + "/" + monthswin + "/" + year;
+    } else {
+      document.getElementById("subCalendar").innerHTML = todaynum + "/" + monthswin + "/" + year;
+    }
+  }else
+  if(localStorage.getItem("lang") == "jp") {
+    const timeNow = new Date();
+    let hoursOfDay = timeNow.getHours();
+    let minutes = timeNow.getMinutes();
+    let weekDay = ["日曜日","月曜日","火曜日","水曜日","木曜日","金曜日","土曜日","日曜日"]
+    let today = weekDay[timeNow.getDay()];
+    let todaynum = timeNow.getDate();
+    let months = ["一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月"];
+    let monthswin = timeNow.getMonth() + 1;
+    monthswin < 10 ? "0" + monthswin : monthswin.toFixed();
+    let tomonths = months[timeNow.getMonth()];
+    let year = timeNow.getFullYear();
+    hoursOfDay = hoursOfDay < 10 ? "0" + hoursOfDay : hoursOfDay;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    document.getElementById("subClock").innerHTML = hoursOfDay + ":" + minutes;
+    if (navigator.userAgent.match(/Android/i)) {
+      document.getElementById("subCalendar").innerHTML = today + ", " + tomonths + " " + todaynum;
+    } else if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+      document.getElementById("subCalendar").innerHTML = today + " " + todaynum + " " + tomonths;
+    } else if (navigator.userAgent.match(/Windows/i)) {
+      document.getElementById("subCalendar").innerHTML = todaynum + "/" + monthswin + "/" + year;
+    } else {
+      document.getElementById("subCalendar").innerHTML = todaynum + "/" + monthswin + "/" + year;
+    }
+  }else
+  if(localStorage.getItem("lang") == "chs") {
+    const timeNow = new Date();
+    let hoursOfDay = timeNow.getHours();
+    let minutes = timeNow.getMinutes();
+    let weekDay = ["星期日","星期一","星期二","星期三","星期四","星期五","星期六","星期日"]
+    let today = weekDay[timeNow.getDay()];
+    let todaynum = timeNow.getDate();
+    let months = ["一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月"];
+    let monthswin = timeNow.getMonth() + 1;
+    monthswin < 10 ? "0" + monthswin : monthswin.toFixed();
+    let tomonths = months[timeNow.getMonth()];
+    let year = timeNow.getFullYear();
+    hoursOfDay = hoursOfDay < 10 ? "0" + hoursOfDay : hoursOfDay;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    document.getElementById("subClock").innerHTML = hoursOfDay + ":" + minutes;
+    if (navigator.userAgent.match(/Android/i)) {
+      document.getElementById("subCalendar").innerHTML = today + ", " + tomonths + " " + todaynum;
+    } else if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+      document.getElementById("subCalendar").innerHTML = today + " " + todaynum + " " + tomonths;
+    } else if (navigator.userAgent.match(/Windows/i)) {
+      document.getElementById("subCalendar").innerHTML = todaynum + "/" + monthswin + "/" + year;
+    } else {
+      document.getElementById("subCalendar").innerHTML = todaynum + "/" + monthswin + "/" + year;
+    }
+  }else
+  if(localStorage.getItem("lang") == "cht") {
+    const timeNow = new Date();
+    let hoursOfDay = timeNow.getHours();
+    let minutes = timeNow.getMinutes();
+    let weekDay = ["星期日","星期一","星期二","星期三","星期四","星期五","星期六","星期日"]
+    let today = weekDay[timeNow.getDay()];
+    let todaynum = timeNow.getDate();
+    let months = ["一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月"];
+    let monthswin = timeNow.getMonth() + 1;
+    monthswin < 10 ? "0" + monthswin : monthswin.toFixed();
+    let tomonths = months[timeNow.getMonth()];
+    let year = timeNow.getFullYear();
+    hoursOfDay = hoursOfDay < 10 ? "0" + hoursOfDay : hoursOfDay;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    document.getElementById("subClock").innerHTML = hoursOfDay + ":" + minutes;
+    if (navigator.userAgent.match(/Android/i)) {
+      document.getElementById("subCalendar").innerHTML = today + ", " + tomonths + " " + todaynum;
+    } else if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+      document.getElementById("subCalendar").innerHTML = today + " " + todaynum + " " + tomonths;
+    } else if (navigator.userAgent.match(/Windows/i)) {
+      document.getElementById("subCalendar").innerHTML = todaynum + "/" + monthswin + "/" + year;
+    } else {
+      document.getElementById("subCalendar").innerHTML = todaynum + "/" + monthswin + "/" + year;
+    }
+  }else
+  if(localStorage.getItem("lang") == "ko") {
+    const timeNow = new Date();
+    let hoursOfDay = timeNow.getHours();
+    let minutes = timeNow.getMinutes();
+    let weekDay = ["일요일","월요일","화요일","수요일","목요일","금요일","토요일","일요일"]
+    let today = weekDay[timeNow.getDay()];
+    let todaynum = timeNow.getDate();
+    let months = ["일월","이월","삼월","사월","오월","유월","칠월","팔월","구월","시월","십일월","십이월"];
+    let monthswin = timeNow.getMonth() + 1;
+    monthswin < 10 ? "0" + monthswin : monthswin.toFixed();
+    let tomonths = months[timeNow.getMonth()];
+    let year = timeNow.getFullYear();
+    hoursOfDay = hoursOfDay < 10 ? "0" + hoursOfDay : hoursOfDay;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    document.getElementById("subClock").innerHTML = hoursOfDay + ":" + minutes;
+    if (navigator.userAgent.match(/Android/i)) {
+      document.getElementById("subCalendar").innerHTML = today + ", " + tomonths + " " + todaynum;
+    } else if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+      document.getElementById("subCalendar").innerHTML = today + " " + todaynum + " " + tomonths;
+    } else if (navigator.userAgent.match(/Windows/i)) {
+      document.getElementById("subCalendar").innerHTML = todaynum + "/" + monthswin + "/" + year;
+    } else {
+      document.getElementById("subCalendar").innerHTML = todaynum + "/" + monthswin + "/" + year;
+    }
+  }
 };

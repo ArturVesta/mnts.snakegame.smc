@@ -49,6 +49,14 @@ function pauseGame() {
         document.getElementById("alertText").innerHTML = "遊戲暫停，點選「繼續」繼續。";
       }
       alertconfirm.value = "繼續";
+    }else
+    if(localStorage.getItem("lang") === "ko") {
+      if(navigator.userAgent.match(/mobile/i)) {
+        document.getElementById("alertText").innerHTML = "게임이 일시 정지되었습니다. 계속하려면 ''계속''을 누르세요.";
+      }else{
+        document.getElementById("alertText").innerHTML = "게임이 일시 정지되었습니다. 계속하려면 ''계속''을 클릭하세요.";
+      }
+      alertconfirm.value = "계속하다";
     }
     alertconfirm.onclick = function() {
       document.getElementById('chechboxPausing').click();
@@ -68,8 +76,11 @@ function pauseGame() {
     if(localStorage.getItem("lang") === "chs") {
       document.getElementById("alertText").innerHTML = "准备继续...";
     }else
-    if(localStorage.getItem("lang") === "chs") {
+    if(localStorage.getItem("lang") === "cht") {
       document.getElementById("alertText").innerHTML = "準備繼續...";
+    }else
+    if(localStorage.getItem("lang") === "ko") {
+      document.getElementById("alertText").innerHTML = "계속 준비...";
     }
     setTimeout(() => {
       document.getElementById("alertText").innerHTML = "3"
@@ -122,7 +133,7 @@ window.addEventListener('load', function() {
 window.oncontextmenu=function(){return false}
 window.onerror=function(){
   if(localStorage.getItem("lang") === "en") {
-    alert("Somthin error.., Tell us if this alert is jump.");
+    alert("Something error.., Tell us if this alert is jump.");
   }else
   if(localStorage.getItem("lang") === "ru") {
     alert("Произошла ошибка.. Сообщите нам, если отображается это оповещение.");
@@ -135,6 +146,9 @@ window.onerror=function(){
   }else
   if(localStorage.getItem("lang") === "cht") {
     alert("出現錯誤..，請告訴我們此警報是否跳轉。");
+  }else
+  if(localStorage.getItem("lang") === "ko") {
+    alert("오류가 발생했습니다. 이 알림이 점프인지 알려주세요.");
   }
 };
 const dimensions = [
@@ -555,6 +569,10 @@ function leagueSystem() {
     if(localStorage.getItem("lang") === "cht") {
       document.getElementById("leagueType").innerHTML = "非聯賽";
       document.getElementById("subleagueType").innerHTML = "非聯賽";
+    }else
+    if(localStorage.getItem("lang") === "ko") {
+      document.getElementById("leagueType").innerHTML = "비리그";
+      document.getElementById("subleagueType").innerHTML = "비리그";
     }
   }else
   if(localStorage.getItem("high-score") == "1" || localStorage.getItem("high-score") == "2" || localStorage.getItem("high-score") == "3" || localStorage.getItem("high-score") == "4" || localStorage.getItem("high-score") == "5" || localStorage.getItem("high-score") == "6" || localStorage.getItem("high-score") == "7" || localStorage.getItem("high-score") == "8" || localStorage.getItem("high-score") == "9" || localStorage.getItem("high-score") == "10") {
@@ -581,6 +599,10 @@ function leagueSystem() {
     if(localStorage.getItem("lang") === "cht") {
       document.getElementById("leagueType").innerHTML = "青銅聯賽";
       document.getElementById("subleagueType").innerHTML = "青銅聯賽";
+    }else
+    if(localStorage.getItem("lang") === "ko") {
+      document.getElementById("leagueType").innerHTML = "브론즈 리그";
+      document.getElementById("subleagueType").innerHTML = "브론즈 리그";
     }
     star.style.color = "#ce8946ff";
     substar.style.color = "#ce8946ff";
@@ -609,6 +631,10 @@ function leagueSystem() {
     if(localStorage.getItem("lang") === "cht") {
       document.getElementById("leagueType").innerHTML = "銀牌聯賽";
       document.getElementById("subleagueType").innerHTML = "銀牌聯賽";
+    }else
+    if(localStorage.getItem("lang") === "ko") {
+      document.getElementById("leagueType").innerHTML = "실버 리그";
+      document.getElementById("subleagueType").innerHTML = "실버 리그";
     }
     star.style.color = "#c4c4c4ff";
     substar.style.color = "#c4c4c4ff";
@@ -637,6 +663,10 @@ function leagueSystem() {
     if(localStorage.getItem("lang") === "cht") {
       document.getElementById("leagueType").innerHTML = "金牌聯賽";
       document.getElementById("subleagueType").innerHTML = "金牌聯賽";
+    }else
+    if(localStorage.getItem("lang") === "ko") {
+      document.getElementById("leagueType").innerHTML = "골드 리그";
+      document.getElementById("subleagueType").innerHTML = "골드 리그";
     }
     star.style.color = "#efbf04ff";
     substar.style.color = "#efbf04ff";
@@ -665,6 +695,10 @@ function leagueSystem() {
     if(localStorage.getItem("lang") === "cht") {
       document.getElementById("leagueType").innerHTML = "白金聯賽";
       document.getElementById("subleagueType").innerHTML = "白金聯賽";
+    }else
+    if(localStorage.getItem("lang") === "ko") {
+      document.getElementById("leagueType").innerHTML = "플래티넘 리그";
+      document.getElementById("subleagueType").innerHTML = "플래티넘 리그";
     }
     star.style.color = "#d9d9d9ff";
     substar.style.color = "#d9d9d9ff";
@@ -693,6 +727,10 @@ function leagueSystem() {
     if(localStorage.getItem("lang") === "cht") {
       document.getElementById("leagueType").innerHTML = "鑽石聯賽";
       document.getElementById("subleagueType").innerHTML = "鑽石聯賽";
+    }else
+    if(localStorage.getItem("lang") === "ko") {
+      document.getElementById("leagueType").innerHTML = "다이아몬드 리그";
+      document.getElementById("subleagueType").innerHTML = "다이아몬드 리그";
     }
     star.style.color = "#D397F8ff";
     substar.style.color = "#D397F8ff";
@@ -721,6 +759,10 @@ function leagueSystem() {
     if(localStorage.getItem("lang") === "cht") {
       document.getElementById("leagueType").innerHTML = "超級聯賽";
       document.getElementById("subleagueType").innerHTML = "超級聯賽";
+    }else
+    if(localStorage.getItem("lang") === "ko") {
+      document.getElementById("leagueType").innerHTML = "슈퍼리그";
+      document.getElementById("subleagueType").innerHTML = "슈퍼리그";
     }
     star.style.color = "#FF7518ff";
     substar.style.color = "#FF7518ff";
@@ -749,6 +791,10 @@ function leagueSystem() {
     if(localStorage.getItem("lang") === "cht") {
       document.getElementById("leagueType").innerHTML = "傳奇聯盟";
       document.getElementById("subleagueType").innerHTML = "傳奇聯盟";
+    }else
+    if(localStorage.getItem("lang") === "ko") {
+      document.getElementById("leagueType").innerHTML = "전설의 리그";
+      document.getElementById("subleagueType").innerHTML = "전설의 리그";
     }
     star.style.color = "#FF7518ff";
     substar.style.color = "#FF7518ff";
@@ -777,6 +823,10 @@ function leagueSystem() {
     if(localStorage.getItem("lang") === "cht") {
       document.getElementById("leagueType").innerHTML = "阿爾法騎士";
       document.getElementById("subleagueType").innerHTML = "阿爾法騎士";
+    }else
+    if(localStorage.getItem("lang") === "ko") {
+      document.getElementById("leagueType").innerHTML = "알파 나이트";
+      document.getElementById("subleagueType").innerHTML = "알파 나이트";
     }
     star.style.color = "#ffff00ff";
     substar.style.color = "#ffff00ff";

@@ -10,7 +10,9 @@
   --filter-shadow: #b8c6dcff;
   --gray: #7c8089ff;
   /* Imageres */
-  /* Foods */
+  --battery-prog-normal: url('index_data/29172/battery_normal.png');
+  --battery-prog-low: url('index_data/29172/battery_low.png');
+  --battery-prog-charging: url('index_data/29172/battery_charging.png');
   --meaw-token: url('29172/meaw_token.png');
   --gold: url('29172/gold.png');
   --alpha-coin: url('29172/alpha_coin.png');
@@ -39,11 +41,13 @@
   --menu-jp: url('29172/nav_menu_jp.png');
   --menu-chs: url('29172/nav_menu_chs.png');
   --menu-cht: url('29172/nav_menu_cht.png');
+  --menu-ko: url('29172/nav_menu_ko.png');
   --menu-en-hover: url('29172/nav_menu_en_hover.png');
   --menu-ru-hover: url('29172/nav_menu_ru_hover.png');
   --menu-jp-hover: url('29172/nav_menu_jp_hover.png');
   --menu-chs-hover: url('29172/nav_menu_chs_hover.png');
   --menu-cht-hover: url('29172/nav_menu_cht_hover.png');
+  --menu-ko-hover: url('29172/nav_menu_ko_hover.png');
   --left: url('29172/btn_control_lt.png');
   --left-hover: url('29172/btn_control_lt_hover.png');
   --down: url('29172/btn_control_dn.png');
@@ -84,6 +88,7 @@
   --google-honyaku: url('29172/Google_jp.png');
   --google-fanyi-s: url('29172/Google_chs.png');
   --google-fanyi-t: url('29172/Google_cht.png');
+  --google-beon-yeog: url('29172/Google_ko.png');
   --icons: url('29172/icon_bg.png');
   --exit: url('29172/exit.png');
   --exit-hover: url('29172/exit_hover.png');
@@ -504,6 +509,16 @@ hr {
   var(--border),
   var(--menu-cht-hover);
 }
+#btn002.ko-lang {background-image:
+  var(--border),
+  var(--menu-ko);
+  position: relative;
+  display: block;
+}
+#btn002.ko-lang:hover {background-image:
+  var(--border),
+  var(--menu-ko-hover);
+}
 #btn003 {background-image:
   var(--border),
   var(--left);
@@ -635,6 +650,9 @@ hr {
 #navBtn.cht-lang {
   background-image: var(--menu-cht);
 }
+#navBtn.ko-lang {
+  background-image: var(--menu-ko);
+}
 #navBtn.en-lang:hover {
   background-image: var(--menu-en-hover);
 }
@@ -646,6 +664,9 @@ hr {
 }
 #navBtn.cht-lang:hover {
   background-image: var(--menu-cht-hover);
+}
+#navBtn.ko-lang:hover {
+  background-image: var(--menu-ko-hover);
 }
 .tab {
   float: left;
@@ -677,7 +698,7 @@ hr {
   -o-transition: 0.6s;
 }
 .tab .tablinks.active {
-  background-position: -5px -1px;
+  background-position: -8px -1px;
   cursor: default !important;
 }
 .tablinks:first-child {
@@ -1143,6 +1164,9 @@ input[type="range"]::-webkit-slider-thumb {
 #translate.g-t-cht {
   background-image: var(--google-fanyi-t);
 }
+#translate.g-t-ko {
+  background-image: var(--google-beon-yeog);
+}
 #customLanguage {
   width: 64%;
   margin: 0px auto;
@@ -1397,6 +1421,82 @@ hr.acc {
 .r-star.cht::after {
   content: ' 星星';
 }
+.r-stars.ko,
+.r-star.ko {
+  font-size: 12px;
+}
+.r-stars.ko::after {
+  content: ' 별';
+}
+.r-star.ko::after {
+  content: ' 별';
+}
+.sub-device-inpo-indicator {
+  position: absolute;
+  left: 90px;
+  top: 0px;
+  width: 450px;
+  height: 36px;
+}
+#subBatteryProgress {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-top: solid 2px black;
+  border-right: solid 2px black;
+  height: 6px;
+  background-color: var(--black-a);
+}
+#subInBatteryProgress {
+  position: relative;
+  height: 100%;
+  background-size: 100% 100%;
+  background-position: left center;
+  transition: 0.6s;
+  -o-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -webkit-transition: 0.6s;
+}
+#subBatteryIndicator {
+  float: right;
+}
+#subBatteryCharge {
+  text-shadow: 0px 0px 5px var(--black-a);
+  float: left;
+  font-size: 25px;
+  margin-top: -3.5px;
+  transition: 0.6s;
+  -o-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -webkit-transition: 0.6s;
+}
+#subBatteryLevel {
+  float: left;
+  padding: 0px;
+  margin-top: -2px;
+  font-size: 27px;
+}
+#subDateTimeIndicator {
+  float: left;
+}
+#subClock {
+  float: left;
+  font-size: 27px;
+  padding-left: 10px;
+  margin-top: -2px;
+}
+#subCalendar {
+  float: left;
+  font-size: 27px;
+  padding-right: 10px;
+  margin-top: -2px;
+}
+.sub-dc-symbol {
+  float: left;
+  font-size: 32px;
+  padding: 0px 10px;
+  margin-top: -5px;
+}
 @font-face {
   font-family: miSans;
   src: url('69326/MiSans.ttf');
@@ -1607,6 +1707,41 @@ hr.acc {
     text-align: right;
     width: calc(100% - 20px);
   }
+  
+.sub-device-inpo-indicator {
+  left: 61px;
+  top: 0px;
+  width: 300px;
+  height: 24px;
+}
+#subBatteryProgress {
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+}
+#subBatteryCharge {
+  margin-top: -2.5px;
+  font-size: 16px;
+}
+#subBatteryLevel {
+  padding: 0px;
+  font-size: 18px;
+}
+#subClock {
+  font-size: 18px;
+  padding-left: 6px;
+  margin-top: -1.5px;
+}
+#subCalendar {
+  font-size: 18px;
+  padding-right: 6px;
+  margin-top: -1.5px;
+}
+.sub-dc-symbol {
+  font-size: 23px;
+  padding: 0px 5px;
+  margin-top: -6px;
+}
 }
 @media screen and (min-width: 1545px) {
   .alert-btn-container input {

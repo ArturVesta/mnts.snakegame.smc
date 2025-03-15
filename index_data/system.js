@@ -33,6 +33,9 @@ if(localStorage.getItem("lang") === "chs") {
 }else
 if(localStorage.getItem("lang") === "cht") {
   highScoreElement.innerText = `高分： ${highScore}`;
+}else
+if(localStorage.getItem("lang") === "ko") {
+  highScoreElement.innerText = `높은 점수: ${highScore}`;
 }
 const updateFoodPosition = () => {
   foodX = Math.floor(Math.random() * 30) + 1;
@@ -60,6 +63,9 @@ const handleGameOver = () => {
     }else
     if(localStorage.getItem("lang") === "cht") {
       document.getElementById("loseNewRecordScore").innerHTML = "距離新紀錄只有一步之遙！";
+    }else
+    if(localStorage.getItem("lang") === "ko") {
+      document.getElementById("loseNewRecordScore").innerHTML = "새로운 기록에 정말 가까워요!";
     }
   }else
   if(score >= localStorage.getItem("steelScore")) {
@@ -77,6 +83,9 @@ const handleGameOver = () => {
     }else
     if(localStorage.getItem("lang") === "cht") {
       document.getElementById("loseNewRecordScore").innerHTML = "恭喜您，創造了新紀錄！";
+    }else
+    if(localStorage.getItem("lang") === "ko") {
+      document.getElementById("loseNewRecordScore").innerHTML = "축하합니다! 새로운 기록을 달성했습니다!";
     }
   }
   if(localStorage.getItem("movementbg") === "playerWalk") {
@@ -179,6 +188,9 @@ document.getElementById("reset").onclick = function() {
   }else
   if(localStorage.getItem("lang") === "cht") {
     scoreElement.innerText = `分數： ${score}`;
+  }else
+  if(localStorage.getItem("lang") === "ko") {
+    scoreElement.innerText = `점수: ${score}`;
   };
   localStorage.setItem("steelScore", localStorage.getItem("high-score"));
 };
@@ -279,6 +291,10 @@ const initGame = () => {
     if(localStorage.getItem("lang") === "cht") {
       scoreElement.innerText = `分數： ${score}`;
       highScoreElement.innerText = `高分： ${highScore}`;
+    }else
+    if(localStorage.getItem("lang") === "ko") {
+      scoreElement.innerText = `점수: ${score}`;
+      highScoreElement.innerText = `높은 점수: ${highScore}`;
     }
     if(localStorage.getItem("foodStyle") === "imgMeow") {
       meaw_token_item++;
