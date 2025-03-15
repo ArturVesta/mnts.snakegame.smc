@@ -474,6 +474,88 @@ function languagesContents() {
       a007_all[i].classList.add("cht");
     }
     document.title = "蛇形機甲收藏家";
+  }else
+  if(localStorage.getItem("lang") === "ko") {
+    a000.innerHTML = "설정";
+    a001.innerHTML = "에 대한";
+    a002.innerHTML = "체계";
+    a003.innerHTML = "뱀";
+    a004.innerHTML = "음식";
+    a005.innerHTML = "판자";
+    a006.innerHTML = "오디오";
+    a007.innerHTML = "어려움:";
+    a008.innerHTML = "정상";
+    a009.innerHTML = "딱딱한";
+    a010.innerHTML = "지옥";
+    a011.innerHTML = "언어:";
+    a012.innerHTML = "알파 시티 지도";
+    a013.innerHTML = "오리고 섬 지도";
+    a014.innerHTML = "플레이어 1";
+    a015.innerHTML = "플레이어 2";
+    a016.innerHTML = "플레이어 3";
+    a017.innerHTML = "야옹 토큰";
+    a018.innerHTML = "금";
+    a019.innerHTML = "알파 코인";
+    a020.innerHTML = "결정";
+    a021.innerHTML = "표";
+    a022.innerHTML = "크로매틱 티켓";
+    a023.innerHTML = "프리미엄 티켓";
+    a024.innerHTML = "오디오 음소거";
+    a025.innerHTML = "SFX 용량";
+    a026.innerHTML = "개인정보 보호정책, 이용약관";
+    a027.innerHTML = "©1997-2025 NetEase, Inc. 모든 권리 보유";
+    a028.innerHTML = "코딩: " + "MNTS;";
+    a029.innerHTML = "기본 코드: 에서";
+    a030.innerHTML = "점수: 0";
+    a031.innerHTML = "게임 오버!";
+    a032.value = "기본";
+    a033.value = "적용하다";
+    a034.innerHTML = "제어 장치:";
+    a035.innerHTML = "위치:";
+    a036.innerHTML = "센터";
+    a037.innerHTML = "왼쪽";
+    a038.innerHTML = "오른쪽";
+    a039.innerHTML = "알아채다";
+    a040.innerHTML = rUsers + "명의 사용자 평가";
+    a041.innerHTML = "배경음악";
+    a042.innerHTML = "음악";
+      a043.classList.add("ko-lang");
+      a044.classList.add("ko-lang");
+    a045.value = "진행 상황 삭제";
+    a046.innerHTML = "(언어 번역은 100% 정확하지 않을 수 있습니다.)";
+    a047.innerHTML = "동적 제어";
+    a048.classList.add("g-t-ko");
+    a049.innerHTML = "뱀";
+    a050.innerHTML = "Discord에서 언어를 공유하거나 기존 언어를 복구하세요";
+    a051.innerHTML = "프로필 센터(베타)";
+    a052.innerHTML = "> 클릭 가능 <";
+    a053.innerHTML = "코딩된 내용: ";
+    a055.innerHTML = "로딩중…";
+    for (let i = 0; i < a000_all.length; i++) {
+      a000_all[i].textContent = '설정:';
+    };
+    for (let i = 0; i < a001_all.length; i++) {
+      a001_all[i].textContent = '스타일:';
+    };
+    for (let i = 0; i < a002_all.length; i++) {
+      a002_all[i].textContent = '곧 출시됩니다. 업데이트를 기다려 주세요.';
+    };
+    for (let i = 0; i < a003_all.length; i++) {
+      a003_all[i].textContent = '더:';
+    };
+    for (let i = 0; i < a004_all.length; i++) {
+      a004_all[i].textContent = '시작하려면';
+    };
+    for (let i = 0; i < a005_all.length; i++) {
+      a005_all[i].textContent = '서비스:';
+    };
+    for (let i = 0; i < a006_all.length; i++) {
+      a006_all[i].classList.add("ko");
+    };
+    for (let i = 0; i < a007_all.length; i++) {
+      a007_all[i].classList.add("ko");
+    }
+    document.title = "뱀 메카 수집가";
   }
   a054.innerHTML = "Visual Studio Code";
 };
