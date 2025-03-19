@@ -87,6 +87,20 @@
           </div>
         </div>
       </div>
+      <div class="device-info-indicator">
+        <div id="batteryProgress">
+          <div id="inBatteryProgress"></div>
+        </div>
+        <div id="dateTimeIndicator">
+          <div id="clock">...</div>
+          <div id="calendar">...</div>
+        </div>
+        <div id="batteryIndicator">
+          <div id="batteryLevel"></div>
+          <div id="batteryCharge"></div>
+        </div>
+        <div id="timeAndDateIndicator"></div>
+      </div>
       <div id="navBtn" onclick="clearInterval(setIntervalId);document.getElementById('menu').style.display='block';openSettingsSound();menuPauseWalkSound();"></div>
       <input type="checkbox" id="chechboxPausing" class="pauseBtn" onchange="pauseGame();">
       <div class="menu" id="menu">
@@ -329,9 +343,9 @@
           <div onclick="alertExitSite();" class="site-exit"></div>
           <div class="sub-device-inpo-indicator">
             <div id="subDateTimeIndicator">
-              <div id="subClock">22:55</div>
+              <div id="subClock">...</div>
               <div class="sub-dc-symbol"> | </div>
-              <div id="subCalendar">24/22/2424</div>
+              <div id="subCalendar">...</div>
             </div>
             <div id="subBatteryIndicator">
               <div id="subBatteryLevel"></div>

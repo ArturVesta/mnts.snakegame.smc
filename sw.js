@@ -1,6 +1,6 @@
 var GHPATH = '/mnts.snakegame.smc';
 var APP_PREFIX = 'gppwa_';
-let VERSIONNAME = "0.3.1";
+let VERSIONNAME = "0.3.2";
 var VERSION = VERSIONNAME;
 var CACHE_NAME = VERSIONNAME;
 var URLS = [
@@ -173,6 +173,9 @@ var URLS = [
   `${GHPATH}/index_data/29172/battery_normal.png`,
   `${GHPATH}/index_data/29172/battery_charging.png`,
   `${GHPATH}/index_data/29172/battery_low.png`,
+  `${GHPATH}/index_data/29172/battery_main_normal.png`,
+  `${GHPATH}/index_data/29172/battery_main_charging.png`,
+  `${GHPATH}/index_data/29172/battery_main_low.png`,
   `${GHPATH}/index_data/29208`,
   `${GHPATH}/index_data/29208/acceleration_folding.mp3`,
   `${GHPATH}/index_data/29208/alborada_walk.mp3`,
@@ -408,6 +411,9 @@ var CacheURLS = [
   `${GHPATH}/index_data/29172/battery_normal.png`,
   `${GHPATH}/index_data/29172/battery_charging.png`,
   `${GHPATH}/index_data/29172/battery_low.png`,
+  `${GHPATH}/index_data/29172/battery_main_normal.png`,
+  `${GHPATH}/index_data/29172/battery_main_charging.png`,
+  `${GHPATH}/index_data/29172/battery_main_low.png`,
   `${GHPATH}/index_data/29208`,
   `${GHPATH}/index_data/29208/acceleration_folding.mp3`,
   `${GHPATH}/index_data/29208/alborada_walk.mp3`,
