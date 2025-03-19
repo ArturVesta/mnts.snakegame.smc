@@ -39,9 +39,9 @@ Languages<br>
   English: Google Translate;<br>
   Russian: By my memory;<br>
   Japanese: Google Translate;<br>
-  Chinese (Simplified): Google Translate;
-  Chinese (Traditional): Google Translate;
-  Korean: Google Translate;
+  Chinese (Simplified): Google Translate;<br>
+  Chinese (Traditional): Google Translate;<br>
+  Korean: Google Translate;<br>
   <a href="https://discord.gg/FRcBQGgy">Tell us what language you want that we add to game or/and repair the exist languages.</a>
 <hr>
 Game is downlodable {<br>
