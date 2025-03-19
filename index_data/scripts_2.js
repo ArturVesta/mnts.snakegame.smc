@@ -494,26 +494,47 @@ function loadLocalStorages() {
   }else{
     return false;
   };
-  if(localStorage.getItem("meawTockenStorage") === null) {
+  if(localStorage.getItem("meawTockenStorage") === null || localStorage.getItem("meawTockenStorage") === "") {
     localStorage.setItem("meawTockenStorage", "0");
+    window.location.reload();
+  }else{
+    return false;
   };
-  if(localStorage.getItem("goldStorage") === null) {
+  if(localStorage.getItem("goldStorage") === null || localStorage.getItem("goldStorage") === "") {
     localStorage.setItem("goldStorage", "0");
+    window.location.reload();
+  }else{
+    return false;
   };
-  if(localStorage.getItem("alphaCoinStorage") === null) {
+  if(localStorage.getItem("alphaCoinStorage") === null || localStorage.getItem("alphaCoinStorage") === "") {
     localStorage.setItem("alphaCoinStorage", "0");
+    window.location.reload();
+  }else{
+    return false;
   };
-  if(localStorage.getItem("crystalStorage") === null) {
+  if(localStorage.getItem("crystalStorage") === null || localStorage.getItem("crystalStorage") === "") {
     localStorage.setItem("crystalStorage", "0");
+    window.location.reload();
+  }else{
+    return false;
   };
-  if(localStorage.getItem("ticketStorage") === null) {
+  if(localStorage.getItem("ticketStorage") === null || localStorage.getItem("ticketStorage") === "") {
     localStorage.setItem("ticketStorage", "0");
+    window.location.reload();
+  }else{
+    return false;
   };
-  if(localStorage.getItem("ticketChromaticStorage") === null) {
+  if(localStorage.getItem("ticketChromaticStorage") === null || localStorage.getItem("ticketChromaticStorage") === "") {
     localStorage.setItem("ticketChromaticStorage", "0");
+    window.location.reload();
+  }else{
+    return false;
   };
-  if(localStorage.getItem("ticketPremiumStorage") === null) {
+  if(localStorage.getItem("ticketPremiumStorage") === null || localStorage.getItem("ticketPremiumStorage") === "") {
     localStorage.setItem("ticketPremiumStorage", "0");
+    window.location.reload();
+  }else{
+    return false;
   };
 };
 function levelsSystem() {

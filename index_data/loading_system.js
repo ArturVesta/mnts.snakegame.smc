@@ -94,6 +94,9 @@ const tasset0 = [
   "battery_normal",
   "battery_charging",
   "battery_low",
+  "battery_main_normal",
+  "battery_main_charging",
+  "battery_main_low",
   ///////Langs///////
   "nav_menu_en",
   "nav_menu_ru",
@@ -224,7 +227,7 @@ function testLoadAsset0() {
 }
 function toDisplayNone() {
   setTimeout(function() {
-  if(document.getElementById('widther').style.width === "107px") {
+  if(document.getElementById('widther').style.width === "110px") {
     alertAccept();
     document.getElementById("loading").style.display = "none";
   }

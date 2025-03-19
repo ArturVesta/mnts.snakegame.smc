@@ -1110,16 +1110,27 @@ navigator.getBattery().then(function (battery) {
   });
   function editChargeInfo() {
     var subBttry = document.getElementById('subBatteryCharge');
+    var baseBttry = document.getElementById('batteryCharge');
     var subInBatteryProg = document.getElementById("subInBatteryProgress");
+    var baseInBatteryProg = document.getElementById("inBatteryProgress");
     var subBatteryCharge = (battery.charging ? "⨭" : "⨴️");
+    var baseBatteryCharge = (battery.charging ? "⨭" : "⨴️");
     subBttry.innerText = subBatteryCharge;
+    baseBttry.innerText = baseBatteryCharge;
     if (subBttry.innerHTML === "⨴️") {
       subBttry.style.color = "black";
       subInBatteryProg.style.backgroundImage = "var(--battery-prog-normal)";
     } else {
       subBttry.style.color = "lime";
       subInBatteryProg.style.backgroundImage = "var(--battery-prog-charging)";
-    }
+    };
+    if (baseBttry.innerHTML === "⨴️") {
+      baseBttry.style.color = "black";
+      baseInBatteryProg.style.backgroundImage = "var(--battery-main-prog-normal)";
+    } else {
+      baseBttry.style.color = "lime";
+      baseInBatteryProg.style.backgroundImage = "var(--battery-main-prog-charging)";
+    };
   };
   battery.addEventListener('levelchange', function () {
     editLevelInfo();
@@ -1129,13 +1140,18 @@ navigator.getBattery().then(function (battery) {
   });
   function editLevelInfo() {
     var subBatteryLevel = document.getElementById('subBatteryLevel');
+    var baseBatteryLevel = document.getElementById('batteryLevel');
     var subBttry = document.getElementById('subBatteryCharge');
+    var baseBttry = document.getElementById('batteryCharge');
     var subInBatteryProg = document.getElementById("subInBatteryProgress");
+    var baseInBatteryProg = document.getElementById("inBatteryProgress");
     var batteryLevel = battery.level * 100;
     //var roundedBatteryLevel = Math.round(batteryLevel);
     var roundedBatteryLevel = batteryLevel.toFixed(0);
     subBatteryLevel.innerText = roundedBatteryLevel + "%";
+    baseBatteryLevel.innerText = roundedBatteryLevel + "%";
     subInBatteryProg.style.width = subBatteryLevel.innerHTML;
+    baseInBatteryProg.style.height = baseBatteryLevel.innerHTML;
     if (roundedBatteryLevel < 20 && subBttry.innerHTML === "⨴️") {
       subBttry.style.color = "red";
       subInBatteryProg.style.backgroundImage = "var(--battery-prog-low)";
@@ -1151,6 +1167,22 @@ navigator.getBattery().then(function (battery) {
     if(roundedBatteryLevel > 20 && subBttry.innerHTML === "⨭") {
       subBttry.style.color = "lime";
       subInBatteryProg.style.backgroundImage = "var(--battery-prog-charging)";
+    };
+    if (roundedBatteryLevel < 20 && baseBttry.innerHTML === "⨴️") {
+      baseBttry.style.color = "red";
+      baseInBatteryProg.style.backgroundImage = "var(--battery-main-prog-low)";
+    }else
+    if(roundedBatteryLevel < 20 && baseBttry.innerHTML === "⨭") {
+      baseBttry.style.color = "lime";
+      baseInBatteryProg.style.backgroundImage = "var(--battery-main-prog-charging)";
+    }else
+    if(roundedBatteryLevel > 20 && baseBttry.innerHTML === "⨴️") {
+      baseBttry.style.color = "black";
+      baseInBatteryProg.style.backgroundImage = "var(--battery-main-prog-normal)";
+    }else
+    if(roundedBatteryLevel > 20 && baseBttry.innerHTML === "⨭") {
+      baseBttry.style.color = "lime";
+      baseInBatteryProg.style.backgroundImage = "var(--battery-main-prog-charging)";
     }
   };
 });
@@ -1172,14 +1204,19 @@ function displayTime() {
     hoursOfDay = hoursOfDay < 10 ? "0" + hoursOfDay : hoursOfDay;
     minutes = minutes < 10 ? "0" + minutes : minutes;
     document.getElementById("subClock").innerHTML = hoursOfDay + ":" + minutes;
+    document.getElementById("clock").innerHTML = hoursOfDay + ":" + minutes;
     if (navigator.userAgent.match(/Android/i)) {
       document.getElementById("subCalendar").innerHTML = today + ", " + tomonths + " " + todaynum;
+      document.getElementById("calendar").innerHTML = today + ", " + tomonths + " " + todaynum;
     } else if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
       document.getElementById("subCalendar").innerHTML = today + " " + todaynum + " " + tomonths;
+      document.getElementById("calendar").innerHTML = today + " " + todaynum + " " + tomonths;
     } else if (navigator.userAgent.match(/Windows/i)) {
       document.getElementById("subCalendar").innerHTML = todaynum + "/" + monthswin + "/" + year;
+      document.getElementById("calendar").innerHTML = todaynum + "/" + monthswin + "/" + year;
     } else {
       document.getElementById("subCalendar").innerHTML = todaynum + "/" + monthswin + "/" + year;
+      document.getElementById("calendar").innerHTML = todaynum + "/" + monthswin + "/" + year;
     }
   }else
   if(localStorage.getItem("lang") == "ru") {
@@ -1197,14 +1234,19 @@ function displayTime() {
     hoursOfDay = hoursOfDay < 10 ? "0" + hoursOfDay : hoursOfDay;
     minutes = minutes < 10 ? "0" + minutes : minutes;
     document.getElementById("subClock").innerHTML = hoursOfDay + ":" + minutes;
+    document.getElementById("clock").innerHTML = hoursOfDay + ":" + minutes;
     if (navigator.userAgent.match(/Android/i)) {
       document.getElementById("subCalendar").innerHTML = today + ", " + tomonths + " " + todaynum;
+      document.getElementById("calendar").innerHTML = today + ", " + tomonths + " " + todaynum;
     } else if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
       document.getElementById("subCalendar").innerHTML = today + " " + todaynum + " " + tomonths;
+      document.getElementById("calendar").innerHTML = today + " " + todaynum + " " + tomonths;
     } else if (navigator.userAgent.match(/Windows/i)) {
       document.getElementById("subCalendar").innerHTML = todaynum + "/" + monthswin + "/" + year;
+      document.getElementById("calendar").innerHTML = todaynum + "/" + monthswin + "/" + year;
     } else {
       document.getElementById("subCalendar").innerHTML = todaynum + "/" + monthswin + "/" + year;
+      document.getElementById("calendar").innerHTML = todaynum + "/" + monthswin + "/" + year;
     }
   }else
   if(localStorage.getItem("lang") == "jp") {
@@ -1222,14 +1264,19 @@ function displayTime() {
     hoursOfDay = hoursOfDay < 10 ? "0" + hoursOfDay : hoursOfDay;
     minutes = minutes < 10 ? "0" + minutes : minutes;
     document.getElementById("subClock").innerHTML = hoursOfDay + ":" + minutes;
+    document.getElementById("clock").innerHTML = hoursOfDay + ":" + minutes;
     if (navigator.userAgent.match(/Android/i)) {
       document.getElementById("subCalendar").innerHTML = today + ", " + tomonths + " " + todaynum;
+      document.getElementById("calendar").innerHTML = today + ", " + tomonths + " " + todaynum;
     } else if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
       document.getElementById("subCalendar").innerHTML = today + " " + todaynum + " " + tomonths;
+      document.getElementById("calendar").innerHTML = today + " " + todaynum + " " + tomonths;
     } else if (navigator.userAgent.match(/Windows/i)) {
       document.getElementById("subCalendar").innerHTML = todaynum + "/" + monthswin + "/" + year;
+      document.getElementById("calendar").innerHTML = todaynum + "/" + monthswin + "/" + year;
     } else {
       document.getElementById("subCalendar").innerHTML = todaynum + "/" + monthswin + "/" + year;
+      document.getElementById("calendar").innerHTML = todaynum + "/" + monthswin + "/" + year;
     }
   }else
   if(localStorage.getItem("lang") == "chs") {
@@ -1247,14 +1294,19 @@ function displayTime() {
     hoursOfDay = hoursOfDay < 10 ? "0" + hoursOfDay : hoursOfDay;
     minutes = minutes < 10 ? "0" + minutes : minutes;
     document.getElementById("subClock").innerHTML = hoursOfDay + ":" + minutes;
+    document.getElementById("clock").innerHTML = hoursOfDay + ":" + minutes;
     if (navigator.userAgent.match(/Android/i)) {
       document.getElementById("subCalendar").innerHTML = today + ", " + tomonths + " " + todaynum;
+      document.getElementById("calendar").innerHTML = today + ", " + tomonths + " " + todaynum;
     } else if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
       document.getElementById("subCalendar").innerHTML = today + " " + todaynum + " " + tomonths;
+      document.getElementById("calendar").innerHTML = today + " " + todaynum + " " + tomonths;
     } else if (navigator.userAgent.match(/Windows/i)) {
       document.getElementById("subCalendar").innerHTML = todaynum + "/" + monthswin + "/" + year;
+      document.getElementById("calendar").innerHTML = todaynum + "/" + monthswin + "/" + year;
     } else {
       document.getElementById("subCalendar").innerHTML = todaynum + "/" + monthswin + "/" + year;
+      document.getElementById("calendar").innerHTML = todaynum + "/" + monthswin + "/" + year;
     }
   }else
   if(localStorage.getItem("lang") == "cht") {
@@ -1272,14 +1324,19 @@ function displayTime() {
     hoursOfDay = hoursOfDay < 10 ? "0" + hoursOfDay : hoursOfDay;
     minutes = minutes < 10 ? "0" + minutes : minutes;
     document.getElementById("subClock").innerHTML = hoursOfDay + ":" + minutes;
+    document.getElementById("clock").innerHTML = hoursOfDay + ":" + minutes;
     if (navigator.userAgent.match(/Android/i)) {
       document.getElementById("subCalendar").innerHTML = today + ", " + tomonths + " " + todaynum;
+      document.getElementById("calendar").innerHTML = today + ", " + tomonths + " " + todaynum;
     } else if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
       document.getElementById("subCalendar").innerHTML = today + " " + todaynum + " " + tomonths;
+      document.getElementById("calendar").innerHTML = today + " " + todaynum + " " + tomonths;
     } else if (navigator.userAgent.match(/Windows/i)) {
       document.getElementById("subCalendar").innerHTML = todaynum + "/" + monthswin + "/" + year;
+      document.getElementById("calendar").innerHTML = todaynum + "/" + monthswin + "/" + year;
     } else {
       document.getElementById("subCalendar").innerHTML = todaynum + "/" + monthswin + "/" + year;
+      document.getElementById("calendar").innerHTML = todaynum + "/" + monthswin + "/" + year;
     }
   }else
   if(localStorage.getItem("lang") == "ko") {
@@ -1297,14 +1354,19 @@ function displayTime() {
     hoursOfDay = hoursOfDay < 10 ? "0" + hoursOfDay : hoursOfDay;
     minutes = minutes < 10 ? "0" + minutes : minutes;
     document.getElementById("subClock").innerHTML = hoursOfDay + ":" + minutes;
+    document.getElementById("clock").innerHTML = hoursOfDay + ":" + minutes;
     if (navigator.userAgent.match(/Android/i)) {
       document.getElementById("subCalendar").innerHTML = today + ", " + tomonths + " " + todaynum;
+      document.getElementById("calendar").innerHTML = today + ", " + tomonths + " " + todaynum;
     } else if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
       document.getElementById("subCalendar").innerHTML = today + " " + todaynum + " " + tomonths;
+      document.getElementById("calendar").innerHTML = today + " " + todaynum + " " + tomonths;
     } else if (navigator.userAgent.match(/Windows/i)) {
       document.getElementById("subCalendar").innerHTML = todaynum + "/" + monthswin + "/" + year;
+      document.getElementById("calendar").innerHTML = todaynum + "/" + monthswin + "/" + year;
     } else {
       document.getElementById("subCalendar").innerHTML = todaynum + "/" + monthswin + "/" + year;
+      document.getElementById("calendar").innerHTML = todaynum + "/" + monthswin + "/" + year;
     }
   }
 };

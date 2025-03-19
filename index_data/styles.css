@@ -13,6 +13,9 @@
   --battery-prog-normal: url('index_data/29172/battery_normal.png');
   --battery-prog-low: url('index_data/29172/battery_low.png');
   --battery-prog-charging: url('index_data/29172/battery_charging.png');
+  --battery-main-prog-normal: url('index_data/29172/battery_main_normal.png');
+  --battery-main-prog-low: url('index_data/29172/battery_main_low.png');
+  --battery-main-prog-charging: url('index_data/29172/battery_main_charging.png');
   --meaw-token: url('29172/meaw_token.png');
   --gold: url('29172/gold.png');
   --alpha-coin: url('29172/alpha_coin.png');
@@ -1496,6 +1499,53 @@ hr.acc {
   font-size: 32px;
   padding: 0px 10px;
   margin-top: -5px;
+}
+.device-info-indicator {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: auto;
+  height: 100px;
+  padding-right: 7px;
+  padding-left: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
+  border-bottom: solid 2px black;
+  border-left: solid 2px black;
+}
+#batteryIndicator {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-right: -8px;
+}
+#clock {
+  font-size: 25px;
+  text-align: center;
+}
+#batteryProgress {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  border-left: solid 2px black;
+  width: 6px;
+  background-color: var(--black-a);
+}
+#inBatteryProgress {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-size: 100% 100%;
+  background-position: left center;
+  transition: 0.6s;
+  -o-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -webkit-transition: 0.6s;
 }
 @font-face {
   font-family: miSans;
