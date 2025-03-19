@@ -38,7 +38,11 @@ Background music<br>
 Languages<br>
   English: Google Translate;<br>
   Russian: By my memory;<br>
-<div>Tell us what language you want that we add to game</div>
+  Japanese: Google Translate;<br>
+  Chinese (Simplified): Google Translate;
+  Chinese (Traditional): Google Translate;
+  Korean: Google Translate;
+  <a href="https://discord.gg/FRcBQGgy">Tell us what language you want that we add to game or/and repair the exist languages.</a>
 <hr>
 Game is downlodable {<br>
   For Android it via browser;<br>
