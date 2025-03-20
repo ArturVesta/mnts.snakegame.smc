@@ -1,6 +1,6 @@
 var GHPATH = '/mnts.snakegame.smc';
 var APP_PREFIX = 'gppwa_';
-let VERSIONNAME = "0.3.2";
+let VERSIONNAME = "0.3.4";
 var VERSION = VERSIONNAME;
 var CACHE_NAME = VERSIONNAME;
 var URLS = [
@@ -233,6 +233,42 @@ var URLS = [
   `${GHPATH}/index_data/29208/notice_close.mp3`,
   `${GHPATH}/index_data/69326`,
   `${GHPATH}/index_data/69326/MiSans.ttf`,
+  `${GHPATH}/index_data/29278`,
+  `${GHPATH}/index_data/29278/16f75a9bdd0bf6.gif`,
+  `${GHPATH}/index_data/29278/blue`,
+  `${GHPATH}/index_data/29278/blue/default-0.png`,
+  `${GHPATH}/index_data/29278/blue/default-1.png`,
+  `${GHPATH}/index_data/29278/blue/default-2.png`,
+  `${GHPATH}/index_data/29278/blue/default-3.png`,
+  `${GHPATH}/index_data/29278/blue/default-4.png`,
+  `${GHPATH}/index_data/29278/blue/default-5.png`,
+  `${GHPATH}/index_data/29278/blue/default-6.png`,
+  `${GHPATH}/index_data/29278/blue/default-7.png`,
+  `${GHPATH}/index_data/29278/blue/default-8.png`,
+  `${GHPATH}/index_data/29278/blue/default-9.png`,
+  `${GHPATH}/index_data/29278/blue/default-10.png`,
+  `${GHPATH}/index_data/29278/blue/default-11.png`,
+  `${GHPATH}/index_data/29278/blue/default-12.png`,
+  `${GHPATH}/index_data/29278/blue/default-13.png`,
+  `${GHPATH}/index_data/29278/blue/default-14.png`,
+  `${GHPATH}/index_data/29278/blue/default-15.png`,
+  `${GHPATH}/index_data/29278/blue/link-0.png`,
+  `${GHPATH}/index_data/29278/blue/link-1.png`,
+  `${GHPATH}/index_data/29278/blue/link-2.png`,
+  `${GHPATH}/index_data/29278/blue/link-3.png`,
+  `${GHPATH}/index_data/29278/blue/link-4.png`,
+  `${GHPATH}/index_data/29278/blue/link-5.png`,
+  `${GHPATH}/index_data/29278/blue/link-6.png`,
+  `${GHPATH}/index_data/29278/blue/link-7.png`,
+  `${GHPATH}/index_data/29278/blue/link-8.png`,
+  `${GHPATH}/index_data/29278/blue/link-9.png`,
+  `${GHPATH}/index_data/29278/blue/link-10.png`,
+  `${GHPATH}/index_data/29278/blue/link-11.png`,
+  `${GHPATH}/index_data/29278/blue/link-12.png`,
+  `${GHPATH}/index_data/29278/blue/link-13.png`,
+  `${GHPATH}/index_data/29278/blue/link-14.png`,
+  `${GHPATH}/index_data/29278/blue/link-15.png`,
+  `${GHPATH}/index_data/animations.css`,
   `${GHPATH}/index_data/scripts.js`,
   `${GHPATH}/index_data/scripts_2.js`,
   `${GHPATH}/index_data/styles.css`,
@@ -471,6 +507,42 @@ var CacheURLS = [
   `${GHPATH}/index_data/29208/notice_close.mp3`,
   `${GHPATH}/index_data/69326`,
   `${GHPATH}/index_data/69326/MiSans.ttf`,
+  `${GHPATH}/index_data/29278`,
+  `${GHPATH}/index_data/29278/16f75a9bdd0bf6.gif`,
+  `${GHPATH}/index_data/29278/blue`,
+  `${GHPATH}/index_data/29278/blue/default-0.png`,
+  `${GHPATH}/index_data/29278/blue/default-1.png`,
+  `${GHPATH}/index_data/29278/blue/default-2.png`,
+  `${GHPATH}/index_data/29278/blue/default-3.png`,
+  `${GHPATH}/index_data/29278/blue/default-4.png`,
+  `${GHPATH}/index_data/29278/blue/default-5.png`,
+  `${GHPATH}/index_data/29278/blue/default-6.png`,
+  `${GHPATH}/index_data/29278/blue/default-7.png`,
+  `${GHPATH}/index_data/29278/blue/default-8.png`,
+  `${GHPATH}/index_data/29278/blue/default-9.png`,
+  `${GHPATH}/index_data/29278/blue/default-10.png`,
+  `${GHPATH}/index_data/29278/blue/default-11.png`,
+  `${GHPATH}/index_data/29278/blue/default-12.png`,
+  `${GHPATH}/index_data/29278/blue/default-13.png`,
+  `${GHPATH}/index_data/29278/blue/default-14.png`,
+  `${GHPATH}/index_data/29278/blue/default-15.png`,
+  `${GHPATH}/index_data/29278/blue/link-0.png`,
+  `${GHPATH}/index_data/29278/blue/link-1.png`,
+  `${GHPATH}/index_data/29278/blue/link-2.png`,
+  `${GHPATH}/index_data/29278/blue/link-3.png`,
+  `${GHPATH}/index_data/29278/blue/link-4.png`,
+  `${GHPATH}/index_data/29278/blue/link-5.png`,
+  `${GHPATH}/index_data/29278/blue/link-6.png`,
+  `${GHPATH}/index_data/29278/blue/link-7.png`,
+  `${GHPATH}/index_data/29278/blue/link-8.png`,
+  `${GHPATH}/index_data/29278/blue/link-9.png`,
+  `${GHPATH}/index_data/29278/blue/link-10.png`,
+  `${GHPATH}/index_data/29278/blue/link-11.png`,
+  `${GHPATH}/index_data/29278/blue/link-12.png`,
+  `${GHPATH}/index_data/29278/blue/link-13.png`,
+  `${GHPATH}/index_data/29278/blue/link-14.png`,
+  `${GHPATH}/index_data/29278/blue/link-15.png`,
+  `${GHPATH}/index_data/animations.css`,
   `${GHPATH}/index_data/scripts.js`,
   `${GHPATH}/index_data/scripts_2.js`,
   `${GHPATH}/index_data/styles.css`,
@@ -484,10 +556,10 @@ self.addEventListener('install', event => {
 });
 self.addEventListener('fetch', event => {
   event.respondWith(caches.match(event.request).then(response => {
-        if (response) {
-          return response;
-        }
-        return fetch(event.request);
-      })
-  );
+    if (response) {
+      return response;
+    }
+    return fetch(event.request);
+    })
+  );
 });
