@@ -4,6 +4,7 @@ const format = ".png";
 const format2 = ".gif";
 const locator = "index_data/29172/";
 const locator2 = "index_data/29278/";
+const locator3 = "index_data/29278/blue/";
 const tasset0 = [
   "alert",
   "alpha_coin",
@@ -121,14 +122,46 @@ const tasset1 = [
   "16f75a9bdd0bf6"
 ];
 const tasset2 = [
+  "default-0",
+  "default-1",
+  "default-2",
+  "default-3",
+  "default-4",
+  "default-5",
+  "default-6",
+  "default-7",
+  "default-8",
+  "default-9",
+  "default-10",
+  "default-11",
+  "default-12",
+  "default-13",
+  "default-14",
+  "default-15",
+  "link-0",
+  "link-1",
+  "link-2",
+  "link-3",
+  "link-4",
+  "link-5",
+  "link-6",
+  "link-7",
+  "link-8",
+  "link-9",
+  "link-10",
+  "link-11",
+  "link-12",
+  "link-13",
+  "link-14",
+  "link-15"
 ];
 function testLoadAsset0() {
   setTimeout(function() {
     for(var a = 0; a < tasset0.length; a++) {
       const asset = document.createElement('img');
       asset.src = locator + tasset0[a] + format;
-      asset.style.width = "20px";
-      asset.style.height = "20px";
+      asset.style.width = "1px";
+      asset.style.height = "1px";
       asset.style.opacity = "0";
       asset.addEventListener("load", function() {
         document.getElementById('widther').style.width = widthcont++ + "px";
@@ -160,8 +193,8 @@ function testLoadAsset0() {
     for(var b = 0; b < tasset1.length; b++) {
       const asset = document.createElement('img');
       asset.src = locator2 + tasset1[b] + format2;
-      asset.style.width = "20px";
-      asset.style.height = "20px";
+      asset.style.width = "1px";
+      asset.style.height = "1px";
       asset.style.opacity = "0";
       asset.addEventListener("load", function() {
         document.getElementById('widther').style.width = widthcont++ + "px";
@@ -192,9 +225,9 @@ function testLoadAsset0() {
     }
     for(var c = 0; c < tasset2.length; c++) {
       const asset = document.createElement('img');
-      asset.src = tasset2[c] + format;
-      asset.style.width = "20px";
-      asset.style.height = "20px";
+      asset.src = locator3 + tasset2[c] + format;
+      asset.style.width = "1px";
+      asset.style.height = "1px";
       asset.style.opacity = "0";
       asset.addEventListener("load", function() {
         document.getElementById('widther').style.width = widthcont++ + "px";
@@ -227,7 +260,7 @@ function testLoadAsset0() {
 }
 function toDisplayNone() {
   setTimeout(function() {
-  if(document.getElementById('widther').style.width === "110px") {
+  if(document.getElementById('widther').style.width === "142px") {
     alertAccept();
     document.getElementById("loading").style.display = "none";
   }

@@ -110,12 +110,19 @@
   -ms-user-select: none;
   -moz-user-select: none;
   -webkit-tap-highlight-color: transparent;
+  transition: 0.6s;
+  -o-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -webkit-transition: 0.6s;
 }
 *::-webkit-scrollbar {
   display: none;
 }
 body {
   overflow: hidden;
+  cursor: url('29278/blue/default-0.png'), default;
+  -webkit-animation: cursordef 1500ms infinite;
+  animation: cursordef 1500ms infinite;
 }
 hr {
   display: block;
@@ -344,7 +351,9 @@ hr {
   top: 6px;
   right: 6px;
   border: none;
-  cursor: pointer;
+  cursor: url('29278/blue/link-10.png'), default;
+  -webkit-animation: cursorlnk 1500ms infinite;
+  animation: cursorlnk 1500ms infinite;
   z-index: 1;
 }
 .modal .modal-content .in-modal-content {
@@ -376,7 +385,9 @@ hr {
   top: 0;
   right: 0;
   border: none;
-  cursor: pointer;
+  cursor: url('29278/blue/link-10.png'), default;
+  -webkit-animation: cursorlnk 1500ms infinite;
+  animation: cursorlnk 1500ms infinite;
 }
 .alert .alert-content #alertText {
   margin-top: 50px;
@@ -424,7 +435,9 @@ hr {
   text-align: center;
   font-size: 1.3rem;
   color: transparent;
-  cursor: pointer;
+  cursor: url('29278/blue/link-10.png'), default;
+  -webkit-animation: cursorlnk 1500ms infinite;
+  animation: cursorlnk 1500ms infinite;
   background-size: 100% 100%, auto 70%;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -690,7 +703,9 @@ hr {
   border: none;
   outline: none;
   text-align: center;
-  cursor: pointer;
+  cursor: url('29278/blue/link-10.png'), default;
+  -webkit-animation: cursorlnk 1500ms infinite;
+  animation: cursorlnk 1500ms infinite;
   background-image: var(--tabs-menu);
   background-size: 117% 170%;
   background-position: 111px -1px;
@@ -702,7 +717,7 @@ hr {
 }
 .tab .tablinks.active {
   background-position: -8px -1px;
-  cursor: default !important;
+  cursor: var(--cur-def) !important;
 }
 .tablinks:first-child {
   margin-top: 0;
@@ -738,12 +753,14 @@ hr {
 }
 .tab-sounds .tablinks-sounds:hover {
   filter: brightness(0.4) grayscale(0);
-  cursor: pointer;
+  cursor: url('29278/blue/link-10.png'), default;
+  -webkit-animation: cursorlnk 1500ms infinite;
+  animation: cursorlnk 1500ms infinite;
   background-image: var(--tabs-audio-hover);
 }
 .tab-sounds .tablinks-sounds.active {
   filter: brightness(1) grayscale(0);
-  cursor: default !important;
+  cursor: var(--cur-def) !important;
   background-image: var(--tabs-audio-hover);
 }
 .tablinks-sounds:first-child {
@@ -778,7 +795,9 @@ hr {
   color: var(--black);
   height: 50px;
   width: calc(50% - 10px);
-  cursor: pointer;
+  cursor: url('29278/blue/link-10.png'), default;
+  -webkit-animation: cursorlnk 1500ms infinite;
+  animation: cursorlnk 1500ms infinite;
   background-size: auto 100px;
   background-image: var(--changed);
   background-position: top right;
@@ -795,7 +814,7 @@ hr {
 .select-content .select.activet {
   background-position: bottom right !important;
   color: var(--white) !important;
-  cursor: default !important;
+  cursor: var(--cur-def) !important;
 }
 .select-content .select.difficulty {
   padding: 6px 0px;
@@ -816,7 +835,7 @@ hr {
 }
 .select-content .difficulty.activet {
   filter: brightness(1) grayscale(0);
-  cursor: default !important;
+  cursor: var(--cur-def) !important;
 }
 .select-content .select.language,
 .select-content .select.controllerpostype {
@@ -845,7 +864,7 @@ hr {
 .select-content .controllerpostype.activet {
   background-image: var(--toggled-on);
   background-position: center center !important;
-  cursor: default !important;
+  cursor: var(--cur-def) !important;
 }
 .select-icon {
   padding: 0;
@@ -913,7 +932,9 @@ hr {
   padding-top: 4px;
 }
 input[type="checkbox"] {
-  cursor: pointer;
+  cursor: url('29278/blue/link-10.png'), default;
+  -webkit-animation: cursorlnk 1500ms infinite;
+  animation: cursorlnk 1500ms infinite;
   appearance: none;
   position: relative;
   margin: 0 !important;
@@ -937,7 +958,9 @@ input[type="submit"] {
   outline: none;
   padding-bottom: 2px;
   border-radius: 2px;
-  cursor: pointer;
+  cursor: url('29278/blue/link-10.png'), default;
+  -webkit-animation: cursorlnk 1500ms infinite;
+  animation: cursorlnk 1500ms infinite;
   color: var(--white);
 }
 #defaultSettings,
@@ -964,7 +987,9 @@ input[type="range"]:focus {
   padding: 8px 0px;
   margin: 5px 0px;
   background-color: transparent;
-  cursor: pointer;
+  cursor: url('29278/blue/link-10.png'), default;
+  -webkit-animation: cursorlnk 1500ms infinite;
+  animation: cursorlnk 1500ms infinite;
   overflow: hidden;
 }
 input[type="range"]::-webkit-slider-runnable-track,
@@ -998,7 +1023,9 @@ input[type="range"]::-webkit-slider-thumb {
   padding-left: 25px;
   margin-top: -2px;
   display: block;
-  cursor: pointer;
+  cursor: url('29278/blue/link-10.png'), default;
+  -webkit-animation: cursorlnk 1500ms infinite;
+  animation: cursorlnk 1500ms infinite;
 }
 .label-range {
   text-align: left !important;
@@ -1040,7 +1067,9 @@ input[type="range"]::-webkit-slider-thumb {
   background-size: auto 100%;
   background-position: right center;
   padding: 3px 10px;
-  cursor: pointer;
+  cursor: url('29278/blue/link-10.png'), default;
+  -webkit-animation: cursorlnk 1500ms infinite;
+  animation: cursorlnk 1500ms infinite;
 }
 .league-info {
   float: right;
@@ -1106,7 +1135,9 @@ input[type="range"]::-webkit-slider-thumb {
   border: none;
   width: 160px;
   height: 41px;
-  cursor: pointer;
+  cursor: url('29278/blue/link-10.png'), default;
+  -webkit-animation: cursorlnk 1500ms infinite;
+  animation: cursorlnk 1500ms infinite;
   transition: 0.6s;
   -webkit-transition: 0.6s;
   -moz-transition: 0.6s;
@@ -1181,7 +1212,9 @@ input[type="range"]::-webkit-slider-thumb {
   background-position: right top;
   background-size: auto 200%;
   background-repeat: no-repeat;
-  cursor: pointer;
+  cursor: url('29278/blue/link-10.png'), default;
+  -webkit-animation: cursorlnk 1500ms infinite;
+  animation: cursorlnk 1500ms infinite;
   transition: 0.6s;
   -webkit-transition: 0.6s;
   -moz-transition: 0.6s;
@@ -1280,7 +1313,9 @@ hr.acc {
   background-size: auto 80%, 100% auto;
   background-position: center center, center center;
   background-repeat: no-repeat;
-  cursor: pointer;
+  cursor: url('29278/blue/link-10.png'), default;
+  -webkit-animation: cursorlnk 1500ms infinite;
+  animation: cursorlnk 1500ms infinite;
   transition: 0.6s;
   -webkit-transition: 0.6s;
   -moz-transition: 0.6s;
@@ -1301,7 +1336,9 @@ hr.acc {
   margin: 10px;
   filter: drop-shadow(0px 0px 5px var(--black)) grayscale(1);
   display: inline-block;
-  cursor: pointer;
+  cursor: url('29278/blue/link-10.png'), default;
+  -webkit-animation: cursorlnk 1500ms infinite;
+  animation: cursorlnk 1500ms infinite;
   transition: 0.6s;
   -webkit-transition: 0.6s;
   -moz-transition: 0.6s;
@@ -1330,7 +1367,9 @@ hr.acc {
   border: none;
   background-color: transparent;
   outline: none;
-  cursor: pointer;
+  cursor: url('29278/blue/link-1.png'), default;
+  -webkit-animation: cursorlnk 1500ms infinite;
+  animation: cursorlnk 1500ms infinite;
   transition: 0.6s;
   -webkit-transition: 0.6s;
   -moz-transition: 0.6s;
