@@ -162,6 +162,36 @@ const handleGameOver = () => {
   }else
   if(localStorage.getItem("movementbg") === "ventorusWalk") {
     document.getElementById("ventorusWalk").pause();
+  }else
+  if(localStorage.getItem("movementbg") === "deathKnellWalk") {
+    document.getElementById("deathKnellWalk").pause();
+  }else
+  if(localStorage.getItem("movementbg") === "dreadwolfWalk") {
+    document.getElementById("dreadwolfWalk").pause();
+  }else
+  if(localStorage.getItem("movementbg") === "gaialWalk") {
+    document.getElementById("gaialWalk").pause();
+  }else
+  if(localStorage.getItem("movementbg") === "guerillaHunterWalk") {
+    document.getElementById("guerillaHunterWalk").pause();
+  }else
+  if(localStorage.getItem("movementbg") === "lancelotWalk") {
+    document.getElementById("lancelotWalk").pause();
+  }else
+  if(localStorage.getItem("movementbg") === "moonRabbitWalk") {
+    document.getElementById("moonRabbitWalk").pause();
+  }else
+  if(localStorage.getItem("movementbg") === "nebulaWalk") {
+    document.getElementById("nebulaWalk").pause();
+  }else
+  if(localStorage.getItem("movementbg") === "shiranuikWalk") {
+    document.getElementById("shiranuikWalk").pause();
+  }else
+  if(localStorage.getItem("movementbg") === "skyfireWalk") {
+    document.getElementById("skyfireWalk").pause();
+  }else
+  if(localStorage.getItem("movementbg") === "twilightWalk") {
+    document.getElementById("twilightWalk").pause();
   }
 };
 document.getElementById("reset").onclick = function() {
@@ -428,6 +458,36 @@ if(localStorage.getItem("difficulty") === "normal") {
   }else
   if(localStorage.getItem("movementbg") === "ventorusWalk") {
     document.getElementById("ventorusWalk").playbackRate = 1.0;
+  }else
+  if(localStorage.getItem("movementbg") === "deathKnellWalk") {
+    document.getElementById("deathKnellWalk").playbackRate = 1.0;
+  }else
+  if(localStorage.getItem("movementbg") === "dreadwolfWalk") {
+    document.getElementById("dreadwolfWalk").playbackRate = 1.0;
+  }else
+  if(localStorage.getItem("movementbg") === "gaialWalk") {
+    document.getElementById("gaialWalk").playbackRate = 1.0;
+  }else
+  if(localStorage.getItem("movementbg") === "guerillaHunterWalk") {
+    document.getElementById("guerillaHunterWalk").playbackRate = 1.0;
+  }else
+  if(localStorage.getItem("movementbg") === "lancelotWalk") {
+    document.getElementById("lancelotWalk").playbackRate = 1.0;
+  }else
+  if(localStorage.getItem("movementbg") === "moonRabbitWalk") {
+    document.getElementById("moonRabbitWalk").playbackRate = 1.0;
+  }else
+  if(localStorage.getItem("movementbg") === "nebulaWalk") {
+    document.getElementById("nebulaWalk").playbackRate = 1.0;
+  }else
+  if(localStorage.getItem("movementbg") === "shiranuikWalk") {
+    document.getElementById("shiranuikWalk").playbackRate = 1.0;
+  }else
+  if(localStorage.getItem("movementbg") === "skyfireWalk") {
+    document.getElementById("skyfireWalk").playbackRate = 1.0;
+  }else
+  if(localStorage.getItem("movementbg") === "twilightWalk") {
+    document.getElementById("twilightWalk").playbackRate = 1.0;
   }
 }else
 if(localStorage.getItem("difficulty") === "hard") {
@@ -506,6 +566,36 @@ if(localStorage.getItem("difficulty") === "hard") {
   }else
   if(localStorage.getItem("movementbg") === "ventorusWalk") {
     document.getElementById("ventorusWalk").playbackRate = 1.5;
+  }else
+  if(localStorage.getItem("movementbg") === "deathKnellWalk") {
+    document.getElementById("deathKnellWalk").playbackRate = 1.5;
+  }else
+  if(localStorage.getItem("movementbg") === "dreadwolfWalk") {
+    document.getElementById("dreadwolfWalk").playbackRate = 1.5;
+  }else
+  if(localStorage.getItem("movementbg") === "gaialWalk") {
+    document.getElementById("gaialWalk").playbackRate = 1.5;
+  }else
+  if(localStorage.getItem("movementbg") === "guerillaHunterWalk") {
+    document.getElementById("guerillaHunterWalk").playbackRate = 1.5;
+  }else
+  if(localStorage.getItem("movementbg") === "lancelotWalk") {
+    document.getElementById("lancelotWalk").playbackRate = 1.5;
+  }else
+  if(localStorage.getItem("movementbg") === "moonRabbitWalk") {
+    document.getElementById("moonRabbitWalk").playbackRate = 1.5;
+  }else
+  if(localStorage.getItem("movementbg") === "nebulaWalk") {
+    document.getElementById("nebulaWalk").playbackRate = 1.5;
+  }else
+  if(localStorage.getItem("movementbg") === "shiranuikWalk") {
+    document.getElementById("shiranuikWalk").playbackRate = 1.5;
+  }else
+  if(localStorage.getItem("movementbg") === "skyfireWalk") {
+    document.getElementById("skyfireWalk").playbackRate = 1.5;
+  }else
+  if(localStorage.getItem("movementbg") === "twilightWalk") {
+    document.getElementById("twilightWalk").playbackRate = 1.5;
   }
 }else
 if(localStorage.getItem("difficulty") === "hell") {
@@ -584,6 +674,36 @@ if(localStorage.getItem("difficulty") === "hell") {
   }else
   if(localStorage.getItem("movementbg") === "ventorusWalk") {
     document.getElementById("ventorusWalk").playbackRate = 2.0;
+  }else
+  if(localStorage.getItem("movementbg") === "deathKnellWalk") {
+    document.getElementById("deathKnellWalk").playbackRate = 2.0;
+  }else
+  if(localStorage.getItem("movementbg") === "dreadwolfWalk") {
+    document.getElementById("dreadwolfWalk").playbackRate = 2.0;
+  }else
+  if(localStorage.getItem("movementbg") === "gaialWalk") {
+    document.getElementById("gaialWalk").playbackRate = 2.0;
+  }else
+  if(localStorage.getItem("movementbg") === "guerillaHunterWalk") {
+    document.getElementById("guerillaHunterWalk").playbackRate = 2.0;
+  }else
+  if(localStorage.getItem("movementbg") === "lancelotWalk") {
+    document.getElementById("lancelotWalk").playbackRate = 2.0;
+  }else
+  if(localStorage.getItem("movementbg") === "moonRabbitWalk") {
+    document.getElementById("moonRabbitWalk").playbackRate = 2.0;
+  }else
+  if(localStorage.getItem("movementbg") === "nebulaWalk") {
+    document.getElementById("nebulaWalk").playbackRate = 2.0;
+  }else
+  if(localStorage.getItem("movementbg") === "shiranuikWalk") {
+    document.getElementById("shiranuikWalk").playbackRate = 2.0;
+  }else
+  if(localStorage.getItem("movementbg") === "skyfireWalk") {
+    document.getElementById("skyfireWalk").playbackRate = 2.0;
+  }else
+  if(localStorage.getItem("movementbg") === "twilightWalk") {
+    document.getElementById("twilightWalk").playbackRate = 2.0;
   }
 }else
 if(localStorage.getItem("difficulty") === "") {
@@ -662,6 +782,36 @@ if(localStorage.getItem("difficulty") === "") {
   }else
   if(localStorage.getItem("movementbg") === "ventorusWalk") {
     document.getElementById("ventorusWalk").playbackRate = 1.0;
+  }else
+  if(localStorage.getItem("movementbg") === "deathKnellWalk") {
+    document.getElementById("deathKnellWalk").playbackRate = 1.0;
+  }else
+  if(localStorage.getItem("movementbg") === "dreadwolfWalk") {
+    document.getElementById("dreadwolfWalk").playbackRate = 1.0;
+  }else
+  if(localStorage.getItem("movementbg") === "gaialWalk") {
+    document.getElementById("gaialWalk").playbackRate = 1.0;
+  }else
+  if(localStorage.getItem("movementbg") === "guerillaHunterWalk") {
+    document.getElementById("guerillaHunterWalk").playbackRate = 1.0;
+  }else
+  if(localStorage.getItem("movementbg") === "lancelotWalk") {
+    document.getElementById("lancelotWalk").playbackRate = 1.0;
+  }else
+  if(localStorage.getItem("movementbg") === "moonRabbitWalk") {
+    document.getElementById("moonRabbitWalk").playbackRate = 1.0;
+  }else
+  if(localStorage.getItem("movementbg") === "nebulaWalk") {
+    document.getElementById("nebulaWalk").playbackRate = 1.0;
+  }else
+  if(localStorage.getItem("movementbg") === "shiranuikWalk") {
+    document.getElementById("shiranuikWalk").playbackRate = 1.0;
+  }else
+  if(localStorage.getItem("movementbg") === "skyfireWalk") {
+    document.getElementById("skyfireWalk").playbackRate = 1.0;
+  }else
+  if(localStorage.getItem("movementbg") === "twilightWalk") {
+    document.getElementById("twilightWalk").playbackRate = 1.0;
   }
 }
 document.addEventListener("keydown", changeDirection);

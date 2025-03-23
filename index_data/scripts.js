@@ -616,6 +616,36 @@ function applySettings() {
   }else
   if(document.getElementById("mwXlang").className === "select activet") {
     localStorage.setItem("movementbg", "ventorusWalk");
+  }else
+  if(document.getElementById("mwYlang").className === "select activet") {
+    localStorage.setItem("movementbg", "deathKnellWalk");
+  }else
+  if(document.getElementById("mwZlang").className === "select activet") {
+    localStorage.setItem("movementbg", "dreadwolfWalk");
+  }else
+  if(document.getElementById("mwAAlang").className === "select activet") {
+    localStorage.setItem("movementbg", "gaialWalk");
+  }else
+  if(document.getElementById("mwABlang").className === "select activet") {
+    localStorage.setItem("movementbg", "guerillaHunterWalk");
+  }else
+  if(document.getElementById("mwAClang").className === "select activet") {
+    localStorage.setItem("movementbg", "lancelotWalk");
+  }else
+  if(document.getElementById("mwADlang").className === "select activet") {
+    localStorage.setItem("movementbg", "moonRabbitWalk");
+  }else
+  if(document.getElementById("mwAElang").className === "select activet") {
+    localStorage.setItem("movementbg", "nebulaWalk");
+  }else
+  if(document.getElementById("mwAFlang").className === "select activet") {
+    localStorage.setItem("movementbg", "shiranuikWalk");
+  }else
+  if(document.getElementById("mwAGlang").className === "select activet") {
+    localStorage.setItem("movementbg", "skyfireWalk");
+  }else
+  if(document.getElementById("mwAHlang").className === "select activet") {
+    localStorage.setItem("movementbg", "twilightWalk");
   }
   window.location.reload();
 };

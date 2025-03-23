@@ -1060,6 +1060,36 @@ function menuPauseWalkSound() {
   }else
   if(localStorage.getItem("movementbg") === "ventorusWalk") {
     document.getElementById("ventorusWalk").pause();
+  }else
+  if(localStorage.getItem("movementbg") === "deathKnellWalk") {
+    document.getElementById("deathKnellWalk").pause();
+  }else
+  if(localStorage.getItem("movementbg") === "dreadwolfWalk") {
+    document.getElementById("dreadwolfWalk").pause();
+  }else
+  if(localStorage.getItem("movementbg") === "gaialWalk") {
+    document.getElementById("gaialWalk").pause();
+  }else
+  if(localStorage.getItem("movementbg") === "guerillaHunterWalk") {
+    document.getElementById("guerillaHunterWalk").pause();
+  }else
+  if(localStorage.getItem("movementbg") === "lancelotWalk") {
+    document.getElementById("lancelotWalk").pause();
+  }else
+  if(localStorage.getItem("movementbg") === "moonRabbitWalk") {
+    document.getElementById("moonRabbitWalk").pause();
+  }else
+  if(localStorage.getItem("movementbg") === "nebulaWalk") {
+    document.getElementById("nebulaWalk").pause();
+  }else
+  if(localStorage.getItem("movementbg") === "shiranuikWalk") {
+    document.getElementById("shiranuikWalk").pause();
+  }else
+  if(localStorage.getItem("movementbg") === "skyfireWalk") {
+    document.getElementById("skyfireWalk").pause();
+  }else
+  if(localStorage.getItem("movementbg") === "twilightWalk") {
+    document.getElementById("twilightWalk").pause();
   }
 };
 function openProfileCenter() {
@@ -1069,7 +1099,7 @@ function goToMessenger() {
   window.open('https://m.me/100037328776594?hash=AbbiIv3lRHEaooAd&source=qr_link_share', '_blank');
 };
 function goToDiscord() {
-  window.open('https://discord.gg/FRcBQGgy', '_blank');
+  window.open('https://discord.gg/YGV7CKbwjQ', '_blank');
 };
 function downloadAlertSystem() {
   var host = "https://";
