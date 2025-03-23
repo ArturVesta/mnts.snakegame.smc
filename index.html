@@ -240,23 +240,33 @@
                 <div onclick="daSetActiveMechaMoveSound();" id="mwDlang" class="select">Aurora (Walk)</div>
                 <div onclick="eaSetActiveMechaMoveSound();" id="mwElang" class="select">Boltus (Walk)</div>
                 <div onclick="faSetActiveMechaMoveSound();" id="mwFlang" class="select">Caramel (Walk)</div>
+                <div onclick="yaSetActiveMechaMoveSound();" id="mwYlang" class="select">Death knell (Walk)</div>
                 <div onclick="gaSetActiveMechaMoveSound();" id="mwGlang" class="select">Doomlight (Walk)</div>
+                <div onclick="zaSetActiveMechaMoveSound();" id="mwZlang" class="select">Dreadwolf (Walk)</div>
                 <div onclick="haSetActiveMechaMoveSound();" id="mwHlang" class="select">Frefox (Walk)</div>
                 <div onclick="iaSetActiveMechaMoveSound();" id="mwIlang" class="select">Firestar (Walk)</div>
                 <div onclick="jaSetActiveMechaMoveSound();" id="mwJlang" class="select">Flamenco (Walk)</div>
                 <div onclick="kaSetActiveMechaMoveSound();" id="mwKlang" class="select">Gabriel (Walk)</div>
+                <div onclick="abSetActiveMechaMoveSound();" id="mwAAlang" class="select">Gaia (Walk)</div>
+                <div onclick="bbSetActiveMechaMoveSound();" id="mwABlang" class="select">Guerilla Hunter (Walk)</div>
                 <div onclick="laSetActiveMechaMoveSound();" id="mwLlang" class="select">Hotsteel (Walk)</div>
                 <div onclick="maSetActiveMechaMoveSound();" id="mwMlang" class="select">Hurricane (Walk)</div>
                 <div onclick="naSetActiveMechaMoveSound();" id="mwNlang" class="select">Jojo (Walk)</div>
+                <div onclick="cbSetActiveMechaMoveSound();" id="mwAClang" class="select">Lancelot (Walk)</div>
                 <div onclick="oaSetActiveMechaMoveSound();" id="mwOlang" class="select">Michael (Walk)</div>
+                <div onclick="dbSetActiveMechaMoveSound();" id="mwADlang" class="select">Moon Rabbit (Walk)</div>
+                <div onclick="ebSetActiveMechaMoveSound();" id="mwAElang" class="select">Nebula (Walk)</div>
                 <div onclick="paSetActiveMechaMoveSound();" id="mwPlang" class="select">Neutron Star (Walk)</div>
                 <div onclick="qaSetActiveMechaMoveSound();" id="mwQlang" class="select">Northern Knight (Walk)</div>
                 <div onclick="raSetActiveMechaMoveSound();" id="mwRlang" class="select">Pulsar (Walk)</div>
                 <div onclick="saSetActiveMechaMoveSound();" id="mwSlang" class="select">Ranger (Walk)</div>
                 <div onclick="taSetActiveMechaMoveSound();" id="mwTlang" class="select">Raven (Walk)</div>
+                <div onclick="fbSetActiveMechaMoveSound();" id="mwAFlang" class="select">Shiranui (Walk)</div>
+                <div onclick="gbSetActiveMechaMoveSound();" id="mwAGlang" class="select">Skyfire (Walk)</div>
                 <div onclick="uaSetActiveMechaMoveSound();" id="mwUlang" class="select">Skylark (Walk)</div>
                 <div onclick="vaSetActiveMechaMoveSound();" id="mwVlang" class="select">Snow Mirage (Walk)</div>
                 <div onclick="waSetActiveMechaMoveSound();" id="mwWlang" class="select">Trio of Enders (Walk)</div>
+                <div onclick="hbSetActiveMechaMoveSound();" id="mwAHlang" class="select">Twilight (Walk)</div>
                 <div onclick="xaSetActiveMechaMoveSound();" id="mwXlang" class="select">Ventorus (Walk)</div>
                 <div onclick="goToScrollToIdElementMusicLang();selectionSound();" class="select activet totopelement">...</div>
               </div>
@@ -481,10 +491,20 @@
       <source type="audio/mp3" src="index_data/29208/caramel_walk.mp3">
       <script src="index_data/29102/caramel_walk.js"></script>
     </audio>
+    <!-- Death knell Walk -->
+    <audio muted preload="none" id="deathKnellWalk" loop class="walk-background">
+      <source type="audio/mp3" src="index_data/29208/death_knell_walk.mp3">
+      <script src="index_data/29102/death_knell_walk.js"></script>
+    </audio>
     <!-- Doomlight Walk -->
     <audio muted preload="none" id="doomlightlWalk" loop class="walk-background">
       <source type="audio/mp3" src="index_data/29208/doomlight_walk.mp3">
       <script src="index_data/29102/doomlight_walk.js"></script>
+    </audio>
+    <!-- Dreadwolf Walk -->
+    <audio muted preload="none" id="dreadwolfWalk" loop class="walk-background">
+      <source type="audio/mp3" src="index_data/29208/dreadwolf_walk.mp3">
+      <script src="index_data/29102/dreadwolf_walk.js"></script>
     </audio>
     <!-- Frefox Walk -->
     <audio muted preload="none" id="firefoxWalk" loop class="walk-background">
@@ -506,6 +526,16 @@
       <source type="audio/mp3" src="index_data/29208/gabriel_walk.mp3">
       <script src="index_data/29102/gabriel_walk.js"></script>
     </audio>
+    <!-- Gaia Walk -->
+    <audio muted preload="none" id="gaialWalk" loop class="walk-background">
+      <source type="audio/mp3" src="index_data/29208/gaia_walk.mp3">
+      <script src="index_data/29102/gaia_walk.js"></script>
+    </audio>
+    <!-- Guerilla Hunter Walk -->
+    <audio muted preload="none" id="guerillaHunterWalk" loop class="walk-background">
+      <source type="audio/mp3" src="index_data/29208/guerilla_hunter_walk.mp3">
+      <script src="index_data/29102/guerilla_hunter_walk.js"></script>
+    </audio>
     <!-- Hotsteel Walk -->
     <audio muted preload="none" id="hotsteelWalk" loop class="walk-background">
       <source type="audio/mp3" src="index_data/29208/hotsteel_walk.mp3">
@@ -521,10 +551,25 @@
       <source type="audio/mp3" src="index_data/29208/jojo_walk.mp3">
       <script src="index_data/29102/jojo_walk.js"></script>
     </audio>
+    <!-- Lancelot Walk -->
+    <audio muted preload="none" id="lancelotWalk" loop class="walk-background">
+      <source type="audio/mp3" src="index_data/29208/lancelot_walk.mp3">
+      <script src="index_data/29102/lancelot_walk.js"></script>
+    </audio>
     <!-- Michael Walk -->
     <audio muted preload="none" id="michaelWalk" loop class="walk-background">
       <source type="audio/mp3" src="index_data/29208/michael_walk.mp3">
       <script src="index_data/29102/michael_walk.js"></script>
+    </audio>
+    <!-- Moon Rabbit Walk -->
+    <audio muted preload="none" id="moonRabbitWalk" loop class="walk-background">
+      <source type="audio/mp3" src="index_data/29208/moon_rabbit_walk.mp3">
+      <script src="index_data/29102/moon_rabbit_walk.js"></script>
+    </audio>
+    <!-- Nebula Walk -->
+    <audio muted preload="none" id="nebulaWalk" loop class="walk-background">
+      <source type="audio/mp3" src="index_data/29208/nebula_walk.mp3">
+      <script src="index_data/29102/nebula_walk.js"></script>
     </audio>
     <!-- Neutron Walk -->
     <audio muted preload="none" id="neutronWalk" loop class="walk-background">
@@ -551,6 +596,16 @@
       <source type="audio/mp3" src="index_data/29208/raven_walk.mp3">
       <script src="index_data/29102/raven_walk.js"></script>
     </audio>
+    <!-- Shiranui Walk -->
+    <audio muted preload="none" id="shiranuikWalk" loop class="walk-background">
+      <source type="audio/mp3" src="index_data/29208/shiranui_walk.mp3">
+      <script src="index_data/29102/shiranui_walk.js"></script>
+    </audio>
+    <!-- Skyfire Walk -->
+    <audio muted preload="none" id="skyfireWalk" loop class="walk-background">
+      <source type="audio/mp3" src="index_data/29208/skyfire_walk.mp3">
+      <script src="index_data/29102/skyfire_walk.js"></script>
+    </audio>
     <!-- Skylark Walk -->
     <audio muted preload="none" id="skylarkWalk" loop class="walk-background">
       <source type="audio/mp3" src="index_data/29208/skylark_walk.mp3">
@@ -565,6 +620,11 @@
     <audio muted preload="none" id="trioWalk" loop class="walk-background">
       <source type="audio/mp3" src="index_data/29208/trio_of_enders_walk.mp3">
       <script src="index_data/29102/trio_of_enders_walk.js"></script>
+    </audio>
+    <!-- Twilight Walk -->
+    <audio muted preload="none" id="twilightWalk" loop class="walk-background">
+      <source type="audio/mp3" src="index_data/29208/twilight_walk.mp3">
+      <script src="index_data/29102/twilight_walk.js"></script>
     </audio>
     <!-- Ventorus Walk -->
     <audio muted preload="none" id="ventorusWalk" loop class="walk-background">
