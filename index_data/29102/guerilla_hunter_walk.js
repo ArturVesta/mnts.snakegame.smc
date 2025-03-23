@@ -1,4 +1,4 @@
-function xaSetActiveMechaMoveSound() {
+function bbSetActiveMechaMoveSound() {
   document.getElementById("pwAlang").classList.remove("activet");
   document.getElementById("mwAlang").classList.remove("activet");
   document.getElementById("mwBlang").classList.remove("activet");
@@ -23,11 +23,11 @@ function xaSetActiveMechaMoveSound() {
   document.getElementById("mwUlang").classList.remove("activet");
   document.getElementById("mwVlang").classList.remove("activet");
   document.getElementById("mwWlang").classList.remove("activet");
-  document.getElementById("mwXlang").classList.add("activet");
+  document.getElementById("mwXlang").classList.remove("activet");
   document.getElementById("mwYlang").classList.remove("activet");
   document.getElementById("mwZlang").classList.remove("activet");
   document.getElementById("mwAAlang").classList.remove("activet");
-  document.getElementById("mwABlang").classList.remove("activet");
+  document.getElementById("mwABlang").classList.add("activet");
   document.getElementById("mwAClang").classList.remove("activet");
   document.getElementById("mwADlang").classList.remove("activet");
   document.getElementById("mwAElang").classList.remove("activet");

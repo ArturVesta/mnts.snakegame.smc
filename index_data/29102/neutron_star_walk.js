@@ -24,6 +24,16 @@ function paSetActiveMechaMoveSound() {
   document.getElementById("mwVlang").classList.remove("activet");
   document.getElementById("mwWlang").classList.remove("activet");
   document.getElementById("mwXlang").classList.remove("activet");
+  document.getElementById("mwYlang").classList.remove("activet");
+  document.getElementById("mwZlang").classList.remove("activet");
+  document.getElementById("mwAAlang").classList.remove("activet");
+  document.getElementById("mwABlang").classList.remove("activet");
+  document.getElementById("mwAClang").classList.remove("activet");
+  document.getElementById("mwADlang").classList.remove("activet");
+  document.getElementById("mwAElang").classList.remove("activet");
+  document.getElementById("mwAFlang").classList.remove("activet");
+  document.getElementById("mwAGlang").classList.remove("activet");
+  document.getElementById("mwAHlang").classList.remove("activet");
   document.getElementById("applySettings").style.display = "block";
   defaultClickSound();
 };

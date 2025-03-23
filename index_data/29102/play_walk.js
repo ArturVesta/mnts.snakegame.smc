@@ -74,6 +74,36 @@ function playActiveMoveSound() {
     }else
     if(localStorage.getItem("movementbg") === "ventorusWalk") {
       document.getElementById("ventorusWalk").muted = true;
+    }else
+    if(localStorage.getItem("movementbg") === "deathKnellWalk") {
+      document.getElementById("deathKnellWalk").muted = true;
+    }else
+    if(localStorage.getItem("movementbg") === "dreadwolfWalk") {
+      document.getElementById("dreadwolfWalk").muted = true;
+    }else
+    if(localStorage.getItem("movementbg") === "gaialWalk") {
+      document.getElementById("gaialWalk").muted = true;
+    }else
+    if(localStorage.getItem("movementbg") === "guerillaHunterWalk") {
+      document.getElementById("guerillaHunterWalk").muted = true;
+    }else
+    if(localStorage.getItem("movementbg") === "lancelotWalk") {
+      document.getElementById("lancelotWalk").muted = true;
+    }else
+    if(localStorage.getItem("movementbg") === "moonRabbitWalk") {
+      document.getElementById("moonRabbitWalk").muted = true;
+    }else
+    if(localStorage.getItem("movementbg") === "nebulaWalk") {
+      document.getElementById("nebulaWalk").muted = true;
+    }else
+    if(localStorage.getItem("movementbg") === "shiranuikWalk") {
+      document.getElementById("shiranuikWalk").muted = true;
+    }else
+    if(localStorage.getItem("movementbg") === "skyfireWalk") {
+      document.getElementById("skyfireWalk").muted = true;
+    }else
+    if(localStorage.getItem("movementbg") === "twilightWalk") {
+      document.getElementById("twilightWalk").muted = true;
     }
   }else{
     if(velocityX === 0 && velocityY === 0) {
@@ -203,6 +233,56 @@ function playActiveMoveSound() {
         document.getElementById("ventorusWalk").muted = false;
         document.getElementById("ventorusWalk").currentTime = 0;
         document.getElementById("ventorusWalk").play();
+      }else
+      if(localStorage.getItem("movementbg") === "deathKnellWalk") {
+        document.getElementById("deathKnellWalk").muted = false;
+        document.getElementById("deathKnellWalk").currentTime = 0;
+        document.getElementById("deathKnellWalk").play();
+      }else
+      if(localStorage.getItem("movementbg") === "dreadwolfWalk") {
+        document.getElementById("dreadwolfWalk").muted = false;
+        document.getElementById("dreadwolfWalk").currentTime = 0;
+        document.getElementById("dreadwolfWalk").play();
+      }else
+      if(localStorage.getItem("movementbg") === "gaialWalk") {
+        document.getElementById("gaialWalk").muted = false;
+        document.getElementById("gaialWalk").currentTime = 0;
+        document.getElementById("gaialWalk").play();
+      }else
+      if(localStorage.getItem("movementbg") === "guerillaHunterWalk") {
+        document.getElementById("guerillaHunterWalk").muted = false;
+        document.getElementById("guerillaHunterWalk").currentTime = 0;
+        document.getElementById("guerillaHunterWalk").play();
+      }else
+      if(localStorage.getItem("movementbg") === "lancelotWalk") {
+        document.getElementById("lancelotWalk").muted = false;
+        document.getElementById("lancelotWalk").currentTime = 0;
+        document.getElementById("lancelotWalk").play();
+      }else
+      if(localStorage.getItem("movementbg") === "moonRabbitWalk") {
+        document.getElementById("moonRabbitWalk").muted = false;
+        document.getElementById("moonRabbitWalk").currentTime = 0;
+        document.getElementById("moonRabbitWalk").play();
+      }else
+      if(localStorage.getItem("movementbg") === "nebulaWalk") {
+        document.getElementById("nebulaWalk").muted = false;
+        document.getElementById("nebulaWalk").currentTime = 0;
+        document.getElementById("nebulaWalk").play();
+      }else
+      if(localStorage.getItem("movementbg") === "shiranuikWalk") {
+        document.getElementById("shiranuikWalk").muted = false;
+        document.getElementById("shiranuikWalk").currentTime = 0;
+        document.getElementById("shiranuikWalk").play();
+      }else
+      if(localStorage.getItem("movementbg") === "skyfireWalk") {
+        document.getElementById("skyfireWalk").muted = false;
+        document.getElementById("skyfireWalk").currentTime = 0;
+        document.getElementById("skyfireWalk").play();
+      }else
+      if(localStorage.getItem("movementbg") === "twilightWalk") {
+        document.getElementById("twilightWalk").muted = false;
+        document.getElementById("twilightWalk").currentTime = 0;
+        document.getElementById("twilightWalk").play();
       }
     }
   }
