@@ -1,6 +1,6 @@
 var GHPATH = '/mnts.snakegame.smc';
 var APP_PREFIX = 'gppwa_';
-let VERSIONNAME = "0.3.6";
+let VERSIONNAME = "0.3.7";
 var VERSION = VERSIONNAME;
 var CACHE_NAME = VERSIONNAME;
 var URLS = [
@@ -61,7 +61,7 @@ var URLS = [
   `${GHPATH}/index_data/29102/trio_of_enders_walk.js`,
   `${GHPATH}/index_data/29102/ultra_beast_force.js`,
   `${GHPATH}/index_data/29102/ventorus_walk.js`,
-  `${GHPATH}/index_data/29102/item_took.js`,
+  `${GHPATH}/index_data/29102/item_taked.js`,
   `${GHPATH}/index_data/29102/notice_close.js`,
   `${GHPATH}/index_data/29102/languages.js`,
   `${GHPATH}/index_data/29102/languages_texts.js`,
@@ -239,7 +239,7 @@ var URLS = [
   `${GHPATH}/index_data/29208/trio_of_enders_walk.mp3`,
   `${GHPATH}/index_data/29208/ultra_beast_force.mp3`,
   `${GHPATH}/index_data/29208/ventorus_walk.mp3`,
-  `${GHPATH}/index_data/29208/item_took.mp3`,
+  `${GHPATH}/index_data/29208/item_taked.mp3`,
   `${GHPATH}/index_data/29208/notice_close.mp3`,
   `${GHPATH}/index_data/29208/death_knell_walk.mp3`,
   `${GHPATH}/index_data/29208/dreadwolf_walk.mp3`,
@@ -355,7 +355,7 @@ var CacheURLS = [
   `${GHPATH}/index_data/29102/trio_of_enders_walk.js`,
   `${GHPATH}/index_data/29102/ultra_beast_force.js`,
   `${GHPATH}/index_data/29102/ventorus_walk.js`,
-  `${GHPATH}/index_data/29102/item_took.js`,
+  `${GHPATH}/index_data/29102/item_taked.js`,
   `${GHPATH}/index_data/29102/notice_close.js`,
   `${GHPATH}/index_data/29102/languages.js`,
   `${GHPATH}/index_data/29102/languages_texts.js`,
@@ -527,7 +527,7 @@ var CacheURLS = [
   `${GHPATH}/index_data/29208/trio_of_enders_walk.mp3`,
   `${GHPATH}/index_data/29208/ultra_beast_force.mp3`,
   `${GHPATH}/index_data/29208/ventorus_walk.mp3`,
-  `${GHPATH}/index_data/29208/item_took.mp3`,
+  `${GHPATH}/index_data/29208/item_taked.mp3`,
   `${GHPATH}/index_data/29208/notice_close.mp3`,
   `${GHPATH}/index_data/29208/death_knell_walk.mp3`,
   `${GHPATH}/index_data/29208/dreadwolf_walk.mp3`,
