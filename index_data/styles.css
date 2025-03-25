@@ -697,9 +697,9 @@ hr {
   display: block;
   background-color: inherit;
   color: var(--white);
-  padding: 9px 0px 9px 22px;
+  padding: 4px 0px 13px 22px;
   margin: 10px 0px;
-  width: 111px;
+  width: 112px;
   border: none;
   outline: none;
   text-align: center;
@@ -707,8 +707,8 @@ hr {
   -webkit-animation: cursorlnk 1500ms infinite;
   animation: cursorlnk 1500ms infinite;
   background-image: var(--tabs-menu);
-  background-size: 117% 170%;
-  background-position: 111px -1px;
+  background-size: 113% 131%;
+  background-position: 111px -4px;
   background-repeat: no-repeat;
   transition: 0.6s;
   -webkit-transition: 0.6s;
@@ -716,7 +716,7 @@ hr {
   -o-transition: 0.6s;
 }
 .tab .tablinks.active {
-  background-position: -8px -1px;
+  background-position: -5px -4px;
   cursor: var(--cur-def) !important;
 }
 .tablinks:first-child {
