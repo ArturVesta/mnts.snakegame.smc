@@ -58,7 +58,6 @@
   --right: url('29172/btn_control_rt.png');
   --right-hover: url('29172/btn_control_rt_hover.png');
   --loading-logo: url('29172/loading_yi_logo_2x.png');
-  --loading-spin: url('29278/16f75a9bdd0bf6.gif');
   --tabs-menu: url('29172/tab_vertical.png');
   --tabs-audio: url('29172/tab_off.png');
   --tabs-audio-hover: url('29172/tab_horizontal.png');
@@ -99,6 +98,9 @@
   --discord: url('29172/discord.png');
   --dl-windows: url('29172/download_computer.png');
   --dl-android: url('29172/download_android.png');
+  --loading-classic: url('29278/classic.gif');
+  --loading-anime: url('29278/anime.gif');
+  --loading-miku: url('29278/miku.gif');
 }
 * {
   margin: 0;
@@ -622,16 +624,32 @@ hr {
     bottom: 10px;
 }
 .animate-img {
-    width: 157px;
-    height: 100px;
-    background: var(--loading-spin) no-repeat;
-    -webkit-background-size: 100% 100%;
-    background-size: 100% 100%;
     position: absolute;
     left: 0;
     top: 0;
     transform-origin:center center;
     -webkit-transform-origin:center center;	
+}
+.classicload {
+    width: 157px;
+    height: 100px;
+    background: var(--loading-classic) no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+.animeload {
+    width: 165px;
+    height: 100px;
+    background: var(--loading-anime) no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+.mikuload {
+    width: 165px;
+    height: 165px;
+    background: var(--loading-miku) no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
 }
 .loading-assets {
   width: 100%;
@@ -802,6 +820,7 @@ hr {
   background-image: var(--changed);
   background-position: top right;
   overflow: hidden;
+  filter: grayscale(1);
   transition: 0.6s;
   -webkit-transition: 0.6s;
   -moz-transition: 0.6s;
@@ -810,11 +829,13 @@ hr {
 .select-content .select:hover {
   background-position: bottom right;
   color: var(--white);
+  filter: grayscale(0.5);
 }
 .select-content .select.activet {
   background-position: bottom right !important;
   color: var(--white) !important;
   cursor: var(--cur-def) !important;
+  filter: grayscale(0);
 }
 .select-content .select.difficulty {
   padding: 6px 0px;
@@ -1650,13 +1671,14 @@ hr.acc {
   }
   .tab .tablinks {
     color: var(--white);
-    padding: 3px 0px 3px 10px;
+    padding: 3px 0px 12px 10px;
     margin: 5px 0px;
     width: 70px;
     font-size: 12px;
+    background-size: 118% 131%;
   }
   .tab .tablinks.active {
-    background-position: -5px -1px;
+    background-position: -6px -4px;
   }
   .select-content .select {
     margin: 5px 0px;

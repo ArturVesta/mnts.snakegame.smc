@@ -646,6 +646,15 @@ function applySettings() {
   }else
   if(document.getElementById("mwAHlang").className === "select activet") {
     localStorage.setItem("movementbg", "twilightWalk");
+  };
+  if(document.getElementById("loadClassic").className === "select activet") {
+    localStorage.setItem("loadingStyle", "classic");
+  }else
+  if(document.getElementById("loadAnime").className === "select activet") {
+    localStorage.setItem("loadingStyle", "anime");
+  }else
+  if(document.getElementById("loadMiku").className === "select activet") {
+    localStorage.setItem("loadingStyle", "miku");
   }
   window.location.reload();
 };
@@ -704,6 +713,7 @@ function alertReloadLater() {
     localStorage.setItem("controllerTypeDev", "classic");
     localStorage.setItem("link-open", "main");
     localStorage.setItem("movementbg", "playerWalk");
+    localStorage.setItem("loadingStyle", "classic");
     window.location.reload();
   }
   defaultClickSound();

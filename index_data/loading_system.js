@@ -119,7 +119,9 @@ const tasset0 = [
   "Google_ko"
 ];
 const tasset1 = [
-  "16f75a9bdd0bf6"
+  "classic",
+  "anime",
+  "miku"
 ];
 const tasset2 = [
   "default-0",
@@ -260,7 +262,7 @@ function testLoadAsset0() {
 }
 function toDisplayNone() {
   setTimeout(function() {
-  if(document.getElementById('widther').style.width === "142px") {
+  if(document.getElementById('widther').style.width === "144px") {
     alertAccept();
     document.getElementById("loading").style.display = "none";
   }

@@ -359,6 +359,7 @@ function checkDeviceType() {
     document.getElementById("navBtn").style.bottom = "auto";
     document.getElementById("chechboxPausing").style.display = "none";
     document.getElementById("devCheck").style.display = "block";
+    document.getElementById("hr0hiddenTuggle").style.display = "block";
   }else{
     document.getElementById("controller").style.display = "none";
     document.getElementById("selectOptionsControllerPosition").style.display = "none";
@@ -369,13 +370,11 @@ function checkDeviceType() {
     document.getElementById("navBtn").style.bottom = "0";
     document.getElementById("chechboxPausing").style.display = "block";
     document.getElementById("devCheck").style.display = "none";
+    document.getElementById("hr0hiddenTuggle").style.display = "none";
   }
 };
 checkDeviceType();
 function firstTime() {
-  var prevbtn = document.getElementById("firstModalPervBtm");
-  var nextbtn = document.getElementById("firstModalNextBtm");
-  var applybtn = document.getElementById("firstModalApplyBtm");
   if(localStorage.getItem("firsttime") === null || localStorage.getItem("firsttime") === "") {
     document.getElementById("firstModal").style.display = "block";
   }else{
@@ -384,154 +383,232 @@ function firstTime() {
 }
 firstTime();
 function loadLocalStorages() {
-  if(localStorage.getItem("snakeStyle") === null || localStorage.getItem("snakeStyle") === "") {
+  if(localStorage.getItem("snakeStyle") === null) {
     // load snake
     localStorage.setItem("snakeStyle", "imgSnakeOne");
     localStorage.setItem("number","one");
-    document.getElementById("snakeOne").classList.add("activet");
-    document.getElementById("snakeTwo").classList.remove("activet");
-    document.getElementById("snakeThree").classList.remove("activet");
+    window.location.reload();
+  }else
+  if(localStorage.getItem("snakeStyle") === "") {
+    // load snake
+    localStorage.setItem("snakeStyle", "imgSnakeOne");
+    localStorage.setItem("number","one");
     window.location.reload();
   }else{
     return false;
   };
-  if(localStorage.getItem("difficulty") === null || localStorage.getItem("difficulty") === "") {
+  if(localStorage.getItem("difficulty") === null) {
     // load difficulty
     localStorage.setItem("difficulty", "normal");
-    document.getElementById("normalDif").classList.add("activet");
-    document.getElementById("hardDif").classList.remove("activet");
-    document.getElementById("hellDif").classList.remove("activet");
+    window.location.reload();
+  }else
+  if(localStorage.getItem("difficulty") === "") {
+    // load difficulty
+    localStorage.setItem("difficulty", "normal");
     window.location.reload();
   }else{
     return false;
   };
-  if(localStorage.getItem("foodStyle") === null || localStorage.getItem("foodStyle") === "") {
+  if(localStorage.getItem("foodStyle") === null) {
     // load food
     localStorage.setItem("foodStyle", "imgMeow");
     localStorage.setItem("reapitfood","meow");
-    document.getElementById("meowItem").classList.add("activet");
-    document.getElementById("goldItem").classList.remove("activet");
-    document.getElementById("alphacoinItem").classList.remove("activet");
-    document.getElementById("crystalItem").classList.remove("activet");
-    document.getElementById("ticketItem").classList.remove("activet");
-    document.getElementById("cTicketItem").classList.remove("activet");
-    document.getElementById("pTicketItem").classList.remove("activet");
+    window.location.reload();
+  }else
+  if(localStorage.getItem("foodStyle") === "") {
+    // load food
+    localStorage.setItem("foodStyle", "imgMeow");
+    localStorage.setItem("reapitfood","meow");
     window.location.reload();
   }else{
     return false;
   };
-  if(localStorage.getItem("boardStyle") === null || localStorage.getItem("boardStyle") === "") {
+  if(localStorage.getItem("boardStyle") === null) {
     // load board
     localStorage.setItem("boardStyle", "imgAlpha");
-    document.getElementById("playBoardId").classList.add("alpha");
-    document.getElementById("playBoardId").classList.remove("origo");
-    document.getElementById("alphaMap").classList.add("activet");
-    document.getElementById("origoMap").classList.remove("activet");
+    window.location.reload();
+  }else
+  if(localStorage.getItem("boardStyle") === "") {
+    // load board
+    localStorage.setItem("boardStyle", "imgAlpha");
     window.location.reload();
   }else{
     return false;
   };
-  if(localStorage.getItem("controllerPosition") === null || localStorage.getItem("controllerPosition") === "") {
+  if(localStorage.getItem("controllerPosition") === null) {
     // load controller position
     localStorage.setItem("controllerPosition", "center");
-    document.getElementById("ccLang").classList.add("activet");
-    document.getElementById("clLang").classList.remove("activet");
-    document.getElementById("crLang").classList.remove("activet");
+    window.location.reload();
+  }else
+  if(localStorage.getItem("controllerPosition") === "") {
+    // load controller position
+    localStorage.setItem("controllerPosition", "center");
     window.location.reload();
   }else{
     return false;
   };
-  if(localStorage.getItem("lang") === null || localStorage.getItem("lang") === "") {
+  if(localStorage.getItem("lang") === null) {
     // load language
     localStorage.setItem("lang", "en");
-    document.getElementById("languageEn").classList.add("activet");
-    document.getElementById("languageRu").classList.remove("activet");
+    window.location.reload();
+  }else
+  if(localStorage.getItem("lang") === "") {
+    // load language
+    localStorage.setItem("lang", "en");
     window.location.reload();
   }else{
     return false;
   };
-  if(localStorage.getItem("musicbg") === null || localStorage.getItem("musicbg") === "") {
+  if(localStorage.getItem("musicbg") === null) {
     // load music
     localStorage.setItem("musicbg", "sauMusic");
-    document.getElementById("msAlang").classList.add("activet");
+    document.getElementById("checkMusicMute").click();
+    window.location.reload();
+  }else
+  if(localStorage.getItem("musicbg") === "") {
+    // load music
+    localStorage.setItem("musicbg", "sauMusic");
     document.getElementById("checkMusicMute").click();
     window.location.reload();
   }else{
     return false;
   };
-  if(localStorage.getItem("controllerTypeDev") === null || localStorage.getItem("controllerTypeDev") === "") {
+  if(localStorage.getItem("controllerTypeDev") === null) {
+    // load music
+    localStorage.setItem("controllerTypeDev", "classic");
+    window.location.reload();
+  }else
+  if(localStorage.getItem("controllerTypeDev") === "") {
     // load music
     localStorage.setItem("controllerTypeDev", "classic");
     window.location.reload();
   }else{
     return false;
   };
-  if(localStorage.getItem("musicPlay") === null || localStorage.getItem("musicPlay") === "") {
+  if(localStorage.getItem("musicPlay") === null) {
+    // load music checkbox
+    localStorage.setItem("musicPlay", "true");
+    window.location.reload();
+  }else
+  if(localStorage.getItem("musicPlay") === "") {
     // load music checkbox
     localStorage.setItem("musicPlay", "true");
     window.location.reload();
   }else{
     return false;
   };
-  if(localStorage.getItem("sfxvolumedata") === null || localStorage.getItem("sfxvolumedata") === "") {
+  if(localStorage.getItem("sfxvolumedata") === null) {
+    // load sfx volume
+    localStorage.setItem("sfxvolumedata", "1.0");
+    window.location.reload();
+  }else
+  if(localStorage.getItem("sfxvolumedata") === "") {
     // load sfx volume
     localStorage.setItem("sfxvolumedata", "1.0");
     window.location.reload();
   }else{
     return false;
   };
-  if(localStorage.getItem("musicvolumedata") === null || localStorage.getItem("musicvolumedata") === "") {
+  if(localStorage.getItem("musicvolumedata") === null) {
+    // load music volume
+    localStorage.setItem("musicvolumedata", "1.0");
+    window.location.reload();
+  }else
+  if(localStorage.getItem("musicvolumedata") === "") {
     // load music volume
     localStorage.setItem("musicvolumedata", "1.0");
     window.location.reload();
   }else{
     return false;
   };
-  if(localStorage.getItem("movementbg") === null || localStorage.getItem("movementbg") === "") {
+  if(localStorage.getItem("movementbg") === null) {
+    // load walk
+    localStorage.setItem("movementbg", "playerWalk");
+    window.location.reload();
+  }else
+  if(localStorage.getItem("movementbg") === "") {
     // load walk
     localStorage.setItem("movementbg", "playerWalk");
     window.location.reload();
   }else{
     return false;
   };
-  if(localStorage.getItem("meawTockenStorage") === null || localStorage.getItem("meawTockenStorage") === "") {
+  if(localStorage.getItem("meawTockenStorage") === null) {
+    localStorage.setItem("meawTockenStorage", "0");
+    window.location.reload();
+  }else
+  if(localStorage.getItem("meawTockenStorage") === "") {
     localStorage.setItem("meawTockenStorage", "0");
     window.location.reload();
   }else{
     return false;
   };
-  if(localStorage.getItem("goldStorage") === null || localStorage.getItem("goldStorage") === "") {
+  if(localStorage.getItem("goldStorage") === null) {
+    localStorage.setItem("goldStorage", "0");
+    window.location.reload();
+  }else
+  if(localStorage.getItem("goldStorage") === "") {
     localStorage.setItem("goldStorage", "0");
     window.location.reload();
   }else{
     return false;
   };
-  if(localStorage.getItem("alphaCoinStorage") === null || localStorage.getItem("alphaCoinStorage") === "") {
+  if(localStorage.getItem("alphaCoinStorage") === null) {
+    localStorage.setItem("alphaCoinStorage", "0");
+    window.location.reload();
+  }else
+  if(localStorage.getItem("alphaCoinStorage") === "") {
     localStorage.setItem("alphaCoinStorage", "0");
     window.location.reload();
   }else{
     return false;
   };
-  if(localStorage.getItem("crystalStorage") === null || localStorage.getItem("crystalStorage") === "") {
+  if(localStorage.getItem("crystalStorage") === null) {
+    localStorage.setItem("crystalStorage", "0");
+    window.location.reload();
+  }else
+  if(localStorage.getItem("crystalStorage") === "") {
     localStorage.setItem("crystalStorage", "0");
     window.location.reload();
   }else{
     return false;
   };
-  if(localStorage.getItem("ticketStorage") === null || localStorage.getItem("ticketStorage") === "") {
+  if(localStorage.getItem("ticketStorage") === null) {
+    localStorage.setItem("ticketStorage", "0");
+    window.location.reload();
+  }else
+  if(localStorage.getItem("ticketStorage") === "") {
     localStorage.setItem("ticketStorage", "0");
     window.location.reload();
   }else{
     return false;
   };
-  if(localStorage.getItem("ticketChromaticStorage") === null || localStorage.getItem("ticketChromaticStorage") === "") {
+  if(localStorage.getItem("ticketChromaticStorage") === null) {
+    localStorage.setItem("ticketChromaticStorage", "0");
+    window.location.reload();
+  }else
+  if(localStorage.getItem("ticketChromaticStorage") === "") {
     localStorage.setItem("ticketChromaticStorage", "0");
     window.location.reload();
   }else{
     return false;
   };
-  if(localStorage.getItem("ticketPremiumStorage") === null || localStorage.getItem("ticketPremiumStorage") === "") {
+  if(localStorage.getItem("ticketPremiumStorage") === null) {
     localStorage.setItem("ticketPremiumStorage", "0");
+    window.location.reload();
+  }else
+  if(localStorage.getItem("ticketPremiumStorage") === "") {
+    localStorage.setItem("ticketPremiumStorage", "0");
+    window.location.reload();
+  }else{
+    return false;
+  };
+  if(localStorage.getItem("loadingStyle") === null) {
+    localStorage.setItem("loadingStyle", "classic");
+    window.location.reload();
+  }else
+  if(localStorage.getItem("loadingStyle") === "") {
+    localStorage.setItem("loadingStyle", "classic");
     window.location.reload();
   }else{
     return false;
@@ -913,78 +990,6 @@ function loadControllerType() {
   }
 };
 loadControllerType();
-document.onmousedown = function (event) {
-  event = (event || window.event);
-  if (event.keyCode == 27) {
-    if(document.getElementById('menu').style.display === 'block') {
-      document.getElementById('menuCloseBtn').click();
-    }else{
-      document.getElementById('navBtn').click();
-    }
-  }else
-  if (event.keyCode == 32) {
-    document.getElementById('chechboxPausing').click();
-  }else
-  if (event.keyCode == 87) {
-    document.getElementById('btn001').click();
-  }else
-  if (event.keyCode == 83) {
-    document.getElementById('btn004').click();
-  }else
-  if (event.keyCode == 65) {
-    document.getElementById('btn003').click();
-  }else
-  if (event.keyCode == 68) {
-    document.getElementById('btn005').click();
-  }else
-  if(event.keyCode == 69) {
-    document.getElementById("profileOpener").click();
-  }else
-  if((event.key === 'F12') ||
-    (event.ctrlKey && event.shiftKey && event.key === 'I') ||
-    (event.ctrlKey && event.shiftKey && event.key === 'C') ||
-    (event.metaKey && event.altKey && event.key === 'I') ||
-    (event.metaKey && event.shiftKey && event.key === 'C')
-  ) {
-    event.preventDefault();
-  }
-}
-document.onkeydown = function (event) {
-  event = (event || window.event);
-  if (event.keyCode == 27) {
-    if(document.getElementById('menu').style.display === 'block') {
-      document.getElementById('menuCloseBtn').click();
-    }else{
-      document.getElementById('navBtn').click();
-    }
-  }else
-  if (event.keyCode == 32) {
-    document.getElementById('chechboxPausing').click();
-  }else
-  if (event.keyCode == 87) {
-    document.getElementById('btn001').click();
-  }else
-  if (event.keyCode == 83) {
-    document.getElementById('btn004').click();
-  }else
-  if (event.keyCode == 65) {
-    document.getElementById('btn003').click();
-  }else
-  if (event.keyCode == 68) {
-    document.getElementById('btn005').click();
-  }else
-  if(event.keyCode == 69) {
-    document.getElementById("profileOpener").click();
-  }else
-  if((event.key === 'F12') ||
-    (event.ctrlKey && event.shiftKey && event.key === 'I') ||
-    (event.ctrlKey && event.shiftKey && event.key === 'C') ||
-    (event.metaKey && event.altKey && event.key === 'I') ||
-    (event.metaKey && event.shiftKey && event.key === 'C')
-  ) {
-    event.preventDefault();
-  }
-};
 function menuPauseWalkSound() {
   if(localStorage.getItem("movementbg") === "playerWalk") {
     document.getElementById("playerWalk").pause();
@@ -1131,3 +1136,52 @@ function handleInterval() {
     document.getElementById("chechboxPausing").click();
   }
 };
+function loadingClassic() {
+  document.getElementById("loadClassic").classList.add("activet");
+  document.getElementById("loadAnime").classList.remove("activet");
+  document.getElementById("loadMiku").classList.remove("activet");
+  document.getElementById("applySettings").style.display = "block";
+  selectionSound();
+};
+function loadingAnime() {
+  document.getElementById("loadClassic").classList.remove("activet");
+  document.getElementById("loadAnime").classList.add("activet");
+  document.getElementById("loadMiku").classList.remove("activet");
+  document.getElementById("applySettings").style.display = "block";
+  selectionSound();
+};
+function loadingMiku() {
+  document.getElementById("loadClassic").classList.remove("activet");
+  document.getElementById("loadAnime").classList.remove("activet");
+  document.getElementById("loadMiku").classList.add("activet");
+  document.getElementById("applySettings").style.display = "block";
+  selectionSound();
+};
+function loadingAnimationLoader() {
+  if(localStorage.getItem("loadingStyle") === "classic") {
+    document.getElementById("animateImg").classList.add("classicload");
+    document.getElementById("animateImg").classList.remove("animeload");
+    document.getElementById("animateImg").classList.remove("mikuload");
+    document.getElementById("loadClassic").classList.add("activet");
+    document.getElementById("loadAnime").classList.remove("activet");
+    document.getElementById("loadMiku").classList.remove("activet");
+  }else
+  if(localStorage.getItem("loadingStyle") === "anime") {
+    document.getElementById("animateImg").classList.remove("classicload");
+    document.getElementById("animateImg").classList.add("animeload");
+    document.getElementById("animateImg").classList.remove("mikuload");
+    document.getElementById("loadClassic").classList.remove("activet");
+    document.getElementById("loadAnime").classList.add("activet");
+    document.getElementById("loadMiku").classList.remove("activet");
+  }else
+  if(localStorage.getItem("loadingStyle") === "miku") {
+    document.getElementById("animateImg").classList.remove("classicload");
+    document.getElementById("animateImg").classList.remove("animeload");
+    document.getElementById("animateImg").classList.add("mikuload");
+    document.getElementById("loadClassic").classList.remove("activet");
+    document.getElementById("loadAnime").classList.remove("activet");
+    document.getElementById("loadMiku").classList.add("activet");
+    document.getElementById("loadingContiner").style.height = "192px";
+  }
+};
+loadingAnimationLoader();
