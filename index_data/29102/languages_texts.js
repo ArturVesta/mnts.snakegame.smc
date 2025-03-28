@@ -56,6 +56,9 @@ function languagesContents() {
   var a053 = document.getElementById("cratedOn0Lang");
   var a054 = document.getElementById("cratedOnLang");
   var a055 = document.getElementById("loadingText");
+  var a056 = document.getElementById("loadClassic");
+  var a057 = document.getElementById("loadAnime");
+  var a058 = document.getElementById("loadingLangStyle");
   const a000_all = document.getElementsByClassName('settingscontent');
   const a001_all = document.getElementsByClassName('stylescontent');
   const a002_all = document.getElementsByClassName('coming-soon');
@@ -119,7 +122,14 @@ function languagesContents() {
     a051.innerHTML = "Profile Center (Beta)";
     a052.innerHTML = "> Clickable <";
     a053.innerHTML = "Coded on: ";
-    a055.innerHTML = "Loading…";
+    if(localStorage.getItem("loadingStyle") === "anime") {
+      a055.innerHTML = "";
+    }else{
+      a055.innerHTML = "Loading…";
+    }
+    a056.innerHTML = "Classic";
+    a057.innerHTML = "Anime";
+    a058.innerHTML = "Loading Animation";
     for (let i = 0; i < a000_all.length; i++) {
       a000_all[i].textContent = 'Settings:';
     };
@@ -201,7 +211,14 @@ function languagesContents() {
     a051.innerHTML = "Центр профиля (Бета)";
     a052.innerHTML = "> Нажемной <";
     a053.innerHTML = "Кодировано на: ";
-    a055.innerHTML = "Загрузка…";
+    if(localStorage.getItem("loadingStyle") === "anime") {
+      a055.innerHTML = "";
+    }else{
+      a055.innerHTML = "Загрузка…";
+    }
+    a056.innerHTML = "Классический";
+    a057.innerHTML = "Аниме";
+    a058.innerHTML = "Анимация загрузки";
     for (let i = 0; i < a000_all.length; i++) {
       a000_all[i].textContent = 'Настройки:';
     };
@@ -284,7 +301,14 @@ function languagesContents() {
     a052.innerHTML = "> ニックネーム可能 <";
       a052.style.fontSize = "12px";
     a053.innerHTML = "コーディング日： ";
-    a055.innerHTML = "読み込み中…";
+    if(localStorage.getItem("loadingStyle") === "anime") {
+      a055.innerHTML = "";
+    }else{
+      a055.innerHTML = "読み込み中…";
+    }
+    a056.innerHTML = "クラシック";
+    a057.innerHTML = "アニメ";
+    a058.innerHTML = "読み込みのアニメーション";
     for (let i = 0; i < a000_all.length; i++) {
       a000_all[i].textContent = '設定：';
     };
@@ -366,7 +390,14 @@ function languagesContents() {
     a051.innerHTML = "个人资料中心（测试版）";
     a052.innerHTML = "> 可点击 <";
     a053.innerHTML = "编码于： ";
-    a055.innerHTML = "加载中…";
+    if(localStorage.getItem("loadingStyle") === "anime") {
+      a055.innerHTML = "";
+    }else{
+      a055.innerHTML = "加载中…";
+    }
+    a056.innerHTML = "经典的";
+    a057.innerHTML = "日本动画片";
+    a058.innerHTML = "加载动画";
     for (let i = 0; i < a000_all.length; i++) {
       a000_all[i].textContent = '设置：';
     };
@@ -448,7 +479,14 @@ function languagesContents() {
     a051.innerHTML = "個人資料中心（測試版）";
     a052.innerHTML = "> 可點擊 <";
     a053.innerHTML = "編碼於： ";
-    a055.innerHTML = "載入中…";
+    if(localStorage.getItem("loadingStyle") === "anime") {
+      a055.innerHTML = "";
+    }else{
+      a055.innerHTML = "載入中…";
+    }
+    a056.innerHTML = "經典的";
+    a057.innerHTML = "日本卡通";
+    a058.innerHTML = "載入動畫";
     for (let i = 0; i < a000_all.length; i++) {
       a000_all[i].textContent = '設定:';
     };
@@ -530,7 +568,14 @@ function languagesContents() {
     a051.innerHTML = "프로필 센터(베타)";
     a052.innerHTML = "> 클릭 가능 <";
     a053.innerHTML = "코딩된 내용: ";
-    a055.innerHTML = "로딩중…";
+    if(localStorage.getItem("loadingStyle") === "anime") {
+      a055.innerHTML = "";
+    }else{
+      a055.innerHTML = "로딩중…";
+    }
+    a056.innerHTML = "고전적인";
+    a057.innerHTML = "애니";
+    a058.innerHTML = "로딩 애니메이션";
     for (let i = 0; i < a000_all.length; i++) {
       a000_all[i].textContent = '설정:';
     };
