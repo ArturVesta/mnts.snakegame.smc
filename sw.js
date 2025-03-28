@@ -1,6 +1,6 @@
 var GHPATH = '/mnts.snakegame.smc';
 var APP_PREFIX = 'gppwa_';
-let VERSIONNAME = "0.3.9";
+let VERSIONNAME = "0.4.0";
 var VERSION = VERSIONNAME;
 var CACHE_NAME = VERSIONNAME;
 var URLS = [
@@ -75,6 +75,7 @@ var URLS = [
   `${GHPATH}/index_data/29102/shiranui_walk.js`,
   `${GHPATH}/index_data/29102/skyfire_walk.js`,
   `${GHPATH}/index_data/29102/twilight_walk.js`,
+  `${GHPATH}/index_data/29102/key_controlls.js`,
   `${GHPATH}/index_data/29172`,
   `${GHPATH}/index_data/29172/alert.png`,
   `${GHPATH}/index_data/29172/alpha_coin.png`,
@@ -254,7 +255,9 @@ var URLS = [
   `${GHPATH}/index_data/69326`,
   `${GHPATH}/index_data/69326/MiSans.ttf`,
   `${GHPATH}/index_data/29278`,
-  `${GHPATH}/index_data/29278/16f75a9bdd0bf6.gif`,
+  `${GHPATH}/index_data/29278/classic.gif`,
+  `${GHPATH}/index_data/29278/anime.gif`,
+  `${GHPATH}/index_data/29278/miku.gif`,
   `${GHPATH}/index_data/29278/blue`,
   `${GHPATH}/index_data/29278/blue/default-0.png`,
   `${GHPATH}/index_data/29278/blue/default-1.png`,
@@ -363,6 +366,7 @@ var CacheURLS = [
   `${GHPATH}/index_data/29102/dreadwolf_walk.js`,
   `${GHPATH}/index_data/29102/gaia_walk.js`,
   `${GHPATH}/index_data/29102/guerilla_hunter_walk.js`,
+  `${GHPATH}/index_data/29102/key_controlls.js`,
   `${GHPATH}/index_data/29172`,
   `${GHPATH}/index_data/29172/alert.png`,
   `${GHPATH}/index_data/29172/alpha_coin.png`,
@@ -542,7 +546,9 @@ var CacheURLS = [
   `${GHPATH}/index_data/69326`,
   `${GHPATH}/index_data/69326/MiSans.ttf`,
   `${GHPATH}/index_data/29278`,
-  `${GHPATH}/index_data/29278/16f75a9bdd0bf6.gif`,
+  `${GHPATH}/index_data/29278/classic.gif`,
+  `${GHPATH}/index_data/29278/anime.gif`,
+  `${GHPATH}/index_data/29278/miku.gif`,
   `${GHPATH}/index_data/29278/blue`,
   `${GHPATH}/index_data/29278/blue/default-0.png`,
   `${GHPATH}/index_data/29278/blue/default-1.png`,

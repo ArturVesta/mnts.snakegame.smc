@@ -126,11 +126,7 @@
               <div onclick="leftController();" id="clLang" class="controllerpostype select">...</div>
               <div onclick="rightController();" id="crLang" class="controllerpostype select">...</div>
             </div>
-            <div class="categores moresettingscontent">...</div>
-            <input type="button" id="deleteprogbutton" onclick="alertDeleteProgress();" value="...">
-            <input type="button" id="downloadNoAutoUpdate" class="windows-dl" onclick="downloadAlertSystem();" value=" ">
-            <input type="button" id="downloadNoAutoUpdate2" class="android-dl" value=" ">
-            <hr>
+            <hr id="hr0hiddenTuggle">
             <div class="categores" id="langsLangs">...</div>
             <div id="selectOptions" class="select-content">
               <div onclick="englishLanguage();" id="languageEn" class="language select">English</div>
@@ -149,7 +145,18 @@
               <div onclick="hellDifLoad();" id="hellDif" class="difficulty select">...</div>
             </div>
             <hr>
+            <div class="categores moresettingscontent">...</div>
+            <input type="button" id="deleteprogbutton" onclick="alertDeleteProgress();" value="...">
+            <input type="button" id="downloadNoAutoUpdate" class="windows-dl" onclick="downloadAlertSystem();" value=" ">
+            <input type="button" id="downloadNoAutoUpdate2" class="android-dl" value=" ">
+            <hr>
             <div class="categores stylescontent">...</div>
+            <div id="loadingLangStyle">...</div>
+            <div id="selectOptions" class="select-content">
+              <div onclick="loadingClassic();" id="loadClassic" class="select">...</div>
+              <div onclick="loadingAnime();" id="loadAnime" class="select">...</div>
+              <div onclick="loadingMiku();" id="loadMiku" class="select">Hatsune Miku</div>
+            </div>
           </div>
           <div id="board" class="content">
             <div class="categores settingscontent">...</div>
@@ -388,9 +395,9 @@
       </div>
       <div class="container" id="loading">
         <div class="loading">
-          <div class="loading-img">
+          <div class="loading-img" id="loadingContiner">
             <div class="text-logo"></div>
-            <div class="animate-img"></div>
+            <div class="animate-img" id="animateImg"></div>
           </div>
           <h2 id="loadingText">...</h2>
         </div>
@@ -780,6 +787,7 @@
     <script src="index_data/loading_system.js">// Specific for load</script>
     <script src="index_data/29102/languages.js"></script>
     <script src="index_data/29102/languages_texts.js"></script>
+    <script src="index_data/29102/key_controlls.js"></script>
     <script>
       if(navigator.serviceWorker) {
         navigator.serviceWorker.register('/mnts.snakegame.smc/sw.js',{scope: '/mnts.snakegame.smc/'})
