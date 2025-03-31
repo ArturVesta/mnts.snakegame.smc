@@ -845,6 +845,11 @@ function alertAccept() {
     }else
     if(localStorage.getItem("lang") === "ko") {
       document.getElementById("alertText").innerHTML = "로딩중…";
+    };
+    if(localStorage.getItem("updateRead") === basicVersion) {
+      document.getElementById("updateModal").style.display = "none";
+    }else{
+      document.getElementById("updateModal").style.display = "block";
     }
     setTimeout(function() {
       document.getElementById("alert").style.display = "none";
@@ -1139,6 +1144,28 @@ if (installButton) {
   installButton.addEventListener('click', installApp);
 };
 // Get battery level in % with charging detection
+//if (navigator.userAgent.match(/Android|Windows/i)) {
+//
+//} else if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+//
+//} else {
+//  console.log('Battery Status API is not supported in this browser.');
+//}
+if ('getBattery' in navigator) {
+  navigator.getBattery().then(function (battery) {
+    function updateBatteryStatus() {
+      document.getElementById("subBatteryLevel").innerHTML = battery.level * 100;
+      document.getElementById('subBatteryCharge').innerHTML = battery.charging ? '⨭' : '⨴️';
+      document.getElementById("batteryLevel").innerHTML = battery.level * 100;
+      document.getElementById('batteryCharge').innerHTML = battery.charging ? '⨭' : '⨴️';
+    }
+    updateBatteryStatus();
+    battery.addEventListener('levelchange', updateBatteryStatus);
+    battery.addEventListener('chargingchange', updateBatteryStatus);
+  });
+} else {
+  console.log('Battery Status API is not supported in this browser.');
+}
 navigator.getBattery().then(function (battery) {
   function showAllBatteryInfo() {
     editChargeInfo();

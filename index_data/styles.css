@@ -1064,7 +1064,8 @@ input[type="range"]::-webkit-slider-thumb {
   color: var(--white);
 }
 #noticeTitleLang,
-#profileTitleLang {
+#profileTitleLang,
+#updateTitleLang {
   position: absolute;
   top: 4px;
   left: 38px;
@@ -1755,7 +1756,8 @@ hr.acc {
     font-size: 10px;
   }
   #noticeTitleLang,
-  #profileTitleLang {
+  #profileTitleLang,
+  #updateTitleLang {
     top: 3px;
     left: 26px;
     font-size: 14px;
@@ -1818,7 +1820,6 @@ hr.acc {
     text-align: right;
     width: calc(100% - 20px);
   }
-  
 .sub-device-inpo-indicator {
   left: 61px;
   top: 0px;

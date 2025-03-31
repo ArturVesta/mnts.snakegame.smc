@@ -121,6 +121,7 @@ function pauseGame() {
 window.addEventListener('load', function() {
   loadLocalStorages();
   testLoadAsset0();
+  updateTextLangs();
   localStorage.setItem("steelScore", localStorage.getItem("high-score"));
   document.getElementById("collectedMeow").innerHTML = localStorage.getItem("meawTockenStorage");
   document.getElementById("collectedGold").innerHTML = localStorage.getItem("goldStorage");
