@@ -797,7 +797,7 @@
     <script src="index_data/29102/languages_texts.js"></script>
     <script src="index_data/29102/key_controlls.js"></script>
     <script>
-      let basicVersion = "0.4.1";
+      let basicVersion = "0.4.2";
       function markUpdateReaded() {
         var modal = document.getElementById("updateModal");
         modal.style.display = "none";
@@ -807,28 +807,28 @@
         var updateTitle = document.getElementById("updateTitleLang");
         var updateContent = document.getElementById("updateNoticeContent");
         if(localStorage.getItem("lang") === "en") {
-          updateTitle.innerHTML = "What new in " + basicVersion + "Version";
-          updateContent.innerHTML = "Trayed fixing battery level for MacOs, iPad & iPhone.";
+          updateTitle.innerHTML = "What new in " + basicVersion + " Version";
+          updateContent.innerHTML = "Fixed interface for menu tabs.";
         }else
         if(localStorage.getItem("lang") === "ru") {
           updateTitle.innerHTML = "Что нового в " + basicVersion + " версии";
-          updateContent.innerHTML = "В трее зафиксирован уровень заряда батареи для MacOs, iPad и iPhone.";
+          updateContent.innerHTML = "Исправлен интерфейс для вкладок меню..";
         }else
         if(localStorage.getItem("lang") === "jp") {
           updateTitle.innerHTML = "バージョン" + basicVersion + "の新機能";
-          updateContent.innerHTML = "MacOs、iPad、iPhone のバッテリーレベルを固定するトレイ。";
+          updateContent.innerHTML = "メニュータブのインターフェースを修正しました。";
         }else
         if(localStorage.getItem("lang") === "chs") {
           updateTitle.innerHTML = basicVersion + "版本有哪些新功能";
-          updateContent.innerHTML = "托盘可修复 MacOs、iPad 和 iPhone 的电池电量。";
+          updateContent.innerHTML = "修复菜单选项卡的界面。";
         }else
         if(localStorage.getItem("lang") === "cht") {
           updateTitle.innerHTML = basicVersion + " 版本有哪些新功能";
-          updateContent.innerHTML = "托盤可修復 MacOs、iPad 和 iPhone 的電池電量。";
+          updateContent.innerHTML = "修復選單選項卡的介面。";
         }else
         if(localStorage.getItem("lang") === "ko") {
           updateTitle.innerHTML = basicVersion + "버전의 새로운 기능";
-          updateContent.innerHTML = "MacOs, iPad, iPhone의 배터리 수준을 고정하는 트레이입니다.";
+          updateContent.innerHTML = "메뉴 탭에 대한 고정 인터페이스.";
         }
       }
     </script>
