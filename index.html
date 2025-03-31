@@ -455,6 +455,14 @@
         </div>
       </div>
     </div>
+    <div id="updateModal" class="modal">
+      <div class="modal-content">
+      <div id="updateTitleLang">...</div>
+        <button class="reset-button" id="closeUpdate" onclick="markUpdateReaded();"></button>
+        <div class="in-modal-content" id="updateNoticeContent"></div>
+        <script src="index_data/update.log.js"></script>
+      </div>
+    </div>
     <!-- Audio sources -->
     <!-- Colections Sounds -->
     <!-- Item collected -->
@@ -789,8 +797,68 @@
     <script src="index_data/29102/languages_texts.js"></script>
     <script src="index_data/29102/key_controlls.js"></script>
     <script>
+      let basicVersion = "0.4.1";
+      function markUpdateReaded() {
+        var modal = document.getElementById("updateModal");
+        modal.style.display = "none";
+        localStorage.setItem("updateRead", basicVersion);
+      }
+      function updateTextLangs() {
+        var updateTitle = document.getElementById("updateTitleLang");
+        var updateContent = document.getElementById("updateNoticeContent");
+        if(localStorage.getItem("lang") === "en") {
+          updateTitle.innerHTML = "What new in " + basicVersion + "Version";
+          updateContent.innerHTML = "Trayed fixing battery level for MacOs, iPad & iPhone.";
+        }else
+        if(localStorage.getItem("lang") === "ru") {
+          updateTitle.innerHTML = "Что нового в " + basicVersion + " версии";
+          updateContent.innerHTML = "В трее зафиксирован уровень заряда батареи для MacOs, iPad и iPhone.";
+        }else
+        if(localStorage.getItem("lang") === "jp") {
+          updateTitle.innerHTML = "バージョン" + basicVersion + "の新機能";
+          updateContent.innerHTML = "MacOs、iPad、iPhone のバッテリーレベルを固定するトレイ。";
+        }else
+        if(localStorage.getItem("lang") === "chs") {
+          updateTitle.innerHTML = basicVersion + "版本有哪些新功能";
+          updateContent.innerHTML = "托盘可修复 MacOs、iPad 和 iPhone 的电池电量。";
+        }else
+        if(localStorage.getItem("lang") === "cht") {
+          updateTitle.innerHTML = basicVersion + " 版本有哪些新功能";
+          updateContent.innerHTML = "托盤可修復 MacOs、iPad 和 iPhone 的電池電量。";
+        }else
+        if(localStorage.getItem("lang") === "ko") {
+          updateTitle.innerHTML = basicVersion + "버전의 새로운 기능";
+          updateContent.innerHTML = "MacOs, iPad, iPhone의 배터리 수준을 고정하는 트레이입니다.";
+        }
+      }
+    </script>
+    <script>
       if(navigator.serviceWorker) {
-        navigator.serviceWorker.register('/mnts.snakegame.smc/sw.js',{scope: '/mnts.snakegame.smc/'})
+        if(window.location.protocol === 'https:') {
+          navigator.serviceWorker.register('/mnts.snakegame.smc/sw.js',{scope: '/mnts.snakegame.smc/'})
+          .then(registration => {
+            console.log('Service Worker registered with scope:', registration.scope);
+          })
+          .catch(error => {
+            return false
+          });
+        }else
+        if (window.location.protocol === 'file:') {
+          // Potentially register service worker for local file access (USE WITH CAUTION)
+          if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js', { scope: '/' }) // Scope might need adjustment
+              .then(registration => {
+                console.log('Service Worker registered for local file with scope:', registration.scope);
+              })
+              .catch(error => {
+                return false
+              });
+          } else {
+            console.log('Service workers are not supported in this environment.');
+          }
+        } else {
+          console.log('Service workers are not being registered on non-HTTPS or non-file protocols.');
+        }
       }
     </script>
     <!-- Adminestrative -->
