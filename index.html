@@ -9,8 +9,8 @@
     <title>...</title>
     <link rel="canonical" href="https://arturvesta.github.io/mnts.snakegame.smc/">
     <link rel="manifest" href="/mnts.snakegame.smc/manifest.webmanifest">
-    <link rel="stylesheet" href="index_data/styles.css">
-    <link rel="stylesheet" href="index_data/animations.css">
+    <link rel="stylesheet" href="index_data/styles/styles.css">
+    <link rel="stylesheet" href="index_data/styles/animations.css">
     <script>
       var rUsers = "0";
       if(localStorage.getItem("lang") === "en") {
@@ -164,6 +164,7 @@
             <div class="categores stylescontent">...</div>
             <div id="selectOptions" class="select-content">
               <div onclick="alphaMapLoad();" id="alphaMap" class="select"><div class="select-icon" id="alphaMapImage"></div><span id="boardMapAlphaLang">...</span></div>
+              <div onclick="alphaMap2Load();" id="alphaMap2" class="select"><div class="select-icon" id="alphaMapImage2"></div><span id="boardMapAlpha2Lang">...</span></div>
               <div onclick="origoMapLoad();" id="origoMap" class="select"><div class="select-icon" id="origoMapImage"></div><span id="boardMapOrigoLang">...</span></div>
             </div>
           </div>
@@ -359,6 +360,7 @@
           <input type="submit" id="defaultSettings" onclick="alertReloadLater();" value="..." />
           <input type="submit" id="applySettings" onclick="applySettings();" value="..." />
           <div onclick="alertExitSite();" class="site-exit"></div>
+          <div onclick="" class="update-notice"></div>
           <div class="sub-device-inpo-indicator">
             <div id="subDateTimeIndicator">
               <div id="subClock">...</div>
@@ -460,344 +462,343 @@
       <div id="updateTitleLang">...</div>
         <button class="reset-button" id="closeUpdate" onclick="markUpdateReaded();"></button>
         <div class="in-modal-content" id="updateNoticeContent"></div>
-        <script src="index_data/update.log.js"></script>
       </div>
     </div>
     <!-- Audio sources -->
     <!-- Colections Sounds -->
     <!-- Item collected -->
     <audio muted preload="none" id="itemCollected" class="collect-background">
-      <source type="audio/mp3" src="index_data/29208/item_taked.mp3">
-      <script src="index_data/29102/item_taked.js"></script>
+      <source type="audio/mp3" src="index_data/audio/item_taked.mp3">
+      <script src="index_data/scripts/item_taked.js"></script>
     </audio>
     <!-- Movement Sounds -->
     <!-- Player Walk -->
     <audio muted preload="none" id="playerWalk" loop class="walk-background">
-      <source type="audio/mp3" src="index_data/29208/player_walk.mp3">
-      <script src="index_data/29102/player_walk.js"></script>
+      <source type="audio/mp3" src="index_data/audio/player_walk.mp3">
+      <script src="index_data/scripts/player_walk.js"></script>
     </audio>
     <!-- Alborada Walk -->
     <audio muted preload="none" id="alboradaWalk" loop class="walk-background">
-      <source type="audio/mp3" src="index_data/29208/alborada_walk.mp3">
-      <script src="index_data/29102/alborada_walk.js"></script>
+      <source type="audio/mp3" src="index_data/audio/alborada_walk.mp3">
+      <script src="index_data/scripts/alborada_walk.js"></script>
     </audio>
     <!-- Andromeda Walk -->
     <audio muted preload="none" id="andromedaWalk" loop class="walk-background">
-      <source type="audio/mp3" src="index_data/29208/andromeda_walk.mp3">
-      <script src="index_data/29102/andromeda_walk.js"></script>
+      <source type="audio/mp3" src="index_data/audio/andromeda_walk.mp3">
+      <script src="index_data/scripts/andromeda_walk.js"></script>
     </audio>
     <!-- Arthur Walk -->
     <audio muted preload="none" id="arthurWalk" loop class="walk-background">
-      <source type="audio/mp3" src="index_data/29208/arthur_walk.mp3">
-      <script src="index_data/29102/arthur_walk.js"></script>
+      <source type="audio/mp3" src="index_data/audio/arthur_walk.mp3">
+      <script src="index_data/scripts/arthur_walk.js"></script>
     </audio>
     <!-- Aurora Walk -->
     <audio muted preload="none" id="auroraWalk" loop class="walk-background">
-      <source type="audio/mp3" src="index_data/29208/aurora_walk.mp3">
-      <script src="index_data/29102/aurora_walk.js"></script>
+      <source type="audio/mp3" src="index_data/audio/aurora_walk.mp3">
+      <script src="index_data/scripts/aurora_walk.js"></script>
     </audio>
     <!-- Boltus Walk -->
     <audio muted preload="none" id="boltusWalk" loop class="walk-background">
-      <source type="audio/mp3" src="index_data/29208/boltus_walk.mp3">
-      <script src="index_data/29102/boltus_walk.js"></script>
+      <source type="audio/mp3" src="index_data/audio/boltus_walk.mp3">
+      <script src="index_data/scripts/boltus_walk.js"></script>
     </audio>
     <!-- Caramel Walk -->
     <audio muted preload="none" id="caramelWalk" loop class="walk-background">
-      <source type="audio/mp3" src="index_data/29208/caramel_walk.mp3">
-      <script src="index_data/29102/caramel_walk.js"></script>
+      <source type="audio/mp3" src="index_data/audio/caramel_walk.mp3">
+      <script src="index_data/scripts/caramel_walk.js"></script>
     </audio>
     <!-- Death knell Walk -->
     <audio muted preload="none" id="deathKnellWalk" loop class="walk-background">
-      <source type="audio/mp3" src="index_data/29208/death_knell_walk.mp3">
-      <script src="index_data/29102/death_knell_walk.js"></script>
+      <source type="audio/mp3" src="index_data/audio/death_knell_walk.mp3">
+      <script src="index_data/scripts/death_knell_walk.js"></script>
     </audio>
     <!-- Doomlight Walk -->
     <audio muted preload="none" id="doomlightlWalk" loop class="walk-background">
-      <source type="audio/mp3" src="index_data/29208/doomlight_walk.mp3">
-      <script src="index_data/29102/doomlight_walk.js"></script>
+      <source type="audio/mp3" src="index_data/audio/doomlight_walk.mp3">
+      <script src="index_data/scripts/doomlight_walk.js"></script>
     </audio>
     <!-- Dreadwolf Walk -->
     <audio muted preload="none" id="dreadwolfWalk" loop class="walk-background">
-      <source type="audio/mp3" src="index_data/29208/dreadwolf_walk.mp3">
-      <script src="index_data/29102/dreadwolf_walk.js"></script>
+      <source type="audio/mp3" src="index_data/audio/dreadwolf_walk.mp3">
+      <script src="index_data/scripts/dreadwolf_walk.js"></script>
     </audio>
     <!-- Frefox Walk -->
     <audio muted preload="none" id="firefoxWalk" loop class="walk-background">
-      <source type="audio/mp3" src="index_data/29208/firefox_walk.mp3">
-      <script src="index_data/29102/firefox_walk.js"></script>
+      <source type="audio/mp3" src="index_data/audio/firefox_walk.mp3">
+      <script src="index_data/scripts/firefox_walk.js"></script>
     </audio>
     <!-- Frestar Walk -->
     <audio muted preload="none" id="firestarWalk" loop class="walk-background">
-      <source type="audio/mp3" src="index_data/29208/firestar_walk.mp3">
-      <script src="index_data/29102/firestar_walk.js"></script>
+      <source type="audio/mp3" src="index_data/audio/firestar_walk.mp3">
+      <script src="index_data/scripts/firestar_walk.js"></script>
     </audio>
     <!-- Flamenco Walk -->
     <audio muted preload="none" id="flamencoWalk" loop class="walk-background">
-      <source type="audio/mp3" src="index_data/29208/flamenco_walk.mp3">
-      <script src="index_data/29102/flamenco_walk.js"></script>
+      <source type="audio/mp3" src="index_data/audio/flamenco_walk.mp3">
+      <script src="index_data/scripts/flamenco_walk.js"></script>
     </audio>
     <!-- Gabriel Walk -->
     <audio muted preload="none" id="gabrielWalk" loop class="walk-background">
-      <source type="audio/mp3" src="index_data/29208/gabriel_walk.mp3">
-      <script src="index_data/29102/gabriel_walk.js"></script>
+      <source type="audio/mp3" src="index_data/audio/gabriel_walk.mp3">
+      <script src="index_data/scripts/gabriel_walk.js"></script>
     </audio>
     <!-- Gaia Walk -->
     <audio muted preload="none" id="gaialWalk" loop class="walk-background">
-      <source type="audio/mp3" src="index_data/29208/gaia_walk.mp3">
-      <script src="index_data/29102/gaia_walk.js"></script>
+      <source type="audio/mp3" src="index_data/audio/gaia_walk.mp3">
+      <script src="index_data/scripts/gaia_walk.js"></script>
     </audio>
     <!-- Guerilla Hunter Walk -->
     <audio muted preload="none" id="guerillaHunterWalk" loop class="walk-background">
-      <source type="audio/mp3" src="index_data/29208/guerilla_hunter_walk.mp3">
-      <script src="index_data/29102/guerilla_hunter_walk.js"></script>
+      <source type="audio/mp3" src="index_data/audio/guerilla_hunter_walk.mp3">
+      <script src="index_data/scripts/guerilla_hunter_walk.js"></script>
     </audio>
     <!-- Hotsteel Walk -->
     <audio muted preload="none" id="hotsteelWalk" loop class="walk-background">
-      <source type="audio/mp3" src="index_data/29208/hotsteel_walk.mp3">
-      <script src="index_data/29102/hotsteel_walk.js"></script>
+      <source type="audio/mp3" src="index_data/audio/hotsteel_walk.mp3">
+      <script src="index_data/scripts/hotsteel_walk.js"></script>
     </audio>
     <!-- Hurricane Walk -->
     <audio muted preload="none" id="hurricaneWalk" loop class="walk-background">
-      <source type="audio/mp3" src="index_data/29208/hurricane_walk.mp3">
-      <script src="index_data/29102/hurricane_walk.js"></script>
+      <source type="audio/mp3" src="index_data/audio/hurricane_walk.mp3">
+      <script src="index_data/scripts/hurricane_walk.js"></script>
     </audio>
     <!-- Jojo Walk -->
     <audio muted preload="none" id="jojoWalk" loop class="walk-background">
-      <source type="audio/mp3" src="index_data/29208/jojo_walk.mp3">
-      <script src="index_data/29102/jojo_walk.js"></script>
+      <source type="audio/mp3" src="index_data/audio/jojo_walk.mp3">
+      <script src="index_data/scripts/jojo_walk.js"></script>
     </audio>
     <!-- Lancelot Walk -->
     <audio muted preload="none" id="lancelotWalk" loop class="walk-background">
-      <source type="audio/mp3" src="index_data/29208/lancelot_walk.mp3">
-      <script src="index_data/29102/lancelot_walk.js"></script>
+      <source type="audio/mp3" src="index_data/audio/lancelot_walk.mp3">
+      <script src="index_data/scripts/lancelot_walk.js"></script>
     </audio>
     <!-- Michael Walk -->
     <audio muted preload="none" id="michaelWalk" loop class="walk-background">
-      <source type="audio/mp3" src="index_data/29208/michael_walk.mp3">
-      <script src="index_data/29102/michael_walk.js"></script>
+      <source type="audio/mp3" src="index_data/audio/michael_walk.mp3">
+      <script src="index_data/scripts/michael_walk.js"></script>
     </audio>
     <!-- Moon Rabbit Walk -->
     <audio muted preload="none" id="moonRabbitWalk" loop class="walk-background">
-      <source type="audio/mp3" src="index_data/29208/moon_rabbit_walk.mp3">
-      <script src="index_data/29102/moon_rabbit_walk.js"></script>
+      <source type="audio/mp3" src="index_data/audio/moon_rabbit_walk.mp3">
+      <script src="index_data/scripts/moon_rabbit_walk.js"></script>
     </audio>
     <!-- Nebula Walk -->
     <audio muted preload="none" id="nebulaWalk" loop class="walk-background">
-      <source type="audio/mp3" src="index_data/29208/nebula_walk.mp3">
-      <script src="index_data/29102/nebula_walk.js"></script>
+      <source type="audio/mp3" src="index_data/audio/nebula_walk.mp3">
+      <script src="index_data/scripts/nebula_walk.js"></script>
     </audio>
     <!-- Neutron Walk -->
     <audio muted preload="none" id="neutronWalk" loop class="walk-background">
-      <source type="audio/mp3" src="index_data/29208/neutron_star_walk.mp3">
-      <script src="index_data/29102/neutron_star_walk.js"></script>
+      <source type="audio/mp3" src="index_data/audio/neutron_star_walk.mp3">
+      <script src="index_data/scripts/neutron_star_walk.js"></script>
     </audio>
     <!-- Northern Walk -->
     <audio muted preload="none" id="northernWalk" loop class="walk-background">
-      <source type="audio/mp3" src="index_data/29208/northern_knight_walk.mp3">
-      <script src="index_data/29102/northern_knight_walk.js"></script>
+      <source type="audio/mp3" src="index_data/audio/northern_knight_walk.mp3">
+      <script src="index_data/scripts/northern_knight_walk.js"></script>
     </audio>
     <!-- Pulsar Walk -->
     <audio muted preload="none" id="pulsarWalk" loop class="walk-background">
-      <source type="audio/mp3" src="index_data/29208/pulsar_walk.mp3">
-      <script src="index_data/29102/pulsar_walk.js"></script>
+      <source type="audio/mp3" src="index_data/audio/pulsar_walk.mp3">
+      <script src="index_data/scripts/pulsar_walk.js"></script>
     </audio>
     <!-- Ranger Walk -->
     <audio muted preload="none" id="rangerWalk" loop class="walk-background">
-      <source type="audio/mp3" src="index_data/29208/ranger_walk.mp3">
-      <script src="index_data/29102/ranger_walk.js"></script>
+      <source type="audio/mp3" src="index_data/audio/ranger_walk.mp3">
+      <script src="index_data/scripts/ranger_walk.js"></script>
     </audio>
     <!-- Raven Walk -->
     <audio muted preload="none" id="ravenWalk" loop class="walk-background">
-      <source type="audio/mp3" src="index_data/29208/raven_walk.mp3">
-      <script src="index_data/29102/raven_walk.js"></script>
+      <source type="audio/mp3" src="index_data/audio/raven_walk.mp3">
+      <script src="index_data/scripts/raven_walk.js"></script>
     </audio>
     <!-- Shiranui Walk -->
     <audio muted preload="none" id="shiranuikWalk" loop class="walk-background">
-      <source type="audio/mp3" src="index_data/29208/shiranui_walk.mp3">
-      <script src="index_data/29102/shiranui_walk.js"></script>
+      <source type="audio/mp3" src="index_data/audio/shiranui_walk.mp3">
+      <script src="index_data/scripts/shiranui_walk.js"></script>
     </audio>
     <!-- Skyfire Walk -->
     <audio muted preload="none" id="skyfireWalk" loop class="walk-background">
-      <source type="audio/mp3" src="index_data/29208/skyfire_walk.mp3">
-      <script src="index_data/29102/skyfire_walk.js"></script>
+      <source type="audio/mp3" src="index_data/audio/skyfire_walk.mp3">
+      <script src="index_data/scripts/skyfire_walk.js"></script>
     </audio>
     <!-- Skylark Walk -->
     <audio muted preload="none" id="skylarkWalk" loop class="walk-background">
-      <source type="audio/mp3" src="index_data/29208/skylark_walk.mp3">
-      <script src="index_data/29102/skylark_walk.js"></script>
+      <source type="audio/mp3" src="index_data/audio/skylark_walk.mp3">
+      <script src="index_data/scripts/skylark_walk.js"></script>
     </audio>
     <!-- Snow Walk -->
     <audio muted preload="none" id="snowWalk" loop class="walk-background">
-      <source type="audio/mp3" src="index_data/29208/snow_mirage_walk.mp3">
-      <script src="index_data/29102/snow_mirage_walk.js"></script>
+      <source type="audio/mp3" src="index_data/audio/snow_mirage_walk.mp3">
+      <script src="index_data/scripts/snow_mirage_walk.js"></script>
     </audio>
     <!-- Trio Walk -->
     <audio muted preload="none" id="trioWalk" loop class="walk-background">
-      <source type="audio/mp3" src="index_data/29208/trio_of_enders_walk.mp3">
-      <script src="index_data/29102/trio_of_enders_walk.js"></script>
+      <source type="audio/mp3" src="index_data/audio/trio_of_enders_walk.mp3">
+      <script src="index_data/scripts/trio_of_enders_walk.js"></script>
     </audio>
     <!-- Twilight Walk -->
     <audio muted preload="none" id="twilightWalk" loop class="walk-background">
-      <source type="audio/mp3" src="index_data/29208/twilight_walk.mp3">
-      <script src="index_data/29102/twilight_walk.js"></script>
+      <source type="audio/mp3" src="index_data/audio/twilight_walk.mp3">
+      <script src="index_data/scripts/twilight_walk.js"></script>
     </audio>
     <!-- Ventorus Walk -->
     <audio muted preload="none" id="ventorusWalk" loop class="walk-background">
-      <source type="audio/mp3" src="index_data/29208/ventorus_walk.mp3">
-      <script src="index_data/29102/ventorus_walk.js"></script>
+      <source type="audio/mp3" src="index_data/audio/ventorus_walk.mp3">
+      <script src="index_data/scripts/ventorus_walk.js"></script>
     </audio>
-    <script src="index_data/29102/play_walk.js"></script>
-    <script src="index_data/29102/local_movement.js"></script>
+    <script src="index_data/scripts/play_walk.js"></script>
+    <script src="index_data/scripts/local_movement.js"></script>
     <!-- Default Click -->
     <audio muted preload="none" id="defaultClickSound">
-      <source src="index_data/29208/default_press.mp3" type="audio/mp3">
-      <script src="index_data/29102/default_click.js"></script>
+      <source src="index_data/audio/default_press.mp3" type="audio/mp3">
+      <script src="index_data/scripts/default_click.js"></script>
     </audio>
     <!-- Close Settings -->
     <audio muted preload="none" id="closeSettingsSound">
-      <source src="index_data/29208/close_settings.mp3" type="audio/mp3">
-      <script src="index_data/29102/close_settings.js"></script>
+      <source src="index_data/audio/close_settings.mp3" type="audio/mp3">
+      <script src="index_data/scripts/close_settings.js"></script>
     </audio>
     <!-- Cancel -->
     <audio muted preload="none" id="cancelSound">
-      <source src="index_data/29208/cancel.mp3" type="audio/mp3">
-      <script src="index_data/29102/cancel.js"></script>
+      <source src="index_data/audio/cancel.mp3" type="audio/mp3">
+      <script src="index_data/scripts/cancel.js"></script>
     </audio>
     <!-- Open Settings -->
     <audio muted preload="none" id="openSettingsSound">
-      <source src="index_data/29208/open_settings.mp3" type="audio/mp3">
-      <script src="index_data/29102/open_settings.js"></script>
+      <source src="index_data/audio/open_settings.mp3" type="audio/mp3">
+      <script src="index_data/scripts/open_settings.js"></script>
     </audio>
     <!-- Tab Select & Select Buttons -->
     <audio muted preload="none" id="selectionSound">
-      <source src="index_data/29208/tab_select.mp3" type="audio/mp3">
-      <script src="index_data/29102/tab_select.js"></script>
+      <source src="index_data/audio/tab_select.mp3" type="audio/mp3">
+      <script src="index_data/scripts/tab_select.js"></script>
     </audio>
     <!-- Close Modals -->
     <audio muted preload="none" id="closeModalSound">
-      <source src="index_data/29208/notice_close.mp3" type="audio/mp3">
-      <script src="index_data/29102/notice_close.js"></script>
+      <source src="index_data/audio/notice_close.mp3" type="audio/mp3">
+      <script src="index_data/scripts/notice_close.js"></script>
     </audio>
     <!-- Background Music 1 -->
     <audio muted preload="none" id="musicAbgSound" loop class="music-background">
-      <source type="audio/mp3" src="index_data/29208/stable_and_upbeat.mp3">
-      <script src="index_data/29102/stable_and_upbeat.js"></script>
+      <source type="audio/mp3" src="index_data/audio/stable_and_upbeat.mp3">
+      <script src="index_data/scripts/stable_and_upbeat.js"></script>
     </audio>
     <!-- Background Music 2 -->
     <audio muted preload="none" id="musicBbgSound" loop class="music-background">
-      <source type="audio/mp3" src="index_data/29208/acceleration_folding.mp3">
-      <script src="index_data/29102/acceleration_folding.js"></script>
+      <source type="audio/mp3" src="index_data/audio/acceleration_folding.mp3">
+      <script src="index_data/scripts/acceleration_folding.js"></script>
     </audio>
     <!-- Background Music 3 -->
     <audio muted preload="none" id="musicCbgSound" loop class="music-background">
-      <source type="audio/mp3" src="index_data/29208/alice_the_dreamer_accompaniment.mp3">
-      <script src="index_data/29102/alice_the_dreamer_accompaniment.js"></script>
+      <source type="audio/mp3" src="index_data/audio/alice_the_dreamer_accompaniment.mp3">
+      <script src="index_data/scripts/alice_the_dreamer_accompaniment.js"></script>
     </audio>
     <!-- Background Music 4 -->
     <audio muted preload="none" id="musicDbgSound" loop class="music-background">
-      <source type="audio/mp3" src="index_data/29208/alice_the_dreamer.mp3">
-      <script src="index_data/29102/alice_the_dreamer.js"></script>
+      <source type="audio/mp3" src="index_data/audio/alice_the_dreamer.mp3">
+      <script src="index_data/scripts/alice_the_dreamer.js"></script>
     </audio>
     <!-- Background Music 5 -->
     <audio muted preload="none" id="musicEbgSound" loop class="music-background">
-      <source type="audio/mp3" src="index_data/29208/all_or_nothing_ending_version.mp3">
-      <script src="index_data/29102/all_or_nothing_ending_version.js"></script>
+      <source type="audio/mp3" src="index_data/audio/all_or_nothing_ending_version.mp3">
+      <script src="index_data/scripts/all_or_nothing_ending_version.js"></script>
     </audio>
     <!-- Background Music 6 -->
     <audio muted preload="none" id="musicFbgSound" loop class="music-background">
-      <source type="audio/mp3" src="index_data/29208/all_or_nothing.mp3">
-      <script src="index_data/29102/all_or_nothing.js"></script>
+      <source type="audio/mp3" src="index_data/audio/all_or_nothing.mp3">
+      <script src="index_data/scripts/all_or_nothing.js"></script>
     </audio>
     <!-- Background Music 7 -->
     <audio muted preload="none" id="musicGbgSound" loop class="music-background">
-      <source type="audio/mp3" src="index_data/29208/backtracking_journey.mp3">
-      <script src="index_data/29102/backtracking_journey.js"></script>
+      <source type="audio/mp3" src="index_data/audio/backtracking_journey.mp3">
+      <script src="index_data/scripts/backtracking_journey.js"></script>
     </audio>
     <!-- Background Music 8 -->
     <audio muted preload="none" id="musicHbgSound" loop class="music-background">
-      <source type="audio/mp3" src="index_data/29208/before_the_storm.mp3">
-      <script src="index_data/29102/before_the_storm.js"></script>
+      <source type="audio/mp3" src="index_data/audio/before_the_storm.mp3">
+      <script src="index_data/scripts/before_the_storm.js"></script>
     </audio>
     <!-- Background Music 9 -->
     <audio muted preload="none" id="musicIbgSound" loop class="music-background">
-      <source type="audio/mp3" src="index_data/29208/disillusionment_melody.mp3">
-      <script src="index_data/29102/disillusionment_melody.js"></script>
+      <source type="audio/mp3" src="index_data/audio/disillusionment_melody.mp3">
+      <script src="index_data/scripts/disillusionment_melody.js"></script>
     </audio>
     <!-- Background Music 10 -->
     <audio muted preload="none" id="musicJbgSound" loop class="music-background">
-      <source type="audio/mp3" src="index_data/29208/explosive_halo.mp3">
-      <script src="index_data/29102/explosive_halo.js"></script>
+      <source type="audio/mp3" src="index_data/audio/explosive_halo.mp3">
+      <script src="index_data/scripts/explosive_halo.js"></script>
     </audio>
     <!-- Background Music 11 -->
     <audio muted preload="none" id="musicKbgSound" loop class="music-background">
-      <source type="audio/mp3" src="index_data/29208/firestar.mp3">
-      <script src="index_data/29102/firestar.js"></script>
+      <source type="audio/mp3" src="index_data/audio/firestar.mp3">
+      <script src="index_data/scripts/firestar.js"></script>
     </audio>
     <!-- Background Music 12 -->
     <audio muted preload="none" id="musicLbgSound" loop class="music-background">
-      <source type="audio/mp3" src="index_data/29208/future_bounce.mp3">
-      <script src="index_data/29102/future_bounce.js"></script>
+      <source type="audio/mp3" src="index_data/audio/future_bounce.mp3">
+      <script src="index_data/scripts/future_bounce.js"></script>
     </audio>
     <!-- Background Music 13 -->
     <audio muted preload="none" id="musicMbgSound" loop class="music-background">
-      <source type="audio/mp3" src="index_data/29208/interlude_mojito.mp3">
-      <script src="index_data/29102/interlude_mojito.js"></script>
+      <source type="audio/mp3" src="index_data/audio/interlude_mojito.mp3">
+      <script src="index_data/scripts/interlude_mojito.js"></script>
     </audio>
     <!-- Background Music 14 -->
     <audio muted preload="none" id="musicNbgSound" loop class="music-background">
-      <source type="audio/mp3" src="index_data/29208/joyful_passion.mp3">
-      <script src="index_data/29102/joyful_passion.js"></script>
+      <source type="audio/mp3" src="index_data/audio/joyful_passion.mp3">
+      <script src="index_data/scripts/joyful_passion.js"></script>
     </audio>
     <!-- Background Music 15 -->
     <audio muted preload="none" id="musicObgSound" loop class="music-background">
-      <source type="audio/mp3" src="index_data/29208/lunar.mp3">
-      <script src="index_data/29102/lunar.js"></script>
+      <source type="audio/mp3" src="index_data/audio/lunar.mp3">
+      <script src="index_data/scripts/lunar.js"></script>
     </audio>
     <!-- Background Music 16 -->
     <audio muted preload="none" id="musicPbgSound" loop class="music-background">
-      <source type="audio/mp3" src="index_data/29208/nyan_nyan.mp3">
-      <script src="index_data/29102/nyan_nyan.js"></script>
+      <source type="audio/mp3" src="index_data/audio/nyan_nyan.mp3">
+      <script src="index_data/scripts/nyan_nyan.js"></script>
     </audio>
     <!-- Background Music 17 -->
     <audio muted preload="none" id="musicQbgSound" loop class="music-background">
-      <source type="audio/mp3" src="index_data/29208/prelude_of_war.mp3">
-      <script src="index_data/29102/prelude_of_war.js"></script>
+      <source type="audio/mp3" src="index_data/audio/prelude_of_war.mp3">
+      <script src="index_data/scripts/prelude_of_war.js"></script>
     </audio>
     <!-- Background Music 18 -->
     <audio muted preload="none" id="musicRbgSound" loop class="music-background">
-      <source type="audio/mp3" src="index_data/29208/preparation_break.mp3">
-      <script src="index_data/29102/preparation_break.js"></script>
+      <source type="audio/mp3" src="index_data/audio/preparation_break.mp3">
+      <script src="index_data/scripts/preparation_break.js"></script>
     </audio>
     <!-- Background Music 19 -->
     <audio muted preload="none" id="musicSbgSound" loop class="music-background">
-      <source type="audio/mp3" src="index_data/29208/smc_memory_2022.mp3">
-      <script src="index_data/29102/smc_memory_2022.js"></script>
+      <source type="audio/mp3" src="index_data/audio/smc_memory_2022.mp3">
+      <script src="index_data/scripts/smc_memory_2022.js"></script>
     </audio>
     <!-- Background Music 20 -->
     <audio muted preload="none" id="musicTbgSound" loop class="music-background">
-      <source type="audio/mp3" src="index_data/29208/smc_memory_2023.mp3">
-      <script src="index_data/29102/smc_memory_2023.js"></script>
+      <source type="audio/mp3" src="index_data/audio/smc_memory_2023.mp3">
+      <script src="index_data/scripts/smc_memory_2023.js"></script>
     </audio>
     <!-- Background Music 21 -->
     <audio muted preload="none" id="musicUbgSound" loop class="music-background">
-      <source type="audio/mp3" src="index_data/29208/throbbing_beat.mp3">
-      <script src="index_data/29102/throbbing_beat.js"></script>
+      <source type="audio/mp3" src="index_data/audio/throbbing_beat.mp3">
+      <script src="index_data/scripts/throbbing_beat.js"></script>
     </audio>
     <!-- Background Music 22 -->
     <audio muted preload="none" id="musicVbgSound" loop class="music-background">
-      <source type="audio/mp3" src="index_data/29208/ultra_beast_force.mp3">
-      <script src="index_data/29102/ultra_beast_force.js"></script>
+      <source type="audio/mp3" src="index_data/audio/ultra_beast_force.mp3">
+      <script src="index_data/scripts/ultra_beast_force.js"></script>
     </audio>
     <!-- Scripts -->
-    <script src="index_data/scripts.js"></script>
-    <script src="index_data/system.js" defer></script>
-    <script src="index_data/scripts_2.js"></script>
-    <script src="index_data/loading_system.js">// Specific for load</script>
-    <script src="index_data/29102/languages.js"></script>
-    <script src="index_data/29102/languages_texts.js"></script>
-    <script src="index_data/29102/key_controlls.js"></script>
+    <script src="index_data/scripts/scripts.js"></script>
+    <script src="index_data/scripts/system.js" defer></script>
+    <script src="index_data/scripts/scripts_2.js"></script>
+    <script src="index_data/scripts/loading_system.js">// Specific for load</script>
+    <script src="index_data/scripts/languages.js"></script>
+    <script src="index_data/scripts/languages_texts.js"></script>
+    <script src="index_data/scripts/key_controlls.js"></script>
     <script>
-      let basicVersion = "0.4.2";
+      let basicVersion = "0.4.3";
       function markUpdateReaded() {
         var modal = document.getElementById("updateModal");
         modal.style.display = "none";
@@ -808,27 +809,63 @@
         var updateContent = document.getElementById("updateNoticeContent");
         if(localStorage.getItem("lang") === "en") {
           updateTitle.innerHTML = "What new in " + basicVersion + " Version";
-          updateContent.innerHTML = "Fixed interface for menu tabs.";
+          updateContent.innerHTML = "Changed position of menu button and pause button when dynamic controller is on.";
+          updateContent.innerHTML += "<br>";
+          updateContent.innerHTML += "Added new board background.";
+          updateContent.innerHTML += "<br>";
+          updateContent.innerHTML += "Fixed load default settings for new users.";
+          updateContent.innerHTML += "<br>";
+          updateContent.innerHTML += "<strong style='color:red;'>This update need redownload or reinstall this game.</strong>";
         }else
         if(localStorage.getItem("lang") === "ru") {
           updateTitle.innerHTML = "Что нового в " + basicVersion + " версии";
-          updateContent.innerHTML = "Исправлен интерфейс для вкладок меню..";
+          updateContent.innerHTML = "Изменено положение кнопка меню и кнопка пауза при включенном динамическом контроллере.";
+          updateContent.innerHTML += "<br>";
+          updateContent.innerHTML += "Добавлен новый фон доски.";
+          updateContent.innerHTML += "<br>";
+          updateContent.innerHTML += "Исправлена ​​загрузка настроек по умолчанию для новых пользователей.";
+          updateContent.innerHTML += "<br>";
+          updateContent.innerHTML += "<strong style='color:red;'>Для этого обновления необходимо повторно загрузить или переустановить игру.</strong>";
         }else
         if(localStorage.getItem("lang") === "jp") {
           updateTitle.innerHTML = "バージョン" + basicVersion + "の新機能";
-          updateContent.innerHTML = "メニュータブのインターフェースを修正しました。";
+          updateContent.innerHTML = "ダイナミック コントローラーがオンのときのメニュー ボタンと一時停止ボタンの位置を変更しました。";
+          updateContent.innerHTML += "<br>";
+          updateContent.innerHTML += "新しいボードの背景を追加しました。";
+          updateContent.innerHTML += "<br>";
+          updateContent.innerHTML += "新規ユーザーのロードのデフォルト設定を修正しました。";
+          updateContent.innerHTML += "<br>";
+          updateContent.innerHTML += "<strong style='color:red;'>このアップデートでは、このゲームを再ダウンロードまたは再インストールする必要があります。</strong>";
         }else
         if(localStorage.getItem("lang") === "chs") {
           updateTitle.innerHTML = basicVersion + "版本有哪些新功能";
-          updateContent.innerHTML = "修复菜单选项卡的界面。";
+          updateContent.innerHTML = "动态控制器打开时，菜单按钮和暂停按钮的位置改变。";
+          updateContent.innerHTML += "<br>";
+          updateContent.innerHTML += "添加了新的棋盘背景。";
+          updateContent.innerHTML += "<br>";
+          updateContent.innerHTML += "修复了新用户的加载默认设置。";
+          updateContent.innerHTML += "<br>";
+          updateContent.innerHTML += "<strong style='color:red;'>此更新需要重新下载或重新安装该游戏。</strong>";
         }else
         if(localStorage.getItem("lang") === "cht") {
           updateTitle.innerHTML = basicVersion + " 版本有哪些新功能";
-          updateContent.innerHTML = "修復選單選項卡的介面。";
+          updateContent.innerHTML = "動態控制器開啟時，選單按鈕和暫停按鈕的位置會改變。";
+          updateContent.innerHTML += "<br>";
+          updateContent.innerHTML += "新增了新的棋盤背景。";
+          updateContent.innerHTML += "<br>";
+          updateContent.innerHTML += "修復了新用戶的載入預設設定。";
+          updateContent.innerHTML += "<br>";
+          updateContent.innerHTML += "<strong style='color:red;'>此更新需要重新下載或重新安裝該遊戲。</strong>";
         }else
         if(localStorage.getItem("lang") === "ko") {
           updateTitle.innerHTML = basicVersion + "버전의 새로운 기능";
-          updateContent.innerHTML = "메뉴 탭에 대한 고정 인터페이스.";
+          updateContent.innerHTML = "동적 컨트롤러가 켜져 있을 때 메뉴 버튼과 일시 정지 버튼의 위치가 변경되었습니다.";
+          updateContent.innerHTML += "<br>";
+          updateContent.innerHTML += "새로운 보드 배경을 추가했습니다.";
+          updateContent.innerHTML += "<br>";
+          updateContent.innerHTML += "새로운 사용자를 위한 고정된 로드 기본 설정이 적용되었습니다.";
+          updateContent.innerHTML += "<br>";
+          updateContent.innerHTML += "<strong style='color:red;'>이 업데이트를 설치하려면 게임을 다시 다운로드하거나 재설치해야 합니다.</strong>";
         }
       }
     </script>
