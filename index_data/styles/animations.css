@@ -1,0 +1,72 @@
+@-webkit-keyframes cursordef {
+  0% {cursor: url('../animations/blue/default-0.png'), pointer;}
+  10% {cursor: url('../animations/blue/default-1.png'), pointer;}
+  20% {cursor: url('../animations/blue/default-2.png'), pointer;}
+  30% {cursor: url('../animations/blue/default-3.png'), pointer;}
+  40% {cursor: url('../animations/blue/default-4.png'), pointer;}
+  50% {cursor: url('../animations/blue/default-5.png'), pointer;}
+  51% {cursor: url('../animations/blue/default-6.png'), pointer;}
+  52% {cursor: url('../animations/blue/default-7.png'), pointer;}
+  53% {cursor: url('../animations/blue/default-8.png'), pointer;}
+  55% {cursor: url('../animations/blue/default-9.png'), pointer;}
+  57% {cursor: url('../animations/blue/default-10.png'), pointer;}
+  60% {cursor: url('../animations/blue/default-11.png'), pointer;}
+  70% {cursor: url('../animations/blue/default-12.png'), pointer;}
+  80% {cursor: url('../animations/blue/default-13.png'), pointer;}
+  90% {cursor: url('../animations/blue/default-14.png'), pointer;}
+  100% {cursor: url('../animations/blue/default-15.png'), pointer;}
+}
+@keyframes cursordef {
+  0% {cursor: url('../animations/blue/default-0.png'), pointer;}
+  10% {cursor: url('../animations/blue/default-1.png'), pointer;}
+  20% {cursor: url('../animations/blue/default-2.png'), pointer;}
+  30% {cursor: url('../animations/blue/default-3.png'), pointer;}
+  40% {cursor: url('../animations/blue/default-4.png'), pointer;}
+  50% {cursor: url('../animations/blue/default-5.png'), pointer;}
+  51% {cursor: url('../animations/blue/default-6.png'), pointer;}
+  52% {cursor: url('../animations/blue/default-7.png'), pointer;}
+  53% {cursor: url('../animations/blue/default-8.png'), pointer;}
+  55% {cursor: url('../animations/blue/default-9.png'), pointer;}
+  57% {cursor: url('../animations/blue/default-10.png'), pointer;}
+  60% {cursor: url('../animations/blue/default-11.png'), pointer;}
+  70% {cursor: url('../animations/blue/default-12.png'), pointer;}
+  80% {cursor: url('../animations/blue/default-13.png'), pointer;}
+  90% {cursor: url('../animations/blue/default-14.png'), pointer;}
+  100% {cursor: url('../animations/blue/default-15.png'), pointer;}
+}
+@-webkit-keyframes cursorlnk {
+  0% {cursor: url('../animations/blue/link-0.png'), pointer;}
+  10% {cursor: url('../animations/blue/link-1.png'), pointer;}
+  20% {cursor: url('../animations/blue/link-2.png'), pointer;}
+  30% {cursor: url('../animations/blue/link-3.png'), pointer;}
+  40% {cursor: url('../animations/blue/link-4.png'), pointer;}
+  50% {cursor: url('../animations/blue/link-5.png'), pointer;}
+  51% {cursor: url('../animations/blue/link-6.png'), pointer;}
+  52% {cursor: url('../animations/blue/link-7.png'), pointer;}
+  53% {cursor: url('../animations/blue/link-8.png'), pointer;}
+  55% {cursor: url('../animations/blue/link-9.png'), pointer;}
+  57% {cursor: url('../animations/blue/link-10.png'), pointer;}
+  60% {cursor: url('../animations/blue/link-11.png'), pointer;}
+  70% {cursor: url('../animations/blue/link-12.png'), pointer;}
+  80% {cursor: url('../animations/blue/link-13.png'), pointer;}
+  90% {cursor: url('../animations/blue/link-14.png'), pointer;}
+  100% {cursor: url('../animations/blue/link-15.png'), pointer;}
+}
+@keyframes cursorlnk {
+  0% {cursor: url('../animations/blue/link-0.png'), pointer;}
+  10% {cursor: url('../animations/blue/link-1.png'), pointer;}
+  20% {cursor: url('../animations/blue/link-2.png'), pointer;}
+  30% {cursor: url('../animations/blue/link-3.png'), pointer;}
+  40% {cursor: url('../animations/blue/link-4.png'), pointer;}
+  50% {cursor: url('../animations/blue/link-5.png'), pointer;}
+  51% {cursor: url('../animations/blue/link-6.png'), pointer;}
+  52% {cursor: url('../animations/blue/link-7.png'), pointer;}
+  53% {cursor: url('../animations/blue/link-8.png'), pointer;}
+  55% {cursor: url('../animations/blue/link-9.png'), pointer;}
+  57% {cursor: url('../animations/blue/link-10.png'), pointer;}
+  60% {cursor: url('../animations/blue/link-11.png'), pointer;}
+  70% {cursor: url('../animations/blue/link-12.png'), pointer;}
+  80% {cursor: url('../animations/blue/link-13.png'), pointer;}
+  90% {cursor: url('../animations/blue/link-14.png'), pointer;}
+  100% {cursor: url('../animations/blue/link-15.png'), pointer;}
+}
