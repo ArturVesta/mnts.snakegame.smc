@@ -373,7 +373,7 @@ hr {
   top: 6px;
   right: 6px;
   border: none;
-  cursor: url('../animations/blue/link-10.png'), default;
+  cursor: url('../animations/blue/link-0.png'), default;
   -webkit-animation: cursorlnk 1500ms infinite;
   animation: cursorlnk 1500ms infinite;
   z-index: 1;
@@ -407,7 +407,7 @@ hr {
   top: 0;
   right: 0;
   border: none;
-  cursor: url('../animations/blue/link-10.png'), default;
+  cursor: url('../animations/blue/link-0.png'), default;
   -webkit-animation: cursorlnk 1500ms infinite;
   animation: cursorlnk 1500ms infinite;
 }
@@ -457,7 +457,7 @@ hr {
   text-align: center;
   font-size: 1.3rem;
   color: transparent;
-  cursor: url('../animations/blue/link-10.png'), default;
+  cursor: url('../animations/blue/link-0.png'), default;
   -webkit-animation: cursorlnk 1500ms infinite;
   animation: cursorlnk 1500ms infinite;
   background-size: 100% 100%, auto 70%;
@@ -741,7 +741,7 @@ hr {
   border: none;
   outline: none;
   text-align: center;
-  cursor: url('../animations/blue/link-10.png'), default;
+  cursor: url('../animations/blue/link-0.png'), default;
   -webkit-animation: cursorlnk 1500ms infinite;
   animation: cursorlnk 1500ms infinite;
   background-image: var(--tabs-menu);
@@ -791,7 +791,7 @@ hr {
 }
 .tab-sounds .tablinks-sounds:hover {
   filter: brightness(0.4) grayscale(0);
-  cursor: url('../animations/blue/link-10.png'), default;
+  cursor: url('../animations/blue/link-0.png'), default;
   -webkit-animation: cursorlnk 1500ms infinite;
   animation: cursorlnk 1500ms infinite;
   background-image: var(--tabs-audio-hover);
@@ -833,7 +833,7 @@ hr {
   color: var(--black);
   height: 50px;
   width: calc(50% - 10px);
-  cursor: url('../animations/blue/link-10.png'), default;
+  cursor: url('../animations/blue/link-0.png'), default;
   -webkit-animation: cursorlnk 1500ms infinite;
   animation: cursorlnk 1500ms infinite;
   background-size: auto 100px;
@@ -976,7 +976,7 @@ hr {
   padding-top: 4px;
 }
 input[type="checkbox"] {
-  cursor: url('../animations/blue/link-10.png'), default;
+  cursor: url('../animations/blue/link-0.png'), default;
   -webkit-animation: cursorlnk 1500ms infinite;
   animation: cursorlnk 1500ms infinite;
   appearance: none;
@@ -1002,7 +1002,7 @@ input[type="submit"] {
   outline: none;
   padding-bottom: 2px;
   border-radius: 2px;
-  cursor: url('../animations/blue/link-10.png'), default;
+  cursor: url('../animations/blue/link-0.png'), default;
   -webkit-animation: cursorlnk 1500ms infinite;
   animation: cursorlnk 1500ms infinite;
   color: var(--white);
@@ -1031,7 +1031,7 @@ input[type="range"]:focus {
   padding: 8px 0px;
   margin: 5px 0px;
   background-color: transparent;
-  cursor: url('../animations/blue/link-10.png'), default;
+  cursor: url('../animations/blue/link-0.png'), default;
   -webkit-animation: cursorlnk 1500ms infinite;
   animation: cursorlnk 1500ms infinite;
   overflow: hidden;
@@ -1067,7 +1067,7 @@ input[type="range"]::-webkit-slider-thumb {
   padding-left: 25px;
   margin-top: -2px;
   display: block;
-  cursor: url('../animations/blue/link-10.png'), default;
+  cursor: url('../animations/blue/link-0.png'), default;
   -webkit-animation: cursorlnk 1500ms infinite;
   animation: cursorlnk 1500ms infinite;
 }
@@ -1112,7 +1112,7 @@ input[type="range"]::-webkit-slider-thumb {
   background-size: auto 100%;
   background-position: right center;
   padding: 3px 10px;
-  cursor: url('../animations/blue/link-10.png'), default;
+  cursor: url('../animations/blue/link-0.png'), default;
   -webkit-animation: cursorlnk 1500ms infinite;
   animation: cursorlnk 1500ms infinite;
 }
@@ -1180,7 +1180,7 @@ input[type="range"]::-webkit-slider-thumb {
   border: none;
   width: 160px;
   height: 41px;
-  cursor: url('../animations/blue/link-10.png'), default;
+  cursor: url('../animations/blue/link-0.png'), default;
   -webkit-animation: cursorlnk 1500ms infinite;
   animation: cursorlnk 1500ms infinite;
   transition: 0.6s;
@@ -1257,7 +1257,7 @@ input[type="range"]::-webkit-slider-thumb {
   background-position: right top;
   background-size: auto 200%;
   background-repeat: no-repeat;
-  cursor: url('../animations/blue/link-10.png'), default;
+  cursor: url('../animations/blue/link-0.png'), default;
   -webkit-animation: cursorlnk 1500ms infinite;
   animation: cursorlnk 1500ms infinite;
   transition: 0.6s;
@@ -1358,7 +1358,7 @@ hr.acc {
   background-size: auto 80%, 100% auto;
   background-position: center center, center center;
   background-repeat: no-repeat;
-  cursor: url('../animations/blue/link-10.png'), default;
+  cursor: url('../animations/blue/link-0.png'), default;
   -webkit-animation: cursorlnk 1500ms infinite;
   animation: cursorlnk 1500ms infinite;
   transition: 0.6s;
@@ -1383,7 +1383,7 @@ hr.acc {
   background-size: auto 80%, 100% auto;
   background-position: center center, center center;
   background-repeat: no-repeat;
-  cursor: url('../animations/blue/link-10.png'), default;
+  cursor: url('../animations/blue/link-0.png'), default;
   -webkit-animation: cursorlnk 1500ms infinite;
   animation: cursorlnk 1500ms infinite;
   transition: 0.6s;
@@ -1406,7 +1406,7 @@ hr.acc {
   margin: 10px;
   filter: drop-shadow(0px 0px 5px var(--black)) grayscale(1);
   display: inline-block;
-  cursor: url('../animations/blue/link-10.png'), default;
+  cursor: url('../animations/blue/link-0.png'), default;
   -webkit-animation: cursorlnk 1500ms infinite;
   animation: cursorlnk 1500ms infinite;
   transition: 0.6s;
@@ -1437,7 +1437,7 @@ hr.acc {
   border: none;
   background-color: transparent;
   outline: none;
-  cursor: url('../animations/blue/link-1.png'), default;
+  cursor: url('../animations/blue/link-0.png'), default;
   -webkit-animation: cursorlnk 1500ms infinite;
   animation: cursorlnk 1500ms infinite;
   transition: 0.6s;
@@ -1655,6 +1655,18 @@ hr.acc {
   -o-transition: 0.6s;
   -moz-transition: 0.6s;
   -webkit-transition: 0.6s;
+}
+.menuscroller {
+  position: absolute;
+  bottom: 15%;
+  left: 0;
+  right: 0;
+  width: 500px !important;
+  margin: auto !important;
+}
+#updateNoticeContent {
+  text-align: left;
+  display: block;
 }
 @font-face {
   font-family: miSans;
@@ -1875,40 +1887,40 @@ hr.acc {
     text-align: right;
     width: calc(100% - 20px);
   }
-.sub-device-inpo-indicator {
-  left: 61px;
-  top: 0px;
-  width: 300px;
-  height: 24px;
-}
-#subBatteryProgress {
-  bottom: 0;
-  width: 100%;
-  height: 4px;
-}
-#subBatteryCharge {
-  margin-top: -2.5px;
-  font-size: 16px;
-}
-#subBatteryLevel {
-  padding: 0px;
-  font-size: 18px;
-}
-#subClock {
-  font-size: 18px;
-  padding-left: 6px;
-  margin-top: -1.5px;
-}
-#subCalendar {
-  font-size: 18px;
-  padding-right: 6px;
-  margin-top: -1.5px;
-}
-.sub-dc-symbol {
-  font-size: 23px;
-  padding: 0px 5px;
-  margin-top: -6px;
-}
+  .sub-device-inpo-indicator {
+    left: 61px;
+    top: 0px;
+    width: 300px;
+    height: 24px;
+  }
+  #subBatteryProgress {
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+  }
+  #subBatteryCharge {
+    margin-top: -2.5px;
+    font-size: 16px;
+  }
+  #subBatteryLevel {
+    padding: 0px;
+    font-size: 18px;
+  }
+  #subClock {
+    font-size: 18px;
+    padding-left: 6px;
+    margin-top: -1.5px;
+  }
+  #subCalendar {
+    font-size: 18px;
+    padding-right: 6px;
+    margin-top: -1.5px;
+  }
+  .sub-dc-symbol {
+    font-size: 23px;
+    padding: 0px 5px;
+    margin-top: -6px;
+  }
 }
 @media screen and (min-width: 1545px) {
   .alert-btn-container input {
