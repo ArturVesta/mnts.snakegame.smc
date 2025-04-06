@@ -109,12 +109,12 @@
           <div id="SettingsTitleLang">...</div>
           <div class="close" id="menuCloseBtn" onclick="handleInterval();document.getElementById('menu').style.display='none';closeSettingsSound();menuPauseWalkSound();"></div>
           <div class="tab">
-            <button class="tablinks active" onclick="openTab(event, 'about');selectionSound();" id="aboutTab">...</button>
-            <button class="tablinks" onclick="openTab(event, 'system');selectionSound();" id="systemTab">...</button>
-            <button class="tablinks" onclick="openTab(event, 'snake');selectionSound();" id="snakeTab">...</button>
-            <button class="tablinks" onclick="openTab(event, 'food');selectionSound();" id="foodTab">...</button>
-            <button class="tablinks" onclick="openTab(event, 'board');selectionSound();" id="boardTab">...</button>
-            <button class="tablinks" onclick="openTab(event, 'audio');selectionSound();" id="audioTab">...</button>
+            <button class="tablinks active" onclick="openRange(event, 'conOne');openTab(event, 'about');selectionSound();" id="aboutTab">...</button>
+            <button class="tablinks" onclick="openRange(event, 'conTwo');openTab(event, 'system');selectionSound();" id="systemTab">...</button>
+            <button class="tablinks" onclick="openRange(event, 'conThree');openTab(event, 'snake');selectionSound();" id="snakeTab">...</button>
+            <button class="tablinks" onclick="openRange(event, 'conFour');openTab(event, 'food');selectionSound();" id="foodTab">...</button>
+            <button class="tablinks" onclick="openRange(event, 'conFive');openTab(event, 'board');selectionSound();" id="boardTab">...</button>
+            <button class="tablinks" onclick="openRange(event, 'conSix');openTab(event, 'audio');selectionSound();" id="audioTab">...</button>
           </div>
           <div id="system" class="content">
             <div class="categores settingscontent">...</div>
@@ -377,6 +377,12 @@
             <div id="subTimeAndDateIndicator"></div>
           </div>
         </div>
+        <input class="menuscroller" type="range" name="conOne" id="conOne" min="0" max="100" value="0" style="display:block;">
+        <input class="menuscroller" type="range" name="conTwo" id="conTwo" min="0" max="100" value="0" style="display:none;">
+        <input class="menuscroller" type="range" name="conThree" id="conThree" min="0" max="100" value="0" style="display:none;">
+        <input class="menuscroller" type="range" name="conFour" id="conFour" min="0" max="100" value="0" style="display:none;">
+        <input class="menuscroller" type="range" name="conFive" id="conFive" min="0" max="100" value="0" style="display:none;">
+        <input class="menuscroller" type="range" name="conSix" id="conSix" min="0" max="100" value="0" style="display:none;">
       </div>
       <div class="wrapper">
         <div class="play-board" id="playBoardId"></div>
@@ -798,7 +804,7 @@
     <script src="index_data/scripts/languages_texts.js"></script>
     <script src="index_data/scripts/key_controlls.js"></script>
     <script>
-      let basicVersion = "0.4.3";
+      let basicVersion = "0.4.4";
       function markUpdateReaded() {
         var modal = document.getElementById("updateModal");
         modal.style.display = "none";
@@ -809,63 +815,63 @@
         var updateContent = document.getElementById("updateNoticeContent");
         if(localStorage.getItem("lang") === "en") {
           updateTitle.innerHTML = "What new in " + basicVersion + " Version";
-          updateContent.innerHTML = "Changed position of menu button and pause button when dynamic controller is on.";
+          updateContent.innerHTML = "Added ranges bottom of menu for comfort scrolling menu.";
           updateContent.innerHTML += "<br>";
-          updateContent.innerHTML += "Added new board background.";
-          updateContent.innerHTML += "<br>";
-          updateContent.innerHTML += "Fixed load default settings for new users.";
-          updateContent.innerHTML += "<br>";
-          updateContent.innerHTML += "<strong style='color:red;'>This update need redownload or reinstall this game.</strong>";
+          updateContent.innerHTML += "Fixed content of ''Update Notice'' modal.";
+          updateContent.innerHTML += "";
+          updateContent.innerHTML += "";
+          updateContent.innerHTML += "";
+          updateContent.innerHTML += "";
         }else
         if(localStorage.getItem("lang") === "ru") {
           updateTitle.innerHTML = "Что нового в " + basicVersion + " версии";
-          updateContent.innerHTML = "Изменено положение кнопка меню и кнопка пауза при включенном динамическом контроллере.";
+          updateContent.innerHTML = "Добавлены диапазоны внизу меню для удобства прокрутки меню.";
           updateContent.innerHTML += "<br>";
-          updateContent.innerHTML += "Добавлен новый фон доски.";
-          updateContent.innerHTML += "<br>";
-          updateContent.innerHTML += "Исправлена ​​загрузка настроек по умолчанию для новых пользователей.";
-          updateContent.innerHTML += "<br>";
-          updateContent.innerHTML += "<strong style='color:red;'>Для этого обновления необходимо повторно загрузить или переустановить игру.</strong>";
+          updateContent.innerHTML += "Исправлено содержимое модального окна ''Уведомление об обновлении''.";
+          updateContent.innerHTML += "";
+          updateContent.innerHTML += "";
+          updateContent.innerHTML += "";
+          updateContent.innerHTML += "";
         }else
         if(localStorage.getItem("lang") === "jp") {
           updateTitle.innerHTML = "バージョン" + basicVersion + "の新機能";
-          updateContent.innerHTML = "ダイナミック コントローラーがオンのときのメニュー ボタンと一時停止ボタンの位置を変更しました。";
+          updateContent.innerHTML = "メニューのスクロールを快適にするために、メニューの下部に範囲を追加しました。";
           updateContent.innerHTML += "<br>";
-          updateContent.innerHTML += "新しいボードの背景を追加しました。";
-          updateContent.innerHTML += "<br>";
-          updateContent.innerHTML += "新規ユーザーのロードのデフォルト設定を修正しました。";
-          updateContent.innerHTML += "<br>";
-          updateContent.innerHTML += "<strong style='color:red;'>このアップデートでは、このゲームを再ダウンロードまたは再インストールする必要があります。</strong>";
+          updateContent.innerHTML += "「更新通知」モーダルのコンテンツを修正しました。";
+          updateContent.innerHTML += "";
+          updateContent.innerHTML += "";
+          updateContent.innerHTML += "";
+          updateContent.innerHTML += "";
         }else
         if(localStorage.getItem("lang") === "chs") {
           updateTitle.innerHTML = basicVersion + "版本有哪些新功能";
-          updateContent.innerHTML = "动态控制器打开时，菜单按钮和暂停按钮的位置改变。";
+          updateContent.innerHTML = "在菜单底部添加了范围，以便舒适地滚动菜单。";
           updateContent.innerHTML += "<br>";
-          updateContent.innerHTML += "添加了新的棋盘背景。";
-          updateContent.innerHTML += "<br>";
-          updateContent.innerHTML += "修复了新用户的加载默认设置。";
-          updateContent.innerHTML += "<br>";
-          updateContent.innerHTML += "<strong style='color:red;'>此更新需要重新下载或重新安装该游戏。</strong>";
+          updateContent.innerHTML += "修复“更新通知”模式的内容。";
+          updateContent.innerHTML += "";
+          updateContent.innerHTML += "";
+          updateContent.innerHTML += "";
+          updateContent.innerHTML += "";
         }else
         if(localStorage.getItem("lang") === "cht") {
           updateTitle.innerHTML = basicVersion + " 版本有哪些新功能";
-          updateContent.innerHTML = "動態控制器開啟時，選單按鈕和暫停按鈕的位置會改變。";
+          updateContent.innerHTML = "在菜單底部添加了範圍，以便舒適地滾動菜單。";
           updateContent.innerHTML += "<br>";
-          updateContent.innerHTML += "新增了新的棋盤背景。";
-          updateContent.innerHTML += "<br>";
-          updateContent.innerHTML += "修復了新用戶的載入預設設定。";
-          updateContent.innerHTML += "<br>";
-          updateContent.innerHTML += "<strong style='color:red;'>此更新需要重新下載或重新安裝該遊戲。</strong>";
+          updateContent.innerHTML += "修復「更新通知」模式的內容。";
+          updateContent.innerHTML += "";
+          updateContent.innerHTML += "";
+          updateContent.innerHTML += "";
+          updateContent.innerHTML += "";
         }else
         if(localStorage.getItem("lang") === "ko") {
           updateTitle.innerHTML = basicVersion + "버전의 새로운 기능";
-          updateContent.innerHTML = "동적 컨트롤러가 켜져 있을 때 메뉴 버튼과 일시 정지 버튼의 위치가 변경되었습니다.";
+          updateContent.innerHTML = "편안한 메뉴 스크롤을 위해 메뉴 하단에 범위를 추가했습니다.";
           updateContent.innerHTML += "<br>";
-          updateContent.innerHTML += "새로운 보드 배경을 추가했습니다.";
-          updateContent.innerHTML += "<br>";
-          updateContent.innerHTML += "새로운 사용자를 위한 고정된 로드 기본 설정이 적용되었습니다.";
-          updateContent.innerHTML += "<br>";
-          updateContent.innerHTML += "<strong style='color:red;'>이 업데이트를 설치하려면 게임을 다시 다운로드하거나 재설치해야 합니다.</strong>";
+          updateContent.innerHTML += "''업데이트 알림'' 모달의 내용이 고정되었습니다.";
+          updateContent.innerHTML += "";
+          updateContent.innerHTML += "";
+          updateContent.innerHTML += "";
+          updateContent.innerHTML += "";
         }
       }
     </script>
