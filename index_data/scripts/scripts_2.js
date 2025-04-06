@@ -1246,3 +1246,98 @@ function loadingAnimationLoader() {
   }
 };
 loadingAnimationLoader();
+function openRange(evt, rangeName) {
+  var i, menuscroller;
+  menuscroller = document.getElementsByClassName("menuscroller");
+  for (i = 0; i < menuscroller.length; i++) {
+    menuscroller[i].style.display = "none";
+  }
+  document.getElementById(rangeName).style.display = "block";
+  evt.currentTarget.className += " ranged";
+};
+document.addEventListener('DOMContentLoaded', function() {
+  const scrollableElementA = document.getElementById('about');
+  const scrollableElementB = document.getElementById('system');
+  const scrollableElementC = document.getElementById('snake');
+  const scrollableElementD = document.getElementById('food');
+  const scrollableElementE = document.getElementById('board');
+  const scrollableElementF = document.getElementById('audio');
+  const scrollRangeA = document.getElementById('conOne');
+  const scrollRangeB = document.getElementById('conTwo');
+  const scrollRangeC = document.getElementById('conThree');
+  const scrollRangeD = document.getElementById('conFour');
+  const scrollRangeE = document.getElementById('conFive');
+  const scrollRangeF = document.getElementById('conSix');
+  scrollRangeA.addEventListener('input', function() {
+    const percentage = this.value;
+    const maxScrollTop = scrollableElementA.scrollHeight - scrollableElementA.clientHeight;
+    const scrollTopPosition = (percentage / 100) * maxScrollTop;
+    scrollableElementA.scrollTop = scrollTopPosition;
+  });
+  scrollRangeB.addEventListener('input', function() {
+    const percentage = this.value;
+    const maxScrollTop = scrollableElementB.scrollHeight - scrollableElementB.clientHeight;
+    const scrollTopPosition = (percentage / 100) * maxScrollTop;
+    scrollableElementB.scrollTop = scrollTopPosition;
+  });
+  scrollRangeC.addEventListener('input', function() {
+    const percentage = this.value;
+    const maxScrollTop = scrollableElementC.scrollHeight - scrollableElementC.clientHeight;
+    const scrollTopPosition = (percentage / 100) * maxScrollTop;
+    scrollableElementC.scrollTop = scrollTopPosition;
+  });
+  scrollRangeD.addEventListener('input', function() {
+    const percentage = this.value;
+    const maxScrollTop = scrollableElementD.scrollHeight - scrollableElementD.clientHeight;
+    const scrollTopPosition = (percentage / 100) * maxScrollTop;
+    scrollableElementD.scrollTop = scrollTopPosition;
+  });
+  scrollRangeE.addEventListener('input', function() {
+    const percentage = this.value;
+    const maxScrollTop = scrollableElementE.scrollHeight - scrollableElementE.clientHeight;
+    const scrollTopPosition = (percentage / 100) * maxScrollTop;
+    scrollableElementE.scrollTop = scrollTopPosition;
+  });
+  scrollRangeF.addEventListener('input', function() {
+    const percentage = this.value;
+    const maxScrollTop = scrollableElementF.scrollHeight - scrollableElementF.clientHeight;
+    const scrollTopPosition = (percentage / 100) * maxScrollTop;
+    scrollableElementF.scrollTop = scrollTopPosition;
+  });
+  scrollableElementA.addEventListener('scroll', function() {
+    const maxScrollTop = this.scrollHeight - this.clientHeight;
+    const currentScrollTop = this.scrollTop;
+    const scrollPercentage = (currentScrollTop / maxScrollTop) * 100;
+    scrollRangeA.value = scrollPercentage;
+  });
+  scrollableElementB.addEventListener('scroll', function() {
+    const maxScrollTop = this.scrollHeight - this.clientHeight;
+    const currentScrollTop = this.scrollTop;
+    const scrollPercentage = (currentScrollTop / maxScrollTop) * 100;
+    scrollRangeB.value = scrollPercentage;
+  });
+  scrollableElementC.addEventListener('scroll', function() {
+    const maxScrollTop = this.scrollHeight - this.clientHeight;
+    const currentScrollTop = this.scrollTop;
+    const scrollPercentage = (currentScrollTop / maxScrollTop) * 100;
+    scrollRangeC.value = scrollPercentage;
+  });
+  scrollableElementD.addEventListener('scroll', function() {
+    const maxScrollTop = this.scrollHeight - this.clientHeight;
+    const currentScrollTop = this.scrollTop;
+    const scrollPercentage = (currentScrollTop / maxScrollTop) * 100;
+    scrollRangeD.value = scrollPercentage;
+  });
+  scrollableElementE.addEventListener('scroll', function() {
+    const maxScrollTop = this.scrollHeight - this.clientHeight;
+    const currentScrollTop = this.scrollTop;
+    const scrollPercentage = (currentScrollTop / maxScrollTop) * 100;
+    scrollRangeE.value = scrollPercentage;
+  });
+  scrollableElementF.addEventListener('scroll', function() {
+    const maxScrollTop = this.scrollHeight - this.clientHeight;
+    const currentScrollTop = this.scrollTop;
+    const scrollPercentage = (currentScrollTop / maxScrollTop) * 100;
+    scrollRangeF.value = scrollPercentage;
+  });
+});
