@@ -1921,6 +1921,10 @@ hr.acc {
     padding: 0px 5px;
     margin-top: -6px;
   }
+  .menuscroller {
+    bottom: 10%;
+    width: 395px !important;
+  }
 }
 @media screen and (min-width: 1545px) {
   .alert-btn-container input {
