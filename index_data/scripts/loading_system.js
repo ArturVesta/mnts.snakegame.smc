@@ -82,7 +82,9 @@ const tassetGuis = [//56
   "tab_off",
   "tab_vertical",
   "unselected",
-  "wrapper_bg"
+  "wrapper_bg",
+  "up_note",
+  "up_note_hover"
 ];
 const tassetLeagues = [//9
   "league_1_bronze",
@@ -442,7 +444,7 @@ function loadTextures() {
 }
 function toDisplayNone() {
   setTimeout(function() {
-  if(document.getElementById('widther').style.width === "145px") {
+  if(document.getElementById('widther').style.width === "147px") {
     alertAccept();
     document.getElementById("loading").style.display = "none";
   }
