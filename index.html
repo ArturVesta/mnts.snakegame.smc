@@ -360,7 +360,7 @@
           <input type="submit" id="defaultSettings" onclick="alertReloadLater();" value="..." />
           <input type="submit" id="applySettings" onclick="applySettings();" value="..." />
           <div onclick="alertExitSite();" class="site-exit"></div>
-          <div onclick="" class="update-notice"></div>
+          <div onclick="document.getElementById('updateModal').style.display='block';defaultClickSound();" class="update-notice"></div>
           <div class="sub-device-inpo-indicator">
             <div id="subDateTimeIndicator">
               <div id="subClock">...</div>
@@ -466,7 +466,7 @@
     <div id="updateModal" class="modal">
       <div class="modal-content">
       <div id="updateTitleLang">...</div>
-        <button class="reset-button" id="closeUpdate" onclick="markUpdateReaded();"></button>
+        <button class="reset-button" id="closeUpdate" onclick="markUpdateReaded();closeModalSound();"></button>
         <div class="in-modal-content" id="updateNoticeContent"></div>
       </div>
     </div>
@@ -804,7 +804,7 @@
     <script src="index_data/scripts/languages_texts.js"></script>
     <script src="index_data/scripts/key_controlls.js"></script>
     <script>
-      let basicVersion = "0.4.4";
+      let basicVersion = "0.4.5";
       function markUpdateReaded() {
         var modal = document.getElementById("updateModal");
         modal.style.display = "none";
@@ -815,61 +815,61 @@
         var updateContent = document.getElementById("updateNoticeContent");
         if(localStorage.getItem("lang") === "en") {
           updateTitle.innerHTML = "What new in " + basicVersion + " Version";
-          updateContent.innerHTML = "Added ranges bottom of menu for comfort scrolling menu.";
+          updateContent.innerHTML = "Fixed ranges size for mobile devices screen dimensions.";
           updateContent.innerHTML += "<br>";
-          updateContent.innerHTML += "Fixed content of ''Update Notice'' modal.";
-          updateContent.innerHTML += "";
-          updateContent.innerHTML += "";
+          updateContent.innerHTML += "Added button open the Update Notice.";
+          updateContent.innerHTML += "<br>";
+          updateContent.innerHTML += "Added ''↲ENTER'' key support for alerts.";
           updateContent.innerHTML += "";
           updateContent.innerHTML += "";
         }else
         if(localStorage.getItem("lang") === "ru") {
           updateTitle.innerHTML = "Что нового в " + basicVersion + " версии";
-          updateContent.innerHTML = "Добавлены диапазоны внизу меню для удобства прокрутки меню.";
+          updateContent.innerHTML = "Фиксирован размер диапазоны для размеров экрана мобильных устройств.";
           updateContent.innerHTML += "<br>";
-          updateContent.innerHTML += "Исправлено содержимое модального окна ''Уведомление об обновлении''.";
-          updateContent.innerHTML += "";
-          updateContent.innerHTML += "";
+          updateContent.innerHTML += "Добавлена ​​кнопка открытия уведомления об обновлении.";
+          updateContent.innerHTML += "<br>";
+          updateContent.innerHTML += "Добавлена ​​поддержка клавиши «↲ENTER» для оповещений.";
           updateContent.innerHTML += "";
           updateContent.innerHTML += "";
         }else
         if(localStorage.getItem("lang") === "jp") {
           updateTitle.innerHTML = "バージョン" + basicVersion + "の新機能";
-          updateContent.innerHTML = "メニューのスクロールを快適にするために、メニューの下部に範囲を追加しました。";
+          updateContent.innerHTML = "モバイル デバイスの画面寸法の範囲サイズを固定しました。";
           updateContent.innerHTML += "<br>";
-          updateContent.innerHTML += "「更新通知」モーダルのコンテンツを修正しました。";
-          updateContent.innerHTML += "";
-          updateContent.innerHTML += "";
+          updateContent.innerHTML += "更新通知を開くボタンを追加しました。";
+          updateContent.innerHTML += "<br>";
+          updateContent.innerHTML += "アラートに「↲ENTER」キーのサポートを追加しました。";
           updateContent.innerHTML += "";
           updateContent.innerHTML += "";
         }else
         if(localStorage.getItem("lang") === "chs") {
           updateTitle.innerHTML = basicVersion + "版本有哪些新功能";
-          updateContent.innerHTML = "在菜单底部添加了范围，以便舒适地滚动菜单。";
+          updateContent.innerHTML = "适合移动设备屏幕尺寸的固定范围大小。";
           updateContent.innerHTML += "<br>";
-          updateContent.innerHTML += "修复“更新通知”模式的内容。";
-          updateContent.innerHTML += "";
-          updateContent.innerHTML += "";
+          updateContent.innerHTML += "添加打开更新通知的按钮。";
+          updateContent.innerHTML += "<br>";
+          updateContent.innerHTML += "为警报添加了 ''↲ENTER'' 键支持。";
           updateContent.innerHTML += "";
           updateContent.innerHTML += "";
         }else
         if(localStorage.getItem("lang") === "cht") {
           updateTitle.innerHTML = basicVersion + " 版本有哪些新功能";
-          updateContent.innerHTML = "在菜單底部添加了範圍，以便舒適地滾動菜單。";
+          updateContent.innerHTML = "適合行動裝置螢幕尺寸的固定範圍大小。";
           updateContent.innerHTML += "<br>";
-          updateContent.innerHTML += "修復「更新通知」模式的內容。";
-          updateContent.innerHTML += "";
-          updateContent.innerHTML += "";
+          updateContent.innerHTML += "新增開啟更新通知的按鈕。";
+          updateContent.innerHTML += "<br>";
+          updateContent.innerHTML += "為警報添加了 ''↲ENTER'' 鍵支援。";
           updateContent.innerHTML += "";
           updateContent.innerHTML += "";
         }else
         if(localStorage.getItem("lang") === "ko") {
           updateTitle.innerHTML = basicVersion + "버전의 새로운 기능";
-          updateContent.innerHTML = "편안한 메뉴 스크롤을 위해 메뉴 하단에 범위를 추가했습니다.";
+          updateContent.innerHTML = "모바일 기기의 화면 크기에 맞춰 고정된 범위 크기가 적용됩니다.";
           updateContent.innerHTML += "<br>";
-          updateContent.innerHTML += "''업데이트 알림'' 모달의 내용이 고정되었습니다.";
-          updateContent.innerHTML += "";
-          updateContent.innerHTML += "";
+          updateContent.innerHTML += "업데이트 알림을 여는 버튼을 추가했습니다.";
+          updateContent.innerHTML += "<br>";
+          updateContent.innerHTML += "알림에 대한 ''↲ENTER'' 키 지원이 추가되었습니다.";
           updateContent.innerHTML += "";
           updateContent.innerHTML += "";
         }
